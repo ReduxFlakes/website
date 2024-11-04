@@ -1,0 +1,174 @@
+@import url("base.css");
+
+.wrapper {
+  --sidebar-width: 13rem;
+  max-width: var(--viewport);
+  margin: 0 auto;
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
+  grid-template-areas:
+    "toolbar toolbar toolbar"
+    "header header header"
+    "nav nav nav"
+    "asider content asidel"
+    "footer footer footer";
+}
+
+.toolbar {
+  display: flex;
+  background: rgb(26, 43, 81);
+  grid-area: toolbar;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9em;
+  border-radius: 0 0 8px 8px;
+}
+
+.toolbar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.toolbar .dropdown {
+  margin-left: auto;
+}
+
+.dropdown {
+  position: relative;
+  user-select: none;
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 2rem;
+  background: rgb(40, 40, 40);
+  max-width: 200px;
+  box-shadow: 0px 0px 2px 0px black;
+}
+
+.dropdown nav a {
+  padding: 0 0.5em;
+}
+
+.toolbar-link img {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(0, 0, 0, 0.25) 30%
+    ),
+    url("/public/img/header_bkg.png");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  border-radius: 6px;
+  outline: 1px solid rgb(150, 150, 150);
+  min-height: 100px;
+}
+
+.main-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: -0.04em;
+  color: white;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  grid-area: nav;
+  background: rgb(40, 40, 86);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.main-nav a {
+  width: 100%;
+  text-align: center;
+  padding: 0.2em 0.5em;
+  transition: all 150ms cubic-bezier(0.28, 0.6, 0.82, 1);
+  text-transform: uppercase;
+}
+
+.main-nav a:hover {
+  color: white;
+  background: black;
+}
+
+.aside,
+main {
+  color: rgb(89, 89, 89);
+  background: var(--container);
+}
+
+.aside {
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.aside--l {
+  grid-area: asider;
+}
+
+main {
+  grid-area: content;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.aside--r {
+  grid-area: asidel;
+}
+
+.main-footer {
+  grid-area: footer;
+  background: rgb(56, 53, 53);
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+button,
+.button {
+  display: block;
+  width: fit-content;
+  text-align: left;
+  background: silver;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey,
+    inset 2px 2px #dfdfdf, 1px 1px 0.5px 0px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: transparent;
+  font-family: monospace;
+  letter-spacing: -0.5px;
+  font-size: 14px;
+  padding: 0.25em 0.75em;
+  text-shadow: 0 0 #222;
+}
+
+button:focus,
+.button:focus {
+  outline: 1px dotted #000;
+  outline-offset: -4px;
+}
+
+button:active,
+.button:active {
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px grey;
+  text-shadow: 1px 1px #222;
+}

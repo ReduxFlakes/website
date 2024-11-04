@@ -1,0 +1,12 @@
+:root {
+  --font: "Neue Haas Grotesk Display Pro", "Helvetica", "Ubuntu", system-ui;
+
+  --viewport: 1020px;
+  --background: hsl(228, 46%, 13%);
+  --container: hsl(0, 0%, 81%);
+  --primary: hsl(214, 58%, 64%);
+  --type-base: hsl(0, 0%, 83%);
+  --type-subtle: hsl(0, 0%, 27%);
+  --muted: hsl(0, 0%, 77%);
+  --text-strong: #252525;
+}

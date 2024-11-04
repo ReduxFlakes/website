@@ -1,0 +1,41 @@
+SurfScape
+
+- version: 1.0.0
+- codenamed 
+- copyright 2021-2024
+
+github: https://github.com/surfscape
+source code: https://github.com/surfscape/web-portal
+mastodon: https://fosstodon.org/@surfscape
+
+-_ Authors _-
+
+Founder and main developer: ReduxFlakes
+Site: reduxflakes.neocities.org
+Mastodon: redux@fosstodon.org
+~^ Thanks to: ^~
+
+    professor4pizza - Co-founder of Retro Space
+    Madebotix - Co-founder of the old NaviNet web portal
+    msterfanact - Admin of Retro Space and support
+    Ivox - Testing, ideas (and mental support)
+    Ultra - Mobile testing
+
+_+ SITE +_
+
+Standards: Nunjucks, HTML5, CSS3, Markdown, JS
+Components:
+    ionicons: https://ionic.io/ioniconse
+Software:
+    SSG: Eleventy: https://www.11ty.dev/
+    Code Editor: Visual Studio Code: https://code.visualstudio.com/
+    Design and concept art:
+        Penpot: https://penpot.app/
+        Figma: https://www.figma.com/
+    Telemetry: GoatCounter: https://www.goatcounter.com/
+    Markdown parser: https://github.com/markdown-it/markdown-it
+    Code optimization: clean-css: https://www.npmjs.com/package/clean-css
+    Date conversion: Luxon: https://moment.github.io/luxon/#/
+    Web browser:
+        Firefox: https://www.mozilla.org/firefox/new/
+        Vivaldi: https://vivaldi.com/

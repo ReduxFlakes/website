@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 100%;
+}
+
+a:focus-visible,
+button:focus-visible,
+.sk-button:focus-visible {
+  box-shadow: 0 0 0 4px #5a75b4;
+  outline: 2px solid #a2d1ff;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+  font-style: italic;
+}
+
+iframe {
+  border: 0;
+}
+
+input,
+button {
+  font: inherit;
+}
+button,
+summary {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("public/fonts/subset-NeueHaasDisplay-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("public/fonts/subset-NeueHaasDisplay-LightItalic.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("public/fonts/subset-NeueHaasDisplay-Roman.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("public/fonts/subset-NeueHaasDisplay-RomanItalic.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("public/fonts/subset-NeueHaasDisplay-Mediu.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("public/fonts/subset-NeueHaasDisplay-MediumItalic.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("public/fonts/subset-NeueHaasDisplay-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("public/fonts/subset-NeueHaasDisplay-BoldItalic.woff2")
+    format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  color: var(--type-base);
+  font: 0.95rem / 1.5 var(--font);
+  background: var(--background);
+}
+
+::selection {
+  background: rgba(74, 183, 238, 0.3);
+  color: #06608e;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+  line-height: 1.2em;
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+.header-anchor {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 120ms ease-in-out;
+  font-family: var(--base-font);
+}
+
+h1:target,
+h2:target,
+h3:target {
+  padding-left: 0.5em;
+  background: hsla(214, 40%, 61%, 0.3);
+  color: var(--primary);
+  transition: 150ms all ease-in-out;
+}
+
+h1:hover > .header-anchor,
+h2:hover > .header-anchor,
+h3:hover > .header-anchor,
+h4:hover > .header-anchor,
+h5:hover > .header-anchor,
+h6:hover > .header-anchor {
+  visibility: visible;
+  opacity: 1;
+}
+
+.acs-skip {
+  position: absolute;
+  top: -1000px;
+}
+
+.acs-skip:focus,
+.acs-skip:focus-visible,
+.acs-skip:focus-within {
+  top: 0.25em;
+}
+
+ul > li > a:has(img) {
+  display: inline-block;
+}
+
+.stack > * + * {
+  --_space: var(--spacer, 1em);
+  margin-top: var(--_space);
+}
