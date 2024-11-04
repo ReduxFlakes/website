@@ -3,10 +3,9 @@
 
   --viewport: 1020px;
   --background: hsl(228, 46%, 13%);
-  --container: hsl(0, 0%, 81%);
+  --container: hsl(0, 0%, 24%);
   --primary: hsl(214, 58%, 64%);
-  --type-base: hsl(0, 0%, 83%);
-  --type-subtle: hsl(0, 0%, 27%);
+  --type-base: hsl(0, 0%, 60%);
   --muted: hsl(0, 0%, 77%);
-  --text-strong: #252525;
+  --text-strong: #fcfcfc;
 }

@@ -13,6 +13,7 @@
     "nav nav nav"
     "asider content asidel"
     "footer footer footer";
+  padding-block-end: 1rem;
 }
 
 .toolbar {
@@ -110,7 +111,6 @@
 
 .aside,
 main {
-  color: rgb(89, 89, 89);
   background: var(--container);
 }
 
@@ -135,10 +135,43 @@ main {
 
 .main-footer {
   grid-area: footer;
-  background: rgb(56, 53, 53);
-  border-radius: 4px;
+  background: rgb(0, 0, 0);
+  border-radius: 6px;
   text-align: center;
   padding: 0.5rem 1rem;
+}
+
+.grayscale {
+  filter: grayscale(1);
+}
+
+.grayscale:hover {
+  animation: graycrt 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes graycrt {
+  5% {
+    filter: grayscale(0);
+  }
+  10% {
+    filter: grayscale(1);
+  }
+  15% {
+    filter: grayscale(0);
+  }
+  20% {
+    filter: grayscale(1);
+  }
+  22% {
+    filter: grayscale(0);
+  }
+  25% {
+    filter: grayscale(1);
+  }
+  100% {
+    filter: grayscale(0);
+  }
 }
 
 button,
@@ -146,7 +179,7 @@ button,
   display: block;
   width: fit-content;
   text-align: left;
-  background: silver;
+  background: rgb(175, 175, 175);
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey,
     inset 2px 2px #dfdfdf, 1px 1px 0.5px 0px rgba(0, 0, 0, 0.1);
   border: none;
