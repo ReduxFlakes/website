@@ -131,7 +131,7 @@ summary {
 
 body {
   color: var(--type-base);
-  font: 0.95rem / 1.5 var(--font);
+  font: 1.05rem / 1.5 var(--font);
   background: var(--background);
 }
 

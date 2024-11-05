@@ -1,18 +1,16 @@
 @import url("base.css");
 
 .wrapper {
-  --sidebar-width: 13rem;
+  --sidebar-width: 14rem;
   max-width: var(--viewport);
   margin: 0 auto;
   display: grid;
   gap: 0.5em;
-  grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
+  grid-template-columns: 1fr var(--sidebar-width);
   grid-template-areas:
-    "toolbar toolbar toolbar"
-    "header header header"
-    "nav nav nav"
-    "asider content asidel"
-    "footer footer footer";
+    "toolbar toolbar"
+    "content aside"
+    "footer footer";
   padding-block-end: 1rem;
 }
 
@@ -65,7 +63,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  grid-area: header;
   background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.5),
@@ -75,9 +72,8 @@
   background-size: cover;
   background-position: center;
   padding: 1rem;
-  border-radius: 6px;
-  outline: 1px solid rgb(150, 150, 150);
   min-height: 100px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
 }
 
 .main-header h1 {
@@ -87,50 +83,25 @@
   color: white;
 }
 
-.main-nav {
-  display: flex;
-  justify-content: space-between;
-  grid-area: nav;
-  background: rgb(40, 40, 86);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.main-nav a {
-  width: 100%;
-  text-align: center;
-  padding: 0.2em 0.5em;
-  transition: all 150ms cubic-bezier(0.28, 0.6, 0.82, 1);
-  text-transform: uppercase;
-}
-
-.main-nav a:hover {
-  color: white;
-  background: black;
-}
-
 .aside,
 main {
   background: var(--container);
 }
 
 .aside {
+  grid-area: aside;
   border-radius: 6px;
   padding: 0.5rem;
 }
 
-.aside--l {
-  grid-area: asider;
-}
-
 main {
   grid-area: content;
-  padding: 1rem;
   border-radius: 8px;
+  overflow: hidden;
 }
 
-.aside--r {
-  grid-area: asidel;
+main > article {
+  padding: 1rem;
 }
 
 .main-footer {
