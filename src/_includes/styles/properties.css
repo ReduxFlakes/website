@@ -1,8 +1,8 @@
 :root {
   --font: "Neue Haas Grotesk Display Pro", "Helvetica", "Ubuntu", system-ui;
 
-  --viewport: 1020px;
-  --background: hsl(228, 46%, 13%);
+  --viewport: 1280px;
+  --background: url("/public/img/site/win98_bubbles.bmp");
   --container: hsl(0, 0%, 24%);
   --primary: hsl(214, 58%, 64%);
   --type-base: hsl(0, 0%, 60%);

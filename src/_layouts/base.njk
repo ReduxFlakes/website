@@ -4,8 +4,9 @@
   <body class="wrapper">
     <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
     {% include "toolbar.njk" %}
+    {% include "header.njk" %}
+    {% include "highway.njk" %}
     <main id="main-content">
-      {% include "header.njk" %}
       <article class="stack">{{content | safe }}</article>
     </main>
     {% include "aside.njk" %}

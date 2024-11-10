@@ -131,8 +131,15 @@ summary {
 
 body {
   color: var(--type-base);
-  font: 1.05rem / 1.5 var(--font);
-  background: var(--background);
+  font: 1.1rem / 1.5 var(--font);
+  --_background-overlay: rgba(0, 0, 0, 0.75);
+  background: linear-gradient(
+      to bottom,
+      var(--_background-overlay),
+      var(--_background-overlay)
+    ),
+    var(--background);
+  image-rendering: pixelated;
 }
 
 ::selection {

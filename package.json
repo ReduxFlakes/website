@@ -11,7 +11,7 @@
   "author": "reduxflakes",
   "license": "GPL-2.0-only",
   "dependencies": {
-    "@11ty/eleventy": "3.0.0-beta.1",
+    "@11ty/eleventy": "3.0.0",
     "@11ty/eleventy-img": "4.0.2",
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-rss": "2.0.2",
@@ -23,7 +23,7 @@
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-attrs": "^4.2.0",
     "markdown-it-footnote": "^4.0.0",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.48",
     "postcss-import": "^16.1.0",
     "postcss-load-config": "^6.0.1",
     "postcss-minify": "^1.1.0"

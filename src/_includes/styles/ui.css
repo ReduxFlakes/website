@@ -1,0 +1,25 @@
+.navigator {
+  grid-area: navigator;
+  border: 1px solid gray;
+  border-top: 0;
+  background: rgb(31, 31, 31);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.navigator strong {
+  font-size: 1.25rem;
+  background: rgb(69, 69, 69);
+  clip-path: polygon(0 0, 100% 0%, 7.75rem 100%, 0% 100%);
+  padding-inline: 0.75rem 1rem;
+  padding-block: 0.2rem;
+}
+
+.navigator a {
+  padding: 0.25em;
+}
+
+.navigator a:hover {
+  background: black;
+}
