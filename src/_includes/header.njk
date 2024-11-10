@@ -1,4 +1,4 @@
-<header>
+<header class="main-header">
     <h1>
         {% if header_title %}
             {{header_title}}
@@ -6,4 +6,6 @@
             {{title}}
         {% endif %}
     </h1>
+    <h1>{{meta.title}}</h1>
+    <p>{{meta.description}}</p>
 </header>

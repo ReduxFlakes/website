@@ -8,4 +8,5 @@
   --type-base: hsl(0, 0%, 60%);
   --muted: hsl(0, 0%, 77%);
   --text-strong: #fcfcfc;
+  --rad: 0.4rem;
 }

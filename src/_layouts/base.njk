@@ -4,20 +4,11 @@
   <body class="wrapper">
     <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
     {% include "toolbar.njk" %}
-    {% include "header.njk" %}
-    <aside class="aside aside--l stack">
-      <b>About project</b>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos vitae perferendis, nulla porro nostrum deleniti error dolorem quibusdam ex minus laboriosam tempora illum! Dolor deleniti, alias quaerat quisquam culpa nisi.</p>
-      <b>Values</b>
-      <br>
-      <b>Most Popular</b>
-    </aside>
     <main id="main-content">
+      {% include "header.njk" %}
       <article class="stack">{{content | safe }}</article>
     </main>
-    <aside class="aside aside--r stack">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia illo, sequi mollitia quisquam eos ab laudantium facilis dolorem consequuntur! Quae in at delectus animi alias quis libero quasi debitis.</p>
-    </aside>
+    {% include "aside.njk" %}
     {% include "footer.njk" %}
   </body>
 </html>

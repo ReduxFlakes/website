@@ -131,7 +131,7 @@ summary {
 
 body {
   color: var(--type-base);
-  font: 0.95rem / 1.5 var(--font);
+  font: 1.05rem / 1.5 var(--font);
   background: var(--background);
 }
 
@@ -200,6 +200,7 @@ h6:hover > .header-anchor {
 .acs-skip:focus-visible,
 .acs-skip:focus-within {
   top: 0.25em;
+  left: 0.25em;
 }
 
 ul > li > a:has(img) {

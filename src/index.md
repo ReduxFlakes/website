@@ -12,5 +12,3 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat numquam
 <a href="" class="button">Button</a>
 
 <button>Button</button>
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROTIsmBvADsd5l4cwzKPgz2t7RaLWP1AUA6Vw0ow0CA6BUua_zRaUO4PVe0LLmaocN4Hk9&s" alt="" class="grayscale">
