@@ -1,12 +1,9 @@
-<header class="main-header">
-    <h1>{{meta.title}}</h1>
-    <p>{{meta.description}}</p>
+<header>
+    <h1>
+        {% if header_title %}
+            {{header_title}}
+        {% else %}
+            {{title}}
+        {% endif %}
+    </h1>
 </header>
-<nav class="main-nav">
-    <a href="/">Home</a>
-    <a href="/">Home</a>
-    <a href="/">Home</a>
-    <a href="/">Home</a>
-    <a href="/">Home</a>
-    <a href="/">Home</a>
-</nav>
