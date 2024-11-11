@@ -131,7 +131,7 @@ summary {
 
 body {
   color: var(--type-base);
-  font: 1.1rem / 1.5 var(--font);
+  font: 1rem / 1.5 var(--font);
   --_background-overlay: rgba(0, 0, 0, 0.75);
   background: linear-gradient(
       to bottom,
@@ -140,6 +140,10 @@ body {
     ),
     var(--background);
   image-rendering: pixelated;
+}
+
+body * {
+  image-rendering: auto;
 }
 
 ::selection {

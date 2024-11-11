@@ -1,34 +1,42 @@
 export default [
   {
     title: "home",
-    url: "",
+    url: "/",
+    icon: "home",
   },
   {
     title: "posts",
-    url: "",
+    url: "/posts/",
+    icon: "posts",
   },
   {
     title: "bookmarks",
-    url: "",
+    url: "/bookmarks/",
+    icon: "bookmark",
   },
   {
     title: "projects",
-    url: "",
+    url: "/projects/",
+    icon: "blueprint",
   },
   {
     title: "shrines",
-    url: "",
+    url: "/shrines/",
+    icon: "star",
   },
   {
     title: "design",
-    url: "",
+    url: "/design/",
+    icon: "paint",
   },
   {
     title: "now",
-    url: "",
+    url: "/now/",
+    icon: "clock_history",
   },
   {
     title: "uses",
-    url: "",
+    url: "/uses/",
+    icon: "generic_pc",
   },
 ];

@@ -38,6 +38,10 @@
 
 .highway {
   grid-area: highway;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/347b1ddd-5231-4d82-8550-1fd0f0dc4afb/d4gb21a-c006c4d4-f163-498a-b7f2-04ce07046981.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM0N2IxZGRkLTUyMzEtNGQ4Mi04NTUwLTFmZDBmMGRjNGFmYlwvZDRnYjIxYS1jMDA2YzRkNC1mMTYzLTQ5OGEtYjdmMi0wNGNlMDcwNDY5ODEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.O8obUNm8I5_W5AjJ0HbKhr0a5tCgwgyrFTRfGdgGj9c");
+  background-size: cover;
+  background-position: 49%;
+  padding: 0.5rem;
 }
 
 .main-header h1 {
@@ -47,9 +51,7 @@
   color: white;
 }
 
-.aside,
-main,
-.highway {
+.aside {
   background: var(--container);
 }
 
@@ -63,6 +65,8 @@ main,
 main {
   grid-area: content;
   border-radius: var(--rad);
+  background: rgba(38, 38, 38, 0.75);
+  backdrop-filter: blur(4px);
 }
 
 main > article {
