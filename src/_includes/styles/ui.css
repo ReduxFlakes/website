@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
 }
 
 .navigator .brand {
@@ -22,8 +23,21 @@
   gap: 0.5em;
   min-height: 100%;
   padding-inline: 0.75em;
+  transition: 150ms ease-in-out all;
+  outline: 1px solid transparent;
+}
+
+.navigator a img {
+  filter: saturate(0.5);
+  transition: 150ms ease-in-out all;
 }
 
 .navigator a:hover {
   background: black;
+  padding-inline: 1.25em;
+  outline-color: var(--primary);
+}
+
+.navigator a:hover img {
+  filter: saturate(1);
 }

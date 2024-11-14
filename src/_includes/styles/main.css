@@ -32,15 +32,8 @@
   background-position: center;
   padding: 1rem;
   min-height: 100px;
-  border-radius: var(--rad) var(--rad) 0 0;
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25), inset 0px 0px 1px 0px white;
-}
-
-.highway {
-  grid-area: highway;
-  background: rgb(41, 42, 48);
-  padding: 0.5rem;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 2px 0px white;
 }
 
 .main-header h1 {
@@ -50,15 +43,18 @@
   color: white;
 }
 
-.aside {
+.aside,
+.highway,
+.main-footer {
   background: var(--container);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
-.aside {
-  grid-area: aside;
-  border-radius: var(--rad);
+.highway {
+  grid-area: highway;
   padding: 0.5rem;
-  font-size: 0.9em;
 }
 
 main {
@@ -66,19 +62,36 @@ main {
   border-radius: var(--rad);
   background: rgba(38, 38, 38, 0.75);
   backdrop-filter: blur(4px);
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 4px 0px,
+    inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 main > article {
   padding: 1rem;
 }
 
+.aside {
+  grid-area: aside;
+  padding: 0.5rem;
+  font-size: 0.9em;
+  overflow: hidden;
+}
+
 .main-footer {
   grid-area: footer;
-  text-align: center;
   padding: 0.5rem 1rem;
-  color: rgba(255, 255, 255, 0.35);
-  background: rgb(40, 20, 33);
-  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95em;
+}
+
+.main-footer :first-child {
+  margin-inline-start: auto;
+}
+
+.main-footer,
+.footer-nav {
+  display: flex;
+  gap: 0.5em;
 }
 
 .grayscale {
