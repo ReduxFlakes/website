@@ -27,6 +27,7 @@
     {% endcss %}
     <style>
         {% getBundle "css" %}
+        {% getBundle "css", "lastfm" %}
     </style>
     {% if style_slot %}
         {% renderTemplate 'njk,md',

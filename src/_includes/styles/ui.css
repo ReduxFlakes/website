@@ -5,14 +5,14 @@
   background: rgb(31, 31, 31);
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  overflow: hidden;
 }
 
-.navigator strong {
+.navigator .brand {
   font-size: 1.25rem;
+  color: white;
   background: rgb(69, 69, 69);
-  clip-path: polygon(0 0, 100% 0%, 7.75rem 100%, 0% 100%);
-  padding-inline: 0.75rem 1rem;
+  padding-inline: 0.75rem;
   padding-block: 0.2rem;
 }
 
@@ -20,7 +20,8 @@
   display: flex;
   align-items: center;
   gap: 0.5em;
-  padding: 0.25em;
+  min-height: 100%;
+  padding-inline: 0.75em;
 }
 
 .navigator a:hover {
