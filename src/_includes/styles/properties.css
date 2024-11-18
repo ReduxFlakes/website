@@ -3,7 +3,7 @@
 
   --viewport: 1280px;
   --background: url("/public/img/site/win98_bubbles.bmp");
-  --container: hsl(0, 0%, 24%);
+  --container: #353638;
   --primary: hsl(214, 58%, 64%);
   --type-base: hsl(0, 0%, 60%);
   --muted: hsl(0, 0%, 77%);

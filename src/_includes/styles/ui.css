@@ -22,8 +22,54 @@
   gap: 0.5em;
   min-height: 100%;
   padding-inline: 0.75em;
+  outline: 1px solid transparent;
+  transition: 135ms ease-in-out all;
 }
 
 .navigator a:hover {
+  outline-color: var(--primary);
+  padding-inline: 1.5em;
   background: black;
+}
+
+.highway,
+.aside,
+.main-footer {
+  background: var(--container);
+}
+
+.highway,
+.aside {
+  padding: 0.5rem;
+  border-radius: var(--rad);
+}
+
+.aside {
+  font-size: 0.9em;
+}
+
+.experience-section {
+  --spacer: 0.5em;
+}
+
+.experience-section a {
+  display: block;
+  width: 100%;
+  border: 1px solid white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: var(--text-strong);
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: right;
+  background-size: cover;
+  box-shadow: inset 0px 0px 4px 0px white;
+  text-shadow: 0px 0px 8px black;
+  transition: all 200ms cubic-bezier(0.28, 0.6, 0.82, 1);
+}
+
+.experience-section a:hover {
+  filter: saturate(0);
+  border-color: var(--primary);
+  scale: 1.075;
 }
