@@ -166,7 +166,7 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.05em;
   color: var(--text-strong);
   line-height: 1.2em;
 }
@@ -221,4 +221,12 @@ ul > li > a:has(img) {
 .stack > * + * {
   --_space: var(--spacer, 1em);
   margin-top: var(--_space);
+}
+
+.pixel {
+  image-rendering: pixelated;
+}
+
+.full-img {
+  width: 100%;
 }

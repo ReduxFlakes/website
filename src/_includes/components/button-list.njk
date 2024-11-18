@@ -1,0 +1,25 @@
+<style>
+    .marquee a {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+
+    .marquee a img {
+        display: inline-block;
+        transition: 100ms ease-in-out;
+        filter: saturate(0.5);
+    }
+
+    .marquee a:hover img {
+        scale: 1.05;
+        filter: saturate(1);
+    }
+</style>
+
+
+<marquee scrollamount="3" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" class="marquee">
+    {%- for item in buttons.marquee -%}
+    <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/{{item.img}}"
+            alt="{{item.title}} button"></a>
+    {%- endfor -%}
+</marquee>

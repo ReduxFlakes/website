@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
 }
 
 .navigator .brand {
@@ -30,6 +31,12 @@
   outline-color: var(--primary);
   padding-inline: 1.5em;
   background: black;
+  padding-inline: 1.25em;
+  outline-color: var(--primary);
+}
+
+.navigator a:hover img {
+  filter: saturate(1);
 }
 
 .highway,

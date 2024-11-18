@@ -56,15 +56,23 @@ main {
   border-radius: var(--rad);
   background: rgba(38, 38, 38, 0.75);
   backdrop-filter: blur(4px);
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 4px 0px,
+    inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 main > article {
   padding: 1rem;
 }
 
+.aside {
+  grid-area: aside;
+  padding: 0.5rem;
+  font-size: 0.9em;
+  overflow: hidden;
+}
+
 .main-footer {
   grid-area: footer;
-  text-align: center;
   padding: 0.5rem 1rem;
   color: rgba(255, 255, 255, 0.35);
   font-size: 0.9em;
