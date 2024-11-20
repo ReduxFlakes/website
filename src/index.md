@@ -12,6 +12,12 @@ Welcome to my new personal website! Yes, I've redesigned it again since I wasn't
 
 ## Latest Additions
 
+<ul>
+{%- for post in collections.all -%}
+  <li><a href="{{ post.url }}">{{ post.url }}</a></li>
+{%- endfor -%}
+</ul>
+
 ## Heading 2
 
 <a href="" class="button">Button</a>

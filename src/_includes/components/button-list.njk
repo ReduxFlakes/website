@@ -1,25 +1,47 @@
 <style>
-    .marquee a {
-        display: inline-block;
-        margin-right: 0.5rem;
+    .button-list {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+        list-style-type: none;
+        padding: 0;
+        gap: 0.5rem;
     }
 
-    .marquee a img {
-        display: inline-block;
-        transition: 100ms ease-in-out;
-        filter: saturate(0.5);
+    .button-list li,
+    .button-list a,
+    .button-list a img {
+        display: block;
+        width: 88px;
+        height: 31px;
+        image-rendering: pixelated;
+        transition: 150ms ease-in-out all;
     }
 
-    .marquee a:hover img {
+    .button-list a:hover {
         scale: 1.05;
-        filter: saturate(1);
+        box-shadow: 0px 2px 4px 0px black;
     }
 </style>
 
 
-<marquee scrollamount="3" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" class="marquee">
-    {%- for item in buttons.marquee -%}
-    <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/{{item.img}}"
-            alt="{{item.title}} button"></a>
-    {%- endfor -%}
-</marquee>
+<section>
+    <h2>Friends</h2>
+    <ul class="button-list">
+        {%- for item in buttons.marquee -%}
+        <li>
+            <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/{{item.img}}"
+                    alt="{{item.title}} button"></a>
+        </li>
+        {%- endfor -%}
+    </ul>
+    <h2>Sites I like</h2>
+    <ul class="button-list">
+        {%- for item in buttons.likes -%}
+        <li>
+            <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/{{item.img}}"
+                    alt="{{item.title}} button"></a>
+        </li>
+        {%- endfor -%}
+    </ul>
+</section>

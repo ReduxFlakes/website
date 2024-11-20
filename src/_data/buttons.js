@@ -1,5 +1,5 @@
 export default {
-  marquee: [
+  likes: [
     {
       title: "Melankorin",
       img: "melankorin.gif",

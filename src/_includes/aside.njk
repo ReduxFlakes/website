@@ -5,8 +5,6 @@
             <a href="{{item.url}}" style="background-image:url(/public/img/expo/{{item.img}})">{{item.title}}</a>
         {% endfor %}
     </section>
-    <section>
-        <h2>Sites I like</h2>
-        {% include "components/button-list.njk" %}
-    </section>
+    {% include "components/button-list.njk" %}
+
 </aside>
