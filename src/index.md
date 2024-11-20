@@ -1,13 +1,14 @@
 ---
 title: Home
 layout: base
+style: true
 ---
 
 <img src="/public/img/gifs/underconstruction.gif" alt="Yellow warning bar telling peopel the site is under construction" class="pixel full-img">
 
 ## Welcome
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat numquam culpa doloribus repellendus. Sed quia, reprehenderit voluptatibus veniam, non repellendus, recusandae deleniti repudiandae ipsum praesentium magnam natus. Quidem, neque?
+Welcome to my new personal website! Yes, I've redesigned it again since I wasn't "enjoying" my last design/layout, the reason was that, like other Neocities sites, I wanted something special and personal, and the last website was just a minimalist portoflio without any personality, now that doesn't mean the other version was scrapped since I liked the work I did on it, so that means I now have two personal websites, this one and a portfolio based on the older one.
 
 ## Latest Additions
 

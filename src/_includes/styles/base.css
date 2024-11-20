@@ -15,7 +15,7 @@ html {
 
 a:focus-visible,
 button:focus-visible,
-.sk-button:focus-visible {
+.button:focus-visible {
   box-shadow: 0 0 0 4px #5a75b4;
   outline: 2px solid #a2d1ff;
 }
@@ -148,7 +148,7 @@ body * {
 
 ::selection {
   background: rgba(74, 183, 238, 0.3);
-  color: #06608e;
+  color: #7eccf3;
 }
 
 a {
@@ -166,7 +166,7 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
   color: var(--text-strong);
   line-height: 1.2em;
 }
@@ -187,8 +187,8 @@ h1:target,
 h2:target,
 h3:target {
   padding-left: 0.5em;
-  background: hsla(214, 40%, 61%, 0.3);
-  color: var(--primary);
+  background: rgba(74, 183, 238, 0.3);
+  color: #7eccf3;
   transition: 150ms all ease-in-out;
 }
 

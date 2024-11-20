@@ -24,16 +24,15 @@
   justify-content: center;
   background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(0, 0, 0, 0.25) 30%
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.65) 50%
     ),
-    url("/public/img/header_bkg.png");
+    url("/public/img/site/banner.gif");
   background-size: cover;
   background-position: center;
   padding: 1rem;
-  min-height: 100px;
-  border-radius: var(--rad) var(--rad) 0 0;
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25), inset 0px 0px 1px 0px white;
+  border-radius: var(--rad);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25), inset 0px 0px 3px 0px white;
 }
 
 .main-header h1 {
@@ -41,6 +40,14 @@
   font-weight: bold;
   letter-spacing: -0.04em;
   color: white;
+  mix-blend-mode: difference;
+}
+
+.main-header p {
+  text-transform: lowercase;
+  font-size: 1.05rem;
+  letter-spacing: -0.025em;
+  color: hsla(0, 0%, 100%, 0.75);
 }
 
 .highway {
@@ -66,17 +73,11 @@ main > article {
 
 .aside {
   grid-area: aside;
-  padding: 0.5rem;
   font-size: 0.9em;
-  overflow: hidden;
 }
 
 .main-footer {
   grid-area: footer;
-  padding: 0.5rem 1rem;
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 0.9em;
-  border-radius: var(--rad);
 }
 
 .grayscale {

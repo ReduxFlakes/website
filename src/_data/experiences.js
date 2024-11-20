@@ -14,9 +14,4 @@ export default [
     url: "/expo/compusoft",
     img: "",
   },
-  {
-    title: "CompuSoft",
-    url: "/expo/compusoft",
-    img: "",
-  },
 ];
