@@ -3,6 +3,7 @@ title: Home
 layout: base
 description: Fireplace in the mall
 style: true
+date: 2024-11-11T09:21
 ---
 
 <img src="/public/img/gifs/underconstruction.gif" alt="Yellow warning bar telling peopel the site is under construction" class="pixel full-img">
@@ -14,7 +15,7 @@ Welcome to my new personal website! Yes, I've redesigned it again since I wasn't
 ## Latest Additions
 
 <ul class="card-list">
-{%- for post in collections.all | reverse -%}
+{%- for post in collections.all -%}
   <li class="card-list-item">
   <a href="{{ post.url }}">
   <h3>

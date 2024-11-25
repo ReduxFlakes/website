@@ -8,6 +8,7 @@
   display: grid;
   gap: 0.5em;
   grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
+  grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
     "navigator navigator navigator"
     "highway header header"
