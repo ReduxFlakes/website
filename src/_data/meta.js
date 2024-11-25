@@ -1,5 +1,5 @@
 export default {
-  title: "reducc",
+  title: "reduc",
   description: "Fireplace in the mall",
   url: "https://reduxflakes.neocities.org",
   lang: "en-US",

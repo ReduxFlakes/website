@@ -8,9 +8,9 @@
         gap: 0.5rem;
     }
 
-    .button-list li,
     .button-list a,
-    .button-list a img {
+    .button-list a img,
+    .button-list li {
         display: block;
         width: 88px;
         height: 31px;
@@ -20,28 +20,27 @@
 
     .button-list a:hover {
         scale: 1.05;
-        box-shadow: 0px 2px 4px 0px black;
+        box-shadow: 0 2px 4px 0 black;
     }
 </style>
 
-
-<section>
+<section class="stack" >
     <h2>Friends</h2>
     <ul class="button-list">
-        {%- for item in buttons.marquee -%}
-        <li>
-            <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/{{item.img}}"
+        {%- for item in buttons.friends -%}
+            <li>
+                <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/friends/{{item.img}}"
                     alt="{{item.title}} button"></a>
-        </li>
+            </li>
         {%- endfor -%}
     </ul>
     <h2>Sites I like</h2>
     <ul class="button-list">
         {%- for item in buttons.likes -%}
-        <li>
-            <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/{{item.img}}"
+            <li>
+                <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/{{item.img}}"
                     alt="{{item.title}} button"></a>
-        </li>
+            </li>
         {%- endfor -%}
     </ul>
 </section>

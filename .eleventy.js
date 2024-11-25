@@ -19,6 +19,7 @@ export default async function (eleventyConfig) {
 
   /* layout aliases */
   eleventyConfig.addLayoutAlias("base", "base.njk");
+  eleventyConfig.addLayoutAlias("page", "page.njk");
   eleventyConfig.addLayoutAlias("post", "post.njk");
 
   /* filters */

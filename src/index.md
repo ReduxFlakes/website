@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: base
+description: Fireplace in the mall
 style: true
 ---
 
@@ -12,9 +13,15 @@ Welcome to my new personal website! Yes, I've redesigned it again since I wasn't
 
 ## Latest Additions
 
-<ul>
-{%- for post in collections.all -%}
-  <li><a href="{{ post.url }}">{{ post.url }}</a></li>
+<ul class="card-list">
+{%- for post in collections.all | reverse -%}
+  <li class="card-list-item">
+  <a href="{{ post.url }}">
+  <h3>
+  {{ post.data.title }}</h3>
+  <p>{{post.data.description}}</p>
+  </a>
+  </li>
 {%- endfor -%}
 </ul>
 

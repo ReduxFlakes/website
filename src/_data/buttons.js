@@ -1,4 +1,16 @@
 export default {
+  friends: [
+    {
+      title: "LRS",
+      img: "LRS.gif",
+      url: "https://lastroseofsummer.neocities.org",
+    },
+    {
+      title: "OpenBooks",
+      img: "openbooks.gif",
+      url: "https://openbooks.neocities.org",
+    },
+  ],
   likes: [
     {
       title: "Melankorin",
