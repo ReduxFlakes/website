@@ -15,4 +15,7 @@ export default {
   min: (...numbers) => {
     return Math.min.apply(null, numbers);
   },
+  revert: (array) => {
+    return array.reverse();
+  },
 };
