@@ -20,6 +20,11 @@ export default [
     icon: "blueprint",
   },
   {
+    title: "gaming",
+    url: "/gaming/",
+    icon: "blueprint",
+  },
+  {
     title: "extras",
     url: "/shrines/",
     icon: "star",
