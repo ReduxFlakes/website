@@ -46,6 +46,13 @@ export default async function (eleventyConfig) {
   md.use(markdownItFootnote);
   eleventyConfig.setLibrary("md", md);
 
+  /* collections */
+  eleventyConfig.addCollection("latestContent", function (collectionsApi) {
+    return collectionsApi.getAll().sort(function (a, b) {
+      return b.date - a.date;
+    });
+  });
+
   /* shortcodes */
   /* a way to make slots work inside content pages: https://danburzo.ro/eleventy-slotted-content/*/
   const slots = {};

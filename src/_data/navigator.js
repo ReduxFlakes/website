@@ -5,12 +5,12 @@ export default [
     icon: "home",
   },
   {
-    title: "posts",
-    url: "/posts/",
+    title: "writing",
+    url: "/writing/",
     icon: "posts",
   },
   {
-    title: "bookmarks",
+    title: "resources",
     url: "/bookmarks/",
     icon: "bookmark",
   },
@@ -20,23 +20,8 @@ export default [
     icon: "blueprint",
   },
   {
-    title: "shrines",
+    title: "extras",
     url: "/shrines/",
     icon: "star",
-  },
-  {
-    title: "design",
-    url: "/design/",
-    icon: "paint",
-  },
-  {
-    title: "now",
-    url: "/now/",
-    icon: "clock_history",
-  },
-  {
-    title: "uses",
-    url: "/uses/",
-    icon: "generic_pc",
   },
 ];
