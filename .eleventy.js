@@ -47,10 +47,14 @@ export default async function (eleventyConfig) {
   eleventyConfig.setLibrary("md", md);
 
   /* collections */
-  eleventyConfig.addCollection("latestContent", function (collectionsApi) {
-    return collectionsApi.getAll().sort(function (a, b) {
+  eleventyConfig.addCollection("latestContent", function (collectionApi) {
+    return collectionApi.getAll().sort(function (a, b) {
       return b.date - a.date;
     });
+  });
+
+  eleventyConfig.addCollection("blog", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("pages/writings/blog/content/*.md");
   });
 
   /* shortcodes */

@@ -1,25 +1,139 @@
-<aside class="sidebar highway stack" style="--spacer:0.75em;">
-    <h2>Highway</h2>
-    <p>A place of quick links around the website.</p>
-    <h2>Webrings</h2>
-    <section>
-        <h3>
-            <a href="https://neossg.neocities.org/" style="color:var(--info)">NeoSSG 🌐</a>
-        </h3>
-        <div id="neossg">
-            <span class="webring-prev">
-                <a href="https://flamedfury.com/">&lt;&lt;</a>
-            </span>
-            <span class="webring-info">
-                <a href="https://neossg.neocities.org">NeoSSG</a>
-            </span>
-            <span class="webring-next">
-                <a href="https://bytemoth.neocities.org/webrings/">&gt;&gt;</a>
-            </span>
-            <script src="https://neossg.neocities.org/onionring-variables.js" async=""></script>
-            <script src="https://neossg.neocities.org/onionring-widget.js" async=""></script>
+<aside class="sidebar highway">
+    <section class="aside-card">
+        <h2>Webmaster</h2>
+        <div class="info-card">
+            <img src="/public/branding/pfp.png" alt="ReduxFlakes cross-propeller logo in pink" width="76px"
+                height="76px">
+            <div style="display:flex;justify-content:center;flex-direction:column;">
+                <p style="font-size:1.15rem;color:var(--type-strong);">
+                    ReduxFlakes <span style="font-size:1.05rem;color:var(--type-subtle);">he/him</span>
+                </p>
+                <span style="display:flex;gap:0.5em;align-items:flex-end;font-size:1.15rem;color:#6CC853;"
+                    title="Current Mood"><img src="{{meta.mood.emoji}}" alt="{{meta.mood.feeling}} emoji" width="32px"
+                        height="32px">
+                    {{meta.mood.feeling}}</span>
+            </div>
         </div>
     </section>
-    <h2>Currently listening</h2>
-    {% include "components/lastfm.njk" %}
+    <section class="aside-card">
+        {% include "components/lastfm.html" %}
+    </section>
+    <section class="aside-card">
+        <h2>Webrings</h2>
+        <div style="display:grid;grid-template-columns:repeat(2, 1fr);">
+            {% if env.environment == "production" %}
+            <p class="webring-label">neossg</p>
+            <p class="webring-container">
+            <div id='neossg'>
+                <script type="text/javascript" src="https://neossg.neocities.org/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://neossg.neocities.org/onionring-widget.js"></script>
+            </div>
+            </p>
+            {% endif %}
+            <p class="webring-label">null</p>
+            <p class="webring-container null">
+                <script src="https://nuthead.neocities.org/ring/ring.js"></script>
+            </p>
+            <p class="webring-label">no ai</p>
+            <p class="webring-container">
+                <a href="https://baccyflap.com/noai/?prv&s=rzr" target="_top" class="icon-button">
+                    <span class="lucide--arrow-left"></span>
+                </a>
+                <a href="https://baccyflap.com/noai" target="_blank" ref="noopener" class="icon-button">
+                    <span class="lucide--globe"></span></a>
+                <a href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" class="icon-button">
+                    <span class="lucide--arrow-right"></span>
+                </a>
+
+            </p>
+        </div>
+    </section>
+    <section class="aside-card">
+        <h2>Socials</h2>
+        <div class="button-grid">
+            {% for btn in meta.socials %}
+            <a href="{{btn.url}}"><img src="/public/img/buttons/general/{{btn.img}}" alt="{{btn.name}} button"
+                    width="88px" height="31px" loading="lazy" class="classic-button"></a>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="aside-card">
+        <h2>Favourite Quote</h2>
+        <blockquote>
+            <p class="citation">
+                “An <strong>idiot</strong> admires <strong>complexity</strong>, while a <strong>genius</strong>
+                appreciates <strong>simplicity</strong>”
+            </p>
+            <p class="author">
+                - Terry A. Davis</p>
+        </blockquote>
+    </section>
+    <section class="aside-card">
+        <h2>Shitpost Zone</h2>
+        <div style="display:flex;align-items:center;height:250px;overflow: hidden;">
+            <img src="" alt="Loading" id="shitpost-viewer">
+        </div>
+    </section>
+    <script>
+        const shitpost = [
+            "https://media1.tenor.com/m/Y4gVSiVvTRsAAAAd/cat-meme.gif",
+            "https://media1.tenor.com/m/lcH4lwQ0OY4AAAAd/angry-birds-real-angry-birds.gif",
+            "https://media1.tenor.com/m/85lZEBSQv1EAAAAd/in-shock.gif",
+            "https://media1.tenor.com/m/bhbZ-twx4-AAAAAC/jimmybutlerlookingatpaper.gif",
+            "https://c.tenor.com/RI1R-IYwo48AAAAC/tenor.gif",
+            "https://media1.tenor.com/m/04GE711i7WgAAAAC/ocean-sea.gif"
+        ];
+        let image = document.getElementById("shitpost-viewer");
+        let counter = 0;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            image.src = shitpost[0];
+            counter = 1;
+            setInterval(function () {
+                image.src = shitpost[counter];
+                image.alt = shitpost[counter];
+                if (counter < shitpost.length - 1) {
+                    counter += 1;
+                } else {
+                    image.src = shitpost[counter];
+                    counter = 0;
+                }
+            }, 3000);
+        });
+    </script>
 </aside>
+<style>
+    .webring-container {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .webring-label {
+        color: var(--type-strong);
+        font-size: 1.4rem;
+    }
+
+    #neossg .webring-next a,
+    #neossg .webring-prev a,
+    .null a {
+        display: flex;
+        padding: 0.25rem 0.75rem;
+        border: 1px solid var(--stroke);
+        text-decoration: none;
+        color: var(--type-subtle);
+    }
+
+    #neossg .webring-next a:hover,
+    #neossg .webring-prev a:hover,
+    .null a:hover {
+        background: var(--background-state);
+    }
+
+    .button-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+</style>

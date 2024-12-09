@@ -1,20 +1,23 @@
 @import url("base.css");
 @import url("ui.css");
+@import url(icons.css);
 
 .wrapper {
-  --sidebar-width: 14rem;
+  --content-aside: 15.5rem;
+  --highway-aside: 17.5rem;
   max-width: var(--viewport);
-  margin: 0 auto;
+  margin: 1rem auto;
   display: grid;
-  gap: 0.5em;
-  grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: var(--highway-aside) 1fr var(--content-aside);
+  grid-template-rows: auto auto auto 1fr auto;
   grid-template-areas:
     "navigator navigator navigator"
     "highway header header"
+    "highway fancy-bar fancy-bar"
     "highway content aside"
-    "footer footer aside";
-  padding-block-end: 1rem;
+    "footer footer footer";
+  background: var(--background);
+  border: 1px solid var(--stroke);
 }
 
 .main-header {
@@ -23,49 +26,71 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
   background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.65) 50%
-    ),
-    url("/public/img/site/banner.gif");
-  background-size: cover;
-  background-position: center;
-  padding: 1rem;
-  border-radius: var(--rad);
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25), inset 0px 0px 3px 0px white;
+    90deg,
+    #330f27 0%,
+    #330f15 10%,
+    #331c0f 20%,
+    #332c0f 30%,
+    #2b330f 40%,
+    #21330f 50%,
+    #15330f 60%,
+    #0f3316 70%,
+    #0f3322 80%,
+    #0f3331 90%,
+    #0f2033 100%
+  );
+  border-bottom: 1px solid var(--stroke);
 }
 
 .main-header h1 {
   font-size: 3rem;
   font-weight: bold;
-  letter-spacing: -0.04em;
-  color: white;
-  mix-blend-mode: difference;
+  letter-spacing: -0.025em;
+  text-transform: lowercase;
+  background: linear-gradient(90deg, #b8ea92 0%, #b2eea6 52%, #8ef5d4 100%);
+  color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main-header p {
   text-transform: lowercase;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   letter-spacing: -0.025em;
-  color: hsla(0, 0%, 100%, 0.75);
+  color: hsla(101, 100%, 87%, 0.85);
+}
+
+.color-bar {
+  grid-area: fancy-bar;
+  border-bottom: 1px solid var(--stroke);
+  overflow: hidden;
+}
+
+.color-bar .marquee3k__wrapper {
+  display: flex;
+}
+
+.color-bar .marquee3k__copy {
+  display: flex !important;
 }
 
 .highway {
   grid-area: highway;
+  border-right: 1px solid var(--stroke);
 }
 
 .aside {
   grid-area: aside;
+  border-left: 1px solid var(--stroke);
 }
 
 main {
   grid-area: content;
-  border-radius: var(--rad);
-  background: rgba(38, 38, 38, 0.75);
-  backdrop-filter: blur(4px);
-  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 4px 0px,
-    inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--stroke);
 }
 
 main > article {
@@ -74,11 +99,42 @@ main > article {
 
 .aside {
   grid-area: aside;
-  font-size: 0.9em;
 }
 
 .main-footer {
   grid-area: footer;
+}
+
+button,
+.button {
+  display: block;
+  width: fit-content;
+  text-align: left;
+  background: rgb(175, 175, 175);
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey,
+    inset 2px 2px #dfdfdf, 1px 1px 0.5px 0px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: transparent;
+  font-family: monospace;
+  letter-spacing: -0.5px;
+  font-size: 14px;
+  padding: 0.25em 0.75em;
+  text-shadow: 0 0 #222;
+}
+
+button:focus,
+.button:focus {
+  outline: 1px dotted #000;
+  outline-offset: -4px;
+}
+
+button:active,
+.button:active {
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px grey;
+  text-shadow: 1px 1px #222;
 }
 
 .grayscale {
@@ -112,36 +168,4 @@ main > article {
   100% {
     filter: grayscale(0);
   }
-}
-
-button,
-.button {
-  display: block;
-  width: fit-content;
-  text-align: left;
-  background: rgb(175, 175, 175);
-  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey,
-    inset 2px 2px #dfdfdf, 1px 1px 0.5px 0px rgba(0, 0, 0, 0.1);
-  border: none;
-  border-radius: 0;
-  box-sizing: border-box;
-  color: transparent;
-  font-family: monospace;
-  letter-spacing: -0.5px;
-  font-size: 14px;
-  padding: 0.25em 0.75em;
-  text-shadow: 0 0 #222;
-}
-
-button:focus,
-.button:focus {
-  outline: 1px dotted #000;
-  outline-offset: -4px;
-}
-
-button:active,
-.button:active {
-  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
-    inset -2px -2px #dfdfdf, inset 2px 2px grey;
-  text-shadow: 1px 1px #222;
 }

@@ -1,0 +1,71 @@
+{% css "lastfm" %}
+.heading-status {
+display: flex;
+align-items: center;
+gap:0.25em;
+}
+
+.status-signal {
+width: 1rem;
+height: 1rem;
+background: gray;
+border-radius: 5rem;
+}
+
+#music-link {
+font-weight: 500;
+color: var(--type-strong);
+}
+
+#album-name {
+color: var(--type-subtle)
+}
+{% endcss %}
+
+<h2 class="heading-status">
+    <div class="status-signal" id="playing-status-signal"></div>
+    <span id="playing-status">Loading</span>
+</h2>
+<div class="info-card">
+    <img id="album-cover" src="" alt="Album cover art" width="76px" height="76px" />
+    <div id="lastfm_meta">
+        <a id="music-link" target="_blank" rel="noopener" href="#"></a>
+        <p id="artist-name"></p>
+        <p id="album-name"></p>
+    </div>
+</div>
+<script>
+    const username = "reduxflakes";
+    const api_key = "c59918e6eac0070e14ca1db741ed8bcf";
+    const getUserData = () => {
+        fetch(
+            `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${api_key}&format=json`
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                let track = data.recenttracks.track[0];
+                let trackName = track.name;
+                let albumName = track.album["#text"];
+                let artistName = track.artist["#text"];
+                let albumCover = track.image[3]["#text"];
+                let isPlaying = track["@attr"] && track["@attr"].nowplaying === "true";
+                document.getElementById("music-link").innerText = trackName;
+
+                document.getElementById(
+                    "music-link"
+                ).href = `https://www.last.fm/music/${encodeURIComponent(
+                    artistName
+                )}/_/${encodeURIComponent(trackName)}`;
+                document.getElementById("album-name").innerText = albumName;
+                document.getElementById("artist-name").innerText = artistName;
+                document.getElementById("album-cover").src = albumCover;
+                document.getElementById("playing-status").innerText = isPlaying
+                    ? "Now Listening"
+                    : "Recently played:";
+                document.getElementById("playing-status-signal").style.background = isPlaying ? "#40EB9C" : "#414141";
+            });
+    };
+    getUserData();
+    // Update the widget every 10 seconds
+    setInterval(getUserData, 100 * 1000);
+</script>

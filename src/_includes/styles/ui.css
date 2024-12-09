@@ -1,21 +1,18 @@
 .navigator {
   grid-area: navigator;
-  border: 1px solid gray;
-  border-top: 0;
-  background: rgb(31, 31, 31);
   display: flex;
   align-items: center;
   overflow: hidden;
-  box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 0 0 var(--rad) var(--rad);
+  border-bottom: 1px solid var(--stroke);
 }
 
 .navigator .brand {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: white;
-  background: var(--container);
-  padding-inline: 0.75rem;
-  padding-block: 0.2rem;
+  padding-inline: 1rem;
+  padding-block: 0.3rem;
+  border-right: 1px solid var(--stroke);
+  background: var(--backdrop);
 }
 
 .navigator a {
@@ -23,37 +20,39 @@
   align-items: center;
   gap: 0.5em;
   min-height: 100%;
-  padding-inline: 0.75em;
-  outline: 1px solid transparent;
-  transition: 135ms ease-in-out all;
+  padding-inline: 1em;
+  color: var(--type-strong);
+  text-decoration: none;
 }
 
 .navigator a:hover {
-  outline-color: var(--primary);
-  padding-inline: 1.5em;
-  background: black;
-  padding-inline: 1.25em;
-  outline-color: var(--primary);
+  background: var(--background-state);
 }
 
-.navigator a:hover img {
-  filter: saturate(1);
+/* components */
+.aside-card {
+  padding: 1rem;
+  border-bottom: 1px solid var(--stroke);
 }
 
-.highway,
-.aside,
-.main-footer {
-  background: var(--container);
+.aside-card > * + * {
+  margin-top: 0.5rem;
 }
 
-.highway,
-.aside {
-  padding: 0.75em;
-  border-radius: var(--rad);
+.aside-card h2 {
+  font-weight: 500;
 }
 
-.aside {
-  font-size: 0.9em;
+.icon-button {
+  display: flex;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--stroke);
+  text-decoration: none;
+  color: var(--type-subtle);
+}
+
+.icon-button:hover {
+  background: var(--background-state);
 }
 
 .experience-section {
@@ -116,4 +115,15 @@
 .card-list-item:hover {
   border-color: var(--primary);
   background: rgba(0, 0, 0, 0.5);
+}
+
+.info-card {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.classic-button {
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
 }

@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
   {% include "head.njk" %}
-  <body class="wrapper">
-    <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
-    {% include "toolbar.njk" %}
-    {% include "header.njk" %}
-    {% include "highway.njk" %}
-    <main id="main-content">
-      <article class="stack">{{content | safe }}</article>
-    </main>
-    {% include "aside.njk" %}
-    {% include "footer.njk" %}
-    <style>
-    </style>
+  <body>
+    <div class="wrapper">
+      <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
+      {% include "toolbar.njk" %}
+      {% include "header.njk" %}
+      {% include "highway.njk" %}
+      <main id="main-content">
+        <article class="stack">{{content | safe }}</article>
+      </main>
+      {% include "aside.njk" %}
+      {% include "footer.njk" %}
+    </div>
+    {% if marquee != false %}
+      <script src="/public/scripts/marquee3k.min.js"></script>
+      <script>
+        Marquee3k.init();
+      </script>
+    {% endif %}
   </body>
 </html>

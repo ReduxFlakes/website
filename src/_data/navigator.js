@@ -5,14 +5,9 @@ export default [
     icon: "home",
   },
   {
-    title: "writing",
-    url: "/writing/",
+    title: "writings",
+    url: "/writings/",
     icon: "posts",
-  },
-  {
-    title: "resources",
-    url: "/bookmarks/",
-    icon: "bookmark",
   },
   {
     title: "projects",
@@ -20,13 +15,18 @@ export default [
     icon: "blueprint",
   },
   {
-    title: "gaming",
-    url: "/gaming/",
-    icon: "blueprint",
+    title: "design",
+    url: "/design/",
+    icon: "paint",
   },
   {
     title: "extras",
     url: "/shrines/",
     icon: "star",
+  },
+  {
+    title: "about",
+    url: "/about/",
+    icon: "person",
   },
 ];

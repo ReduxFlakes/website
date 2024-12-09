@@ -5,25 +5,44 @@ description: Fireplace in the mall
 date: 2024-11-11T09:25:31.000Z
 ---
 
-<img src="/public/img/gifs/underconstruction.gif" alt="Yellow warning bar telling peopel the site is under construction" class="pixel full-img">
-
 {% renderTemplate "md" %}
 
 ## Welcome
 
-Welcome to my new personal website! Yes, I've redesigned it again since I wasn't "enjoying" my last design/layout, the reason was that, like other Neocities sites, I wanted something special and personal, and the last website was just a minimalist portoflio without any personality, now that doesn't mean the other version was scrapped since I liked the work I did on it, so that means I now have two personal websites, this one and a portfolio based on the older one.
+I'm ReduxFlakes (reduc for close friends), a software developer, designer, and privacy advocate from Portugal, and this is my zone on the internet.
+
+I'm a huge fan of old tech, gaming, minimalism, and music.
+
+## Latest Post
+
+{% endrenderTemplate %}
+
+{%- for post in collections.blog -%}
+  <section class="post-showcase">
+    <h3 class="ps-heading">{{ post.data.title }}</h3>
+    <div class="content">
+      <p>{{post.content}}</p>
+      <p>
+        <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
+        <a href="{{ post.url }}">Read more...</a>
+      </p>
+    </div>
+  </section>
+{%- endfor -%}
+
+{% renderTemplate "md" %}
 
 ## Latest Additions
 
 {% endrenderTemplate %}
 
 <ul class="card-list">
-  {%- for post in collections.latestContent  -%}
+  {%- for post in collections.latestContent | limit(3) -%}
     <li class="card-list-item">
       <a href="{{ post.url }}">
         <h3>
           {{ post.data.title }}</h3>
-        <p>{{post.data.description}}</p>
+        <p>{{ post.data.description }}</p>
       </a>
     </li>
   {%- endfor -%}

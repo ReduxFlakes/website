@@ -12,7 +12,7 @@ export default {
   dateToISO: (date) => {
     return new Date(date).toISOString();
   },
-  min: (...numbers) => {
-    return Math.min.apply(null, numbers);
+  limit: (arr, limit) => {
+    return arr.slice(0, limit);
   },
 };

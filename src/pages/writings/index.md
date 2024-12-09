@@ -1,0 +1,4 @@
+---
+title: Writings
+layout: base
+---
