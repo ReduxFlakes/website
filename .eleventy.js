@@ -46,6 +46,11 @@ export default async function (eleventyConfig) {
   md.use(markdownItFootnote);
   eleventyConfig.setLibrary("md", md);
 
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: "<!-- cut -->",
+  });
+
   /* collections */
   eleventyConfig.addCollection("latestContent", function (collectionApi) {
     return collectionApi.getAll().sort(function (a, b) {
@@ -53,8 +58,8 @@ export default async function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addCollection("blog", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("pages/writings/blog/content/*.md");
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/pages/writings/content/*.md");
   });
 
   /* shortcodes */

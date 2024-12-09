@@ -6,7 +6,8 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "build:prod": "cross-env BUILD_TYPE=production eleventy"
+    "build:prod": "cross-env BUILD_TYPE=production eleventy",
+    "debug": "cross-env DEBUG=Eleventy* eleventy --serve"
   },
   "keywords": [],
   "author": "reduxflakes",
@@ -15,7 +16,6 @@
     "@11ty/eleventy": "3.0.0",
     "@11ty/eleventy-img": "4.0.2",
     "@11ty/eleventy-navigation": "0.3.5",
-    "@11ty/eleventy-plugin-rss": "2.0.2",
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
     "eleventy-plugin-toc": "^1.1.5",
@@ -23,9 +23,9 @@
     "luxon": "^3.5.0",
     "markdown-it": "14.1.0",
     "markdown-it-anchor": "^9.2.0",
-    "markdown-it-attrs": "^4.2.0",
+    "markdown-it-attrs": "^4.3.0",
     "markdown-it-footnote": "^4.0.0",
-    "postcss": "^8.4.48",
+    "postcss": "^8.4.49",
     "postcss-import": "^16.1.0",
     "postcss-load-config": "^6.0.1",
     "postcss-minify": "^1.1.0"

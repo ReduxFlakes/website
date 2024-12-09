@@ -1,0 +1,4 @@
+{
+  "layout": "base",
+  "permalink": "/post/{{title | slugify}}/"
+}

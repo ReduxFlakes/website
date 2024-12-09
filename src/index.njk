@@ -3,6 +3,8 @@ title: Home
 layout: base
 description: Fireplace in the mall
 date: 2024-11-11T09:25:31.000Z
+eleventyImport:
+  ["posts"]
 ---
 
 {% renderTemplate "md" %}
@@ -17,13 +19,17 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
 
 {% endrenderTemplate %}
 
-{%- for post in collections.blog -%}
-  <section class="post-showcase">
-    <h3 class="ps-heading">{{ post.data.title }}</h3>
-    <div class="content">
-      <p>{{post.content}}</p>
+{%- for post in collections.posts -%}
+  <section class="showcase-card">
+    <h3 class="sc-heading">{{ post.data.title }}</h3>
+    <div class="content stack" style="--spacer: 0.25em;">
       <p>
-        <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
+        <small>
+          <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
+        </small>
+      </p>
+      <p>{{ post.data.page.excerpt }}</p>
+      <p>
         <a href="{{ post.url }}">Read more...</a>
       </p>
     </div>
