@@ -3,8 +3,7 @@ title: Home
 layout: base
 description: Fireplace in the mall
 date: 2024-11-11T09:25:31.000Z
-eleventyImport:
-  ["posts"]
+tabby: true
 ---
 
 {% renderTemplate "md" %}
@@ -19,7 +18,7 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
 
 {% endrenderTemplate %}
 
-{%- for post in collections.posts -%}
+{%- for post in collections.posts | reverse | limit(1) -%}
   <section class="showcase-card">
     <h3 class="sc-heading">{{ post.data.title }}</h3>
     <div class="content stack" style="--spacer: 0.25em;">
@@ -38,7 +37,29 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
 
 {% renderTemplate "md" %}
 
-## Latest Additions
+## Interests
+
+<div class="tabs-container">
+  <ul data-tabs>
+    <li>
+      <a data-tabby-default href="#likes">Likes</a>
+    </li>
+    <li>
+      <a href="#dislikes">Dislikes</a>
+    </li>
+  </ul>
+  <div id="likes" class="tabby-content">
+  
+  * UI design
+  * Blue, pink, and purple
+  * Valve games
+  * Minimalism design (modern and swiss)
+  * Pixel art
+  * Old tech
+  
+  </div>
+  <div id="dislikes" class="tabby-content">456</div>
+</div>
 
 {% endrenderTemplate %}
 
@@ -55,8 +76,6 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
 </ul>
 
 {% renderTemplate "md" %}
-
-## Stuff to do
 
 ## Projects
 

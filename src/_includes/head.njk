@@ -36,4 +36,13 @@
         {{ style_slot | safe }}
         {% endrenderTemplate %}
     {% endif %}
+    <noscript>
+        <style>
+            .shitpost-container {
+                display: none !important;
+                opacity: 0 !important;
+                height: 0 !important;
+            }
+        </style>
+    </noscript>
 </head>

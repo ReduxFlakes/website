@@ -13,6 +13,12 @@
       {% include "aside.njk" %}
       {% include "footer.njk" %}
     </div>
+    {% if tabby != false %}
+      <script src="/public/scripts/tabby.min.js"></script>
+      <script>
+        var tabs = new Tabby('[data-tabs]');
+      </script>
+    {% endif %}
     {% if marquee != false %}
       <script src="/public/scripts/marquee3k.min.js"></script>
       <script>

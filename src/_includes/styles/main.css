@@ -3,7 +3,7 @@
 @import url(icons.css);
 
 .wrapper {
-  --content-aside: 15.5rem;
+  --content-aside: 16.5rem;
   --highway-aside: 17.5rem;
   max-width: var(--viewport);
   margin: 1rem auto;

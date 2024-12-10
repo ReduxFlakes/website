@@ -1,7 +1,8 @@
-<aside class="aside stack">
-    <section class="aside-card">
+{%- from "util/component.njk" import component with context -%}
+<aside class="aside">
+    <section class="aside-card aside-card--expand">
         <h2 class="md-heading">Latest Posts</h2>
-        {% for post in collections.posts %}
+        {% for post in collections.posts | reverse %}
             <a href="{{post.url}}" class="card">
                 <section>
                     <h3>{{post.data.title}}</h3>
@@ -10,7 +11,39 @@
             </a>
         {% endfor %}
     </section>
-    <section class="aside-card"></section>
-    <section class="aside-card"></section>
-    <section class="aside-card"></section>
+    <section class="aside-card">
+        <h2 class="md-heading">Currently Working On</h2>
+        <ul style="padding-inline-start:0.85rem;font-size:0.95rem">
+            <li>SurfScape v2 release</li>
+            <li>Remastering music for YouTube</li>
+            <li>A Windows app</li>
+            <li>This website ;)</li>
+        </ul>
+    </section>
+    <section class="aside-card aside-card--expand">
+        <h2 class="md-heading">Gallery Showcase <span class="lucide--circle-help"></span></h2>
+        <div class="aside-card-content">
+            <p>No work to showcase today...</p>
+            {{ component('link-button', {href: post.url, title: "Check gallery", icon: "lucide--image"}) }}
+        </div>
+    </section>
+    <section class="aside-card aside-card--expand">
+        <h2 class="md-heading">Hits <span class="lucide--circle-help"></span></h2>
+        {% for hit in hits %}
+            <a href="{{hit.url}}" class="card" target="_blank" rel="noopener">
+                <section>
+                    <h3>{{hit.title}}</h3>
+                    <p>{{hit.displayUrl}}</p>
+                </section>
+            </a>
+        {% endfor %}
+    </section>
+    <section class="aside-card aside-card--expand">
+        <h2 class="md-heading">Guestbook <span class="lucide--circle-help"></span></h2>
+        <a href="guestbook.com" class="card" target="_blank" rel="noopener">
+            <section>
+                <h3>Sign in atabook.com</h3>
+            </section>
+        </a>
+    </section>
 </aside>

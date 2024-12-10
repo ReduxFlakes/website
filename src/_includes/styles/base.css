@@ -160,6 +160,7 @@ h6 {
   line-height: 1.2em;
 }
 
+h3,
 b,
 strong {
   font-weight: 500;
@@ -228,4 +229,8 @@ blockquote .author {
 
 time {
   color: var(--type-subtle);
+}
+
+ul {
+  padding-inline-start: 1rem;
 }

@@ -39,7 +39,7 @@
                 <a href="https://baccyflap.com/noai/?prv&s=rzr" target="_top" class="icon-button">
                     <span class="lucide--arrow-left"></span>
                 </a>
-                <a href="https://baccyflap.com/noai" target="_blank" ref="noopener" class="icon-button">
+                <a href="https://baccyflap.com/noai" target="_blank" rel="noopener" class="icon-button">
                     <span class="lucide--globe"></span></a>
                 <a href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" class="icon-button">
                     <span class="lucide--arrow-right"></span>
@@ -68,72 +68,77 @@
                 - Terry A. Davis</p>
         </blockquote>
     </section>
-    <section class="aside-card">
-        <h2>Shitpost Zone</h2>
-        <div style="display:flex;align-items:center;height:250px;overflow: hidden;">
-            <img src="" alt="Loading" id="shitpost-viewer">
-        </div>
-    </section>
-    <script>
-        const shitpost = [
-            "https://media1.tenor.com/m/Y4gVSiVvTRsAAAAd/cat-meme.gif",
-            "https://media1.tenor.com/m/lcH4lwQ0OY4AAAAd/angry-birds-real-angry-birds.gif",
-            "https://media1.tenor.com/m/85lZEBSQv1EAAAAd/in-shock.gif",
-            "https://media1.tenor.com/m/bhbZ-twx4-AAAAAC/jimmybutlerlookingatpaper.gif",
-            "https://c.tenor.com/RI1R-IYwo48AAAAC/tenor.gif",
-            "https://media1.tenor.com/m/04GE711i7WgAAAAC/ocean-sea.gif"
-        ];
-        let image = document.getElementById("shitpost-viewer");
-        let counter = 0;
+    {% if env.environment == "production" %}
+        <section class="aside-card">
+            <h2>Shitpost Zone</h2>
+            <div style="display:flex;align-items:center;height:250px;overflow: hidden;" class="shitpost-container">
+                <img src="" alt="Loading" id="shitpost-viewer">
+            </div>
+            <noscript>
+                <p>You need JavaScript to load the Shitpost Zone</p>
+            </noscript>
+        </section>
+        <script>
+            const shitpost = [
+                "https://media1.tenor.com/m/Y4gVSiVvTRsAAAAd/cat-meme.gif",
+                "https://media1.tenor.com/m/lcH4lwQ0OY4AAAAd/angry-birds-real-angry-birds.gif",
+                "https://media1.tenor.com/m/85lZEBSQv1EAAAAd/in-shock.gif",
+                "https://media1.tenor.com/m/bhbZ-twx4-AAAAAC/jimmybutlerlookingatpaper.gif",
+                "https://c.tenor.com/RI1R-IYwo48AAAAC/tenor.gif",
+                "https://media1.tenor.com/m/04GE711i7WgAAAAC/ocean-sea.gif"
+            ];
+            let image = document.getElementById("shitpost-viewer");
+            let counter = 0;
 
-        document.addEventListener('DOMContentLoaded', function () {
-            image.src = shitpost[0];
-            counter = 1;
-            setInterval(function () {
-                image.src = shitpost[counter];
-                image.alt = shitpost[counter];
-                if (counter < shitpost.length - 1) {
-                    counter += 1;
-                } else {
+            document.addEventListener('DOMContentLoaded', function () {
+                image.src = shitpost[0];
+                counter = 1;
+                setInterval(function () {
                     image.src = shitpost[counter];
-                    counter = 0;
-                }
-            }, 3000);
-        });
-    </script>
-</aside>
-<style>
-    .webring-container {
-        display: flex;
-        align-items: center;
-        gap: 0.25rem;
-    }
+                    image.alt = shitpost[counter];
+                    if (counter < shitpost.length - 1) {
+                        counter += 1;
+                    } else {
+                        image.src = shitpost[counter];
+                        counter = 0;
+                    }
+                }, 3000);
+            });
+        </script>
+        {%endif%}
+    </aside>
+    <style>
+        .webring-container {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
 
-    .webring-label {
-        color: var(--type-strong);
-        font-size: 1.4rem;
-    }
+        .webring-label {
+            color: var(--type-strong);
+            font-size: 1.4rem;
+        }
 
-    #neossg .webring-next a,
-    #neossg .webring-prev a,
-    .null a {
-        display: flex;
-        padding: 0.25rem 0.75rem;
-        border: 1px solid var(--stroke);
-        text-decoration: none;
-        color: var(--type-subtle);
-    }
+        #neossg .webring-next a,
+        #neossg .webring-prev a,
+        .null a {
+            display: flex;
+            padding: 0.25rem 0.75rem;
+            border: 1px solid var(--stroke);
+            text-decoration: none;
+            color: var(--type-subtle);
+        }
 
-    #neossg .webring-next a:hover,
-    #neossg .webring-prev a:hover,
-    .null a:hover {
-        background: var(--background-state);
-    }
+        #neossg .webring-next a:hover,
+        #neossg .webring-prev a:hover,
+        .null a:hover {
+            background: var(--background-state);
+        }
 
-    .button-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-</style>
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+    </style>

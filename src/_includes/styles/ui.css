@@ -52,6 +52,18 @@
   border-bottom: 1px solid var(--stroke);
 }
 
+.aside-card--expand {
+  padding-inline: 0;
+}
+
+.aside-card--expand h2 {
+  margin-left: 1rem;
+}
+/* only used when the aside card is using the expand modifier */
+.aside-card-content {
+  padding-inline: 1rem;
+}
+
 .aside-card > * + * {
   margin-top: 0.5rem;
 }
@@ -78,25 +90,65 @@
 }
 
 .icon-link {
-  display: flex;
+  --_link-accent: var(--link-accent, var(--type-subtle));
+  display: inline-flex;
   align-items: center;
   gap: 0.5em;
-  color: var(--type-subtle);
+  color: var(--_link-accent);
+  --base-color: var(--_link-accent);
 }
 
 .md-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-end: 1rem;
   border-bottom: 1px solid var(--type-strong);
 }
 
 .card {
   display: block;
-  padding: 0.25rem 0rem;
+  padding: 0.25rem 1rem;
+  margin-inline-end: 1rem;
   border-right: 6px solid var(--border);
   text-decoration: none;
 }
 
 .card:hover {
   background: var(--background-state);
+}
+
+.tabs-container {
+  border: 1px solid white;
+}
+
+.tabs-container ul[data-tabs] {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs-container ul[data-tabs] li {
+  width: 100%;
+}
+
+.tabs-container ul[data-tabs] li a {
+  display: block;
+  text-decoration: none;
+  color: var(--type-subtle);
+  border-bottom: 1px solid transparent;
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+}
+
+.tabs-container ul[data-tabs] li a[aria-selected="true"] {
+  color: var(--type-strong);
+  border-color: var(--stroke-strong);
+}
+
+.tabby-content {
+  padding: 0.75rem;
 }
 
 .classic-button {
