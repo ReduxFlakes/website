@@ -136,8 +136,16 @@ body {
 }
 
 ::selection {
-  background: rgba(74, 183, 238, 0.3);
+  background: #234455;
   color: #7eccf3;
+  background-clip: initial;
+  text-fill-color: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+img::selection {
+  background: hsla(256, 83%, 72%, 0.5);
 }
 
 a {

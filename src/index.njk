@@ -20,7 +20,8 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
 
 {%- for post in collections.posts | reverse | limit(1) -%}
   <section class="showcase-card">
-    <h3 class="sc-heading">{{ post.data.title }}</h3>
+    <h3 class="sc-heading">
+      <span>{{ post.data.title }}</span></h3>
     <div class="content stack" style="--spacer: 0.25em;">
       <p>
         <small>

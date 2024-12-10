@@ -38,9 +38,8 @@
 .sc-heading {
   background: var(--type-strong);
   color: var(--backdrop);
-  writing-mode: sideways-lr;
-  text-orientation: sideways;
   padding: 0.25em;
+  writing-mode: vertical-lr;
 }
 
 .showcase-card .content {
