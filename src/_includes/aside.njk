@@ -1,9 +1,16 @@
 <aside class="aside stack">
-    <section class="stack experience-section">
-        <h2>Experiences</h2>
-        {% for item in experiences %}
-            <a href="{{item.url}}" style="background-image:url(/public/img/expo/{{item.img}})">{{item.title}}</a>
+    <section class="aside-card">
+        <h2 class="md-heading">Latest Posts</h2>
+        {% for post in collections.posts %}
+            <a href="{{post.url}}" class="card">
+                <section>
+                    <h3>{{post.data.title}}</h3>
+                    <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
+                </section>
+            </a>
         {% endfor %}
     </section>
-    {% include "components/button-list.njk" %}
+    <section class="aside-card"></section>
+    <section class="aside-card"></section>
+    <section class="aside-card"></section>
 </aside>

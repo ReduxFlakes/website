@@ -51,6 +51,13 @@ export default async function (eleventyConfig) {
     excerpt_separator: "<!-- cut -->",
   });
 
+  eleventyConfig.addPreprocessor("macro-inject", "njk,md", (data, content) => {
+    return (
+      `{%- from "util/component.njk" import component with context -%}\n` +
+      content
+    );
+  });
+
   /* collections */
   eleventyConfig.addCollection("latestContent", function (collectionApi) {
     return collectionApi.getAll().sort(function (a, b) {
@@ -111,6 +118,7 @@ export default async function (eleventyConfig) {
 
   return {
     passthroughFileCopy: true,
+    markdownTemplateEngine: "njk",
     dir: {
       input: "src",
       includes: "_includes",

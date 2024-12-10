@@ -30,7 +30,7 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
       </p>
       <p>{{ post.data.page.excerpt }}</p>
       <p>
-        <a href="{{ post.url }}">Read more...</a>
+        {{ component('link-button', {href: post.url, title: "Read more..." }) }}
       </p>
     </div>
   </section>

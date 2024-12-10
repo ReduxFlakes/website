@@ -225,3 +225,7 @@ blockquote .citation {
 blockquote .author {
   font-style: italic;
 }
+
+time {
+  color: var(--type-subtle);
+}

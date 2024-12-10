@@ -77,6 +77,28 @@
   gap: 0.5rem;
 }
 
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--type-subtle);
+}
+
+.md-heading {
+  border-bottom: 1px solid var(--type-strong);
+}
+
+.card {
+  display: block;
+  padding: 0.25rem 0rem;
+  border-right: 6px solid var(--border);
+  text-decoration: none;
+}
+
+.card:hover {
+  background: var(--background-state);
+}
+
 .classic-button {
   width: 88px;
   height: 31px;
