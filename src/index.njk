@@ -62,34 +62,66 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
   <div id="dislikes" class="tabby-content">456</div>
 </div>
 
+## More Stuff :)
+
 {% endrenderTemplate %}
 
-<ul class="card-list">
-  {%- for post in collections.latestContent | limit(3) -%}
-    <li class="card-list-item">
-      <a href="{{ post.url }}">
+<div class="tabs-container">
+  <ul data-tabs>
+    <li>
+      <a data-tabby-default href="#additions">Recent additions</a>
+    </li>
+    <li>
+      <a href="#friends">Friends</a>
+    </li>
+    <li>
+      <a href="#bestof">Best of the month</a>
+    </li>
+    <li>
+      <a href="#todo">Site To-Do</a>
+    </li>
+  </ul>
+  <div id="additions" class="tabby-content card-list" style="--minsize:150px;">
+    {%- for post in collections.latestContent | limit(3) -%}
+      <a class="card" href="{{ post.url }}">
         <h3>
           {{ post.data.title }}</h3>
         <p>{{ post.data.description }}</p>
       </a>
-    </li>
-  {%- endfor -%}
-</ul>
+    {%- endfor -%}
+  </div>
+  <div id="friends" class="tabby-content">213</div>
+  <div id="bestof" class="tabby-content">123</div>
+  <div id="todo" class="tabby-content">13</div>
+</div>
 
 {% renderTemplate "md" %}
 
-## Projects
+## Ramblings <small style="color:var(--type-subtle)">(AKA Small)</small>
 
 {% endrenderTemplate %}
 
-<ul class="card-list">
-  {%- for item in projects  -%}
-    <li class="card-list-item">
-      <a href="{{ item.url }}">
-        <h3>
-          {{ item.title }}</h3>
-        <p>{{item.description}}</p>
-      </a>
-    </li>
-  {%- endfor -%}
-</ul>
+{%- for post in collections.posts | reverse | limit(1) -%}
+  <section class="showcase-card showcase-card--scroller">
+    <div class="showcase-scroller">
+      <ul data-tabs>
+        {% for note in notes %}
+          {% if loop.index0 == 0 %}
+            <li>
+              <a data-tabby-default href="#{{note.title | slugify}}">{{note.title}}</a>
+            </li>
+          {% else %}
+            <li>
+              <a href="#{{note.title | slugify}}">{{note.title}}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% for note in notes %}
+      <div class="content stack" style="--spacer: 0.25em;" id="{{note.title | slugify}}">
+        <p>{{ note.content }}</p>
+      </div>
+    {% endfor %}
+  </section>
+{%- endfor -%}

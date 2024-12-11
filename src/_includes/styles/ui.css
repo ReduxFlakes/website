@@ -15,7 +15,16 @@
   background: var(--backdrop);
 }
 
-.navigator a {
+.navigator-nav {
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.navigator-nav a {
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -24,7 +33,6 @@
   color: var(--type-strong);
   text-decoration: none;
 }
-
 .navigator a:hover {
   background: var(--background-state);
 }
@@ -32,6 +40,7 @@
 /* components */
 .showcase-card {
   display: flex;
+  align-items: stretch;
   border: 1px solid var(--stroke-strong);
 }
 
@@ -40,6 +49,7 @@
   color: var(--backdrop);
   padding: 0.25em;
   writing-mode: vertical-lr;
+  transform: scale(-1, -1);
 }
 
 .showcase-card .content {
@@ -105,10 +115,15 @@
   border-bottom: 1px solid var(--type-strong);
 }
 
+.card-list {
+  --_minsize: var(--minsize, 250px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--_minsize), 1fr));
+}
+
 .card {
   display: block;
-  padding: 0.25rem 1rem;
-  margin-inline-end: 1rem;
+  padding: 0.75rem;
   border-right: 6px solid var(--border);
   text-decoration: none;
 }
@@ -117,11 +132,16 @@
   background: var(--background-state);
 }
 
+.aside-card--expand .card {
+  padding: 0.25rem 1rem;
+  margin-inline-end: 1rem;
+}
+
 .tabs-container {
   border: 1px solid white;
 }
 
-.tabs-container ul[data-tabs] {
+ul[data-tabs] {
   display: flex;
   list-style-type: none;
   margin: 0;
@@ -146,8 +166,22 @@
   border-color: var(--stroke-strong);
 }
 
+.tabby-content[hidden="hidden"] {
+  display: none;
+}
+
 .tabby-content {
   padding: 0.75rem;
+}
+
+.showcase-card--scroller {
+  display: grid;
+  grid-template-columns: 172px 1fr;
+}
+
+.showcase-scroller ul[data-tabs] {
+  flex-direction: column;
+  border-right: 1px solid var(--stroke-strong);
 }
 
 .classic-button {

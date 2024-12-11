@@ -1,24 +1,7 @@
-@import url("base.css");
-@import url("ui.css");
+@import url(base.css);
+@import url(ui.css);
 @import url(icons.css);
-
-.wrapper {
-  --content-aside: 16.5rem;
-  --highway-aside: 17.5rem;
-  max-width: var(--viewport);
-  margin: 1rem auto;
-  display: grid;
-  grid-template-columns: var(--highway-aside) 1fr var(--content-aside);
-  grid-template-rows: auto auto auto 1fr auto;
-  grid-template-areas:
-    "navigator navigator navigator"
-    "highway header header"
-    "highway fancy-bar fancy-bar"
-    "highway content aside"
-    "footer footer footer";
-  background: var(--background);
-  border: 1px solid var(--stroke);
-}
+@import url(responsive.css);
 
 .main-header {
   grid-area: header;
@@ -68,6 +51,10 @@
   grid-area: fancy-bar;
   border-bottom: 1px solid var(--stroke);
   overflow: hidden;
+}
+
+.color-bar > div {
+  display: flex;
 }
 
 .color-bar .marquee3k__wrapper {

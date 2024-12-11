@@ -1,8 +1,10 @@
-<nav class="navigator">
+<header class="navigator">
     <strong class="brand">reduxflakes</strong>
-    {% for item in navigator %}
-        <a href="{{item.url}}">
-            <img src="/public/icons/{{item.icon}}.png" alt="{{item.title}} icon" width="18px" height="18px">
-            {{item.title}}</a>
-    {% endfor %}
-</nav>
+    <nav class="navigator-nav">
+        {% for item in navigator %}
+            <a href="{{item.url}}">
+                <img src="/public/icons/{{item.icon}}.png" alt="{{item.title}} icon" width="18px" height="18px">
+                {{item.title}}</a>
+        {% endfor %}
+    </nav>
+</header>
