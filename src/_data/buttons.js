@@ -6,9 +6,24 @@ export default {
       url: "https://lastroseofsummer.neocities.org",
     },
     {
+      title: "Leilukin's Hub",
+      img: "leilukins-hub.png",
+      url: "https://leilukin.neocities.org",
+    },
+    {
       title: "OpenBooks",
       img: "openbooks.gif",
       url: "https://openbooks.neocities.org",
+    },
+    {
+      title: "fLaMEd fury",
+      img: "fury.gif",
+      url: "https://flamedfury.com/",
+    },
+    {
+      title: "Bulltown.neo",
+      img: "bulltown.png",
+      url: "https://bulltown.neocities.org",
     },
   ],
   likes: [

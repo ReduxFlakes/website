@@ -7,7 +7,7 @@
       {% include "toolbar.njk" %}
       {% include "header.njk" %}
       {% include "highway.njk" %}
-      <main id="main-content">
+      <main id="main-content" {% if bg %}style="background:{{bg}}"{% endif %}>
         <article class="stack">{{content | safe }}</article>
       </main>
       {% include "aside.njk" %}

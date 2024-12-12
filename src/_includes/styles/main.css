@@ -1,7 +1,6 @@
 @import url(base.css);
 @import url(ui.css);
 @import url(icons.css);
-@import url(responsive.css);
 
 .main-header {
   grid-area: header;
@@ -67,12 +66,10 @@
 
 .highway {
   grid-area: highway;
-  border-right: 1px solid var(--stroke);
 }
 
 .aside {
   grid-area: aside;
-  border-left: 1px solid var(--stroke);
 }
 
 main {
@@ -89,7 +86,31 @@ main > article {
 }
 
 .main-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--type-subtle);
   grid-area: footer;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--stroke);
+  font-size: 0.9em;
+  gap: 0.5em;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.75em;
+}
+
+.footer-nav a {
+  color: var(--type-subtle);
+  text-decoration: none;
+}
+.footer-nav a:hover {
+  text-decoration: underline dotted;
 }
 
 button,
@@ -155,4 +176,12 @@ button:active,
   100% {
     filter: grayscale(0);
   }
+}
+
+.auto-grid {
+  --_minsize: var(--minsize, 250px);
+  --_gridgap: var(--gridgap, 0);
+  display: grid;
+  gap: var(--_gridgap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--_minsize), 1fr));
 }

@@ -1,8 +1,13 @@
 <footer class="main-footer">
-    <span>&copy; 2024 ReduxFlakes</span>
+    <div>
+        <p>&copy; 2021 - 2024 ReduxFlakes. <a href="7about/license/">License and attribution</a>
+        </p>
+        <p>Built with <a href="https://www.11ty.dev/">11ty</a> and procrastination, and hosted for free thanks to <a href="https://neocities.org/">Neocities</a>.
+        </p>
+    </div>
     <nav class="footer-nav">
         {% for item in navlink.footer %}
-            | <a href="{{item.url}}">{{item.title}}</a>
+            <a href="{{item.url}}">{{item.title}}</a>
         {% endfor %}
     </nav>
 </footer>

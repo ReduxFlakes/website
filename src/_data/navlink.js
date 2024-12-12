@@ -12,14 +12,13 @@ export default {
       title: "Privacy Statement",
       url: "/privacy/",
     },
-
-    {
-      title: "About",
-      url: "/about/",
-    },
     {
       title: "Credits & Tools",
       url: "/about/site/",
+    },
+    {
+      title: "About",
+      url: "/about/",
     },
   ],
 };

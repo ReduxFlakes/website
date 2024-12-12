@@ -1,6 +1,6 @@
 :root {
   --font: "Neue Haas Grotesk Display Pro", "Helvetica", "Ubuntu", system-ui;
-  --viewport: 1200px;
+  --viewport: 1250px;
   --backdrop: #000000;
   --background: #121212;
   --background-state: hsla(0, 0%, 100%, 0.075);

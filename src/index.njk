@@ -81,18 +81,29 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
       <a href="#todo">Site To-Do</a>
     </li>
   </ul>
-  <div id="additions" class="tabby-content card-list" style="--minsize:150px;">
+  <div id="additions" class="tabby-content tabby-content--expand auto-grid" style="--minsize:150px;">
     {%- for post in collections.latestContent | limit(3) -%}
-      <a class="card" href="{{ post.url }}">
+      <a class="card card--breath" href="{{ post.url }}">
         <h3>
           {{ post.data.title }}</h3>
         <p>{{ post.data.description }}</p>
       </a>
     {%- endfor -%}
   </div>
-  <div id="friends" class="tabby-content">213</div>
+  <div id="friends" class="tabby-content button-grid">
+    {% for button in buttons.friends %}
+      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" class="classic-button"></a>
+    {% endfor %}
+  </div>
   <div id="bestof" class="tabby-content">123</div>
-  <div id="todo" class="tabby-content">13</div>
+  <div id="todo" class="tabby-content">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
 </div>
 
 {% renderTemplate "md" %}
