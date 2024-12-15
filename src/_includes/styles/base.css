@@ -242,3 +242,32 @@ time {
 ul {
   padding-inline-start: 1rem;
 }
+
+hr {
+  border-color: var(--stroke);
+}
+
+details summary {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  user-select: none;
+  padding: 0.75rem 1rem;
+}
+
+details summary::before {
+  height: 22px;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22px' height='22px' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Crect width='18' height='18' x='3' y='3' rx='2'/%3E%3Cpath d='M8 12h8m-4 4l4-4l-4-4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+details[open] summary::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22px' height='22px' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Crect width='18' height='18' x='3' y='3' rx='2'/%3E%3Cpath d='M12 8v8m-4-4l4 4l4-4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+details summary:hover {
+  background: var(--background-state);
+}
+
+details .details-content {
+  padding: 0.5rem;
+}
