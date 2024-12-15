@@ -17,6 +17,9 @@ importers:
       '@11ty/eleventy-navigation':
         specifier: 0.3.5
         version: 0.3.5
+      '@uncenter/eleventy-plugin-toc':
+        specifier: ^1.0.3
+        version: 1.0.3
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -271,6 +274,10 @@ packages:
   '@types/mdurl@2.0.0':
     resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
 
+  '@uncenter/eleventy-plugin-toc@1.0.3':
+    resolution: {integrity: sha512-cKWlG3lnd9WcFwHfq0gKLPrbe0FYlVlkvxIId/8YD/zyZZdQMTlskjLDw27p9m6x9pL+nCwX2R/Ha2uTgsdrvQ==}
+    engines: {node: '>=16.0.0'}
+
   a-sync-waterfall@1.0.1:
     resolution: {integrity: sha512-RYTOHHdWipFUliRFMCS4X2Yn2X8M87V/OpSqWzKKOGhzqyUxzyVmhHDH9sAvG+ZuQf/TAOFsLCpMw09I1ufUnA==}
 
@@ -399,6 +406,10 @@ packages:
   cheerio@1.0.0:
     resolution: {integrity: sha512-quS9HgjQpdaXOvsZz82Oz7uxtXiy6UIsIQcpBj7HRw2M63Skasm9qlDocAM7jNuaxdhpPU7c4kJN+gA5MCu4ww==}
     engines: {node: '>=18.17'}
+
+  cheerio@1.0.0-rc.12:
+    resolution: {integrity: sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==}
+    engines: {node: '>= 6'}
 
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
@@ -723,6 +734,9 @@ packages:
 
   htmlparser2@7.2.0:
     resolution: {integrity: sha512-H7MImA4MS6cw7nbyURtLPO1Tms7C5H602LRETv95z1MxO/7CP7rDVROehUYeYBUYEON94NXXDEPmZuq+hX4sog==}
+
+  htmlparser2@8.0.2:
+    resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
 
   htmlparser2@9.1.0:
     resolution: {integrity: sha512-5zfg6mHUoaer/97TxnGpxmbR7zJtPwIYFMZ/H5ucTlPZhKvtum05yiPK3Mgai3a0DyVxv7qYqoweaEd2nrYQzQ==}
@@ -1630,6 +1644,10 @@ snapshots:
 
   '@types/mdurl@2.0.0': {}
 
+  '@uncenter/eleventy-plugin-toc@1.0.3':
+    dependencies:
+      cheerio: 1.0.0-rc.12
+
   a-sync-waterfall@1.0.1: {}
 
   acorn-walk@8.3.4:
@@ -1769,6 +1787,16 @@ snapshots:
       parse5-parser-stream: 7.1.2
       undici: 6.21.0
       whatwg-mimetype: 4.0.0
+
+  cheerio@1.0.0-rc.12:
+    dependencies:
+      cheerio-select: 2.1.0
+      dom-serializer: 2.0.0
+      domhandler: 5.0.3
+      domutils: 3.1.0
+      htmlparser2: 8.0.2
+      parse5: 7.2.1
+      parse5-htmlparser2-tree-adapter: 7.1.0
 
   chokidar@3.6.0:
     dependencies:
@@ -2098,6 +2126,13 @@ snapshots:
       domhandler: 4.3.1
       domutils: 2.8.0
       entities: 3.0.1
+
+  htmlparser2@8.0.2:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.1.0
+      entities: 4.5.0
 
   htmlparser2@9.1.0:
     dependencies:

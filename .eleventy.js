@@ -7,7 +7,7 @@ import htmlMin from "html-minifier-terser";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import postcssConfig from "postcss-load-config";
-import pluginTOC from "eleventy-plugin-toc";
+import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import filters from "./config/filters.js";
 
 export default async function (eleventyConfig) {
@@ -45,6 +45,11 @@ export default async function (eleventyConfig) {
   });
   md.use(markdownItFootnote);
   eleventyConfig.setLibrary("md", md);
+  eleventyConfig.addPlugin(pluginTOC, {
+    tags: ["h2", "h3", "h4"],
+    ignoredElements: ["a"],
+    flat: true,
+  });
 
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
