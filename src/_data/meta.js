@@ -8,8 +8,8 @@ export default {
     website: "https://reduxflakes.neocities.org/",
   },
   mood: {
-    feeling: "Content",
-    emoji: "/public/icons/emojis/neofox_floof_happy.png",
+    feeling: "Stressed",
+    emoji: "/public/icons/emojis/neofox_notice.png",
   },
   socials: [
     {
