@@ -21,9 +21,26 @@ export default {
       url: "https://flamedfury.com/",
     },
     {
+      title: "Houdini",
+      img: "houdininokia.gif",
+      url: "https://erikhoudini.com/",
+    },
+    {
       title: "Bulltown.neo",
       img: "bulltown.png",
       url: "https://bulltown.neocities.org",
+    },
+    {
+      title: "Coulored",
+      img: "conline.png",
+      url: "https://coloured.neocities.org/",
+    },
+  ],
+  bestof: [
+    {
+      title: "www.cozynet.org",
+      img: "cozybro.gif",
+      url: "www.cozynet.org",
     },
   ],
   likes: [
