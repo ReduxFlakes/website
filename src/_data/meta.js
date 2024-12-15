@@ -9,7 +9,7 @@ export default {
   },
   mood: {
     feeling: "Stressed",
-    emoji: "/public/icons/emojis/neofox_notice.png",
+    emoji: "/public/icons/emojis/neofox_notice.webp",
   },
   socials: [
     {
