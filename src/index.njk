@@ -20,8 +20,7 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
 
 {%- for post in collections.posts | reverse | limit(1) -%}
   <section class="showcase-card">
-    <h3 class="sc-heading">
-      <span>{{ post.data.title }}</span></h3>
+    <h3 class="sc-heading">{{ post.data.title }}</h3>
     <div class="content stack" style="--spacer: 0.25em;">
       <p>
         <small>
@@ -117,11 +116,13 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
   </div>
   <div id="friends" class="tabby-content button-grid">
     {% for button in buttons.friends %}
-      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" class="classic-button"></a>
+      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy"></a>
     {% endfor %}
   </div>
-  <div id="bestof" class="tabby-content">
-  Still thinking on what to add here...
+  <div id="bestof" class="tabby-content button-grid">
+    {% for button in buttons.bestof %}
+      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="240px" height="60px" style="image-rendering:pixelated;" loading="lazy"></a>
+    {% endfor %}
   </div>
   <div id="todo" class="tabby-content">
     <ul>
@@ -131,34 +132,3 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
     </ul>
   </div>
 </div>
-
-{% renderTemplate "md" %}
-
-## Ramblings <small style="color:var(--type-subtle)">(AKA Small)</small>
-
-{% endrenderTemplate %}
-
-{%- for post in collections.posts | reverse | limit(1) -%}
-  <section class="showcase-card showcase-card--scroller">
-    <div class="showcase-scroller">
-      <ul data-tabs>
-        {% for note in notes %}
-          {% if loop.index0 == 0 %}
-            <li>
-              <a data-tabby-default href="#{{note.title | slugify}}">{{note.title}}</a>
-            </li>
-          {% else %}
-            <li>
-              <a href="#{{note.title | slugify}}">{{note.title}}</a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-    {% for note in notes %}
-      <div class="content stack" style="--spacer: 0.25em;" id="{{note.title | slugify}}">
-        <p>{{ note.content }}</p>
-      </div>
-    {% endfor %}
-  </section>
-{%- endfor -%}
