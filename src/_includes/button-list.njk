@@ -30,7 +30,7 @@
         {%- for item in buttons.friends -%}
             <li>
                 <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/friends/{{item.img}}"
-                    alt="{{item.title}} button"></a>
+                    alt="{{item.title}} button" loading="lazy"></a>
             </li>
         {%- endfor -%}
     </ul>
@@ -39,7 +39,7 @@
         {%- for item in buttons.likes -%}
             <li>
                 <a href="{{item.url}}" title="{{item.title}}"><img src="/public/img/buttons/{{item.img}}"
-                    alt="{{item.title}} button"></a>
+                    alt="{{item.title}} button" loading="lazy"></a>
             </li>
         {%- endfor -%}
     </ul>
