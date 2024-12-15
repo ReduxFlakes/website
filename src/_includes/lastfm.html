@@ -27,7 +27,7 @@ color: var(--type-subtle)
     <span id="playing-status">Loading</span>
 </h2>
 <div class="info-card">
-    <img id="album-cover" src="" alt="Album cover art" width="76px" height="76px" />
+    <img id="album-cover" src="" alt="Album cover art" width="76px" height="76px" loading="lazy" />
     <div id="lastfm_meta">
         <a id="music-link" target="_blank" rel="noopener" href="#"></a>
         <p id="artist-name"></p>
@@ -47,7 +47,7 @@ color: var(--type-subtle)
                 let trackName = track.name;
                 let albumName = track.album["#text"];
                 let artistName = track.artist["#text"];
-                let albumCover = track.image[3]["#text"];
+                let albumCover = track.image[1]["#text"];
                 let isPlaying = track["@attr"] && track["@attr"].nowplaying === "true";
                 document.getElementById("music-link").innerText = trackName;
 
