@@ -1,6 +1,12 @@
 <header class="main-header">
     <h1>{{title}}</h1>
-    <p>{{description}}</p>
+    {% if is_post %}
+        <p>
+            <time datetime="{{date}}">{{date | formatPostDate}}</time>
+        </p>
+    {% else %}
+        <p>{{description}}</p>
+    {% endif %}
 </header>
 {% set marquee = true %}
 <div class="color-bar marquee3k">
