@@ -15,4 +15,7 @@ export default {
   limit: (arr, limit) => {
     return arr.slice(0, limit);
   },
+  getKeys: (target) => {
+    return Object.keys(target).toString();
+  },
 };

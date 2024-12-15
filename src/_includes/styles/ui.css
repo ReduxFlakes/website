@@ -40,7 +40,6 @@
 /* components */
 .showcase-card {
   display: flex;
-  align-items: stretch;
   border: 1px solid var(--stroke-strong);
 }
 
@@ -184,16 +183,6 @@ ul[data-tabs] {
 
 .tabby-content--expand .card:not(:last-child) {
   border-right: 1px solid var(--stroke);
-}
-
-.showcase-card--scroller {
-  display: grid;
-  grid-template-columns: 172px 1fr;
-}
-
-.showcase-scroller ul[data-tabs] {
-  flex-direction: column;
-  border-right: 1px solid var(--stroke-strong);
 }
 
 .classic-button {

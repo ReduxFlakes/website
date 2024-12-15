@@ -12,7 +12,12 @@ background: gray;
 border-radius: 5rem;
 }
 
+#lastfm_meta {
+width: 156px;
+}
+
 #music-link {
+display:block;
 font-weight: 500;
 color: var(--type-strong);
 }
@@ -20,6 +25,13 @@ color: var(--type-strong);
 #album-name {
 color: var(--type-subtle)
 }
+
+#lastfm_meta * {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
 {% endcss %}
 
 <h2 class="heading-status">

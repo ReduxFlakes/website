@@ -40,7 +40,7 @@ export default {
     {
       title: "www.cozynet.org",
       img: "cozybro.gif",
-      url: "www.cozynet.org",
+      url: "https://www.cozynet.org",
     },
   ],
   likes: [

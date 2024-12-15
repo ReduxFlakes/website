@@ -70,8 +70,10 @@ export default async function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/pages/writings/content/*.md");
+  eleventyConfig.addCollection("posts", function (collection) {
+    return [
+      ...collection.getFilteredByGlob("src/pages/writings/content/**/*.md"),
+    ].reverse();
   });
 
   /* shortcodes */

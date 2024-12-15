@@ -2,7 +2,7 @@
 <aside class="aside">
     <section class="aside-card aside-card--expand">
         <h2 class="md-heading">Latest Posts</h2>
-        {% for post in collections.posts | reverse %}
+        {% for post in collections.posts | limit(3) %}
             <a href="{{post.url}}" class="card">
                 <section>
                     <h3>{{post.data.title}}</h3>

@@ -3,16 +3,21 @@
 {% set is_post = true %}
 {% css "post" %}{% endcss %}
 
+{% set toc_enabled = toc is not defined or toc %}
+{# This checks if toc is not defined or is true #}
+
 {% block base %}
-    <details>
-        <summary>
-            <h2>Table of Contents</h2>
-        </summary>
-        <section class="stack details-content">
-            {{ content | toc | safe }}
-        </section>
-    </details>
-    <hr>
+    {% if toc_enabled %}
+        <details>
+            <summary>
+                <h2>Table of Contents</h2>
+            </summary>
+            <section class="stack details-content">
+                {{ content | toc | safe }}
+            </section>
+        </details>
+        <hr>
+    {% endif %}
     <article class="stack">
         {{ content | safe }}
     </article>
