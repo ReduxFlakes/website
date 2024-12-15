@@ -11,6 +11,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   font-size: 100%;
+  color-scheme: dark;
 }
 
 a:focus-visible,
