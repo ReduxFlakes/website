@@ -77,7 +77,8 @@ main {
   border-bottom: 1px solid var(--stroke);
 }
 
-main > article {
+main > article,
+main > section {
   padding: 1rem;
 }
 
