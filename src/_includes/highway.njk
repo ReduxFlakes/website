@@ -3,14 +3,14 @@
         <h2>Webmaster</h2>
         <div class="info-card">
             <img src="/public/branding/pfp.png" alt="ReduxFlakes cross-propeller logo in pink" width="76px"
-                height="76px">
+                height="76px" loading="lazy">
             <div style="display:flex;justify-content:center;flex-direction:column;">
                 <p style="font-size:1.15rem;color:var(--type-strong);">
                     ReduxFlakes <span style="font-size:1.05rem;color:var(--type-subtle);">he/him</span>
                 </p>
-                <span style="display:flex;gap:0.5em;align-items:flex-end;font-size:1.15rem;color:#6CC853;"
+                <span style="display:flex;gap:0.5em;align-items:flex-end;font-size:1.15rem;"
                     title="Current Mood"><img src="{{meta.mood.emoji}}" alt="{{meta.mood.feeling}} emoji" width="32px"
-                        height="32px">
+                        height="32px" loading="lazy">
                     {{meta.mood.feeling}}</span>
             </div>
         </div>
@@ -44,7 +44,17 @@
                 <a href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" class="icon-button">
                     <span class="lucide--arrow-right"></span>
                 </a>
-
+            </p>
+            <p class="webring-label">bucket webring</p>
+            <p class="webring-container">
+                <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes" target="_top" class="icon-button">
+                    <span class="lucide--arrow-left"></span>
+                </a>
+                <a href="https://webring.bucketfish.me" target="_blank" rel="noopener" class="icon-button">
+                    <span class="lucide--globe"></span></a>
+                <a href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" class="icon-button">
+                    <span class="lucide--arrow-right"></span>
+                </a>
             </p>
         </div>
     </section>
@@ -68,77 +78,76 @@
                 - Terry A. Davis</p>
         </blockquote>
     </section>
-    {% if env.environment == "production" %}
-        <section class="aside-card">
-            <h2>Shitpost Zone</h2>
-            <div style="display:flex;align-items:center;height:250px;overflow: hidden;" class="shitpost-container">
-                <img src="" alt="Loading" id="shitpost-viewer">
-            </div>
-            <noscript>
-                <p>You need JavaScript to load the Shitpost Zone</p>
-            </noscript>
-        </section>
-        <script>
-            const shitpost = [
-                "https://media1.tenor.com/m/Y4gVSiVvTRsAAAAd/cat-meme.gif",
-                "https://media1.tenor.com/m/lcH4lwQ0OY4AAAAd/angry-birds-real-angry-birds.gif",
-                "https://media1.tenor.com/m/85lZEBSQv1EAAAAd/in-shock.gif",
-                "https://media1.tenor.com/m/bhbZ-twx4-AAAAAC/jimmybutlerlookingatpaper.gif",
-                "https://c.tenor.com/RI1R-IYwo48AAAAC/tenor.gif",
-                "https://media1.tenor.com/m/04GE711i7WgAAAAC/ocean-sea.gif"
-            ];
-            let image = document.getElementById("shitpost-viewer");
-            let counter = 0;
+    {#
+    <section class="aside-card">
+        <h2>Discharge Zone</h2>
+        <div style="display:flex;align-items:center;height:274px;overflow: hidden;" class="funky-container">
+            <img src="" alt="Loading" id="funky-viewer" lazy="loading">
+        </div>
+        <noscript>
+            <p>You need JavaScript to load the Discharge Zone</p>
+        </noscript>
+    </section>
+    <script>
+        const funky = ["/public/img/funky/cat_escape.gif", "/public/img/funky/cat-but-heres-the-approacher.gif", "/public/img/funky/squish.gif", "/public/img/funky/tada-peekaboo.gif", "/public/img/funky/get-real-cat.gif"];
+        let image = document.getElementById("funky-viewer");
+        let counter = 0;
 
-            document.addEventListener('DOMContentLoaded', function () {
-                image.src = shitpost[0];
-                counter = 1;
-                setInterval(function () {
-                    image.src = shitpost[counter];
-                    image.alt = shitpost[counter];
-                    if (counter < shitpost.length - 1) {
-                        counter += 1;
-                    } else {
-                        image.src = shitpost[counter];
-                        counter = 0;
-                    }
-                }, 3000);
-            });
-        </script>
-        {%endif%}
-    </aside>
-    <style>
-        .webring-container {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            image.src = funky[0];
+            counter = 1;
+            setInterval(function () {
+                image.src = funky[counter];
+                image.alt = funky[counter];
+                if (counter < funky.length - 1) {
+                    counter += 1;
+                } else {
+                    image.src = funky[counter];
+                    counter = 0;
+                }
+            }, 2850);
+        });
+    </script>
+    #}
+</aside>
+<style>
+    .webring-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.25rem;
+    }
 
-        .webring-label {
-            color: var(--type-strong);
-            font-size: 1.4rem;
-        }
+    .webring-label {
+        color: var(--type-strong);
+        font-size: 1.4rem;
+    }
 
-        #neossg .webring-next a,
-        #neossg .webring-prev a,
-        .null a {
-            display: flex;
-            padding: 0.25rem 0.75rem;
-            border: 1px solid var(--stroke);
-            text-decoration: none;
-            color: var(--type-subtle);
-        }
+    #neossg .webring-next a,
+    #neossg .webring-prev a,
+    .null a {
+        display: flex;
+        padding: 0.25rem 0.75rem;
+        border: 1px solid var(--stroke);
+        text-decoration: none;
+        color: var(--type-subtle);
+    }
 
-        #neossg .webring-next a:hover,
-        #neossg .webring-prev a:hover,
-        .null a:hover {
-            background: var(--background-state);
-        }
+    .null a img {
+        width: 20px;
+        height: 20px;
+    }
 
-        .button-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-    </style>
+    #neossg .webring-next a:hover,
+    #neossg .webring-prev a:hover,
+    .null a:hover {
+        background: var(--background-state);
+    }
+
+    .button-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+</style>
