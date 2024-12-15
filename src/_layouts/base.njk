@@ -8,7 +8,9 @@
       {% include "header.njk" %}
       {% include "highway.njk" %}
       <main id="main-content" {% if bg %}style="background:{{bg}}"{% endif %}>
-        <article class="stack">{{content | safe }}</article>
+        {% block base %}
+          <article class="stack">{{content | safe }}</article>
+        {% endblock %}
       </main>
       {% include "aside.njk" %}
       {% include "footer.njk" %}

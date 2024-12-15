@@ -1,0 +1,19 @@
+{% extends "./base.njk" %}
+
+{% set is_post = true %}
+{% css "post" %}{% endcss %}
+
+{% block base %}
+    <details>
+        <summary>
+            <h2>Table of Contents</h2>
+        </summary>
+        <section class="stack details-content">
+            {{ content | toc | safe }}
+        </section>
+    </details>
+    <hr>
+    <article class="stack">
+        {{ content | safe }}
+    </article>
+{% endblock %}
