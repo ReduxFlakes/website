@@ -1,22 +1,30 @@
 ---
-title: Writings
+title: "Writings"
 layout: base
-description: site updates, projects, and other rambles...
+description: "site updates, projects, and other rambles..."
 pagination:
   data: collections.posts
-  size: 5
-permalink: "blog{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html"
-paginationPrevText: "Newer posts"
-paginationNextText: "Older posts"
-paginationAnchor: "#post-list"
+  size: 4
+  alias: posts
+permalink: "writings{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html"
+paginationPrevText: 'Newer posts'
+paginationNextText: 'Older posts'
 ---
 
 <blockquote>Older posts might look broken as they have been imported from older versions of the website.</blockquote>
 
-<a href="/writings/tags" class="button">Check all the tags</a>
+{% if pagination.pageNumber == 0 %}
+  <details>
+    <summary>See all tags</summary>
+    {% set tagCloud = collections.posts | tagCloud %}
 
-{%- for post in collections.posts  -%}
+    {% for tag, count in tagCloud %}
+      <a href="/writings/t/{{ tag | slugify }}">{{ tag }}</a>
+    {% endfor %}
+  </details>
+{% endif %}
 
+{% for post in posts %}
   <section class="showcase-card">
     <h3 class="sc-heading">{{ post.data.title }}</h3>
     <div class="content stack" style="--spacer: 0.25em;">
@@ -30,34 +38,34 @@ paginationAnchor: "#post-list"
         {% for tag in post.data.tags -%}
           <a href="/writings/t/{{tag | slugify}}" >{{tag}}</a>
         {% endfor -%}
-        </p>
+      </p>
       <p>
-      {% if post.data.page.excerpt %}
-        {{post.data.page.excerpt}}
-      {% else %}
-      {{post.data.description}}
-      {% endif %}</p>
+        {% if post.data.page.excerpt %}
+          {{post.data.page.excerpt}}
+        {% else %}
+          {{post.data.description}}
+        {% endif %}
+      </p>
       <p>
         {{ component('link-button', {href: post.url, title: "Read more..." }) }}
       </p>
     </div>
   </section>
-{%- endfor -%}
+{% endfor %}
 
 {% if pagination.href.next or pagination.href.previous %}
-
   <footer>
-      <nav class="pagination__inner" aria-label="Pagination links">
-        {% if pagination.href.previous %}
-          <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
-            <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
-          </a>
-        {% endif %}
-        {% if pagination.href.next %}
-          <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
-            <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
-          </a>
-        {% endif %}
-      </nav>
+    <nav class="pagination__inner" aria-label="Pagination links">
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+          <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+        </a>
+      {% endif %}
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+          <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
+        </a>
+      {% endif %}
+    </nav>
   </footer>
 {% endif %}
