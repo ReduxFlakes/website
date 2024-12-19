@@ -18,4 +18,15 @@ export default {
   getKeys: (target) => {
     return Object.keys(target).toString();
   },
+  tagCloud: (collection) => {
+    const tagCount = {};
+    collection.forEach((item) => {
+      if (item.data.tags) {
+        item.data.tags.forEach((tag) => {
+          tagCount[tag] = (tagCount[tag] || 0) + 1;
+        });
+      }
+    });
+    return tagCount;
+  },
 };
