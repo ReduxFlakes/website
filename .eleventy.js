@@ -8,6 +8,7 @@ import { EleventyRenderPlugin } from "@11ty/eleventy";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import postcssConfig from "postcss-load-config";
 import pluginTOC from "@uncenter/eleventy-plugin-toc";
+import glob from "fast-glob";
 import filters from "./config/filters.js";
 
 export default async function (eleventyConfig) {
@@ -74,6 +75,17 @@ export default async function (eleventyConfig) {
     return [
       ...collection.getFilteredByGlob("src/pages/writings/content/**/*.md"),
     ].reverse();
+  });
+  eleventyConfig.addCollection("extras", function (collection) {
+    let extrasContent = collection.getFilteredByGlob("src/pages/extras/*.md");
+
+    let filterExtras = extrasContent.filter(
+      (page) => page.fileSlug !== "extras"
+    );
+
+    return filterExtras.sort((a, b) => {
+      return a.data.sort_level - b.data.sort_level;
+    });
   });
 
   /* shortcodes */

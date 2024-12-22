@@ -35,12 +35,7 @@ export default {
     {
       name: "Last.fm",
       img: "lastfm.png",
-      url: "https://last.fm/reduxflakes",
-    },
-    {
-      name: "Revolt",
-      img: "revolt.gif",
-      url: "https://revolt.chat",
+      url: "https://www.last.fm/user/reduxflakes",
     },
   ],
 };

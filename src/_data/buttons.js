@@ -21,6 +21,16 @@ export default {
       url: "https://flamedfury.com/",
     },
     {
+      title: "july.lol",
+      img: "lonelyjuly.gif",
+      url: "https://july.lol/",
+    },
+    {
+      title: "Wlodekm",
+      img: "wlodekm.png",
+      url: "https://wlodekm.nekoweb.org/",
+    },
+    {
       title: "Houdini",
       img: "houdininokia.gif",
       url: "https://erikhoudini.com/",

@@ -2,6 +2,10 @@
 @import url(ui.css);
 @import url(icons.css);
 
+.wrapper {
+  background: var(--background);
+}
+
 .main-header {
   grid-area: header;
   display: flex;
@@ -144,39 +148,6 @@ button:active,
   box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
     inset -2px -2px #dfdfdf, inset 2px 2px grey;
   text-shadow: 1px 1px #222;
-}
-
-.grayscale {
-  filter: grayscale(1);
-}
-
-.grayscale:hover {
-  animation: graycrt 4s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes graycrt {
-  5% {
-    filter: grayscale(0);
-  }
-  10% {
-    filter: grayscale(1);
-  }
-  15% {
-    filter: grayscale(0);
-  }
-  20% {
-    filter: grayscale(1);
-  }
-  22% {
-    filter: grayscale(0);
-  }
-  25% {
-    filter: grayscale(1);
-  }
-  100% {
-    filter: grayscale(0);
-  }
 }
 
 .auto-grid {

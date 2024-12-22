@@ -132,7 +132,7 @@ summary {
 
 body {
   color: var(--type);
-  font: 1.05rem / 1.5 var(--font);
+  font: 1.075rem / 1.5 var(--font);
   background: var(--backdrop);
 }
 
@@ -245,7 +245,8 @@ ul {
 }
 
 hr {
-  border-color: var(--stroke);
+  border: none;
+  border-top: 1px solid var(--stroke);
 }
 
 details summary {

@@ -11,20 +11,22 @@
             </a>
         {% endfor %}
     </section>
-    <section class="aside-card">
+    <section class="aside-card aside-card--expand">
         <h2 class="md-heading">Currently Working On</h2>
-        <ul style="padding-inline-start:0.85rem;font-size:0.95rem">
-            <li>SurfScape v2 release</li>
+        <ul style="padding-inline-start:2rem;font-size:0.95rem">
+            <li>SurfScape v3 release</li>
             <li>Remastering music for YouTube</li>
             <li>A Windows app</li>
-            <li>This website ;)</li>
+            <li>
+                <a href="/#more-stuff">This website ;)</a>
+            </li>
         </ul>
     </section>
     <section class="aside-card aside-card--expand">
         <h2 class="md-heading">Gallery Showcase <span class="lucide--circle-help"></span></h2>
         <div class="aside-card-content">
             <p>No work to showcase today...</p>
-            {{ component('link-button', {href: post.url, title: "Check gallery", icon: "lucide--image"}) }}
+            {{ component('link-button', {href: "/design", title: "Check gallery", icon: "lucide--image"}) }}
         </div>
     </section>
     <section class="aside-card aside-card--expand">
@@ -40,9 +42,9 @@
     </section>
     <section class="aside-card aside-card--expand">
         <h2 class="md-heading">Guestbook <span class="lucide--circle-help"></span></h2>
-        <a href="guestbook.com" class="card" target="_blank" rel="noopener">
+        <a href="https://reduxflakes.atabook.org/" class="card" target="_blank" rel="noopener" style="border-color:#108EC0;">
             <section>
-                <h3>Sign in atabook.com</h3>
+                <h3>Sign at atabook.com</h3>
             </section>
         </a>
     </section>

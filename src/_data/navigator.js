@@ -21,7 +21,7 @@ export default [
   },
   {
     title: "extras",
-    url: "/shrines/",
+    url: "/extras/",
     icon: "star",
   },
   {

@@ -1,0 +1,4 @@
+{
+  "layout": "base",
+  "permalink": "/extras/{{title|slugify}}/"
+}

@@ -1,7 +1,7 @@
 ---
 title: Gaming
 description: My gaming library and habits
-bg: "#2B2B2B"
+sort_level: 2
 ---
 
 ## Games I'm playing

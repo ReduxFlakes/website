@@ -1,6 +1,5 @@
 ---
 title: "Writings"
-layout: base
 description: "site updates, projects, and other rambles..."
 pagination:
   data: collections.posts
@@ -11,7 +10,10 @@ paginationPrevText: 'Newer posts'
 paginationNextText: 'Older posts'
 ---
 
-<blockquote>Older posts might look broken as they have been imported from older versions of the website.</blockquote>
+<div class="notice notice--error">
+  <span class="lucide--list-x"></span>
+  <p>Older posts might look broken as they have been imported from older versions of the website</p>
+</div>
 
 {% if pagination.pageNumber == 0 %}
   <details>
@@ -26,7 +28,7 @@ paginationNextText: 'Older posts'
 
 {% for post in posts %}
   <section class="showcase-card">
-    <h3 class="sc-heading">{{ post.data.title }}</h3>
+    <h2 class="sc-heading">{{ post.data.title }}</h2>
     <div class="content stack" style="--spacer: 0.25em;">
       <p>
         <small>

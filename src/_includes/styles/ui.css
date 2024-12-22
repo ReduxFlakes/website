@@ -1,8 +1,10 @@
 .navigator {
   grid-area: navigator;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
   overflow: hidden;
+  flex-wrap: wrap;
   border-bottom: 1px solid var(--stroke);
 }
 
@@ -17,18 +19,20 @@
 
 .navigator-nav {
   display: flex;
-  align-items: center;
+  flex: 1;
+  align-items: stretch;
   text-wrap: nowrap;
   overflow-x: auto;
   white-space: nowrap;
   height: 100%;
+  min-width: 500px;
 }
 
 .navigator-nav a {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  min-height: 100%;
+  height: 100%;
   padding-inline: 1em;
   color: var(--type-strong);
   text-decoration: none;
@@ -39,16 +43,13 @@
 
 /* components */
 .showcase-card {
-  display: flex;
   border: 1px solid var(--stroke-strong);
 }
 
 .sc-heading {
   background: var(--type-strong);
   color: var(--backdrop);
-  padding: 0.25em;
-  writing-mode: vertical-lr;
-  transform: scale(-1, -1);
+  padding: 0.25em 0.5rem;
 }
 
 .showcase-card .content {
@@ -270,4 +271,36 @@ ul[data-tabs] {
 .game-card:hover::before {
   opacity: 0.6;
   transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+
+.notice {
+  --_nt-bg: var(--nt-bg, #0f5132);
+  --_nt-clr: var(--nt-clr, hsl(152, 40%, 78%));
+  --_nt-ic: var(--nt-ic, hsl(152, 55%, 48%));
+  --base-color: var(--_nt-ic);
+  --base-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5rem;
+  background: var(--_nt-bg);
+  color: var(--_nt-clr);
+  border: 1px dotted var(--_nt-ic);
+}
+
+.notice > span {
+  mask-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.notice--warning {
+  --nt-bg: hsl(59, 69%, 19%);
+  --nt-clr: hsl(59, 40%, 78%);
+  --nt-ic: hsl(59, 55%, 48%);
+}
+
+.notice--error {
+  --nt-bg: hsl(2, 69%, 19%);
+  --nt-clr: hsl(2, 45%, 75%);
+  --nt-ic: hsl(2, 55%, 55%);
 }
