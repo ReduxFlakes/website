@@ -6,9 +6,8 @@ export default [
     url: "https://surfscape.neocities.org",
   },
   {
-    title: "Remasters Project",
-    description: "A project focused on remastering rare songs.",
-    url: "/services/remastering",
-    status: "not-available",
+    title: "Raven Protection",
+    description: "Ad and tracking filters for desktop and mobile browsers.",
+    url: "https://codeberg.org/reduxflakes/raven-protection",
   },
 ];

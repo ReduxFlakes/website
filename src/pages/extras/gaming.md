@@ -10,15 +10,6 @@ sort_level: 2
 <section class="game-card" >
 <div class="game-card__cover" style="background-image: url(/public/img/games/v-rally.png)"></div>
 </section>
-<section class="game-card">
-<div class="game-card__cover" style="background-image: url(/public/img/games/v-rally.png)"></div>
-</section>
-<section class="game-card">
-<div class="game-card__cover" style="background-image: url(/public/img/games/v-rally.png)"></div>
-</section>
-<section class="game-card">
-<div class="game-card__cover" style="background-image: url(/public/img/games/v-rally.png)"></div>
-</section>
 </div>
 
 ## Games I've finished
