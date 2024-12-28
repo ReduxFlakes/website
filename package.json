@@ -1,7 +1,7 @@
 {
-  "name": "neocities",
+  "name": "website",
   "version": "1.0.0",
-  "description": "",
+  "description": "My main website",
   "type": "module",
   "scripts": {
     "start": "eleventy --serve",
