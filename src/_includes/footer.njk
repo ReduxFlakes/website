@@ -1,8 +1,17 @@
 <footer class="main-footer">
-    <div>
+    <div class="stack" style="--spacer:0.25em;">
+        <div class="button-grid" style="justify-content:start;">
+            {% for button in buttons.general %}
+                {% if not button.url %}
+                    <img src="/public/img/buttons/general/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy" title="{{button.title}}">
+                {% else %}
+                    <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/general/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy"></a>
+                {% endif %}
+            {% endfor %}
+        </div>
         <p>&copy; 2021 - 2024 ReduxFlakes. <a href="7about/license/">License and attribution</a>
         </p>
-        <p>Built with <a href="https://www.11ty.dev/">11ty</a> and procrastination, and hosted for free thanks to <a href="https://neocities.org/">Neocities</a>.
+        <p>Built with <a href="https://www.11ty.dev/">11ty</a> and procrastination, and hosted for free thanks to <a href="https://neocities.org/">Neocities</a> and <a href="https://nekoweb.org/">Nekoweb</a>.
         </p>
     </div>
     <nav class="footer-nav">

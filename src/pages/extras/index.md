@@ -1,7 +1,7 @@
 ---
 title: Extras
 permalink: "/extras/"
-description: additional stuff for my kind readers :3
+description: additional stuff for my kind visitors :3
 ---
 
 {% for page in collections.extras %}

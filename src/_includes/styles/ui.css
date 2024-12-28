@@ -304,3 +304,11 @@ ul[data-tabs] {
   --nt-clr: hsl(2, 45%, 75%);
   --nt-ic: hsl(2, 55%, 55%);
 }
+
+.carbon-scroller {
+  display: block;
+  border: 1px solid var(--stroke-strong);
+  padding: 1rem;
+  max-height: 150px;
+  overflow-y: auto;
+}

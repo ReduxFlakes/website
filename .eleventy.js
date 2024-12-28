@@ -73,7 +73,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addCollection("posts", function (collection) {
     return [
-      ...collection.getFilteredByGlob("src/pages/writings/content/**/*.md"),
+      ...collection.getFilteredByGlob("src/pages/posts/content/**/*.md"),
     ].reverse();
   });
   eleventyConfig.addCollection("extras", function (collection) {

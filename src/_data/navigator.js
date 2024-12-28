@@ -5,8 +5,8 @@ export default [
     icon: "home",
   },
   {
-    title: "writings",
-    url: "/writings/",
+    title: "blog",
+    url: "/blog/",
     icon: "posts",
   },
   {

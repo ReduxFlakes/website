@@ -35,6 +35,21 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
   </section>
 {%- endfor -%}
 
+<h2 id="updates" tabindex="-1">Updates <a href="#updates" class="header-anchor">#</a>
+</h2>
+
+<div class="carbon-scroller">
+
+  {%- for entry in updates -%}
+    <div class="stack" style="--spacer: 0.5em;">
+      <time datetime="{{ entry.updateDate | dateToISO }}">{{ entry.updateDate | formatStringDate }}</time>
+      <p>{{ entry.content | safe }}</p>
+      <hr>
+    </div>
+  {%- endfor -%}
+
+</div>
+
 {% renderTemplate "md" %}
 
 ## Interests
@@ -127,6 +142,7 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
   <div id="todo" class="tabby-content">
     <ul>
       <li>Improve responsivness</li>
+      <li>Make the design page</li>
       <li>Clean code</li>
       <li>Add more stuff to extras</li>
     </ul>
