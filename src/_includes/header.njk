@@ -8,6 +8,17 @@
         <p>{{description}}</p>
     {% endif %}
 </header>
+{% if theme %}
+    <style>
+        .main-header {
+            background: linear-gradient(to right, {{theme.primary}}, {{theme.secondary}});
+        }
+        .main-header h1,
+        .main-header p {
+            color: {{theme.text}};
+        }
+    </style>
+{% endif %}
 {% set marquee = true %}
 <div class="color-bar marquee3k">
     <div>

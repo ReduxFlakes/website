@@ -16,9 +16,19 @@ export default {
       url: "https://openbooks.neocities.org",
     },
     {
+      title: "joosh's Homepage!",
+      img: "jooshRice.gif",
+      url: "https://joo.sh/",
+    },
+    {
       title: "fLaMEd fury",
       img: "fury.gif",
       url: "https://flamedfury.com/",
+    },
+    {
+      title: "rice.place",
+      img: "riceplace.png",
+      url: "https://rice.place/",
     },
     {
       title: "july.lol",

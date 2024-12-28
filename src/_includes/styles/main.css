@@ -31,23 +31,16 @@
 }
 
 .main-header h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  letter-spacing: -0.025em;
   text-transform: lowercase;
-  background: linear-gradient(90deg, #b8ea92 0%, #b2eea6 52%, #8ef5d4 100%);
-  color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #afefab;
 }
 
 .main-header p {
   text-transform: lowercase;
-  font-size: 1.1rem;
-  letter-spacing: -0.025em;
-  color: hsla(101, 100%, 87%, 0.85);
+  font-size: 1.225rem;
+  letter-spacing: -0.0175em;
+  color: hsl(101deg 43.79% 72.25%);
+  opacity: 0.85;
 }
 
 .color-bar {

@@ -4,12 +4,9 @@ description: My gaming library and habits
 sort_level: 2
 ---
 
-## Games I'm playing
-
-<div class="auto-grid" style="--minsize: 150px;--gridgap:1rem;">
-<section class="game-card" >
-<div class="game-card__cover" style="background-image: url(/public/img/games/v-rally.png)"></div>
-</section>
+<div class="notice notice--warning">
+<span class="lucide--traffic-cone"></span>
+<p>This page is a big mess and will be remade.</p>
 </div>
 
 ## Games I've finished
