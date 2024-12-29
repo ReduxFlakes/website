@@ -15,7 +15,7 @@
       {% include "aside.njk" %}
       {% include "footer.njk" %}
     </div>
-    {% if tabby != false %}
+    {% if tabby and tabby != false %}
       <script src="/public/scripts/tabby.min.js"></script>
       <script>
         const tabSelectors = document.querySelectorAll('[data-tabs]');
@@ -25,7 +25,6 @@
             new Tabby(`[data-tabs="${i}"]`);
           }
         }
-
         function toggleTabs(sel) {
           for ([i, tabs] of[...tabSelectors].entries()) {
             tabs = new Tabby(`[data-tabs="${i}"]`);
@@ -41,6 +40,12 @@
       <script>
         Marquee3k.init();
       </script>
+    {% endif %}
+    {% if jquery and jquery != false or not gallery and gallery != false %}
+      <script src="/public/scripts/jquery-3.7.1.min.js"></script>
+      {% if gallery and gallery != false %}
+        <script src="/public/scripts/glightbox.min.js"></script>
+      {% endif %}
     {% endif %}
   </body>
 </html>
