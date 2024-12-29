@@ -8,7 +8,6 @@ theme:
   text: "hsl(244, 76.90%, 74.50%)"
 ---
 
-<div class="notice notice--warning">
-<span class="lucide--traffic-cone"></span>
-<p>Not available</p>
-</div>
+<h1>OSM</h1>
+<p>Mockups of operating systems (Windows and others)</p>
+<a href="/gallery/osm">Check gallery</a>
