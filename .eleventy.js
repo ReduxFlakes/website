@@ -8,13 +8,14 @@ import { EleventyRenderPlugin } from "@11ty/eleventy";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import postcssConfig from "postcss-load-config";
 import pluginTOC from "@uncenter/eleventy-plugin-toc";
-import glob from "fast-glob";
+import pluginRss from "@11ty/eleventy-plugin-rss";
 import filters from "./config/filters.js";
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginTOC);
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addPassthroughCopy("src/public");
 
