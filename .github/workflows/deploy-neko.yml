@@ -1,0 +1,35 @@
+name: Deploy to nekoweb
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: deploy2nekoweb
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - run: npm i
+      - run: bun run build:neo
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-artifacts
+          path: _site
+      - uses: actions/checkout@v3
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: website-artifacts
+          path: _site
+      - name: deploy2nekoweb
+        uses: deploy2nekoweb/deploy2nekoweb@v4
+        with:
+          nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
+          nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
+          nekoweb-folder: "site"
+          directory: "_site"
