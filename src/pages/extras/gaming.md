@@ -6,7 +6,7 @@ sort_level: 2
 
 <div class="notice notice--warning">
 <span class="lucide--traffic-cone"></span>
-<p>This page is a big mess and will be remade.</p>
+<p>This page is a big mess and will be remade</p>
 </div>
 
 ## Games I've finished
