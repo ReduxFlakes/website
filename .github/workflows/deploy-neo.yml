@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm i
-      - run: bun run build:neo
+      - run: npm run build:neo
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:

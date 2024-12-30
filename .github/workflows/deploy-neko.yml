@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - run: npm i
-      - run: bun run build:neo
+      - run: npm run build:neko
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:
