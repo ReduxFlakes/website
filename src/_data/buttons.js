@@ -83,6 +83,11 @@ export default {
       url: "https://dimden.dev/",
     },
     {
+      title: "sizeof(cat)",
+      img: "sizeofcat-white.jpg",
+      url: "https://sizeof.cat/",
+    },
+    {
       title: "june's web page",
       img: "webcatz.png",
       url: "https://webcatz.neocities.org/",
@@ -151,12 +156,46 @@ export default {
       url: "https://mystsaphyr.art/",
     },
   ],
-
+  software: [
+    {
+      title: "AltaVista",
+      img: "altavista.gif",
+    },
+    {
+      title: "Aperture Laboratories",
+      img: "aperture_labs.jpg",
+    },
+    {
+      title: "Arch Linux",
+      img: "archlinux.gif",
+    },
+    {
+      title: "Firefox",
+      img: "firefoxget.gif",
+    },
+    {
+      title: "FREE Software",
+      img: "free.gif",
+    },
+    {
+      title: "uBlock",
+      img: "ublock.gif",
+    },
+    {
+      title: "Windows 7 Boot",
+      img: "w7-boot.gif",
+    },
+  ],
   bestof: [
     {
       title: "www.cozynet.org",
       img: "cozybro.gif",
       url: "https://www.cozynet.org",
+    },
+    {
+      title: "sizeof(cat)",
+      img: "sizeofcat.gif",
+      url: "https://sizeof.cat/",
     },
   ],
 };
