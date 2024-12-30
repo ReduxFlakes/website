@@ -1,13 +1,14 @@
 ---
-title: "Tagged with {{ tag }}"
-pagination:
-  data: collections
-  size: 1
-  alias: tag
+pagination: 
+    data: collections
+    size: 1
+    alias: tag
 permalink: "blog/tagged/{{ tag | slugify }}/"
+eleventyComputed:
+    title: "tagged with {{ tag }}"
 ---
 
-<h1>Tagged “{{ tag }}”</h1>
+<a href="/blog">Go back to the blog</a>
 
 <ol>
     {% set taglist = collections[tag] %}

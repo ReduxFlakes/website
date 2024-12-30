@@ -2,7 +2,7 @@
 title: Going Back to Lineage OS
 description: Degoogling my phone and going back to Lineage OS and documenting everything about it!
 date: 2024-06-06T21:43:00.000Z
-tags: ["android", "life"]
+tags: ["android", "privacy", "life"]
 ---
 
 Since I moved to Pixel OS last month I've been quite happy with my phone. I was on HyperOS before and even though the experience was miles better than MIUI, I always had privacy and security concerns with the amount of questionable services and applications HyperOS has pre-installed (this also applies to any ROM with GApps). The reason why I went to Pixel OS, was really because of the consistency, minimalism, and the Android stock experience It offers. However not everything is perfect. Pixel OS (at least on my phone, Lisa) is known to be perfect but always has a weird bug every major release, from audio not working, battery level not showing, the phone getting to hot, etc.
