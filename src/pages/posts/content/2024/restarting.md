@@ -2,6 +2,8 @@
 title: Restarting...
 date: 2024-12-30T12:03:00.000Z
 tags: ["website", "life"]
+eleventyComputed:
+  description: "{{ page.excerpt | safe }}"
 ---
 
 I finally got a drop of motivation to restart my personal website once again for the... I don't even know how many redesigns I made so forget it. Anyways, welcome to my new website, inspired by Swiss and minimalism design that I fell in love earlier this year.

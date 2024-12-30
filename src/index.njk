@@ -125,7 +125,7 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
       <a class="card card--breath" href="{{ post.url }}">
         <h3>
           {{ post.data.title }}</h3>
-        <p>{{ post.data.description }}</p>
+        <p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">{{ post.data.description }}</p>
       </a>
     {%- endfor -%}
   </div>

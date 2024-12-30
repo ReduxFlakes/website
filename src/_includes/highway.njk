@@ -14,6 +14,9 @@
                     {{meta.mood.feeling}}</span>
             </div>
         </div>
+        {% if env.host == "nekoweb" %}
+            <iframe src="https://nekoweb.org/frame/follow" frameborder="0" width="170" height="28"></iframe>
+        {% endif %}
     </section>
     <section class="aside-card">
         {% include "lastfm.html" %}

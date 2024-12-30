@@ -1,18 +1,23 @@
 <head>
+    {%- if env.host == "neocities" -%}
+        {% set host = meta.url_neo -%}
+    {%- else -%}
+        {% set host = meta.url_neko -%}
+    {%- endif -%}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light"/>
+    <meta name="color-scheme" content="dark"/>
     <meta name="CCBot" content="nofollow">
     <meta name="robots" content="noai, noimageai">
     <meta name="tdm-reservation" content="1">
     <title>{{ title }} | {{ meta.title }}</title>
     <meta name="description" content="{% if description %}{{description}}{% else %}{{ meta.description }}{% endif %}">
     <base href="{{page.url}}">
-    <link rel="canonical" href="{{meta.url}}">
+    <link rel="canonical" href="{{host}}">
     <link rel="author" href="/humans.txt">
     <link rel="shortcut icon" href="/static/favicon.svg" type="image/x-icon">
-    <meta property="og:url" content="{{meta.url}}{{ page.url }}">
+    <meta property="og:url" content="{{host}}{{ page.url }}">
     <meta property="og:title" content="{%- if title -%}{{title}}{%- else -%}{{meta.title}}{%- endif -%}">
     <meta property="og:site_name" content="{{ meta.title }}"/>
     <meta property="og:description" content="{%- if description -%}{{description}}{%- else -%}{{meta.description}}{%- endif -%}">
@@ -37,13 +42,4 @@
         {{ style_slot | safe }}
         {% endrenderTemplate %}
     {% endif %}
-    <noscript>
-        <style>
-            .shitpost-container {
-                display: none !important;
-                opacity: 0 !important;
-                height: 0 !important;
-            }
-        </style>
-    </noscript>
 </head>

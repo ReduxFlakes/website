@@ -1,0 +1,48 @@
+---json
+{
+  "permalink": "/blog/feed.json",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "ReduxFlakes Blog",
+    "description": "life, projects, site updates, and other rambles...",
+    "language": "en",
+    "base_neo": "https://reduxflakes.neocities.org/",
+    "base_neko": "https://reduxflakes.nekoweb.org/",
+    "author": {
+      "name": "ReduxFlakes"
+    }
+  }
+}
+---
+{%- if env.host == "neocities" -%}
+  {%- set base = metadata.base_neo -%}
+{%- else -%}
+  {%- set base = metadata.base_neko -%}
+{%- endif -%}
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "{{ metadata.title }}",
+  "language": "{{ metadata.language or page.lang }}",
+  "home_page_url": "{{ base | addPathPrefixToFullUrl }}",
+  "feed_url": "{{ permalink | htmlBaseUrl(base) }}",
+  "description": "{{ metadata.description }}",
+  "authors": [
+    {
+      "name": "{{ metadata.author.name }}"
+    }
+  ],
+  "items": [
+    {%- for post in collections.posts | reverse %}
+  {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(base) }}{% endset %}
+    {
+      "id": "{{ absolutePostUrl }}",
+      "url": "{{ absolutePostUrl }}",
+      "title": "{{ post.data.title }}",
+      "content_html": {% if post.content %}{{ post.content | renderTransforms(post.data.page, base) | dump | safe }}
+  {% else %}""{% endif %},
+      "date_published": "{{ post.date | dateToRfc3339 }}"
+    }
+    {% if not loop.last %},{% endif %}
+{%- endfor %}
+]
+}

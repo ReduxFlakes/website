@@ -1,11 +1,13 @@
 export default {
   title: "reduc",
   description: "Fireplace in the mall",
-  url: "https://reduxflakes.neocities.org",
+  url_neo: "https://reduxflakes.neocities.org",
+  url_neko: "https://reduxflakes.nekoweb.org",
   lang: "en-US",
   webmaster: {
     name: "ReduxFlakes",
-    website: "https://reduxflakes.neocities.org/",
+    website_neo: "https://reduxflakes.neocities.org/",
+    website_neko: "https://reduxflakes.nekoweb.org/",
   },
   mood: {
     feeling: "Stressed",

@@ -14,7 +14,7 @@ export default {
     },
     {
       title: "Credits & Tools",
-      url: "/about/site/",
+      url: "/about/#about-the-website",
     },
     {
       title: "About",

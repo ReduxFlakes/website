@@ -1,6 +1,6 @@
 ---
-title: Gaming
-description: My gaming library and habits
+title: "Gaming"
+description: "My gaming library and habits"
 sort_level: 2
 ---
 

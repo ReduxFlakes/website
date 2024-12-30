@@ -122,7 +122,7 @@ export default {
     {
       title: "Nekoweb",
       img: "nekoweb.gif",
-      url: "https://nekoweb.org/site/reduxflakes",
+      url: "https://nekoweb.org/",
     },
     {
       title: "Brain Made",

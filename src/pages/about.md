@@ -1,6 +1,6 @@
 ---
 title: About
-description: "information about me and this website"
+description: "Information about me and this website"
 theme:
   primary: "hsl(238, 48.50%, 12.90%)"
   secondary: "hsl(197, 69.70%, 12.90%)"
@@ -37,3 +37,19 @@ I do mostly web design, mockups of operating systems and software, music remaste
   
   </div>
 </div>
+
+## License
+
+This website content, unless specified, is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en) and it's source code [available on GitHub]() is licensed under [GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
+
+### Attribution
+
+If you want to reuse a part of content or source code of this website please do add an attribution to it's origin either directly on the code or on a credit section of your website/application where that code was used, below is an example of how this can be done.
+
+{% if env.host == "neocities" %}
+{% set website_host = "https://reduxflakes.neocities.org" %}
+{% else %}
+{% set website_host = "https://reduxflakes.nekoweb.org" %}
+{% endif %}
+
+> This following content/code comes from <a href="{{website_host}}/page_to_the_content">{{website_host}}/page_to_the_content</a> by the author: ReduxFlakes, and is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en)/[GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
