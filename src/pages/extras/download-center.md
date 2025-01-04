@@ -6,7 +6,7 @@ sort_level: 1
 
 <div class="notice notice--warning">
 <span class="lucide--traffic-cone"></span>
-<p>Not sure how to make this so it's still empty</p>
+<p>Not sure how to make this so it's still empty, while you're waiting, check the gorgeous 88x31 buttons below :p</p>
 </div>
 
 <div class="button-grid">

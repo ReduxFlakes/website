@@ -188,32 +188,48 @@ export default {
   ],
   software: [
     {
-      title: "AltaVista",
-      img: "altavista.gif",
+      title: "uBlock",
+      img: "ublock.gif",
     },
     {
-      title: "Aperture Laboratories",
-      img: "aperture_labs.jpg",
+      title: "Lucida",
+      img: "lucida.gif",
     },
     {
       title: "Arch Linux",
       img: "archlinux.gif",
     },
     {
-      title: "Firefox",
+      title: "Get Firefox",
       img: "firefoxget.gif",
     },
     {
-      title: "FREE Software",
-      img: "free.gif",
+      title: "Firefox",
+      img: "firefox3.gif",
     },
     {
-      title: "uBlock",
-      img: "ublock.gif",
+      title: "AltaVista",
+      img: "altavista.gif",
+    },
+    {
+      title: "Bring Back the Headphone Jack",
+      img: "bring-back-the-headphone-jack.gif",
+    },
+    {
+      title: "DuckDuckGo",
+      img: "ddg.gif",
+    },
+    {
+      title: "Aperture Laboratories",
+      img: "aperture_labs.jpg",
     },
     {
       title: "Windows 7 Boot",
       img: "w7-boot.gif",
+    },
+    {
+      title: "FREE Software",
+      img: "free.gif",
     },
   ],
   bestof: [
