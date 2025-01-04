@@ -32,8 +32,10 @@ I do mostly web design, mockups of operating systems and software, music remaste
   </div>
   <div id="credits" class="tabby-content">
   
-  * [Eleventy]() - The SSG of the site, helps making things more consistent and cuts of copy and pasting.
-  * [Lucide]() - The icons I used across the website (excluding the ones of the navbar).
+  * [Eleventy](https://www.11ty.dev/) - The SSG of the site, helps making things more consistent and cuts of copy and pasting.
+  * [Lucide](https://lucide.dev/) - The icons I used across the website (excluding the ones of the navbar).
+  * [Tabby](https://github.com/cferdinandi/tabby) - For the tabs used around the site.
+  * [MARQUEE3000](https://github.com/ezekielaquino/Marquee3000) - For marquees (only used on the fancy rainbow bar below the header) since unfortunately Firefox borked vanilla marquees (why 😔) and CSS-only solutions look ugly.
   
   </div>
 </div>
@@ -52,4 +54,4 @@ If you want to reuse a part of content or source code of this website please do 
 {% set website_host = "https://reduxflakes.nekoweb.org" %}
 {% endif %}
 
-> This following content/code comes from <a href="{{website_host}}/page_to_the_content">{{website_host}}/page_to_the_content</a> by the author: ReduxFlakes, and is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en)/[GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
+> This following content/code comes from <a href="{{website_host}}/page_to_the_content">{{website_host}}</a> by the author: ReduxFlakes, and is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en)/[GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
