@@ -38,7 +38,7 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
 <h2 id="updates" tabindex="-1">Updates <a href="#updates" class="header-anchor">#</a>
 </h2>
 
-<div class="carbon-scroller">
+<div class="carbon-scroller stack" style="--spacer: 0.5em;">
 
   {%- for entry in updates -%}
     <div class="stack" style="--spacer: 0.5em;">
@@ -111,7 +111,7 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
       <a data-tabby-default href="#additions">Recent additions</a>
     </li>
     <li>
-      <a href="#friends">Friends</a>
+      <a href="#buttons">Buttons</a>
     </li>
     <li>
       <a href="#bestof">The Best</a>
@@ -129,10 +129,19 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
       </a>
     {%- endfor -%}
   </div>
-  <div id="friends" class="tabby-content button-grid">
-    {% for button in buttons.friends %}
-      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy"></a>
-    {% endfor %}
+  <div id="buttons" class="tabby-content stack">
+    <h3 style="text-align:center;">Friends</h3>
+    <div class="button-grid">
+      {% for button in buttons.friends %}
+        <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy"></a>
+      {% endfor %}
+    </div>
+    <h3 style="text-align:center;">Websites I Like</h3>
+    <div class="button-grid">
+      {% for button in buttons.likes %}
+        <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy"></a>
+      {% endfor %}
+    </div>
   </div>
   <div id="bestof" class="tabby-content button-grid">
     {% for button in buttons.bestof %}
