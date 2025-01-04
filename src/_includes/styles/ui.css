@@ -1,25 +1,23 @@
 /*
 Redux Carbon - A CSS UI Framework and design system (sort of)
-Version 1.0-rc1
+Version 1.0-rc2
 */
 
 .navigator {
   grid-area: navigator;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
   overflow: hidden;
-  flex-wrap: wrap;
   border-bottom: 1px solid var(--stroke);
 }
 
 .navigator .brand {
+  display: block;
   font-size: 1.35rem;
   color: white;
   padding-inline: 1rem;
-  padding-block: 0.3rem;
-  border-right: 1px solid var(--stroke);
+  padding-block: 0.25rem;
+  text-align: center;
   background: var(--backdrop);
+  border-bottom: 1px solid var(--stroke);
 }
 
 .navigator-nav {
@@ -29,16 +27,17 @@ Version 1.0-rc1
   text-wrap: nowrap;
   overflow-x: auto;
   white-space: nowrap;
-  height: 100%;
   min-width: 500px;
 }
 
 .navigator-nav a {
+  display: block;
   display: flex;
   align-items: center;
+  min-width: max-content;
   gap: 0.5em;
-  height: 100%;
   padding-inline: 1em;
+  padding-block: 0.5em;
   color: var(--type-strong);
   text-decoration: none;
 }

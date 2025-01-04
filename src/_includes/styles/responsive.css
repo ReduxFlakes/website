@@ -40,6 +40,22 @@
   }
 }
 
+@media (min-width: 650px) {
+  .navigator {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .navigator .brand {
+    border-bottom: 0;
+    border-right: 1px solid var(--stroke);
+  }
+  .navigator-nav a {
+    padding-block: 0;
+  }
+}
+
 @media (max-width: 720px) {
   .highway {
     border-right: 0;
