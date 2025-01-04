@@ -31,6 +31,11 @@ export default {
       url: "https://rice.place/",
     },
     {
+      title: "Velvet Blue",
+      img: "velvetblue.png",
+      url: "https://velvetblue.neocities.org",
+    },
+    {
       title: "july.lol",
       img: "lonelyjuly.gif",
       url: "https://july.lol/",
@@ -49,6 +54,11 @@ export default {
       title: "Bulltown.neo",
       img: "bulltown.png",
       url: "https://bulltown.neocities.org",
+    },
+    {
+      title: "Hifumi's Weebsite",
+      img: "lhfm.png",
+      url: "https://lhfm.neocities.org/",
     },
     {
       title: "Coulored",
@@ -71,6 +81,16 @@ export default {
       title: "www.cozynet.org",
       img: "cozybro88.gif",
       url: "https://www.cozynet.org",
+    },
+    {
+      title: "Daudix",
+      img: "daudix.gif",
+      url: "https://daudix.one/",
+    },
+    {
+      title: "Freeplay",
+      img: "free.gif",
+      url: "https://freeplay.floof.company/",
     },
     {
       title: "pjfrix",
@@ -98,6 +118,11 @@ export default {
       url: "https://datguy.neocities.org/",
     },
     {
+      title: "Seirdy's Home",
+      img: "seirdy.gif",
+      url: "https://seirdy.one/",
+    },
+    {
       title: "Shishka",
       img: "shishka.gif",
       url: "https://shishka.neocities.org/",
@@ -106,6 +131,11 @@ export default {
       title: "rm94",
       img: "rm94.gif",
       url: "https://rm94.neocities.org/",
+    },
+    {
+      title: "Solinu's Website",
+      img: "seirdy.gif",
+      url: "https://solinus.neocities.org/",
     },
     {
       title: "meows.zip",
