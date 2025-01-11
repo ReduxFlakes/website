@@ -3,11 +3,6 @@ title: Projects
 description: "Check my projects, coding work, and contributions I've made over the years"
 ---
 
-<div class="notice notice--warning">
-<span class="lucide--traffic-cone"></span>
-<p>This page is still in heavy construction</p>
-</div>
-
 ## Active Projects
 
 {% for item in projects %}
