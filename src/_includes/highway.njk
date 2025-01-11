@@ -25,15 +25,13 @@
         <section class="aside-card">
             <h2>Webrings</h2>
             <div style="display:grid;grid-template-columns:repeat(2, 1fr);">
-                {% if env.environment == "production" %}
-                    <p class="webring-label">neossg</p>
-                    <p class="webring-container">
-                        <div id='neossg'>
-                            <script type="text/javascript" src="https://neossg.neocities.org/onionring-variables.js"></script>
-                            <script type="text/javascript" src="https://neossg.neocities.org/onionring-widget.js"></script>
-                        </div>
-                    </p>
-                {% endif %}
+
+                <p class="webring-label">neossg</p>
+                <div id='neossg' class="webring-container">
+                    <script type="text/javascript" src="https://neossg.neocities.org/onionring-variables.js"></script>
+                    <script type="text/javascript" src="https://neossg.neocities.org/onionring-widget.js"></script>
+                </div>
+
                 <p class="webring-label">null</p>
                 <p class="webring-container null">
                     <script src="https://nuthead.neocities.org/ring/ring.js"></script>
@@ -83,6 +81,11 @@
                 - Terry A. Davis</p>
         </blockquote>
     </section>
+    <script>
+        document
+            .querySelector(".webring-info")
+            .remove();
+    </script>
     {#
     <section class="aside-card">
         <h2>Discharge Zone</h2>
