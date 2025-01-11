@@ -6,8 +6,18 @@ export default [
     url: "https://surfscape.neocities.org",
   },
   {
+    title: "CSMPJS",
+    description: "A customizable, simple, music player in JS",
+    url: "https://github.com/ReduxFlakes/csmpjs",
+  },
+  {
     title: "Raven Protection",
     description: "Ad and tracking filters for desktop and mobile browsers.",
     url: "https://codeberg.org/reduxflakes/raven-protection",
+  },
+  {
+    title: "Last.fm Widget",
+    description: "A simple widget that show what song is currently listening",
+    url: "https://github.com/ReduxFlakes/lastfm-widget",
   },
 ];
