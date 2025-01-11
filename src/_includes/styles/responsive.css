@@ -40,6 +40,15 @@
   }
 }
 
+@media (max-width: 720px) {
+  .highway {
+    border-right: 0;
+  }
+  .aside {
+    border-right: 0;
+  }
+}
+
 @media (min-width: 650px) {
   .navigator {
     display: flex;
@@ -51,16 +60,10 @@
     border-bottom: 0;
     border-right: 1px solid var(--stroke);
   }
+  .navigator .navigator-nav {
+    min-width: 500px;
+  }
   .navigator-nav a {
     padding-block: 0;
-  }
-}
-
-@media (max-width: 720px) {
-  .highway {
-    border-right: 0;
-  }
-  .aside {
-    border-right: 0;
   }
 }
