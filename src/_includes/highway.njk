@@ -148,19 +148,13 @@
   </section>
   <script>
     /* use the website icons for NeoSSG webring*/
-    document
-      .getElementsByClassName("webring-info")[0]
-      .innerHTML(
-        '<span class="webring-info"><a href="https://neossg.neocities.org"><span class="lucide--globe"></span></a></span>'
-      );
+    document.getElementsByClassName("webring-info").innerHTML =
+      '<span class="webring-info"><a href="https://neossg.neocities.org"><span class="lucide--globe"></span></a></span>';
+    document.getElementsByClassName("webring-prev").innerHTML =
+      '<span class="lucide--arrow-left"></span>';
 
-    document
-      .getElementsByClassName("webring-prev")[0]
-      .innerHTML('<span class="lucide--arrow-left"></span>');
-
-    document
-      .getElementsByClassName("webring-next")[0]
-      .innerHTML('<span class="lucide--arrow-next"></span>');
+    document.getElementsByClassName("webring-next").innerHTML =
+      '<span class="lucide--arrow-next"></span>';
   </script>
   {#
   <section class="aside-card">
