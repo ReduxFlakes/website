@@ -15,11 +15,6 @@ export default [
     icon: "blueprint",
   },
   {
-    title: "design",
-    url: "/design/",
-    icon: "paint",
-  },
-  {
     title: "extras",
     url: "/extras/",
     icon: "star",
