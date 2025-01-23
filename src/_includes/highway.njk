@@ -149,17 +149,17 @@
   <script>
     /* use the website icons for NeoSSG webring*/
     document
-      .querySelector(".webring-info")
+      .getElementsByClassName("webring-info")[0]
       .innerHTML(
         '<span class="webring-info"><a href="https://neossg.neocities.org"><span class="lucide--globe"></span></a></span>'
       );
 
     document
-      .querySelector(".webring-prev")
+      .getElementsByClassName("webring-prev")[0]
       .innerHTML('<span class="lucide--arrow-left"></span>');
 
     document
-      .querySelector(".webring-next")
+      .getElementsByClassName("webring-next")[0]
       .innerHTML('<span class="lucide--arrow-next"></span>');
   </script>
   {#
