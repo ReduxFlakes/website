@@ -23,13 +23,6 @@
         </ul>
     </section>
     <section class="aside-card aside-card--expand">
-        <h2 class="md-heading">Gallery Showcase <span class="lucide--circle-help"></span></h2>
-        <div class="aside-card-content">
-            <p>No work to showcase today...</p>
-            {{ component('link-button', {href: "/design", title: "Check gallery", icon: "lucide--image"}) }}
-        </div>
-    </section>
-    <section class="aside-card aside-card--expand">
         <h2 class="md-heading">Hits <span class="lucide--circle-help"></span></h2>
         {% for hit in hits %}
             <a href="{{hit.url}}" class="card" target="_blank" rel="noopener">
