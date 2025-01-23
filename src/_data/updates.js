@@ -1,5 +1,10 @@
 export default [
   {
+    updateDate: "2025-01-23",
+    content:
+      "Removed the design page since it will take awhile to start making it. Also tried making NeoSSG webring widget to look more consistent with the website.",
+  },
+  {
     updateDate: "2025-01-11",
     content:
       "Fixed the navbar again on mobile, added new projects and added feed icons on the blog page.",
