@@ -12,7 +12,7 @@ tabby: true
 
 Hi, my name is ReduxFlakes also known as reduc to close friends. I'm a CS student from Portugal that likes old stuff. The main things I love is music, programming (I'm bad though), design, and gaming. I'm an advocate on privacy and FLOSS.
 
-I do mostly web design, mockups of operating systems and software, music remastering (that I upload to [YouTube]()), and other projects that I'll never released because I'm too ambitious and I procrastinate a lot :p.
+I do mostly web design, mockups of operating systems and software, music remastering (that I upload to [YouTube](https://www.youtube.com/@reduxflakes)), and other projects that I'll never released because I'm too ambitious and I procrastinate a lot :p.
 
 ## About the website
 
@@ -42,7 +42,7 @@ I do mostly web design, mockups of operating systems and software, music remaste
 
 ## License
 
-This website content, unless specified, is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en) and it's source code [available on GitHub]() is licensed under [GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
+This website content, unless specified, is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en) and it's source code [available on GitHub](https://github.com/ReduxFlakes/website) is licensed under [GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
 
 ### Attribution
 

@@ -42,7 +42,11 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
 
   {%- for entry in updates -%}
     <div class="stack" style="--spacer: 0.5em;">
-      <time datetime="{{ entry.updateDate | dateToISO }}">{{ entry.updateDate | formatStringDate }}</time>
+      {%- if loop.first -%}
+        <time datetime="{{ entry.updateDate | dateToISO }}" style="font-weight:bold;color:var(--type-strong);">{{ entry.updateDate | formatStringDate }}</time>
+      {%- else -%}
+        <time datetime="{{ entry.updateDate | dateToISO }}">{{ entry.updateDate | formatStringDate }}</time>
+      {%- endif -%}
       <p>{{ entry.content | safe }}</p>
       <hr>
     </div>

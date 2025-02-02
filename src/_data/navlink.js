@@ -5,20 +5,17 @@ export default {
       url: "/faq/",
     },
     {
-      title: "No AI",
-      url: "/no-ai/",
-    },
-    {
       title: "Privacy Statement",
       url: "/privacy/",
+    },
+
+    {
+      title: "About",
+      url: "/about/",
     },
     {
       title: "Credits & Tools",
       url: "/about/#about-the-website",
-    },
-    {
-      title: "About",
-      url: "/about/",
     },
   ],
 };

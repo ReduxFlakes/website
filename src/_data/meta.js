@@ -9,10 +9,6 @@ export default {
     website_neo: "https://reduxflakes.neocities.org/",
     website_neko: "https://reduxflakes.nekoweb.org/",
   },
-  mood: {
-    feeling: "Stressed",
-    emoji: "/public/icons/emojis/neofox_notice.webp",
-  },
   socials: [
     {
       name: "GitHub",

@@ -1,6 +1,6 @@
 /*
 Redux Carbon - A CSS UI Framework and design system (sort of)
-Version 1.0-rc2
+Version 1.0-rc3
 */
 
 .navigator {
@@ -12,7 +12,7 @@ Version 1.0-rc2
 .navigator .brand {
   display: block;
   font-size: 1.35rem;
-  color: white;
+  color: var(--type-strong);
   padding-inline: 1rem;
   padding-block: 0.25rem;
   text-align: center;
@@ -30,18 +30,18 @@ Version 1.0-rc2
 }
 
 .navigator-nav a {
-  display: block;
   display: flex;
   align-items: center;
   min-width: max-content;
-  gap: 0.5em;
   padding-inline: 1em;
   padding-block: 0.5em;
   color: var(--type-strong);
-  text-decoration: none;
+  font-weight: 400;
 }
 .navigator a:hover {
+  color: var(--type);
   background: var(--background-state);
+  text-decoration: underline dotted;
 }
 
 /* components */

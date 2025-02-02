@@ -1,5 +1,10 @@
 export default [
   {
+    updateDate: "2025-02-02",
+    content:
+      "Major update on the projects page, and new blog post about new projects and what I've doing last month! Also removed some of the clutter like the icons from the navbar, removed empty links and sidebar widgets.",
+  },
+  {
     updateDate: "2025-01-23",
     content:
       "Removed the design page since it will take awhile to start making it. Also tried making NeoSSG webring widget to look more consistent with the website.",

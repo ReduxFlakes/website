@@ -14,24 +14,13 @@
     <section class="aside-card aside-card--expand">
         <h2 class="md-heading">Currently Working On</h2>
         <ul style="padding-inline-start:2rem;font-size:0.95rem">
+            <li>A toolbox app for Windows</li>
             <li>SurfScape v3 release</li>
-            <li>Remastering music for YouTube</li>
-            <li>A Windows app</li>
+            <li>Remastering music</li>
             <li>
-                <a href="/#more-stuff">This website ;)</a>
+                <a href="/#more-stuff">This website!</a>
             </li>
         </ul>
-    </section>
-    <section class="aside-card aside-card--expand">
-        <h2 class="md-heading">Hits <span class="lucide--circle-help"></span></h2>
-        {% for hit in hits %}
-            <a href="{{hit.url}}" class="card" target="_blank" rel="noopener">
-                <section>
-                    <h3>{{hit.title}}</h3>
-                    <p>{{hit.displayUrl}}</p>
-                </section>
-            </a>
-        {% endfor %}
     </section>
     <section class="aside-card aside-card--expand">
         <h2 class="md-heading">Guestbook <span class="lucide--circle-help"></span></h2>
@@ -40,5 +29,15 @@
                 <h3>Sign at atabook.org</h3>
             </section>
         </a>
+    </section>
+    <section class="aside-card aside-card--expand">
+        <h2 class="md-heading">Favourite Quote</h2>
+        <blockquote style="margin-inline-start:1rem;padding-inline-end:1rem;font-size:0.95rem;">
+            <p class="citation" style="text-align:right;">
+        “An <strong>idiot</strong> admires <strong>complexity</strong>, a
+        <strong>genius</strong> admires <strong>simplicity</strong>”
+      </p>
+            <p class="author" style="text-align:right;">- Terry A. Davis</p>
+        </blockquote>
     </section>
 </aside>
