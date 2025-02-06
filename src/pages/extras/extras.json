@@ -1,9 +1,0 @@
-{
-  "layout": "base",
-  "permalink": "/extras/{{title|slugify}}/",
-  "theme": {
-    "primary": "#380f10",
-    "secondary": "#380f32",
-    "text": "#ef894f"
-  }
-}
