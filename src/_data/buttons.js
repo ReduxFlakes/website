@@ -134,7 +134,7 @@ export default {
     },
     {
       title: "Solinu's Website",
-      img: "seirdy.gif",
+      img: "solinus.gif",
       url: "https://solinus.neocities.org/",
     },
     {
