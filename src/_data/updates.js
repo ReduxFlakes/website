@@ -1,5 +1,10 @@
 export default [
   {
+    updateDate: "2025-02-06",
+    content:
+      "Changed the layout around to be simpler, removed some junk, fixed a button with the wrong image. I need to rewrite this website again!",
+  },
+  {
     updateDate: "2025-02-02",
     content:
       "Major update on the projects page, and new blog post about new projects and what I've doing last month! Also removed some of the clutter like the icons from the navbar, removed empty links and sidebar widgets.",
