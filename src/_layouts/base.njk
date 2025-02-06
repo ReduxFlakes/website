@@ -6,13 +6,12 @@
       <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
       {% include "toolbar.njk" %}
       {% include "header.njk" %}
-      {% include "highway.njk" %}
       <main id="main-content" {% if bg %}style="background:{{bg}}"{% endif %}>
         {% block base %}
           <article class="stack">{{content | safe }}</article>
         {% endblock %}
       </main>
-      {% include "aside.njk" %}
+      {% include "highway.njk" %}
       {% include "footer.njk" %}
     </div>
     {% if tabby and tabby != false %}

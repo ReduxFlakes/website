@@ -15,9 +15,15 @@ Version 1.0-rc3
   color: var(--type-strong);
   padding-inline: 1rem;
   padding-block: 0.25rem;
+  font-weight: 500;
+  text-decoration: none;
   text-align: center;
   background: var(--backdrop);
   border-bottom: 1px solid var(--stroke);
+}
+
+.navigator .brand:hover {
+  background: var(--background-state);
 }
 
 .navigator-nav {

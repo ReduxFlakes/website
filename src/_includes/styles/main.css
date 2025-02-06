@@ -65,10 +65,6 @@
   grid-area: highway;
 }
 
-.aside {
-  grid-area: aside;
-}
-
 main {
   grid-area: content;
   border-bottom: 1px solid var(--stroke);
@@ -77,10 +73,6 @@ main {
 main > article,
 main > section {
   padding: 1rem;
-}
-
-.aside {
-  grid-area: aside;
 }
 
 .main-footer {
