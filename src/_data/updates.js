@@ -1,5 +1,10 @@
 export default [
   {
+    updateDate: "2025-02-13",
+    content:
+      "Added the guestbook hyperlink again and other sections from the old sidebar.",
+  },
+  {
     updateDate: "2025-02-06",
     content:
       "Changed the layout around to be simpler, removed some junk, fixed a button with the wrong image. I need to rewrite this website again!",
