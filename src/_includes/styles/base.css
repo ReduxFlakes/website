@@ -139,10 +139,7 @@ body {
 ::selection {
   background: #234455;
   color: #7eccf3;
-  background-clip: initial;
-  text-fill-color: initial;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
+  appearance: initial;
 }
 
 img::selection {

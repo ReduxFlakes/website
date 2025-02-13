@@ -14,7 +14,7 @@
           ReduxFlakes
         </p>
         <p style="font-size: 1.05rem; color: var(--type-subtle)">
-        he/him
+        he/him/they
         </p>
       </div>
     </div>
@@ -28,6 +28,17 @@
     {% endif %}
   </section>
   <section class="aside-card">{% include "lastfm.html" %}</section>
+  <section class="aside-card aside-card--expand">
+    <h2 class="md-heading">Latest Posts</h2>
+    {% for post in collections.posts | limit(3) %}
+      <a href="{{post.url}}" class="card">
+        <section>
+          <h3>{{post.data.title}}</h3>
+          <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
+        </section>
+      </a>
+    {% endfor %}
+  </section>
   {% if env.host == "neocities" %}
     <section class="aside-card">
       <h2>Webrings</h2>
@@ -102,6 +113,7 @@
       </div>
     </section>
   {% endif %}
+
   <section class="aside-card">
     <h2>Socials</h2>
     <div class="button-grid">
@@ -119,7 +131,25 @@
       <a href='https://ko-fi.com/K3K519YBGW' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com'/></a>
     </div>
   </section>
+  <section class="aside-card aside-card--expand">
+    <h2 class="md-heading">Guestbook</h2>
+    <a href="https://reduxflakes.atabook.org/" class="card" target="_blank" rel="noopener" style="border-color:#108EC0;">
+      <section>
+        <h3>Sign at atabook.org</h3>
+      </section>
+    </a>
+  </section>
 
+  <section class="aside-card aside-card--expand">
+    <h2 class="md-heading">Favourite Quote</h2>
+    <blockquote style="margin-inline-start:1rem;padding-inline-end:1rem;font-size:0.95rem;">
+      <p class="citation" style="text-align:right;">
+        “An <strong>idiot</strong> admires <strong>complexity</strong>, a
+        <strong>genius</strong> admires <strong>simplicity</strong>”
+      </p>
+      <p class="author" style="text-align:right;">- Terry A. Davis</p>
+    </blockquote>
+  </section>
   <script>
     /* use the website icons for NeoSSG webring */
     document
@@ -133,51 +163,6 @@
       .getElementsByClassName("webring-next")
       .innerHTML = '<span class="lucide--arrow-next"></span>';
   </script>
-  {#
-  <section class="aside-card">
-    <h2>Discharge Zone</h2>
-    <div
-      style="
-        display: flex;
-        align-items: center;
-        height: 274px;
-        overflow: hidden;
-      "
-      class="funky-container"
-    >
-      <img src="" alt="Loading" id="funky-viewer" lazy="loading" />
-    </div>
-    <noscript>
-      <p>You need JavaScript to load the Discharge Zone</p>
-    </noscript>
-  </section>
-  <script>
-    const funky = [
-      "/public/img/funky/cat_escape.gif",
-      "/public/img/funky/cat-but-heres-the-approacher.gif",
-      "/public/img/funky/squish.gif",
-      "/public/img/funky/tada-peekaboo.gif",
-      "/public/img/funky/get-real-cat.gif",
-    ];
-    let image = document.getElementById("funky-viewer");
-    let counter = 0;
-
-    document.addEventListener("DOMContentLoaded", function () {
-      image.src = funky[0];
-      counter = 1;
-      setInterval(function () {
-        image.src = funky[counter];
-        image.alt = funky[counter];
-        if (counter < funky.length - 1) {
-          counter += 1;
-        } else {
-          image.src = funky[counter];
-          counter = 0;
-        }
-      }, 2850);
-    });
-  </script>
-  #}
 </aside>
 <style>
   .webring-container {
