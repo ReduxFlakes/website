@@ -1,53 +1,26 @@
 /*
-Redux Carbon - A CSS UI Framework and design system (sort of)
-Version 1.0-rc3
+Steel UI - A design system for websites and applications
+Version 1.0-rc4
 */
 
 .navigator {
-  grid-area: navigator;
-  overflow: hidden;
+  display: flex;
   border-bottom: 1px solid var(--stroke);
 }
 
-.navigator .brand {
-  display: block;
-  font-size: 1.35rem;
-  color: var(--type-strong);
+.navigator a {
   padding-inline: 1rem;
-  padding-block: 0.25rem;
-  font-weight: 500;
+  padding-block: 0.3em;
+  color: var(--type-subtle);
   text-decoration: none;
-  text-align: center;
-  background: var(--backdrop);
-  border-bottom: 1px solid var(--stroke);
-}
-
-.navigator .brand:hover {
-  background: var(--background-state);
-}
-
-.navigator-nav {
-  display: flex;
-  flex: 1;
-  align-items: stretch;
-  text-wrap: nowrap;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.navigator-nav a {
-  display: flex;
-  align-items: center;
-  min-width: max-content;
-  padding-inline: 1em;
-  padding-block: 0.5em;
-  color: var(--type-strong);
-  font-weight: 400;
 }
 .navigator a:hover {
   color: var(--type);
   background: var(--background-state);
-  text-decoration: underline dotted;
+}
+
+.navigator a[aria-current="true"] {
+  color: var(--type-strong);
 }
 
 /* components */
@@ -57,12 +30,12 @@ Version 1.0-rc3
 
 .sc-heading {
   background: var(--type-strong);
-  color: var(--backdrop);
-  padding: 0.25em 0.5rem;
+  color: var(--strong-foreground);
+  padding: 0.25em 0.75rem;
 }
 
 .showcase-card .content {
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
 }
 
 .aside-card {
@@ -139,62 +112,6 @@ Version 1.0-rc3
   background: var(--background-state);
 }
 
-.aside-card--expand .card {
-  padding: 0.25rem 1rem;
-  margin-inline-end: 1rem;
-}
-
-.tabs-container {
-  border: 1px solid white;
-}
-
-ul[data-tabs] {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.tabs-container ul[data-tabs] li {
-  flex-grow: 1;
-}
-
-.tabs-container ul[data-tabs] li a {
-  display: block;
-  text-decoration: none;
-  color: var(--type-subtle);
-  border-bottom: 1px solid transparent;
-  width: 100%;
-  padding: 0.25rem 0.75rem;
-}
-
-.tabs-container ul[data-tabs] li a:hover {
-  background: var(--background-state);
-}
-
-.tabs-container ul[data-tabs] li a[aria-selected="true"] {
-  color: var(--type-strong);
-  border-color: var(--stroke-strong);
-}
-
-.tabby-content[hidden="hidden"] {
-  display: none;
-}
-
-.tabby-content {
-  padding: 0.75rem;
-}
-
-.tabby-content--expand {
-  border-top: 1px solid var(--stroke);
-  padding: 0;
-}
-
-.tabby-content--expand .card:not(:last-child) {
-  border-right: 1px solid var(--stroke);
-}
-
 .classic-button {
   width: 88px;
   height: 31px;
@@ -205,119 +122,16 @@ ul[data-tabs] {
   scale: 1.05;
 }
 
-.game-card {
-  position: relative;
-  width: 150px;
-  height: 225px;
-  perspective: 1000px;
-  z-index: 1;
-  transition: 150ms all cubic-bezier(0.45, 0, 0.4, 1);
-}
-
-.game-card__cover {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  background-size: cover;
-  perspective-origin: 50% 50%;
-  transform-style: preserve-3d;
-  transform-origin: top center;
-  will-change: transform;
-  transform: skewX(0.001deg);
-  transition: transform 0.35s ease-in-out;
-}
-
-.game-card__cover::after {
-  display: block;
-  content: "";
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  background: linear-gradient(
-    226deg,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0.4) 35%,
-    rgba(255, 255, 255, 0.2) 42%,
-    rgba(255, 255, 255, 0) 60%
-  );
-  transform: translateY(-20%);
-  will-change: transform;
-  transition: transform 0.65s cubic-bezier(0.18, 0.9, 0.58, 1);
-}
-
-.game-card:hover .game-card__cover {
-  transform: rotateX(7deg) translateY(-6px);
-}
-
-.game-card:hover .game-card__cover::after {
-  transform: translateY(0%);
-}
-
-.game-card::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  background: rgba(#000000, 0.5);
-  box-shadow: 0 6px 12px 12px rgba(#000000, 0.4);
-  will-change: opacity;
-  transform-origin: top center;
-  transform: skewX(0.001deg);
-  transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.game-card:hover::before {
-  opacity: 0.6;
-  transform: rotateX(7deg) translateY(-6px) scale(1.05);
-}
-
-.notice {
-  --_nt-bg: var(--nt-bg, #0f5132);
-  --_nt-clr: var(--nt-clr, hsl(152, 40%, 78%));
-  --_nt-ic: var(--nt-ic, hsl(152, 55%, 48%));
-  --base-color: var(--_nt-ic);
-  --base-size: 2.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  padding: 0.5rem;
-  background: var(--_nt-bg);
-  color: var(--_nt-clr);
-  border: 1px dotted var(--_nt-ic);
-}
-
-.notice > span {
-  mask-repeat: no-repeat;
-  flex-shrink: 0;
-}
-
-.notice--warning {
-  --nt-bg: hsl(59, 69%, 19%);
-  --nt-clr: hsl(59, 40%, 78%);
-  --nt-ic: hsl(59, 55%, 48%);
-}
-
-.notice--error {
-  --nt-bg: hsl(2, 69%, 19%);
-  --nt-clr: hsl(2, 45%, 75%);
-  --nt-ic: hsl(2, 55%, 55%);
-}
-
 .carbon-scroller {
   display: block;
   border: 1px solid var(--stroke-strong);
   padding: 1rem;
-  max-height: 150px;
+  height: 200px;
   overflow-y: auto;
+  transition: all 200ms cubic-bezier(0.14, 0.37, 0.55, 0.84);
+}
+
+.carbon-scroller:hover {
+  height: 300px;
+  box-shadow: 0px 0px 8px 0px white;
 }

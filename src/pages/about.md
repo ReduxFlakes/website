@@ -16,29 +16,20 @@ I do mostly web design, mockups of operating systems and software, music remaste
 
 ## About the website
 
-<div class="tabs-container">
-  <ul data-tabs>
-    <li><a data-tabby-default href="#inspiration">Inspiration</a></li>
-    <li><a href="#credits">Credits</a></li>
-  </ul>
-  <div id="inspiration" class="tabby-content">
-    <p style="text-align:center;">These are all the websites that inspired me to create this site as is in terms of layout, design, and content, so thank you to everyone on this list, go visit them all!</p>
-    <br>
-    <div  class="button-grid">
-    {% for button in buttons.likes %}
-      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-button" loading="lazy"></a>
-    {% endfor %}
-    </div>
-  </div>
-  <div id="credits" class="tabby-content">
-  
-  * [Eleventy](https://www.11ty.dev/) - The SSG of the site, helps making things more consistent and cuts of copy and pasting.
-  * [Lucide](https://lucide.dev/) - The icons I used across the website (excluding the ones of the navbar).
-  * [Tabby](https://github.com/cferdinandi/tabby) - For the tabs used around the site.
-  * [MARQUEE3000](https://github.com/ezekielaquino/Marquee3000) - For marquees (only used on the fancy rainbow bar below the header) since unfortunately Firefox borked vanilla marquees (why 😔) and CSS-only solutions look ugly.
-  
-  </div>
+### Inspiration
+
+<p style="text-align:center;">These are all the websites that inspired me to create this site as is in terms of layout, design, and content, so thank you to everyone on this list, go visit them all!</p>
+
+<div  class="button-grid">
+  {% for button in buttons.likes %}
+    <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-button" loading="lazy"></a>
+  {% endfor %}
 </div>
+
+### Credits
+
+- [Eleventy](https://www.11ty.dev/) - The SSG of the site, helps making things more consistent and cuts on copy and pasting.
+- [Lucide](https://lucide.dev/) - The icons I used across the website.
 
 ## License
 

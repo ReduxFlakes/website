@@ -1,50 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
   {% include "head.njk" %}
-  <body>
-    <div class="wrapper">
-      <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
-      {% include "toolbar.njk" %}
-      {% include "header.njk" %}
-      <main id="main-content" {% if bg %}style="background:{{bg}}"{% endif %}>
-        {% block base %}
-          <article class="stack">{{content | safe }}</article>
-        {% endblock %}
-      </main>
-      {% include "highway.njk" %}
-      {% include "footer.njk" %}
-    </div>
-    {% if tabby and tabby != false %}
-      <script src="/public/scripts/tabby.min.js"></script>
-      <script>
-        const tabSelectors = document.querySelectorAll('[data-tabs]');
-        if (tabSelectors) {
-          for (const [i, tabs] of[...tabSelectors].entries()) {
-            tabs.setAttribute('data-tabs', i);
-            new Tabby(`[data-tabs="${i}"]`);
-          }
-        }
-        function toggleTabs(sel) {
-          for ([i, tabs] of[...tabSelectors].entries()) {
-            tabs = new Tabby(`[data-tabs="${i}"]`);
-            document
-              .querySelectorAll(sel)
-              .forEach(tab => tabs.toggle(tab));
-          }
-        }
-      </script>
-    {% endif %}
-    {% if marquee != false %}
-      <script src="/public/scripts/marquee3k.min.js"></script>
-      <script>
-        Marquee3k.init();
-      </script>
-    {% endif %}
-    {% if jquery and jquery != false or not gallery and gallery != false %}
-      <script src="/public/scripts/jquery-3.7.1.min.js"></script>
-      {% if gallery and gallery != false %}
-        <script src="/public/scripts/glightbox.min.js"></script>
-      {% endif %}
-    {% endif %}
+  <body class="wrapper">
+    <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
+    {% include "toolbar.njk" %}
+    {% include "header.njk" %}
+    <main id="main-content" {% if bg %}style="background:{{bg}}"{% endif %}>
+      {% block base %}
+        <article class="stack">{{content | safe }}</article>
+      {% endblock %}
+    </main>
+
+    {% include "footer.njk" %}
   </body>
 </html>

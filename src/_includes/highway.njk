@@ -1,207 +1,134 @@
 <aside class="sidebar highway">
-  <section class="aside-card">
-    <h2>Webmaster</h2>
-    <div class="info-card">
-      <img
-        src="/public/branding/pfp.png"
-        alt="ReduxFlakes cross-propeller logo in pink"
-        width="64px"
-        height="64px"
-        loading="lazy"
-/>
-      <div style="display: flex; justify-content: center; flex-direction: column">
-        <p style="font-size: 1.15rem; color: var(--type-strong)">
-          ReduxFlakes
-        </p>
-        <p style="font-size: 1.05rem; color: var(--type-subtle)">
-        he/him/they
-        </p>
-      </div>
-    </div>
-    {% if env.host == "nekoweb" %}
-      <iframe
-      src="https://nekoweb.org/frame/follow"
-      frameborder="0"
-      width="170"
-      height="28"
-    ></iframe>
-    {% endif %}
-  </section>
-  <section class="aside-card">{% include "lastfm.html" %}</section>
-  <section class="aside-card aside-card--expand">
-    <h2 class="md-heading">Latest Posts</h2>
-    {% for post in collections.posts | limit(3) %}
-      <a href="{{post.url}}" class="card">
-        <section>
-          <h3>{{post.data.title}}</h3>
-          <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
-        </section>
-      </a>
-    {% endfor %}
-  </section>
-  {% if env.host == "neocities" %}
-    <section class="aside-card">
-      <h2>Webrings</h2>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr)">
-        <p class="webring-label">neossg</p>
-        <div id="neossg" class="webring-container">
-          <script
+
+  <h2>Webrings</h2>
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr)">
+    {% if env.host == "neocities" %}
+      <p class="webring-label">neossg</p>
+      <div id="neossg" class="webring-container">
+        <script
           type="text/javascript"
           src="https://neossg.neocities.org/onionring-variables.js"
         ></script>
-          <script
+        <script
           type="text/javascript"
           src="https://neossg.neocities.org/onionring-widget.js"
         ></script>
-        </div>
+      </div>
 
-        <p class="webring-label">null</p>
-        <p class="webring-container null">
-          <script src="https://nuthead.neocities.org/ring/ring.js"></script>
-        </p>
-        <p class="webring-label">no ai</p>
-        <p class="webring-container">
-          <a
+      <p class="webring-label">null</p>
+      <p class="webring-container null">
+        <script src="https://nuthead.neocities.org/ring/ring.js"></script>
+      </p>
+      <p class="webring-label">no ai</p>
+      <p class="webring-container">
+        <a
           href="https://baccyflap.com/noai/?prv&s=rzr"
           target="_top"
           class="icon-button"
         >
-            <span class="lucide--arrow-left"></span>
-          </a>
-          <a
+          <span class="lucide--arrow-left"></span>
+        </a>
+        <a
           href="https://baccyflap.com/noai"
           target="_blank"
           rel="noopener"
           class="icon-button"
         >
-            <span class="lucide--globe"></span
+          <span class="lucide--globe"></span
         ></a>
-          <a
+        <a
           href="https://baccyflap.com/noai/?nxt&s=rzr"
           target="_top"
           class="icon-button"
         >
-            <span class="lucide--arrow-right"></span>
-          </a>
-        </p>
-        {% if env.host == "nekoweb" %}{% endif %}
-        <p class="webring-label">bucket webring</p>
-        <p class="webring-container">
-          <a
+          <span class="lucide--arrow-right"></span>
+        </a>
+      </p>
+    {% endif %}
+    {% if env.host == "nekoweb" %}
+      <p class="webring-label">bucket webring</p>
+      <p class="webring-container">
+        <a
           href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes"
           target="_top"
           class="icon-button"
         >
-            <span class="lucide--arrow-left"></span>
-          </a>
-          <a
+          <span class="lucide--arrow-left"></span>
+        </a>
+        <a
           href="https://webring.bucketfish.me"
           target="_blank"
           rel="noopener"
           class="icon-button"
         >
-            <span class="lucide--globe"></span
+          <span class="lucide--globe"></span
         ></a>
-          <a
+        <a
           href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes"
           target="_top"
           class="icon-button"
         >
-            <span class="lucide--arrow-right"></span>
-          </a>
-        </p>
-      </div>
-    </section>
-  {% endif %}
-
-  <section class="aside-card">
-    <h2>Socials</h2>
-    <div class="button-grid">
-      {% for btn in meta.socials %}
-        <a href="{{ btn.url }}"
-        ><img
-          src="/public/img/buttons/general/{{ btn.img }}"
-          alt="{{ btn.name }} button"
-          width="88px"
-          height="31px"
-          loading="lazy"
-          class="classic-button"
-/></a>
-      {% endfor %}
-      <a href='https://ko-fi.com/K3K519YBGW' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com'/></a>
-    </div>
-  </section>
-  <section class="aside-card aside-card--expand">
-    <h2 class="md-heading">Guestbook</h2>
-    <a href="https://reduxflakes.atabook.org/" class="card" target="_blank" rel="noopener" style="border-color:#108EC0;">
-      <section>
-        <h3>Sign at atabook.org</h3>
-      </section>
-    </a>
-  </section>
-
-  <section class="aside-card aside-card--expand">
-    <h2 class="md-heading">Favourite Quote</h2>
-    <blockquote style="margin-inline-start:1rem;padding-inline-end:1rem;font-size:0.95rem;">
-      <p class="citation" style="text-align:right;">
-        “An <strong>idiot</strong> admires <strong>complexity</strong>, a
-        <strong>genius</strong> admires <strong>simplicity</strong>”
+          <span class="lucide--arrow-right"></span>
+        </a>
       </p>
-      <p class="author" style="text-align:right;">- Terry A. Davis</p>
-    </blockquote>
-  </section>
-  <script>
-    /* use the website icons for NeoSSG webring */
-    document
-      .getElementsByClassName("webring-info")
-      .innerHTML = '<span class="webring-info"><a href="https://neossg.neocities.org"><span class="lucide--globe"></span></a></span>';
-    document
-      .getElementsByClassName("webring-prev")
-      .innerHTML = '<span class="lucide--arrow-left"></span>';
+    {% endif %}
+  </div>
+</section>
 
-    document
-      .getElementsByClassName("webring-next")
-      .innerHTML = '<span class="lucide--arrow-next"></span>';
-  </script>
+<section class="aside-card aside-card--expand">
+  <h2 class="md-heading">Guestbook</h2>
+  <a href="https://reduxflakes.atabook.org/" class="card" target="_blank" rel="noopener" style="border-color:#108EC0;">
+    <section>
+      <h3>Sign at atabook.org</h3>
+    </section>
+  </a>
+</section>
+
+<script>
+  /* use the website icons for NeoSSG webring */
+  document
+    .getElementsByClassName("webring-info")
+    .innerHTML = '<span class="webring-info"><a href="https://neossg.neocities.org"><span class="lucide--globe"></span></a></span>';
+  document
+    .getElementsByClassName("webring-prev")
+    .innerHTML = '<span class="lucide--arrow-left"></span>';
+
+  document
+    .getElementsByClassName("webring-next")
+    .innerHTML = '<span class="lucide--arrow-next"></span>';
+</script>
 </aside>
 <style>
-  .webring-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.25rem;
-  }
+.webring-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
 
-  .webring-label {
-    color: var(--type-strong);
-    font-size: 1.4rem;
-  }
+.webring-label {
+  color: var(--type-strong);
+  font-size: 1.4rem;
+}
 
-  #neossg .webring-next a,
-  #neossg .webring-prev a,
-  .null a {
-    display: flex;
-    padding: 0.25rem 0.75rem;
-    border: 1px solid var(--stroke);
-    text-decoration: none;
-    color: var(--type-subtle);
-  }
+#neossg .webring-next a,
+#neossg .webring-prev a,
+.null a {
+  display: flex;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--stroke);
+  text-decoration: none;
+  color: var(--type-subtle);
+}
 
-  .null a img {
-    width: 20px;
-    height: 20px;
-  }
+.null a img {
+  width: 20px;
+  height: 20px;
+}
 
-  #neossg .webring-next a:hover,
-  #neossg .webring-prev a:hover,
-  .null a:hover {
-    background: var(--background-state);
-  }
-
-  .button-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
+#neossg .webring-next a:hover,
+#neossg .webring-prev a:hover,
+.null a:hover {
+  background: var(--background-state);
+}
 </style>

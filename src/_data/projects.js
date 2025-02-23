@@ -7,7 +7,7 @@ export default {
       url: "https://surfscape.neocities.org",
     },
     {
-      title: "Steel",
+      title: "Steel (private for now)",
       description:
         "A minimal, utilitarian, and modern UI design system for building simple and clear applications.",
       url: "https://github.com/ReduxFlakes/steel",

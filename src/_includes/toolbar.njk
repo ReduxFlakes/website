@@ -1,10 +1,5 @@
-<header class="navigator">
-    <a href="/" class="brand">reduxflakes</a>
-    <nav class="navigator-nav">
-        {% for item in navigator %}
-            <a href="{{item.url}}">
-                {{item.title}}
-            </a>
-        {% endfor %}
-    </nav>
-</header>
+<nav class="navigator">
+    {% for item in navigator %}
+        <a href="{{item.url}}" {% if (item.url != "/" and page.url.startsWith(item.url)) or page.url == item.url %}aria-current="true"{% endif %}>{{item.title}}</a>
+    {% endfor %}
+</nav>

@@ -1,16 +1,16 @@
 ---
-title: Home
 layout: base
 description: Fireplace in the mall
 date: 2024-11-11T09:25:31.000Z
-tabby: true
 ---
+
+{% include "homepage-grid.njk" %}
 
 {% renderTemplate "md" %}
 
 ## Welcome
 
-I'm ReduxFlakes (reduc for close friends), a software developer, designer, and privacy advocate from Portugal, and this is my zone on the internet.
+I'm ReduxFlakes (or reduc for close friends), I'm a designer and developer from Portugal. I mostly do web 
 
 I'm a huge fan of old tech, gaming, minimalism, and music.
 
@@ -61,17 +61,9 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
 
 ## Interests
 
-<div class="tabs-container">
-<ul data-tabs>
-  <li>
-    <a data-tabby-default href="#likes">Likes</a>
-  </li>
-  <li>
-    <a href="#dislikes">Dislikes</a>
-  </li>
-</ul>
-<div id="likes" class="tabby-content">
-  
+<details>
+<summary>Likes</summary>
+
   * UI design
   * Blue, pink, and purple
   * Valve games
@@ -87,10 +79,12 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
     * Mindustry
     * Infinitode
     * Armor Games
-  
-  </div>
-<div id="dislikes" class="tabby-content">
-  
+
+</details>
+
+<details>
+<summary>Dislikes</summary>
+
   * GAFAM
   * Tech/Crypto bros
   * Most AIs/LLMs
@@ -104,63 +98,48 @@ I'm a huge fan of old tech, gaming, minimalism, and music.
     * Activision
     * Rockstar Games
     * Blizzard
-  
-  </div>
-</div>
 
-## More Stuff :)
+</details>
+
+## More Stuff!
+
+### Buttons
 
 {% endrenderTemplate %}
 
-<div class="tabs-container">
-<ul data-tabs>
-  <li>
-    <a data-tabby-default href="#additions">Recent additions</a>
-  </li>
-  <li>
-    <a href="#buttons">Buttons</a>
-  </li>
-  <li>
-    <a href="#bestof">The Best</a>
-  </li>
-  <li>
-    <a href="#todo">Site To-Do</a>
-  </li>
-</ul>
-<div id="additions" class="tabby-content tabby-content--expand auto-grid" style="--minsize:150px;">
-  {%- for post in collections.latestContent | limit(3) -%}
-    <a class="card card--breath" href="{{ post.url }}">
-      <h3>
-        {{ post.data.title }}</h3>
-      <p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">{{ post.data.description }}</p>
-    </a>
-  {%- endfor -%}
-</div>
-<div id="buttons" class="tabby-content stack">
-  <h3 style="text-align:center;">Friends</h3>
-  <div class="button-grid">
-    {% for button in buttons.friends %}
-      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy"></a>
-    {% endfor %}
-  </div>
-  <h3 style="text-align:center;">Websites I Like</h3>
-  <div class="button-grid">
-    {% for button in buttons.likes %}
-      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy"></a>
-    {% endfor %}
-  </div>
-</div>
-<div id="bestof" class="tabby-content button-grid">
-  {% for button in buttons.bestof %}
-    <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="240px" height="60px" style="image-rendering:pixelated;" loading="lazy"></a>
+<div id="buttons" class="stack">
+<h4 style="text-align:center;">Friends</h4>
+<div class="button-grid">
+  {% for button in buttons.friends %}
+    <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy"></a>
   {% endfor %}
 </div>
-<div id="todo" class="tabby-content">
-  <ul>
-    <li>Improve responsivness</li>
-    <li>Make the design page</li>
-    <li>Clean code</li>
-    <li>Add more stuff to extras</li>
-  </ul>
+<h4 style="text-align:center;">Websites I Like</h4>
+<div class="button-grid">
+  {% for button in buttons.likes %}
+    <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" class="classic-button" loading="lazy"></a>
+  {% endfor %}
 </div>
 </div>
+
+{% renderTemplate "md" %}
+
+### The Best
+
+{% endrenderTemplate %}
+
+<div id="thebest" class="button-grid">
+{% for button in buttons.bestof %}
+  <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="240px" height="60px" style="image-rendering:pixelated;" loading="lazy"></a>
+{% endfor %}
+</div>
+
+{% renderTemplate "md" %}
+
+### Website Roadmap
+
+* Improve responsivness
+* Clean code
+* Add more pages (colophon, now, etc)
+
+{% endrenderTemplate %}

@@ -1,6 +1,10 @@
 export default [
   {
-    title: "blog",
+    title: "fireplace",
+    url: "/",
+  },
+  {
+    title: "posts",
     url: "/blog/",
   },
   {

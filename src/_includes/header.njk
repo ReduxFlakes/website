@@ -1,7 +1,14 @@
 {% set header_title = title %}
 <header class="main-header">
-    <h1>{{ header_title }}</h1>
+    <h1>
+        {% if header_title %}
+            {{header_title}}
+            {%else%}
+            {{meta.title}}
+        {% endif %}
+    </h1>
     {% if is_post %}
+        <p>{{description}}</p>
         <p>
             <time datetime="{{date}}">{{date | formatPostDate}}</time>
         </p>
@@ -9,33 +16,3 @@
         <p>{{description}}</p>
     {% endif %}
 </header>
-{% if theme %}
-    <style>
-        .main-header {
-            background: linear-gradient(to right, {{theme.primary}}, {{theme.secondary}});
-        }
-        .main-header h1,
-        .main-header p {
-            color: {{theme.text}};
-        }
-    </style>
-{% endif %}
-{% set marquee = true %}
-<div class="color-bar marquee3k">
-    <div>
-        <div style="background:#F965C8;width:74px;height:13px;"></div>
-        <div style="background:#F6305B;width:117px;height:13px;"></div>
-        <div style="background:#F9891A;width:43px;height:13px;"></div>
-        <div style="background:#F9AB1A;width:39px;height:13px;"></div>
-        <div style="background:#F9F11A;width:25px;height:13px;"></div>
-        <div style="background:#C5F91A;width:35px;height:13px;"></div>
-        <div style="background:#7BE611;width:18px;height:13px;"></div>
-        <div style="background:#1AF96F;width:75px;height:13px;"></div>
-        <div style="background:#1AF9AB;width:123px;height:13px;"></div>
-        <div style="background:#4ED3F7;width:51px;height:13px;"></div>
-        <div style="background:#4EB6F7;width:176px;height:13px;"></div>
-        <div style="background:#4E83F7;width:146px;height:13px;"></div>
-        <div style="background:#C24EF7;width:78px;height:13px;"></div>
-        <div style="background:#F74EBF;width:18px;height:13px;"></div>
-    </div>
-</div>

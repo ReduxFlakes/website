@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "eleventy --serve",
+    "start:nekoweb": "cross-env HOST_TYPE=nekoweb eleventy --serve",
     "build": "eleventy",
     "build:prod": "cross-env BUILD_TYPE=production eleventy",
     "build:neo": "cross-env BUILD_TYPE=production HOST_TYPE=neocities eleventy",

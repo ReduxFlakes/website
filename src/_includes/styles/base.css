@@ -10,15 +10,15 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  font-size: 100%;
   color-scheme: dark;
 }
 
+:focus,
 a:focus-visible,
 button:focus-visible,
 .button:focus-visible {
-  box-shadow: 0 0 0 4px #5a75b4;
-  outline: 2px solid #a2d1ff;
+  box-shadow: 0 0 0 4px #b45a71;
+  outline: 2px solid #ffa2b8;
 }
 
 ul[role="list"],
@@ -60,23 +60,6 @@ summary {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-@font-face {
-  font-family: "Neue Haas Grotesk Display Pro";
-  src: url("/public/fonts/subset-NeueHaasDisplay-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Neue Haas Grotesk Display Pro";
-  src: url("/public/fonts/subset-NeueHaasDisplay-LightItalic.woff2")
-    format("woff2");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
 }
 
 @font-face {
@@ -132,13 +115,13 @@ summary {
 
 body {
   color: var(--type);
-  font: 1.075rem / 1.5 var(--font);
-  background: var(--backdrop);
+  font: 1.25rem / 1.65 var(--font);
+  background: var(--background);
 }
 
 ::selection {
-  background: #234455;
-  color: #7eccf3;
+  background: #55232b;
+  color: #f37e9d;
   appearance: initial;
 }
 
@@ -161,12 +144,15 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   color: var(--type-strong);
   line-height: 1.2em;
 }
 
 h3,
+h4,
+h5,
+h6,
 b,
 strong {
   font-weight: 500;
@@ -176,9 +162,8 @@ strong {
 h1:target,
 h2:target,
 h3:target {
-  padding-left: 0.5em;
-  background: rgba(74, 183, 238, 0.3);
-  color: #7eccf3;
+  background: rgba(238, 74, 150, 0.3);
+  color: #f37eb1;
   transition: 150ms all ease-in-out;
 }
 

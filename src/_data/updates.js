@@ -1,5 +1,10 @@
 export default [
   {
+    updateDate: "2025-02-23",
+    content:
+      "Huge update? I guess, as you can imagine, I've decided to once again redesign the website, it's mostly a layout change, most of the design itself is and will stay the same. I'm thinking of adding more pages and try to clean the code, but let's see...",
+  },
+  {
     updateDate: "2025-02-13",
     content:
       "Added the guestbook hyperlink again and other sections from the old sidebar.",

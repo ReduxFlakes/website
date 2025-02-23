@@ -3,62 +3,23 @@
 @import url(icons.css);
 
 .wrapper {
-  background: var(--background);
+  max-width: var(--viewport);
+  margin: 0 auto;
 }
 
 .main-header {
-  grid-area: header;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  background: linear-gradient(
-    90deg,
-    #330f27 0%,
-    #330f15 10%,
-    #331c0f 20%,
-    #332c0f 30%,
-    #2b330f 40%,
-    #21330f 50%,
-    #15330f 60%,
-    #0f3316 70%,
-    #0f3322 80%,
-    #0f3331 90%,
-    #0f2033 100%
-  );
-  border-bottom: 1px solid var(--stroke);
+  padding: 1rem;
 }
 
 .main-header h1 {
   text-transform: lowercase;
-  color: #afefab;
+  color: var(--primary);
 }
 
 .main-header p {
-  text-transform: lowercase;
   font-size: 1.225rem;
-  letter-spacing: -0.0175em;
-  color: hsl(101deg 43.79% 72.25%);
-  opacity: 0.85;
-}
-
-.color-bar {
-  grid-area: fancy-bar;
-  border-bottom: 1px solid var(--stroke);
-  overflow: hidden;
-}
-
-.color-bar > div {
-  display: flex;
-}
-
-.color-bar .marquee3k__wrapper {
-  display: flex;
-}
-
-.color-bar .marquee3k__copy {
-  display: flex !important;
 }
 
 .highway {
@@ -67,7 +28,6 @@
 
 main {
   grid-area: content;
-  border-bottom: 1px solid var(--stroke);
 }
 
 main > article,
@@ -82,6 +42,7 @@ main > section {
   color: var(--type-subtle);
   grid-area: footer;
   padding: 0.5rem 1rem;
+  padding-top: 1rem;
   margin-top: 1rem;
   border-top: 1px solid var(--stroke);
   font-size: 0.9em;
@@ -141,4 +102,11 @@ button:active,
   display: grid;
   gap: var(--_gridgap);
   grid-template-columns: repeat(auto-fit, minmax(var(--_minsize), 1fr));
+}
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 }

@@ -1,14 +1,14 @@
 :root {
   --font: "Neue Haas Grotesk Display Pro", "Helvetica", "Ubuntu", system-ui;
-  --viewport: 1080px;
-  --backdrop: #000000;
-  --background: #121212;
+  --viewport: 880px;
+  --background: hsl(0, 0%, 6%);
   --background-state: hsla(0, 0%, 100%, 0.05);
-  --primary: #3a90da;
-  --type: #d9d9d9;
-  --type-strong: #ffffff;
-  --type-subtle: #999999;
+  --primary: hsl(343, 100%, 69%);
+  --type: hsl(0, 0%, 83%);
+  --type-strong: hsl(0, 0%, 94%);
+  --type-subtle: hsl(0, 0%, 70%);
   --stroke: #414141;
   --stroke-strong: #ffffff;
+  --strong-foreground: rgb(0, 0, 0);
   --border: #cccccc;
 }
