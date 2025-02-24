@@ -14,9 +14,7 @@ description: "Check my projects, coding work, and contributions I've made over t
           {{item.description }}
       </p>
       {%- if not item.status -%}
-        <p>
-          {{ component('link-button', {href: item.url, title: "Go to "+item.title }) }}
-        </p>
+<a href="{{item.url}}">Go to project</a>
       {%- endif -%}
     </div>
   </section>
@@ -34,9 +32,7 @@ description: "Check my projects, coding work, and contributions I've made over t
           {{item.description }}
       </p>
       {%- if not item.status -%}
-        <p>
-          {{ component('link-button', {href: item.url, title: "Go to "+item.title }) }}
-        </p>
+<a href="{{item.url}}">Go to project</a>
       {%- endif -%}
     </div>
   </section>
@@ -54,9 +50,7 @@ description: "Check my projects, coding work, and contributions I've made over t
           {{item.description }}
       </p>
       {%- if not item.status -%}
-        <p>
-          {{ component('link-button', {href: item.url, title: "Go to "+item.title }) }}
-        </p>
+<a href="{{item.url}}">Go to project</a>
       {%- endif -%}
     </div>
   </section>

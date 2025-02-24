@@ -1,0 +1,56 @@
+body {
+  max-width: 72ch;
+  padding: 1rem;
+}
+
+header.page {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  margin-block-start: 0;
+}
+
+nav.page {
+  display: flex;
+  gap: 0.5em;
+}
+
+nav.page a {
+  color: var(--foreground);
+}
+
+nav.page a[aria-current="true"] {
+  text-decoration: underline dotted;
+  color: var(--foreground-subtle);
+}
+
+figure img {
+  image-rendering: pixelated;
+  border: 1px solid var(--stroke);
+}
+
+figcaption {
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  color: var(--foreground-subtle);
+}
+
+header.main {
+  border-bottom: 1px dashed var(--stroke);
+}
+
+a:has(svg) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+a:has(svg) svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+footer.page {
+  border-top: 1px solid gray;
+}

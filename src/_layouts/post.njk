@@ -7,17 +7,17 @@
 {# This checks if toc is not defined or is true #}
 
 {% block base %}
-    {% if toc_enabled %}
+    {%- if toc_enabled -%}
         <details open>
             <summary>
                 <h2>Table of Contents</h2>
             </summary>
-            <section class="stack details-content">
+            <section class="stack">
                 {{ content | toc | safe }}
             </section>
         </details>
         <hr>
-    {% endif %}
+    {%- endif -%}
     <article class="stack" style="font-size: 1.025em;line-height: 1.6;">
         {{ content | safe }}
     </article>

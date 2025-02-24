@@ -28,32 +28,7 @@ paginationNextText: 'Older posts'
 </div>
 
 {% for post in posts %}
-  <section class="showcase-card">
-    <h2 class="sc-heading">{{ post.data.title }}</h2>
-    <div class="content stack" style="--spacer: 0.25em;">
-      <p>
-        <small>
-          <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
-        </small>
-      </p>
-      <p>
-      Tags:
-        {% for tag in post.data.tags -%}
-          <a href="/blog/tagged/{{tag | slugify}}" >{{tag}}</a>
-        {% endfor -%}
-      </p>
-      <p>
-        {% if post.data.page.excerpt %}
-          {{post.data.page.excerpt}}
-        {% else %}
-          {{post.data.description}}
-        {% endif %}
-      </p>
-      <p>
-        {{ component('link-button', {href: post.url, title: "Read more..." }) }}
-      </p>
-    </div>
-  </section>
+  {{ component('post-listing', {title: post.data.title, date: post.date, description: post.data.description, href: post.url }) }}
 {% endfor %}
 
 {% if pagination.href.next or pagination.href.previous %}

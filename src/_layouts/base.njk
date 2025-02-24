@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
   {% include "head.njk" %}
-  <body class="wrapper">
+  <body class="wrapper stack">
     <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
-    {% include "toolbar.njk" %}
+    {% include "navbar.njk" %}
     {% include "header.njk" %}
-    <main id="main-content" {% if bg %}style="background:{{bg}}"{% endif %}>
+    <main id="main-content">
       {% block base %}
         <article class="stack">{{content | safe }}</article>
       {% endblock %}
+      {% block aside %}{% endblock aside %}
     </main>
-
     {% include "footer.njk" %}
   </body>
 </html>

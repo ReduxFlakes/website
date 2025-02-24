@@ -20,6 +20,9 @@ importers:
       '@11ty/eleventy-plugin-rss':
         specifier: ^2.0.2
         version: 2.0.3
+      '@grimlink/eleventy-plugin-lucide-icons':
+        specifier: ^2.1.3
+        version: 2.1.3
       '@uncenter/eleventy-plugin-toc':
         specifier: ^1.0.3
         version: 1.0.3
@@ -32,9 +35,6 @@ importers:
       eleventy-plugin-toc:
         specifier: ^1.1.5
         version: 1.1.5
-      fast-glob:
-        specifier: ^3.3.2
-        version: 3.3.3
       html-minifier-terser:
         specifier: ^7.2.0
         version: 7.2.0
@@ -123,6 +123,9 @@ packages:
 
   '@emnapi/runtime@1.3.1':
     resolution: {integrity: sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==}
+
+  '@grimlink/eleventy-plugin-lucide-icons@2.1.3':
+    resolution: {integrity: sha512-Nko4SVhKPUKxxi2LEU5YKasB0IZ4XHwOHbVvkz3a0zCtkr9lbMcDlqS5tPKbZj0uIit6ry8xYl+QxHYwZ3wqTQ==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -831,6 +834,9 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
+  lucide-static@0.473.0:
+    resolution: {integrity: sha512-fHDRD9De8oyAVXkcmHTtC4ENT6jGxcyey7y/wBLkKlLvU/+zhR2VnAcwA2Hvsa9TJIEizc06jdC7PWoboc6Mkg==}
+
   luxon@3.5.0:
     resolution: {integrity: sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==}
     engines: {node: '>=12'}
@@ -1472,6 +1478,10 @@ snapshots:
     dependencies:
       tslib: 2.8.1
     optional: true
+
+  '@grimlink/eleventy-plugin-lucide-icons@2.1.3':
+    dependencies:
+      lucide-static: 0.473.0
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
@@ -2159,6 +2169,8 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
+  lucide-static@0.473.0: {}
+
   luxon@3.5.0: {}
 
   markdown-it-anchor@9.2.0(@types/markdown-it@14.1.2)(markdown-it@14.1.0):
@@ -2258,8 +2270,9 @@ snapshots:
     dependencies:
       a-sync-waterfall: 1.0.1
       asap: 2.0.6
-      chokidar: 3.6.0
       commander: 5.1.0
+    optionalDependencies:
+      chokidar: 3.6.0
 
   on-finished@2.4.1:
     dependencies:
@@ -2340,6 +2353,7 @@ snapshots:
   postcss-load-config@6.0.1(postcss@8.5.1):
     dependencies:
       lilconfig: 3.1.3
+    optionalDependencies:
       postcss: 8.5.1
 
   postcss-minify@1.1.0(postcss@8.5.1):

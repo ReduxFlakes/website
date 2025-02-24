@@ -9,6 +9,7 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import postcssConfig from "postcss-load-config";
 import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import pluginRss from "@11ty/eleventy-plugin-rss";
+import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import filters from "./config/filters.js";
 
 export default async function (eleventyConfig) {
@@ -16,6 +17,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginTOC);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyLucideicons);
 
   eleventyConfig.addPassthroughCopy("src/public");
 
@@ -53,11 +55,6 @@ export default async function (eleventyConfig) {
     flat: true,
   });
 
-  eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: true,
-    excerpt_separator: "<!-- cut -->",
-  });
-
   eleventyConfig.addPreprocessor("macro-inject", "njk,md", (data, content) => {
     return (
       `{%- from "util/component.njk" import component with context -%}\n` +
@@ -66,44 +63,10 @@ export default async function (eleventyConfig) {
   });
 
   /* collections */
-  eleventyConfig.addCollection("latestContent", function (collectionApi) {
-    return collectionApi.getAll().sort(function (a, b) {
-      return b.date - a.date;
-    });
-  });
-
   eleventyConfig.addCollection("posts", function (collection) {
     return [
       ...collection.getFilteredByGlob("src/pages/posts/content/**/*.md"),
     ].reverse();
-  });
-  eleventyConfig.addCollection("extras", function (collection) {
-    let extrasContent = collection.getFilteredByGlob("src/pages/extras/*.md");
-
-    let filterExtras = extrasContent.filter(
-      (page) => page.fileSlug !== "extras"
-    );
-
-    return filterExtras.sort((a, b) => {
-      return a.data.sort_level - b.data.sort_level;
-    });
-  });
-
-  /* shortcodes */
-  /* a way to make slots work inside content pages: https://danburzo.ro/eleventy-slotted-content/*/
-  const slots = {};
-  eleventyConfig.addGlobalData("eleventyComputed.slots", function () {
-    return (data) => {
-      const key = data.page.inputPath;
-      slots[key] = slots[key] || {};
-      return slots[key];
-    };
-  });
-
-  eleventyConfig.addPairedShortcode("slot", function (content, name) {
-    if (!name) throw new Error("Missing name for {% slot %} block!");
-    slots[this.page.inputPath][name] = content;
-    return "";
   });
 
   /* html and css optimization */

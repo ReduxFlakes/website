@@ -1,0 +1,10 @@
+<header class="page">
+    <a href="/">
+        <img src="/public/branding/logo.svg" alt="ReduxFlakes" width="72">
+    </a>
+    <nav class="page">
+        {% for item in navigator %}
+            <a href="{{item.url}}" {% if (item.url != "/" and page.url.startsWith(item.url)) or page.url == item.url %}aria-current="true"{% endif %}>{{item.title}}</a>
+        {% endfor %}
+    </nav>
+</header>

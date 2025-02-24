@@ -35,22 +35,18 @@
     <meta property="og:locale" content="{{meta.lang}}">
     <meta property="article:author" content="{{ meta.webmaster.name }}"/>
     <meta name="generator" content="{{ eleventy.generator }}"/>
-    {% css %}
-    {% include "styles/main.css" %}
-    {% include "styles/properties.css" %}
-    {% include "styles/responsive.css" %}
+    {% css "base" %}
+    {% include "styles/base.css" %}
     {% endcss %}
     <style>
-        {% getBundle "css" %}
+        {% getBundle "css", "base" %}
     </style>
+    {% css %}
+    {% include "styles/main.css" %}
+    {% endcss %}
+    <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
     <!-- components -->
     <style>
         {% getBundle "css", "lastfm" %}
     </style>
-    {% if style_slot %}
-        {% renderTemplate 'njk,md',
-        slots %}
-        {{ style_slot | safe }}
-        {% endrenderTemplate %}
-    {% endif %}
 </head>

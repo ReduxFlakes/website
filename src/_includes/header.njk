@@ -1,18 +1,27 @@
 {% set header_title = title %}
-<header class="main-header">
+<header class="stack main" style="--spacer:0.25em">
     <h1>
-        {% if header_title %}
-            {{header_title}}
-            {%else%}
+        {%- if header_title -%}
+            {{ header_title }}
+        {%- else -%}
             {{meta.title}}
-        {% endif %}
+        {%- endif -%}
     </h1>
     {% if is_post %}
-        <p>{{description}}</p>
         <p>
             <time datetime="{{date}}">{{date | formatPostDate}}</time>
-        </p>
+            <small>-</small>
+            {{description}}</p>
     {% else %}
         <p>{{description}}</p>
+    {% endif %}
+    {% if banner %}
+        <figure style="--spacer:1em">
+            <img src="/public/img/banners/{{banner.image}}" alt="{{banner.alt}}" title="{{banner.alt}}">
+            <figcaption>
+                <p>{{banner.date}}</p>
+                <p>Author: {{banner.author}}</p>
+            </figcaption>
+        </figure>
     {% endif %}
 </header>
