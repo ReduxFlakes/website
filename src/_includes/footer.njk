@@ -1,5 +1,16 @@
 <footer class="page">
-    <p>&copy; 2021 - 2025 ReduxFlakes. <a href="/about/#license">License and attribution</a>
+    <div class="auto-flex" style="margin-bottom: 0.5em;">
+        {%- for item in buttons.general -%}
+            {%- if item.url -%}
+                <a href="{{item.url}}" title="{{item.title}}">
+                    <img src="/public/img/buttons/general/{{item.img}}" alt="{{item.title}} button" class="classic-btn" width="88" height="31"  loading="lazy" eleventy:ignore>
+                </a>
+            {%- else -%}
+                <img src="/public/img/buttons/general/{{item.img}}" alt="{{item.title}} button" title="{{item.title}}" class="classic-btn" width="88" height="31"  loading="lazy" eleventy:ignore>
+            {%- endif -%}
+        {%- endfor -%}
+    </div>
+    <p>&copy; 2021 - 2025 ReduxFlakes. <a href="/about/#license">License and attribution</a> / <a href="/privacy">Privacy Statement</a>
     </p>
     <p>Built with <a href="https://www.11ty.dev/">11ty</a> and procrastination, and hosted for free thanks to <a href="https://neocities.org/">Neocities</a> and <a href="https://nekoweb.org/">Nekoweb</a>.
         </p>

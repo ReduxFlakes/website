@@ -1,5 +1,10 @@
 export default [
   {
+    updateDate: "2025-03-2",
+    content:
+      'Let\'s go even more minimalist!! New design and layout, tons of optimizations from less CSS to finally implementing eleventy img to optimize images. Also added a "uses" page. More stuff coming soon.',
+  },
+  {
     updateDate: "2025-02-23",
     content:
       "Huge update? I guess, as you can imagine, I've decided to once again redesign the website, it's mostly a layout change, most of the design itself is and will stay the same. I'm thinking of adding more pages and try to clean the code, but let's see...",

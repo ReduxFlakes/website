@@ -7,7 +7,7 @@ export default {
     postcssImport({
       path: ["./src/_includes/styles/"],
     }),
-    postcssMinify,
     autoprefixer,
+    postcssMinify,
   ],
 };

@@ -1,13 +1,15 @@
 export default {
-  active: [
+  pinned: [
     {
       title: "SurfScape",
       description:
-        "SurfScape is a project focused on developing resources, services, and software to help people build their own personal space on the web, escape big corporations, and learn more about privacy and accessibility values.",
+        "A project that serves as an umbrella for all kinds of ambitious project I have. Also serves as a resource library for everything related to the web, privacy, open source, and more.",
       url: "https://surfscape.neocities.org",
     },
+  ],
+  active: [
     {
-      title: "Steel (private for now)",
+      title: "Steel (WIP/Not public)",
       description:
         "A minimal, utilitarian, and modern UI design system for building simple and clear applications.",
       url: "https://github.com/ReduxFlakes/steel",
@@ -20,7 +22,7 @@ export default {
     {
       title: "Last.fm Widget",
       description:
-        "A simple widget that show what song is currently listening.",
+        "A simple widget that show what song is currently listening. Currently being used in the homepage.",
       url: "https://github.com/ReduxFlakes/lastfm-widget",
     },
   ],

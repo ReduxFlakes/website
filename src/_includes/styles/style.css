@@ -1,6 +1,7 @@
 body {
-  max-width: 72ch;
+  max-width: var(--viewport);
   padding: 1rem;
+  margin-inline: auto;
 }
 
 header.page {
@@ -10,21 +11,18 @@ header.page {
   margin-block-start: 0;
 }
 
-nav.page {
-  display: flex;
-  gap: 0.5em;
-}
-
 nav.page a {
   color: var(--foreground);
 }
 
 nav.page a[aria-current="true"] {
   text-decoration: underline dotted;
+  font-style: italic;
   color: var(--foreground-subtle);
 }
 
 figure img {
+  width: 100%;
   image-rendering: pixelated;
   border: 1px solid var(--stroke);
 }
@@ -52,5 +50,31 @@ a:has(svg) svg {
 }
 
 footer.page {
-  border-top: 1px solid gray;
+  margin-block-start: 1rem;
+  padding-block-start: 1rem;
+  border-top: 1px dashed var(--stroke);
+}
+
+details {
+  border: 1px solid var(--stroke);
+}
+
+details summary {
+  padding: 0.25rem 0.5rem;
+}
+
+details summary:has(h2) h2 {
+  display: inline-block;
+  font-size: inherit;
+}
+
+details[open] .details-child {
+  padding: 0 1rem 1rem;
+}
+/* util classes */
+.auto-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
 }

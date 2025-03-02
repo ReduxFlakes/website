@@ -10,6 +10,7 @@ import postcssConfig from "postcss-load-config";
 import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import filters from "./config/filters.js";
 
 export default async function (eleventyConfig) {
@@ -18,6 +19,14 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginTOC);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyLucideicons);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    htmlOptions: {
+      imgAttributes: {
+        loading: "lazy",
+        decoding: "async",
+      },
+    },
+  });
 
   eleventyConfig.addPassthroughCopy("src/public");
 

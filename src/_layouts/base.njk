@@ -5,11 +5,13 @@
     <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
     {% include "navbar.njk" %}
     {% include "header.njk" %}
-    <main id="main-content">
-      {% block base %}
+    <main id="main-content" {%- if aside -%}class="homepage"{%- endif -%}>
+      {%- block base -%}
         <article class="stack">{{content | safe }}</article>
-      {% endblock %}
-      {% block aside %}{% endblock aside %}
+      {%- endblock -%}
+      {% if aside %}
+        {% include "highway.njk" %}
+      {% endif %}
     </main>
     {% include "footer.njk" %}
   </body>

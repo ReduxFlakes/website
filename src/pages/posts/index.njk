@@ -13,15 +13,17 @@ paginationNextText: 'Older posts'
 {% if pagination.pageNumber == 0 %}
   <details>
     <summary>See all tags</summary>
-    {% set tagCloud = collections.posts | tagCloud %}
+    <nav class="details-child">
+      {% set tagCloud = collections.posts | tagCloud %}
 
-    {% for tag, count in tagCloud %}
-      <a href="/blog/tagged/{{ tag | slugify }}">{{ tag }}</a>
-    {% endfor %}
+      {% for tag, count in tagCloud %}
+        <a href="/blog/tagged/{{ tag | slugify }}">{{ tag }}</a>
+      {% endfor %}
+    </nav>
   </details>
 {% endif %}
 
-<div class="button-grid">
+<div class="auto-flex">
   <a href="/blog/feed.xml"><img src="/public/img/buttons/general/80-rss.png" alt="RSS Feed" style="image-rendering:pixelated;"></a>
   <a href="/blog/atom.xml"><img src="/public/img/buttons/general/80-atom.png" alt="Atom Feed" style="image-rendering:pixelated;"></a>
   <a href="/blog/feed.json"><img src="/public/img/buttons/general/80-json.png" alt="JSON Feed" style="image-rendering:pixelated;"></a>

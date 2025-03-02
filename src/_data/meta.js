@@ -35,10 +35,5 @@ export default {
       img: "lastfm.png",
       url: "https://www.last.fm/user/reduxflakes",
     },
-    {
-      name: "Armor Games",
-      img: "armorgames.jpg",
-      url: "https://armorgames.com/user/reduxflakes",
-    },
   ],
 };

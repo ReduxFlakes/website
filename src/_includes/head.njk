@@ -49,4 +49,9 @@
     <style>
         {% getBundle "css", "lastfm" %}
     </style>
+    {% if env.host == "neocities" %}
+        <script src="https://tinylytics.app/embed/dcJBJt8md3MZEExK1rry.js" defer></script>
+    {% else %}
+        <script src="https://tinylytics.app/embed/hsW57LwsRxDySR_okyTP.js" defer></script>
+    {% endif %}
 </head>
