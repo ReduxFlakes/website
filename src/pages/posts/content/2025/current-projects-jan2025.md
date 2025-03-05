@@ -1,6 +1,7 @@
 ---
-title: What I've been doing this past month (January 2025)
+title: What I've been doing this past month
 date: 2025-02-02T12:36:00.000Z
+modified: 2025-03-04T18:38:00.00Z
 tags: ["projects"]
 description: An update on what I've been doing this last month and upcoming projects and updates.
 ---

@@ -1,5 +1,5 @@
 import postcssImport from "postcss-import";
-import postcssMinify from "postcss-minify";
+import cssnano from "cssnano";
 import autoprefixer from "autoprefixer";
 
 export default {
@@ -8,6 +8,6 @@ export default {
       path: ["./src/_includes/styles/"],
     }),
     autoprefixer,
-    postcssMinify,
+    cssnano,
   ],
 };

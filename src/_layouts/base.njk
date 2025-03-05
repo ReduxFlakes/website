@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
   {% include "head.njk" %}
-  <body class="wrapper stack">
-    <a href="#main-content" class="sk-button acs-skip">Skip to main content</a>
-    {% include "navbar.njk" %}
-    {% include "header.njk" %}
-    <main id="main-content" {%- if aside -%}class="homepage"{%- endif -%}>
-      {%- block base -%}
-        <article class="stack">{{content | safe }}</article>
-      {%- endblock -%}
-      {% if aside %}
-        {% include "highway.njk" %}
-      {% endif %}
+  <body>
+    <a href="#main-content" class="acs-skip">Skip to main content</a>
+    {% include "nav.njk" %}
+    <main>
+      {% include "header.njk" %}
+      <article id="main-content" class="stack">
+        {{ content | safe }}
+      </article>
     </main>
     {% include "footer.njk" %}
   </body>

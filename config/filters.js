@@ -39,4 +39,7 @@ export default {
     });
     return tagCount;
   },
+  stat: (file, field = "birthtime") => {
+    return DateTime.fromJSDate(fs.statSync(file)[field]).toISO();
+  },
 };

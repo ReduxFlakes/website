@@ -11,16 +11,12 @@ paginationNextText: 'Older posts'
 ---
 
 {% if pagination.pageNumber == 0 %}
-  <details>
-    <summary>See all tags</summary>
-    <nav class="details-child">
+  <p>Tags: 
       {% set tagCloud = collections.posts | tagCloud %}
-
-      {% for tag, count in tagCloud %}
-        <a href="/blog/tagged/{{ tag | slugify }}">{{ tag }}</a>
-      {% endfor %}
-    </nav>
-  </details>
+    {% for tag, count in tagCloud %}
+      <a href="/blog/t/{{ tag | slugify }}">{{ tag }}</a>
+    {% endfor %}
+  </p>
 {% endif %}
 
 <div class="auto-flex">

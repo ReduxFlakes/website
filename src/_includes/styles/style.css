@@ -1,41 +1,45 @@
+@import url(properties.css);
+
+html {
+  background: var(--void);
+}
+
 body {
   max-width: var(--viewport);
-  padding: 1rem;
   margin-inline: auto;
 }
 
-header.page {
+.main-nav {
   display: flex;
-  gap: 1rem;
-  align-items: baseline;
-  margin-block-start: 0;
+  flex-wrap: wrap;
+  background: hsl(343, 51%, 15%);
+  border-bottom: 1px solid var(--stroke);
 }
 
-nav.page a {
-  color: var(--foreground);
+.main-nav a {
+  display: block;
+  padding: 0.25em 1rem;
+  flex-grow: 1;
+  text-align: center;
 }
 
-nav.page a[aria-current="true"] {
-  text-decoration: underline dotted;
-  font-style: italic;
-  color: var(--foreground-subtle);
+.main-nav a[aria-current] {
+  text-decoration: none;
+  font-weight: bold;
 }
 
-figure img {
-  width: 100%;
-  image-rendering: pixelated;
-  border: 1px solid var(--stroke);
+.hero {
+  padding: 1rem;
+  border-bottom: 1px dashed var(--primary);
 }
 
-figcaption {
-  display: flex;
-  justify-content: space-between;
-  font-style: italic;
-  color: var(--foreground-subtle);
+main {
+  padding: 1.25rem;
 }
 
-header.main {
-  border-bottom: 1px dashed var(--stroke);
+footer {
+  border-top: 1px dashed var(--stroke);
+  padding: 1rem;
 }
 
 a:has(svg) {
@@ -44,37 +48,24 @@ a:has(svg) {
   gap: 0.25em;
 }
 
-a:has(svg) svg {
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
-footer.page {
-  margin-block-start: 1rem;
-  padding-block-start: 1rem;
-  border-top: 1px dashed var(--stroke);
-}
-
-details {
-  border: 1px solid var(--stroke);
-}
-
-details summary {
-  padding: 0.25rem 0.5rem;
-}
-
-details summary:has(h2) h2 {
-  display: inline-block;
-  font-size: inherit;
-}
-
-details[open] .details-child {
-  padding: 0 1rem 1rem;
-}
-/* util classes */
 .auto-flex {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 0.5rem;
+}
+
+.secondary {
+  color: var(--foreground-subtle);
+  font-size: 1.15rem;
+}
+
+.classic-btn:hover {
+  opacity: 0.75;
+}
+
+.scroll {
+  max-height: 15rem;
+  overflow: auto;
+  border: 1px solid var(--stroke);
+  padding: 1rem;
 }

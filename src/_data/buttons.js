@@ -65,6 +65,10 @@ export default {
       img: "conline.png",
       url: "https://coloured.neocities.org/",
     },
+    {
+      title: "Jak2",
+      url: "https://jak2k.schwanenberg.name/",
+    },
   ],
   likes: [
     {
@@ -133,47 +137,25 @@ export default {
       url: "https://rm94.neocities.org/",
     },
     {
+      title: "Pixel",
+      img: "pixeldesu.png",
+      url: "https://pixelde.su/",
+    },
+    {
       title: "Solinu's Website",
       img: "solinus.gif",
       url: "https://solinus.neocities.org/",
     },
+
     {
       title: "meows.zip",
       img: "meowsdotzip.png",
       url: "https://meows.zip/",
     },
-  ],
-  general: [
     {
-      title: "Neocities",
-      img: "neocities.gif",
-      url: "https://neocities.org/site/reduxflakes",
-    },
-    {
-      title: "Nekoweb",
-      img: "nekoweb.gif",
-      url: "https://nekoweb.org/",
-    },
-    {
-      title: "Brain Made",
-      img: "brain-made.svg",
-      url: "https://brainmade.org/",
-    },
-    {
-      title: "Say No to Web 3",
-      img: "saynotoweb3.gif",
-      url: "https://yesterweb.org/no-to-web3/",
-    },
-    {
-      title: "web design is my passion",
-      img: "web-design-passion.gif",
-    },
-  ],
-  websites: [
-    {
-      title: "Shishka",
-      img: "shishka.gif",
-      url: "https://shishka.neocities.org/",
+      title: "Shellsharks",
+      img: "shellsharks.gif",
+      url: "https://shellsharks.com/",
     },
     {
       title: "Levant's Cyberspace",
@@ -185,63 +167,15 @@ export default {
       img: "mystsaphyr.gif",
       url: "https://mystsaphyr.art/",
     },
-  ],
-  software: [
     {
-      title: "uBlock",
-      img: "ublock.gif",
+      title: "mux",
+      img: "mux.png",
+      url: "https://mux.nekoweb.org/",
     },
     {
-      title: "Lucida",
-      img: "lucida.gif",
-    },
-    {
-      title: "Arch Linux",
-      img: "archlinux.gif",
-    },
-    {
-      title: "Get Firefox",
-      img: "firefoxget.gif",
-    },
-    {
-      title: "Firefox",
-      img: "firefox3.gif",
-    },
-    {
-      title: "AltaVista",
-      img: "altavista.gif",
-    },
-    {
-      title: "Bring Back the Headphone Jack",
-      img: "bring-back-the-headphone-jack.gif",
-    },
-    {
-      title: "DuckDuckGo",
-      img: "ddg.gif",
-    },
-    {
-      title: "Aperture Laboratories",
-      img: "aperture_labs.jpg",
-    },
-    {
-      title: "Windows 7 Boot",
-      img: "w7-boot.gif",
-    },
-    {
-      title: "FREE Software",
-      img: "free.gif",
-    },
-  ],
-  bestof: [
-    {
-      title: "www.cozynet.org",
-      img: "cozybro.gif",
-      url: "https://www.cozynet.org",
-    },
-    {
-      title: "sizeof(cat)",
-      img: "sizeofcat.gif",
-      url: "https://sizeof.cat/",
+      title: "remblanc",
+      img: "remblanc.png",
+      url: "https://remblanc.com/",
     },
   ],
 };

@@ -1,10 +1,9 @@
 {% extends "./base.njk" %}
 
-{% set is_post = true %}
-{% css "post" %}{% endcss %}
+{% set post = true %}
 
+{# Check if toc is not defined or if it's true in the frontmatter #}
 {% set toc_enabled = toc is not defined or toc %}
-{# This checks if toc is not defined or is true #}
 
 {% block base %}
     {%- if toc_enabled -%}
@@ -21,4 +20,6 @@
     <article class="stack" style="font-size: 1.025em;line-height: 1.6;">
         {{ content | safe }}
     </article>
+    <p>Last updated in {{lastModified}}</p>
+
 {% endblock %}

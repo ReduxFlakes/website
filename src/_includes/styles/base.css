@@ -7,26 +7,36 @@
 
 html {
   scroll-behavior: smooth;
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
   text-size-adjust: none;
   color-scheme: dark;
 }
 
 body {
-  font: 1.15rem / 1.65 var(--font);
+  font: 1.2rem / 1.65 var(--font);
   background: var(--background);
   color: var(--foreground);
 }
 
+dl dd:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 1em;
+}
+
 :focus {
-  box-shadow: 0 0 0 4px var(--primary);
   outline: 2px solid var(--foreground);
 }
 
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+  padding: 0;
 }
 
 img,
@@ -42,12 +52,9 @@ iframe {
 }
 
 input,
-button {
-  font: inherit;
-}
 button,
 summary {
-  cursor: pointer;
+  font: inherit;
   background: none;
   border: none;
 }
@@ -66,6 +73,7 @@ img::selection {
 
 a {
   color: var(--primary);
+  text-decoration: underline 2px;
 }
 
 a:hover {
@@ -77,10 +85,8 @@ h2,
 h3,
 h4,
 h5,
-h6,
-b,
-strong {
-  letter-spacing: -0.0125em;
+h6 {
+  letter-spacing: -0.01em;
   line-height: 1.2em;
 }
 
@@ -91,15 +97,15 @@ h6 {
   font-weight: normal;
 }
 
-.header-anchor {
+.anchor {
   visibility: hidden;
   font-weight: normal;
   opacity: 0;
 }
 
-h1:hover > .header-anchor,
-h2:hover > .header-anchor,
-h3:hover > .header-anchor {
+h1:hover > .anchor,
+h2:hover > .anchor,
+h3:hover > .anchor {
   visibility: visible;
   opacity: 1;
 }
@@ -111,7 +117,6 @@ h3:hover > .header-anchor {
 }
 
 .acs-skip:focus,
-.acs-skip:focus-visible,
 .acs-skip:focus-within {
   top: 0.25em;
   left: 0.25em;
@@ -122,13 +127,16 @@ h3:hover > .header-anchor {
   margin-top: var(--_space);
 }
 
-time {
-  color: var(--foreground-subtle);
-}
-
 hr {
   border: none;
   border-top: 1px solid var(--stroke);
+}
+
+blockquote {
+  padding: 0.5rem 1rem;
+  background: hsl(343, 35%, 13%);
+  font-style: italic;
+  border-left: 0.25em solid var(--primary);
 }
 
 @media (prefers-reduced-motion: reduce) {

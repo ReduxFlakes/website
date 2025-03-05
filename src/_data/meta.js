@@ -1,5 +1,5 @@
 export default {
-  title: "reduc",
+  title: "ReduxFlakes",
   description: "Fireplace in the mall",
   url_neo: "https://reduxflakes.neocities.org",
   url_neko: "https://reduxflakes.nekoweb.org",

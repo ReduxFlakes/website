@@ -1,10 +1,13 @@
 :root {
-  --font: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
-    source-sans-pro, sans-serif;
-  --viewport: 780px;
-  --background: hsl(0, 0%, 3%);
-  --foreground: #f2f2f2;
-  --primary: hsl(343, 100%, 69%);
+  --font: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari,
+    "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro,
+    sans-serif;
+
+  --void: black;
+  --background: hsl(0, 0%, 8%);
+  --foreground: hsl(0, 0%, 95%);
+  --primary: hsl(343, 100%, 70%);
   --foreground-subtle: hsl(0, 0%, 78%);
-  --stroke: hsl(0, 0%, 30%);
+  --stroke: hsl(0, 0%, 25%);
+  --viewport: 800px;
 }

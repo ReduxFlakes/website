@@ -1,0 +1,5 @@
+<nav class="main-nav">
+    {% for item in routes.nav %}
+        <a href="{{item.url}}" {% if (item.url != "/" and page.url.startsWith(item.url)) or page.url == item.url %}aria-current="page"{% endif %}>{{item.title}}</a>
+    {% endfor %}
+</nav>

@@ -1,5 +1,10 @@
 export default [
   {
+    updateDate: "2025-03-4",
+    content:
+      "I'm finally happy with the design and layout! Simple, fast, optimized, and works great!! I've also added new stuff, from new pages, but also improved existing stuff from the button grid now supporting sites that do not have images, the projects page has been updated, and the CSS has been severely cut down. Happy happy happy!",
+  },
+  {
     updateDate: "2025-03-2",
     content:
       'Let\'s go even more minimalist!! New design and layout, tons of optimizations from less CSS to finally implementing eleventy img to optimize images. Also added a "uses" page. More stuff coming soon.',

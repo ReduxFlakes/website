@@ -1,27 +1,15 @@
-{% set header_title = title %}
-<header class="stack main" style="--spacer:0.25em">
-    <h1>
-        {%- if header_title -%}
-            {{ header_title }}
-        {%- else -%}
-            {{meta.title}}
-        {%- endif -%}
-    </h1>
-    {% if is_post %}
-        <p>
-            <time datetime="{{date}}">{{date | formatPostDate}}</time>
-            <small>-</small>
-            {{description}}</p>
-    {% else %}
-        <p>{{description}}</p>
+<header class="hero stack" style="margin-bottom:1em;padding-block-start:0;--spacer:0.5em;">
+    <h1>{{title or meta.title}}</h1>
+    <p>{{description or hero.description or meta.description}}</p>
+    {% if post %}
+        <p class="secondary" >Posted in: <time datetime="{{date}}">{{date | formatPostDate}}</time>
+        </p>
     {% endif %}
-    {% if banner %}
-        <figure style="--spacer:1em">
-            <img src="/public/img/banners/{{banner.image}}" alt="{{banner.alt}}" title="{{banner.alt}}">
-            <figcaption>
-                <p>{{banner.date}}</p>
-                <p>Author: {{banner.author}}</p>
-            </figcaption>
-        </figure>
+    {% if modified %}
+        <p class="secondary" {%if post%}style="margin:0;"{%else%}style="margin-top:0.25em;"{%endif%}>Modified in: <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
+        </p>
+    {% endif %}
+    {% if post %}
+        <p class="secondary" style="margin:0;">Read time: {{ 'text' | timeToRead }}</p>
     {% endif %}
 </header>
