@@ -61,13 +61,24 @@ export default {
       url: "https://lhfm.neocities.org/",
     },
     {
-      title: "Coulored",
+      title: "Coloured",
       img: "conline.png",
       url: "https://coloured.neocities.org/",
     },
     {
-      title: "Jak2",
+      title: "Jak2K",
+      img: "jak2k.webp",
       url: "https://jak2k.schwanenberg.name/",
+    },
+    {
+      title: "Thin Liquid",
+      img: "thnlqd.png",
+      url: "https://thinliquid.dev/",
+    },
+    {
+      title: "jbcarreon123",
+      img: "jbcarreon123.png",
+      url: "jbcarreon123.nekoweb.org",
     },
   ],
   likes: [
