@@ -78,7 +78,7 @@ export default {
     {
       title: "jbcarreon123",
       img: "jbcarreon123.png",
-      url: "jbcarreon123.nekoweb.org",
+      url: "https://jbcarreon123.nekoweb.org",
     },
   ],
   likes: [
