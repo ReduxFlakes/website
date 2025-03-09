@@ -21,18 +21,19 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and design from Po
 
 ### Socials
 
-<div class="auto-flex">
+<div class="auto-flex button-grid">
 {%- for item in meta.socials -%}
   <a href="{{item.url}}">
   <img src="/public/img/buttons/general/{{item.img}}" alt="{{item.title}}" class="classic-btn" width="88" height="31" loading="lazy">
   </a>
 {%- endfor -%}
 <a href="https://reduxflakes.atabook.org/" style="font-size:1.0125em;"><b>Sign guestbook</b></a>
+<a href="https://nekoweb.org/follow/reduxflakes">Follow me on Nekoweb!</a>
 </div>
 
 ### Friends
 
-<div  class="auto-flex">
+<div  class="auto-flex button-grid">
   {% for button in buttons.friends %}
   {% if button.img %}
       <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore ></a>
@@ -40,6 +41,17 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and design from Po
         <a href="{{button.url}}" style="display:block;text-align:center;min-width:88px;">{{button.title}}</a>
   {% endif %}
 {% endfor %}
+</div>
+
+### Link me!
+
+If you like my site, you can link me by using the buttons below!
+
+<div class="auto-flex">
+
+<img src="/public/img/buttons/reduc_anim.gif" alt="Redux animated button" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore >
+
+<img src="/public/img/buttons/reduc.webp" alt="Redux static button" class="classic-btn" loading="lazy" decoding="async">
 
 </div>
 
@@ -74,9 +86,9 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and design from Po
 
 ### 💧 Bucket Webring
 
-<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes" target="_top"> < </a>
+<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes" target="_top">{% lucide "arrow-left" %}</a>
 <a href="https://webring.bucketfish.me" target="_blank" rel="noopener"> bucket </a>
-<a href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" class="icon-button"> > </a>
+<a href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" class="icon-button">{% lucide "arrow-right" %}</a>
 {% endif %}
 
 ## Updates

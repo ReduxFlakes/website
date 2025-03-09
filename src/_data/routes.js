@@ -36,9 +36,5 @@ export default {
       title: "Support",
       url: "/support",
     },
-    {
-      title: "[+]",
-      url: "https://nekoweb.org/follow/reduxflakes",
-    },
   ],
 };
