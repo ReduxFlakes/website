@@ -12,6 +12,8 @@ import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import timeToRead from "eleventy-plugin-time-to-read";
 import filters from "./config/filters.js";
+import { DateTime, Zone } from "luxon";
+import { basename } from "node:path";
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -41,6 +43,21 @@ export default async function (eleventyConfig) {
     eleventyConfig.addFilter(filterName, filters[filterName]);
   });
 
+  /* custom date formats */
+  eleventyConfig.addDateParsing(function (dateValue) {
+    let localDate;
+    if (typeof dateValue === "string") {
+      localDate = DateTime.fromFormat(dateValue, "yyyy-MM-dd HH:mm:ss").setZone(
+        "Europe/Lisbon"
+      );
+    }
+    if (localDate?.isValid === false) {
+      throw new Error(
+        `Invalid \`date\` value (${dateValue}) is invalid for ${this.page.inputPath}: ${localDate.invalidReason}`
+      );
+    }
+    return localDate;
+  });
   /* plugins */
   const md = markdownIt({ html: true });
   md.use(markdownItAttrs, {

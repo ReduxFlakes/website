@@ -2,12 +2,11 @@
 layout: base
 hero:
   description: Software developer and designer from Portugal
-date: 2024-11-11T09:25:31.000Z
 ---
 
 ## Welcome
 
-I'm ReduxFlakes (or reduc for close friends), I'm a developer and design from Portugal that focuses on privacy, simplicity, and performance. This is my personal website where I talk about various things from life, ongoing projects, musics, and resource & guides. [Learn more about me](/about)
+I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from Portugal that focuses on privacy, simplicity, and performance. This is my personal website where I talk about various things from life, ongoing projects, musics, and resource & guides. [Learn more about me](/about)
 
 > Remember a personal site is never finished, so expect things not working or returing not found ;)
 
@@ -23,8 +22,8 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and design from Po
 
 <div class="auto-flex button-grid">
 {%- for item in meta.socials -%}
-  <a href="{{item.url}}">
-  <img src="/public/img/buttons/general/{{item.img}}" alt="{{item.title}}" class="classic-btn" width="88" height="31" loading="lazy">
+  <a href="{{item.url}}" title="{{item.name}}">
+  <img src="/public/img/buttons/general/{{item.img}}" alt="{{item.name}}" class="classic-btn" width="88" height="31">
   </a>
 {%- endfor -%}
 <a href="https://reduxflakes.atabook.org/" style="font-size:1.0125em;"><b>Sign guestbook</b></a>
@@ -77,18 +76,30 @@ If you like my site, you can link me by using the buttons below!
 ### 🤖 No AI
 
 <div class="auto-flex" style="align-items:center;">
-<a href="https://baccyflap.com/noai/?prv&s=rzr" target="_top">{% lucide "arrow-left" %}</a>
+<a href="https://baccyflap.com/noai/?prv&s=rzr" target="_top" title="Go back">{% lucide "arrow-left" %}</a>
 <a href="https://baccyflap.com/noai" target="_blank" rel="noopener"> no ai </a>
-<a href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top">{% lucide "arrow-right" %}</a>
+<a href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
 </div>
 
 {% else %}
 
 ### 💧 Bucket Webring
 
-<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes" target="_top">{% lucide "arrow-left" %}</a>
+<div class="auto-flex" style="align-items:center;">
+<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes" target="_top" title="Go back">{% lucide "arrow-left" %}</a>
 <a href="https://webring.bucketfish.me" target="_blank" rel="noopener"> bucket </a>
-<a href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" class="icon-button">{% lucide "arrow-right" %}</a>
+<a href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
+</div>
+
+💻 SSGRing
+
+<div class="auto-flex" style="align-items:center;">
+<a href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=prev" title="Go back">{% lucide "arrow-left" %}</a>
+<a href="https://jbcarreon123.nekoweb.org/webrings/ssgring" target="_blank" rel="noopener"> SSGRing </a>
+<a href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?way=rand" title="Random">{% lucide "shuffle" %}</a>
+<a href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=next" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
+</div>
+
 {% endif %}
 
 ## Updates
@@ -102,11 +113,11 @@ If you like my site, you can link me by using the buttons below!
   <div class="stack" style="--spacer: 0.5em;">
     {%- if loop.first -%}
     <p><b>
-      <time datetime="{{ entry.updateDate | dateToISO }}">{{ entry.updateDate | formatStringDate }}</time>
+      <time datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}</time>
       </b></p>
     {%- else -%}
     <p>
-      <time style="color:var(--foreground-subtle);" datetime="{{ entry.updateDate | dateToISO }}">{{ entry.updateDate | formatStringDate }}</time>
+      <time style="color:var(--foreground-subtle);" datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}</time>
       </p>
     {%- endif -%}
     <p>{{ entry.content | safe }}</p>

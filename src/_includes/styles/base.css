@@ -63,7 +63,7 @@ summary {
 h1:target,
 h2:target,
 h3:target {
-  background: hsla(0, 0%, 16%, 0.08);
+  background: hsla(15, 31%, 20%, 0.5);
   color: var(--primary);
 }
 

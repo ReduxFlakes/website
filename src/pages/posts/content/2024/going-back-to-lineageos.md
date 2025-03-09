@@ -1,7 +1,7 @@
 ---
 title: Going Back to Lineage OS
 description: Degoogling my phone and going back to Lineage OS and documenting everything about it!
-date: 2024-06-06T21:43:00.000Z
+date: 2024-06-06 21:43:00
 tags: ["android", "privacy", "life"]
 ---
 

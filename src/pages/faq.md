@@ -1,10 +1,6 @@
 ---
 title: FAQ
 description: "Questions/Anwsers related to the webmaster or this website"
-theme:
-  primary: "hsl(272, 48.50%, 12.90%)"
-  secondary: "hsl(197, 69.70%, 12.90%)"
-  text: "hsl(200, 73.80%, 74.50%)"
 ---
 
 <details>

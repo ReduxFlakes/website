@@ -1,5 +1,4 @@
 {
   "layout": "base",
-  "permalink": "/{{ title | slugify }}/",
-  "lastModified": "{{ page.inputPath | stat: \"ctime\" }}"
+  "permalink": "/{{ title | slugify }}/"
 }

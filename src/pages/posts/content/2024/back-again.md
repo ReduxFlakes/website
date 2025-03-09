@@ -1,7 +1,7 @@
 ---
 title: Back again
 description: Talking about my history with creating websites, coming back with blogging and a snippet on my future projects.
-date: 2024-03-14T14:19:45.000Z
+date: 2024-03-14 14:19:45
 tags: ["website", "life"]
 ---
 
