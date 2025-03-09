@@ -63,12 +63,12 @@ summary {
 h1:target,
 h2:target,
 h3:target {
-  background: hsla(343, 100%, 75%, 0.08);
+  background: hsla(0, 0%, 16%, 0.08);
   color: var(--primary);
 }
 
 img::selection {
-  background: hsla(265, 100%, 75%, 0.25);
+  background: hsla(279, 100%, 75%, 0.25);
 }
 
 a {
@@ -113,7 +113,7 @@ h3:hover > .anchor {
 .acs-skip {
   position: absolute;
   top: -100px;
-  background: black;
+  background: var(--container);
 }
 
 .acs-skip:focus,
@@ -134,7 +134,7 @@ hr {
 
 blockquote {
   padding: 0.5rem 1rem;
-  background: hsl(343, 35%, 13%);
+  background: var(--container);
   font-style: italic;
   border-left: 0.25em solid var(--primary);
 }

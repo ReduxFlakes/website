@@ -1,9 +1,5 @@
 @import url(properties.css);
 
-html {
-  background: var(--void);
-}
-
 body {
   max-width: var(--viewport);
   margin-inline: auto;
@@ -12,8 +8,8 @@ body {
 .main-nav {
   display: flex;
   flex-wrap: wrap;
-  background: hsl(343, 51%, 15%);
-  border-bottom: 1px solid var(--stroke);
+  background: var(--container);
+  outline: 1px solid var(--stroke);
 }
 
 .main-nav a {
@@ -21,6 +17,11 @@ body {
   padding: 0.25em 1rem;
   flex-grow: 1;
   text-align: center;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  background: var(--background);
 }
 
 .main-nav a[aria-current] {
@@ -30,7 +31,7 @@ body {
 
 .hero {
   padding: 1rem;
-  border-bottom: 1px dashed var(--primary);
+  border-bottom: 1px dashed var(--stroke);
 }
 
 main {
@@ -59,8 +60,17 @@ a:has(svg) {
   font-size: 1.15rem;
 }
 
-.classic-btn:hover {
-  opacity: 0.75;
+.classic-btn {
+  image-rendering: pixelated;
+}
+
+.button-grid .classic-btn {
+  transition: opacity 100ms ease-in-out;
+}
+
+/* from jb (jbcarreon123.nekoweb.org) */
+.button-grid:has(.classic-btn:hover) .classic-btn:not(:hover) {
+  opacity: 0.25;
 }
 
 .scroll {
