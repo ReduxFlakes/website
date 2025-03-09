@@ -1,11 +1,16 @@
 export default [
   {
-    updateDate: "2025-03-4",
+    updateDate: "2025-03-09",
+    content:
+      'Switched to Gruvbox, and added new stuff! From new buttons in the friends section, new hover effect on buttons, new roadmap page, updated the <a href="/now">/now</a> page and readded the link me section.',
+  },
+  {
+    updateDate: "2025-03-04",
     content:
       "I'm finally happy with the design and layout! Simple, fast, optimized, and works great!! I've also added new stuff, from new pages, but also improved existing stuff from the button grid now supporting sites that do not have images, the projects page has been updated, and the CSS has been severely cut down. Happy happy happy!",
   },
   {
-    updateDate: "2025-03-2",
+    updateDate: "2025-03-02",
     content:
       'Let\'s go even more minimalist!! New design and layout, tons of optimizations from less CSS to finally implementing eleventy img to optimize images. Also added a "uses" page. More stuff coming soon.',
   },
