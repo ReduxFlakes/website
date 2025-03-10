@@ -8,7 +8,7 @@ hero:
 
 I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from Portugal that focuses on privacy, simplicity, and performance. This is my personal website where I talk about various things from life, ongoing projects, musics, and resource & guides. [Learn more about me](/about)
 
-> Remember a personal site is never finished, so expect things not working or returing not found ;)
+> Remember, a personal site is never finished, so expect things not working or returning not found!
 
 ## Latest Post
 
@@ -26,8 +26,8 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from 
   <img src="/public/img/buttons/general/{{item.img}}" alt="{{item.name}}" class="classic-btn" width="88" height="31">
   </a>
 {%- endfor -%}
-<a href="https://reduxflakes.atabook.org/" style="font-size:1.0125em;"><b>Sign guestbook</b></a>
-<a href="https://nekoweb.org/follow/reduxflakes">Follow me on Nekoweb!</a>
+<a href="https://reduxflakes.atabook.org/" style="font-size:1.0125em;"><b>Sign my guestbook!</b></a>
+<p>Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> | <a href="https://neocities.org/site/reduxflakes">Neocities</a></p>
 </div>
 
 ### Friends
@@ -91,7 +91,7 @@ If you like my site, you can link me by using the buttons below!
 <a href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
 </div>
 
-💻 SSGRing
+### 💻 SSGRing
 
 <div class="auto-flex" style="align-items:center;">
 <a href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=prev" title="Go back">{% lucide "arrow-left" %}</a>

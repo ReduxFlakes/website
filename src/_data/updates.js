@@ -1,5 +1,10 @@
 export default [
   {
+    date: "2025-03-10 17:38:03",
+    content:
+      "Fixed webring (i hope), made some grammar fixes and improved links in the homepage.",
+  },
+  {
     date: "2025-03-09 17:39:43",
     content:
       "Added new webring and made some accessibility fixes, I've also improved date handling which means I can now use time in changelogs!",
