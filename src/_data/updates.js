@@ -1,5 +1,9 @@
 export default [
   {
+    date: "2025-03-21 07:54:00",
+    content: "Added new webring and fixed some stuff including fixing the webrings on Nekoweb again (i hope) and cleaned up some CSS. It's been a busy month sorry for the lack of updates :("
+  },
+  {
     date: "2025-03-10 17:38:03",
     content:
       "Fixed webring (i hope), made some grammar fixes and improved links in the homepage.",

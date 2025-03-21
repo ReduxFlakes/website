@@ -127,6 +127,10 @@ h3:hover > .anchor {
   margin-top: var(--_space);
 }
 
+main {
+  hyphens: auto;
+}
+
 hr {
   border: none;
   border-top: 1px solid var(--stroke);

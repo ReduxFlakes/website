@@ -61,8 +61,8 @@ If you like my site, you can link me by using the buttons below!
 ### 🌐 NeoSSG Webring
 
 <div id="neossg">
-  <script type="text/javascript" src="https://neossg.neocities.org/onionring-variables.js"></script>
-  <script type="text/javascript" src="https://neossg.neocities.org/onionring-widget.js"></script>
+  <script type="text/javascript" src="https://neossg.neocities.org/onionring-variables.js" defer async></script>
+  <script type="text/javascript" src="https://neossg.neocities.org/onionring-widget.js" defer async></script>
 </div>
 
 ### 💽 Null Webring
@@ -81,7 +81,7 @@ If you like my site, you can link me by using the buttons below!
 <a href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
 </div>
 
-{% else %}
+{% elif env.host == "nekoweb" %}
 
 ### 💧 Bucket Webring
 
@@ -99,6 +99,15 @@ If you like my site, you can link me by using the buttons below!
 <a href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?way=rand" title="Random">{% lucide "shuffle" %}</a>
 <a href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=next" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
 </div>
+
+### 🎨 palette webring
+
+<webring-container>
+    <config key="type" value="gruvbox-dark"></config>
+    <config key="font" value="Overused Grotesk, Arial, sans-serif"></config>
+    <config key="fill" value="false"></config>
+    <script src="https://palette.nekoweb.org/webring.js"></script>
+</webring-container>
 
 {% endif %}
 

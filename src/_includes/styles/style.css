@@ -8,8 +8,7 @@ body {
 .main-nav {
   display: flex;
   flex-wrap: wrap;
-  background: var(--container);
-  outline: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
 }
 
 .main-nav a {
@@ -21,7 +20,7 @@ body {
 }
 
 .main-nav a:hover {
-  background: var(--background);
+  background: var(--container);
 }
 
 .main-nav a[aria-current] {
@@ -78,4 +77,10 @@ a:has(svg) {
   overflow: auto;
   border: 1px solid var(--stroke);
   padding: 1rem;
+}
+
+webring-container {
+  display: block;
+  width: 100%;
+  height: max-content;
 }
