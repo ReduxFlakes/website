@@ -80,6 +80,44 @@ export default {
       img: "jbcarreon123.png",
       url: "https://jbcarreon123.nekoweb.org",
     },
+    {
+      title: "Lux Fero",
+      img: "lux_fero.gif",
+      url: "https://luxfero.nekoweb.org/en/",
+    },
+    {
+      title: "yatagarasu",
+      img: "yatagarasu.gif",
+      url: "https://yatagarasu.nekoweb.org/",
+    },
+    {
+      title: "Plushspace",
+      img:"plushspace.gif",
+      url: "https://plushspace.uwu.ai/",
+    },
+    {
+      title: "soulwebb",
+      img:"soulwebb.gif",
+      url: "https://soulwebb.ing/",
+    },
+    {
+      title: "ui(ooo-eee)",
+      img: "oooeee.png",
+      url: "https://oooeee.nekoweb.org/"
+    },
+    {
+      title: "Layercake",
+      img: "layercake.gif",
+      url: "https://layercake.nekoweb.org/"
+    },
+    {
+      title: "Miko",
+      url: "https://miko.nekoweb.org/"
+    },
+    {
+      title: "Demgoze",
+      url: "https://demgoze.nekoweb.org/"
+    }
   ],
   likes: [
     {

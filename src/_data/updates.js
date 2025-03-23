@@ -1,5 +1,9 @@
 export default [
   {
+    date: "2025-03-23 15:40:04",
+    content: "New buttons on the friends section and redesigned the site card and post box on Nekoweb.",
+  },
+  {
     date: "2025-03-21 07:54:00",
     content: "Added new webring and fixed some stuff including fixing the webrings on Nekoweb again (i hope) and cleaned up some CSS. It's been a busy month sorry for the lack of updates :("
   },

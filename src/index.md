@@ -105,7 +105,7 @@ If you like my site, you can link me by using the buttons below!
 <webring-container>
     <config key="type" value="gruvbox-dark"></config>
     <config key="font" value="Overused Grotesk, Arial, sans-serif"></config>
-    <config key="fill" value="false"></config>
+    <config key="fill" value="true"></config>
     <script src="https://palette.nekoweb.org/webring.js"></script>
 </webring-container>
 
@@ -113,8 +113,8 @@ If you like my site, you can link me by using the buttons below!
 
 ## Updates
 
-<details>
-<summary>Open changelog</summary>
+<details open>
+<summary>See changelog</summary>
 <div class="scroll stack">
 
 {%- for entry in updates -%}

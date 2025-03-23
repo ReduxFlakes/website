@@ -59,6 +59,14 @@ summary {
   border: none;
 }
 
+summary {
+  cursor: default;
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+}
+
 ::selection,
 h1:target,
 h2:target,
