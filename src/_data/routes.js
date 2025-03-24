@@ -9,10 +9,6 @@ export default {
       url: "/blog",
     },
     {
-      title: "KB",
-      url: "/kb",
-    },
-    {
       title: "Projects",
       url: "/projects",
     },
@@ -23,10 +19,6 @@ export default {
     {
       title: "Now",
       url: "/now",
-    },
-    {
-      title: "Colophon",
-      url: "/colophon",
     },
     {
       title: "About",

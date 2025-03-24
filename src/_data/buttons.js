@@ -6,6 +6,21 @@ export default {
       url: "https://lastroseofsummer.neocities.org",
     },
     {
+      title: "ByteMoth",
+      img: "bytemoth.png",
+      url: "https://bytemoth.neocities.org/",
+    },
+    {
+      title: "Fabled",
+      img: "fabled.gif",
+      url: "https://fabled.day",
+    },
+    {
+      title: "Aristasian Reminiscence",
+      img: "aristasiabutton.gif",
+      url: "https://aristasia.guide/",
+    },
+    {
       title: "Leilukin's Hub",
       img: "leilukins-hub.png",
       url: "https://leilukin.neocities.org",
@@ -14,6 +29,11 @@ export default {
       title: "OpenBooks",
       img: "openbooks.gif",
       url: "https://openbooks.neocities.org",
+    },
+    {
+      title: "Badgraph1csghost",
+      img: "badgraph1csghost.png",
+      url: "https://badgraph1csghost.neocities.org/",
     },
     {
       title: "joosh's Homepage!",
@@ -156,9 +176,9 @@ export default {
       url: "https://dimden.dev/",
     },
     {
-      title: "sizeof(cat)",
-      img: "sizeofcat-white.jpg",
-      url: "https://sizeof.cat/",
+      title: "CozyNet",
+      img: "cozybro88.gif",
+      url: "https://www.cozynet.org/",
     },
     {
       title: "june's web page",
@@ -225,6 +245,16 @@ export default {
       title: "remblanc",
       img: "remblanc.png",
       url: "https://remblanc.com/",
+    },
+    {
+      title: "nuthead",
+      img: "nuthead.gif",
+      url: "https://nuthead.neocities.org/",
+    },
+    {
+      title: "sizeof(cat)",
+      img: "sizeofcat.jpg",
+      url: "https://sizeof.cat/",
     },
   ],
 };

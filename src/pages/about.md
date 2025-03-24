@@ -11,6 +11,18 @@ I mostly do websites, design mockups of software, music remastering (that I uplo
 
 I want to start releasing software mostly for Windows using WPF which I'm learning currently, although when I get back on Linux I really wanna start messing around with GTK and AdWaita!
 
+{% if env.host == "neocities" %}
+
+### Hotline Webring 💽
+
+<div class="auto-flex" style="align-items:center;">
+<a href="https://hotlinewebring.club/reduxflakes/previous" title="Go back">{% lucide "arrow-left" %}</a>
+<a href="https://hotlinewebring.club/" target="_blank" rel="noopener"> hotline webring </a>
+<a href="https://hotlinewebring.club/reduxflakes/next" title="Next up">{% lucide "arrow-right" %}</a>
+</div>
+
+{%endif%}
+
 ## About the website
 
 ### Inspiration
@@ -25,8 +37,10 @@ I want to start releasing software mostly for Windows using WPF which I'm learni
   <a href="{{button.url}}" >{{button.title}}</a>
   {% endif %}
   {% endfor %}
-
 </div>
+
+
+
 
 ### Tools
 
@@ -34,6 +48,8 @@ I want to start releasing software mostly for Windows using WPF which I'm learni
 
 - [Eleventy](https://www.11ty.dev/) - The SSG I use to build this website, helps on cutting the copy/paste and makes things more consistent (great for someone who is perfectionist).
 - [Lucide](https://lucide.dev/) - The icons I use across the website.
+
+
 
 ## License
 

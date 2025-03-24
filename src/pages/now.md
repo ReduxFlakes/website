@@ -1,7 +1,7 @@
 ---
 title: Now
-description: Stuff I've been doing lately
-modified: 2025-03-09T12:12:00.00Z
+description: Stuff I've been doing recently
+modified: 2025-03-24T17:57:00.00Z
 ---
 
 ## Currently Working On
@@ -10,15 +10,17 @@ modified: 2025-03-09T12:12:00.00Z
   <dt>Celer</dt>
   <dd>The toolbox for Windows</dd>
   <dt>This website</dt>
-  <dd>Planning on how could I make the <a href="/kb">KB</a> page</dd>
+  <dd>Working on expanding the site's content. See <a href="/roadmap">roadmap</a>.</dd>
+    <dt>A directory</dt>
+  <dd>A new website that will serve as a directory of personal sites and services from both the clearnet and the tor network that I like.</dd>
 </dl>
 
 ## What I've been playing
 
-I've again addicted to Brawl Stars focusing on griding trophies and ranked. [My profile on brawltime.ninja](https://brawltime.ninja/profile/YRGCY0PJQ).
+I'm again addicted to Brawl Stars, focusing on griding trophies and ranked. [My profile on brawltime.ninja](https://brawltime.ninja/profile/YRGCY0PJQ).
 
-Been playing Kingdom Rush and Mindustry as well after a long brake as well.
+I've also gone back to playing Kingdom Rush and Mindustry after a long break.
 
 ## What I'm Listening
 
-If you want to check what I'm listening to, you can view my [Last.FM](https://www.last.fm/user/ReduxFlakes), [ListenBrainz](https://listenbrainz.org/user/reduxflakes/), or [Libre.FM](https://libre.fm/user/reduxflakes) pages.
+If you want to check what I'm listening to, you can view my [Last.FM](https://www.last.fm/user/ReduxFlakes), [ListenBrainz](https://listenbrainz.org/user/reduxflakes/), or [Libre.FM](https://libre.fm/user/reduxflakes) profiles. (Last.FM is always updated).
