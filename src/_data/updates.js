@@ -1,5 +1,9 @@
 export default [
   {
+    date: "2025-03-24 18:42:04",
+    content: "More buttons! Also updated the now page with a new section and readded Hotline Webring on the about page.",
+  },
+  {
     date: "2025-03-23 15:40:04",
     content: "New buttons on the friends section and redesigned the site card and post box on Nekoweb.",
   },
