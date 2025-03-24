@@ -21,6 +21,10 @@ I'm again addicted to Brawl Stars, focusing on griding trophies and ranked. [My 
 
 I've also gone back to playing Kingdom Rush and Mindustry after a long break.
 
+## What I've been watching
+
+2 days ago I decided to revisit Regular Show, one of my favourites cartoons of my childhood, and I'm not disappointed! Currently on half way trough season 2 and I'm loving it!
+
 ## What I'm Listening
 
 If you want to check what I'm listening to, you can view my [Last.FM](https://www.last.fm/user/ReduxFlakes), [ListenBrainz](https://listenbrainz.org/user/reduxflakes/), or [Libre.FM](https://libre.fm/user/reduxflakes) profiles. (Last.FM is always updated).
