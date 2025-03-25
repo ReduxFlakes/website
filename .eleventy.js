@@ -32,6 +32,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(timeToRead);
 
   eleventyConfig.addPassthroughCopy("src/public");
+  eleventyConfig.addPassthroughCopy({"src/_includes/styles/nekofm.css": "nekofm.css"});
 
   /* layout aliases */
   eleventyConfig.addLayoutAlias("base", "base.njk");

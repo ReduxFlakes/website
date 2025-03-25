@@ -1,0 +1,35 @@
+songBox {
+  background-color: #282828;
+  border: 1px solid #504945;
+  align-items: center;
+}
+
+siteName {
+  margin: auto;
+  color: #D5C4A0;
+}
+
+trackInfo {
+  font-family: system-ui;
+  width: fit-content;
+}
+
+trackCover {
+  height: 150px;
+  float: left;
+}
+
+trackName {
+  color: #FBF1A5;
+}
+
+artistName {
+  margin: 5px auto;
+}
+
+searchButton {
+  color: #FBF1C7;
+  border: 1px solid #FF933B;
+  padding: 4px;
+  text-decoration: none;
+}

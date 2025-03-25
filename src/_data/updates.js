@@ -1,5 +1,9 @@
 export default [
   {
+    date: "2025-03-25 07:57:32",
+    content: "Add custom css file for NekoFM.",
+  },
+  {
     date: "2025-03-24 18:42:04",
     content: "More buttons! Also updated the now page with a new section and readded Hotline Webring on the about page.",
   },
