@@ -12,27 +12,22 @@ export default {
   socials: [
     {
       name: "GitHub",
-      img: "github.gif",
       url: "https://github.com/reduxflakes",
     },
     {
       name: "Discord",
-      img: "discord.gif",
       url: "https://discord.gg/dY4GSudRxv",
     },
     {
       name: "YouTube",
-      img: "youtube.gif",
       url: "https://youtube.com/@reduxflakes",
     },
     {
       name: "Mastodon",
-      img: "mastodon.png",
       url: "https://fosstodon.org/@redux",
     },
     {
       name: "Last.fm",
-      img: "lastfm.png",
       url: "https://www.last.fm/user/reduxflakes",
     },
   ],

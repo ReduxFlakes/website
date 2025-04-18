@@ -6,19 +6,16 @@ import postcss from "postcss/lib/postcss";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import postcssConfig from "postcss-load-config";
-import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import timeToRead from "eleventy-plugin-time-to-read";
 import filters from "./config/filters.js";
-import { DateTime, Zone } from "luxon";
-import { basename } from "node:path";
+import { DateTime } from "luxon";
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
-  eleventyConfig.addPlugin(pluginTOC);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyLucideicons);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
@@ -36,7 +33,6 @@ export default async function (eleventyConfig) {
 
   /* layout aliases */
   eleventyConfig.addLayoutAlias("base", "base.njk");
-  eleventyConfig.addLayoutAlias("page", "page.njk");
   eleventyConfig.addLayoutAlias("post", "post.njk");
 
   /* filters */
@@ -77,23 +73,18 @@ export default async function (eleventyConfig) {
   });
   md.use(markdownItFootnote);
   eleventyConfig.setLibrary("md", md);
-  eleventyConfig.addPlugin(pluginTOC, {
-    tags: ["h2", "h3", "h4"],
-    ignoredElements: ["a"],
-    flat: true,
-  });
 
   eleventyConfig.addPreprocessor("macro-inject", "njk,md", (data, content) => {
     return (
       `{%- from "util/component.njk" import component with context -%}\n` +
       content
-    );
+    );  
   });
 
   /* collections */
   eleventyConfig.addCollection("posts", function (collection) {
     return [
-      ...collection.getFilteredByGlob("src/pages/posts/content/**/*.md"),
+      ...collection.getFilteredByGlob("src/writings/blog/content/**/*.md"),
     ].reverse();
   });
 

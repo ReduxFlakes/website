@@ -1,0 +1,11 @@
+{
+  "layout": "post",
+  "permalink": "/research/{{ page.fileSlug }}/",
+  "eleventyComputed": {
+    "eleventyNavigation": {
+      "parent": "Research",
+      "key": "{{ title | safe }}",
+      "excludeFromNav": true
+    }
+  }
+}

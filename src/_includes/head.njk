@@ -18,8 +18,7 @@
     <meta name="description" content="{% if description %}{{description}}{% else %}{{ meta.description }}{% endif %}">
     <base href="{{page.url}}">
     <link rel="canonical" href="{{host}}">
-    <link rel="author" href="/humans.txt">
-    <link rel="shortcut icon" href="/static/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/public/branding/favicon.svg" type="image/svg+xml">
     <meta property="og:url" content="{{host}}{{ page.url }}">
     <meta property="og:title" content="{{page_title or meta.title}}">
     <meta property="og:site_name" content="{{ meta.title }}"/>
@@ -30,16 +29,22 @@
     {% css "base" %}
     {% include "styles/base.css" %}
     {% endcss %}
+    {% css "post" %}
+    {% include "styles/post.css" %}
+    {% endcss %}
     <style>
         {% getBundle "css", "base" %}
     </style>
+    {% if post %}
+        <style>
+            {% getBundle "css", "post" %}
+        </style>
+    {% endif %}
     {% css %}
     {% include "styles/style.css" %}
     {% endcss %}
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
-    {% if env.host == "neocities" %}
+    {%- if env.host == "production" -%}
         <script src="https://tinylytics.app/embed/dcJBJt8md3MZEExK1rry.js" defer async></script>
-    {% else %}
-        <script src="https://tinylytics.app/embed/hsW57LwsRxDySR_okyTP.js" defer async></script>
-    {% endif %}
+    {%- endif -%}
 </head>

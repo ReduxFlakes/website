@@ -1,5 +1,18 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+{% set footerLinks = [] %}
+{% for item in navPages %}
+    {% if item.for == "Footer" %}
+        {% set footerLinks = footerLinks.concat([item]) %}
+    {% endif %}
+{% endfor %}
+
 <footer>
-    <p>&copy; 2021 - 2025 ReduxFlakes. <a href="/about/#license">License and attribution</a> / <a href="/privacy">Privacy Statement</a> / <a href="/roadmap">Roadmap</a>
-    </p>
-    <p>Built with <a href="https://www.11ty.dev/">11ty</a> and procrastination, and hosted for free thanks to <a href="https://neocities.org/">Neocities</a> and <a href="https://nekoweb.org/">Nekoweb</a>.</p>
+    <nav class="auto-flex">
+        {% for entry in footerLinks %}
+            <a href="{{entry.url}}">{{entry.title}}</a>
+        {% endfor %}
+    </nav>
+    <p>&copy; 2021 - 2025 ReduxFlakes.</p>
+    <p>Built with <a href="https://www.11ty.dev/">11ty</a> & procrastination, and hosted for free thanks to <a href="https://neocities.org/">Neocities</a> and <a href="https://nekoweb.org/">Nekoweb</a>.</p>
 </footer>

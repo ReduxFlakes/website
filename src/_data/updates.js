@@ -1,5 +1,19 @@
 export default [
   {
+    date: "2025-04-17 18:50:00",
+    content:"New redesign, with lots of new features and content!",
+    list: [
+      "New design and layout with some bits of Frutiger Aero",
+      "New navigation system",
+      "Breadcrumbs on all pages for easier navigation",
+      "Improve previous features of the site (ex: Table of Contents and the changelog)",
+      "Organized all the pages into categories with icons and descriptions",
+      "New content from the new download category, upcoming research section, and other goodies",
+      "Improved accessibility troughout the site",
+      "And more!!"
+    ]
+  },
+  {
     date: "2025-03-25 07:57:32",
     content: "Add custom css file for NekoFM.",
   },

@@ -1,14 +1,33 @@
 ---
 title: Roadmap
 description: Progress on new stuff for the site (fancy name for a to-do list)
-modified: 2025-03-09T12:18:00.00Z
+modified: 2025-04-17T18:31:00.00Z
+eleventyNavigation:
+  for: Footer
 ---
 
-- ~~Redesign the site until I'm happy~~ _Done! 04/03/2025_
-- ~~Create a roadmap page~~ _Done! 09/03/2025_
-- ~~Change to a more pleasent color palette~~ _Done! 09/03/2025_
-- Make the music page
-- Make the colophon page
-- Make a blogroll page
-- Make a links/bookmarks page
-- Create the Knowledge Base section (AKA KB)
+- ~~Implement advanced navigation~~
+- ~~Implement breadcrumbs~~
+- ~~Make new and improved update & changelog section~~
+- Create the index page for "Work"
+- Create the Digital Garden
+- Create the download center
+  - ~~Create directory for my YouTube remaster~~ 17/04/2025
+  - Create GCam Config directory
+- Create shrines
+- Make the [Related Sites page](/sites)
+- Make the website accessible & responsive
+  - ~~Navigation~~
+  - ~~Table Of Contents~~
+  - ~~Check blog feeds~~
+  - Improve mobile view
+- ~~Add webmaster sidebar on the homepage~~
+
+## QoL
+
+- Restructure the footer
+- Implement aria-current on the navigation
+- Improve blog tags
+- Improve projects page
+
+

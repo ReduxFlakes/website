@@ -1,0 +1,34 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+{# creates an object with pages (incl. sub-pages) that contain the eleventyNavigation "Recommended" tag #}
+{% set recommended = [] %}
+{% for item in navPages %}
+    {% if item.tag == "Recommended" %}
+        {% set recommended = recommended.concat([item]) %}
+    {% endif %}
+    {% for children in item.children %}
+        {% if children.tag == "Recommended" %}
+            {% set recommended = recommended.concat([children]) %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+<aside class="box box--fluid">
+
+    {% renderTemplate "md" %}
+## Webmaster
+{% endrenderTemplate %}
+
+    <section style="margin-top:0.25em;">
+        <h3 style="font-size:1.1rem">Recommendations</h3>
+        <nav>
+            <ul role="list">
+                {%- for entry in recommended -%}
+                    <li>
+                        <a href="{{entry.url}}">{{entry.data.title}}</a>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </nav>
+    </section>
+</aside>

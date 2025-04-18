@@ -1,12 +1,12 @@
 :root {
-  --font: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari,
-    "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro,
-    sans-serif;
-  --background: #282828;
-  --container: hsl(0, 0%, 13%);
-  --foreground: #FBF1C7;
-  --primary: #ff933b;
-  --foreground-subtle: #d5c4a1;
-  --stroke: #504945;
-  --viewport: 800px;
+  --font: "Arial", sans-serif;
+  --background: hsla(0, 0%, 14%, 0.9);
+  --container: hsl(12, 7%, 11%);
+  --foreground: #fbe6c7;
+  --primary: #fb9668;
+  --foreground-subtle: #d5c2a1;
+  --stroke: #574d49;
+  --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
+  --breathing-space: 0.8rem;
+  --viewport: 984px;
 }

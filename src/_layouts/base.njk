@@ -3,13 +3,35 @@
   {% include "head.njk" %}
   <body>
     <a href="#main-content" class="acs-skip">Skip to main content</a>
+    {% include "toolbar.njk" %}
+    {% include "header.njk" %}
     {% include "nav.njk" %}
+    {% include "breadcrumbs.njk" %}
     <main>
-      {% include "header.njk" %}
-      <article id="main-content" class="stack">
-        {{ content | safe }}
-      </article>
+      {% block base %}
+        <article id="main-content" class="stack">
+          {% if isInConstruction %}
+            <p class="notice notice--warning" role="alert">
+              <img src="/public/icons/farm-vlc.png" alt=""> This page is in construction, so expect broken features and/or missing content.</p>
+          {% endif %}
+          {{ content | safe }}
+        </article>
+      {% endblock base %}
     </main>
     {% include "footer.njk" %}
+    <script>
+      if (document.querySelector('details')) {
+        const details = document.querySelectorAll('details');
+        details.forEach((targetDetail) => {
+          targetDetail.addEventListener("click", () => {
+            details.forEach((detail) => {
+              if (detail !== targetDetail) {
+                detail.removeAttribute("open");
+              }
+            });
+          });
+        });
+      }
+    </script>
   </body>
 </html>

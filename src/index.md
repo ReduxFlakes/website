@@ -1,14 +1,22 @@
 ---
-layout: base
-hero:
-  description: Software developer and designer from Portugal
+description: "Software developer and designer from Portugal"
+eleventyNavigation:
+  key: Home
 ---
+
+<div class="sider">
+
+<article class="stack">
 
 ## Welcome
 
 I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from Portugal that focuses on privacy, simplicity, and performance. This is my personal website where I talk about various things from life, ongoing projects, musics, and resource & guides. [Learn more about me](/about)
 
-> Remember, a personal site is never finished, so expect things not working or returning not found!
+</article>
+
+{% include "partials/webmaster.njk" %}
+
+</div>
 
 ## Latest Post
 
@@ -18,29 +26,36 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from 
 
 ## Links
 
-### Socials
+### On the web
 
-<div class="auto-flex button-grid">
+<div class="auto-flex button-grid"style="gap:1rem;">
 {%- for item in meta.socials -%}
-  <a href="{{item.url}}" title="{{item.name}}">
-  <img src="/public/img/buttons/general/{{item.img}}" alt="{{item.name}}" class="classic-btn" width="88" height="31">
-  </a>
+    <a href="{{item.url}}" style="display:flex;flex-direction:column;align-items:center;"><img src="/public/icons/pixy/{{item.name | slugify}}.png" alt="" aria-hidden="true" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore>{{item.name}}</a>
 {%- endfor -%}
-<a href="https://reduxflakes.atabook.org/" style="font-size:1.0125em;"><b>Sign my guestbook!</b></a>
-<p>Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> | <a href="https://neocities.org/site/reduxflakes">Neocities</a></p>
 </div>
+
+
+<div class="auto-flex">
+<a href="https://reduxflakes.atabook.org/" style="font-size:1.0125em;"><b>Sign my guestbook!</b></a>
+<p>Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a href="https://neocities.org/site/reduxflakes">Neocities</a></p>
+</div>
+
 
 ### Friends
 
-<div  class="auto-flex button-grid">
-  {% for button in buttons.friends %}
-  {% if button.img %}
-      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore ></a>
-  {% else %}
-        <a href="{{button.url}}" style="display:block;text-align:center;min-width:88px;">{{button.title}}</a>
-  {% endif %}
+<details>
+<summary>Click to load buttons</summary>
+<div class="auto-flex button-grid">
+  {%- for button in buttons.friends -%}
+  {%- if button.img -%}
+      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img -%} loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
+  {%- else -%}
+        <a href="{{button.url}}" style="min-width:88px;min-height:31px;">{{button.title}}</a>
+  {%- endif -%}
 {% endfor %}
 </div>
+</details>
+
 
 ### Link me!
 
@@ -69,7 +84,7 @@ If you like my site, you can link me by using the buttons below!
 
 <div class="auto-flex">
 
-<script src="https://nuthead.neocities.org/ring/ring.js"></script>
+<script src="https://nuthead.neocities.org/ring/ring.js" defer async></script>
 
 </div>
 
@@ -106,32 +121,33 @@ If you like my site, you can link me by using the buttons below!
     <config key="type" value="gruvbox-dark"></config>
     <config key="font" value="Overused Grotesk, Arial, sans-serif"></config>
     <config key="fill" value="true"></config>
-    <script src="https://palette.nekoweb.org/webring.js"></script>
+    <script src="https://palette.nekoweb.org/webring.js" defer async></script>
 </webring-container>
 
 {% endif %}
 
-## Updates
+<section class="stack">
 
-<details open>
-<summary>See changelog</summary>
-<div class="scroll stack">
+## Latest Update
 
-{%- for entry in updates -%}
+{% for entry in updates | limit(1) %}
 
-  <div class="stack" style="--spacer: 0.5em;">
-    {%- if loop.first -%}
-    <p><b>
-      <time datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}</time>
-      </b></p>
-    {%- else -%}
-    <p>
-      <time style="color:var(--foreground-subtle);" datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}</time>
-      </p>
-    {%- endif -%}
-    <p>{{ entry.content | safe }}</p>
-    <hr>
-  </div>
-{%- endfor -%}
-</div>
-</details>
+<p><b class="flex-h"><img src="/public/icons/farm-new.png" alt="" aria-visibility="hidden" class="icon"> <time datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}<time></b></p>
+
+<p>{{ entry.content | safe }}</p>
+{% if entry.list %}
+  <p>Some of the changes:</p>
+    <ul style="padding:0 2rem;">
+    {% for item in entry.list %}
+      <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</p>
+{% endfor %}
+
+<hr>
+
+Older updates are available in the [changelogs page](/changelog).
+
+</section>
