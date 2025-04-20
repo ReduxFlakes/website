@@ -8,7 +8,7 @@
     "url": "https://github.com/reduxflakes/website.git"
   },
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --watch",
     "start:nekoweb": "cross-env HOST_TYPE=nekoweb eleventy --serve",
     "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
     "build": "eleventy",

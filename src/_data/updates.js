@@ -1,5 +1,9 @@
 export default [
   {
+    date: "2025-04-20 01:47:00",
+    content: "Fixed Tinylytics and hopefully Discord website connection."
+  },
+  {
     date: "2025-04-17 18:50:00",
     content:"New redesign, with lots of new features and content!",
     list: [

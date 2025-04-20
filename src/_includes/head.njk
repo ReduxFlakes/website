@@ -44,7 +44,7 @@
     {% include "styles/style.css" %}
     {% endcss %}
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
-    {%- if env.host == "production" -%}
-        <script src="https://tinylytics.app/embed/dcJBJt8md3MZEExK1rry.js" defer async></script>
+    {%- if env.environment == "production" -%}
+        <script src="https://tinylytics.app/embed/dcJBJt8md3MZEExK1rry.js" defer></script>
     {%- endif -%}
 </head>
