@@ -10,8 +10,9 @@ eleventyNavigation:
   parent: Downloads
 ---
 
-<table>
-  <caption>Available remasters (from most recent to oldest)</caption>
+<div class="table-overflow">
+<table style="min-width:700px">
+  <caption style="text-align:left">Currently available (from most recent to oldest)</caption>
   <thead>
     <tr>
       <th scope="col">Title</th>
@@ -25,8 +26,12 @@ eleventyNavigation:
   <tbody>
   {%- for item in downloads.remasters | reverse -%}
   <tr>
+  {%- if not item.description -%}
+      <td colspan="2">{{item.title}}</td>  
+  {%- else -%}
       <td>{{item.title}}</td>
       <td>{{item.description}}</td>
+  {%- endif -%}
       <td>{{item.time}}</td>
       <td>{{item.size}}</td>
       <td>{{item.format}}</td>
@@ -40,12 +45,13 @@ eleventyNavigation:
   {%- endfor -%}
   </tbody>
 </table>
+</div>
 
 <section class="stack">
 
-## Legends
+## About mirror numbers
 
-- Mirror 1 = File.Garden
+- Mirror 1 = File Garden
 - Mirror 2 = Mega.NZ
   
 </section>

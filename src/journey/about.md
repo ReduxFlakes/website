@@ -44,25 +44,41 @@ If you want to know what I'm up to check either my [now page](/now) or [my socia
   {% endfor %}
 </div>
 
-
-
-
-### Tools
-
-> Need to move this to the colophon page
+### Credits
 
 - [Eleventy](https://www.11ty.dev/) - The SSG I use to build this website, helps on cutting the copy/paste and makes things more consistent (great for someone who is perfectionist).
-- [Lucide](https://lucide.dev/) - The icons I use across the website.
 
+#### Icons
+
+- [Lucide](https://lucide.dev/) - The flat icons used across the website.
+
+The following icons are the ones found in the nav bar and respective menus.
+
+- Farm Fresh Icons :: Fatcow Web Hosting » CC Attribution 4.0 (https://fatcow.com/free-icons)
+- Koloria Icons Pack :: Graphic Rating (Andy Gongea) » Freeware
+- Sfeers Icons Pack :: emey87 » CC Attribution-Noncommercial-No Derivate 4.0
+- Pixelophilia Icons :: omercetin » CC Attribution-Noncommercial-No Derivate 4.0
+- WooCons :: Janik Baumgartner » GPL
+
+
+#### CSS & other code
+
+- Opacity effect when hovering buttons - Original idea and code of [jbcarreon123](https://jbcarreon123.nekoweb.org/)
+
+- Zoom effect when hovering buttons - Code of [Daudix](https://daudix.one/)
+
+- Table of Contents Eleventy filter - Original code of [uncenter](https://github.com/uncenter/eleventy-plugin-toc)
 
 
 ## License
 
-This website content, unless specified, is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en) and it's source code [available on GitHub](https://github.com/ReduxFlakes/website) is licensed under [GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
+This website content, unless specified, is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en) and it's source code, unless specified, is licensed under [GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
+
+<a href="https://github.com/ReduxFlakes/website" class="button">View source code (GitHub)</a>
 
 ### Attribution
 
-If you want to reuse a part of content or source code of this website please do add an attribution to it's origin either directly on the code or on a credit section of your website/application where that code was used, below is an example of how this can be done.
+If you want to reuse a part of content or code of this website please do add an attribution to it's origin either directly on the code or on a credit section of your website/application where that code was used, below is an example of how this can be done.
 
 {% if env.host == "neocities" %}
 {% set website_host = "https://reduxflakes.neocities.org" %}
@@ -70,4 +86,11 @@ If you want to reuse a part of content or source code of this website please do 
 {% set website_host = "https://reduxflakes.nekoweb.org" %}
 {% endif %}
 
-> This following content/code comes from <a href="{{website_host}}/page_to_the_content">{{website_host}}</a> by the author: ReduxFlakes, and is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en)/[GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
+> This following content/code was taken from <a href="{{website_host}}/page_to_the_content">{{website_host}}</a>.<br/> It's licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en)/[GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
+
+<label for="attributioncode">HTML Template</label>
+
+<textarea id="attributioncode" name="attributioncode" rows="7" cols="37" readonly>
+&lt;p&gt;This following content/code was taken from &lt;a href=&quot;https://reduxflakes.neocities.org/page_to_the_content&quot;&gt;https://reduxflakes.neocities.org&lt;/a&gt;.&lt;br&gt; It's licensed under &lt;a href=&quot;https://creativecommons.org/licenses/by/4.0/deed.en&quot;&gt;Creative Commons 4.0 DEED&lt;/a&gt;/&lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html&quot;&gt;GPL-2.0 Only&lt;/a&gt;.&lt;/p&gt;
+
+</textarea>

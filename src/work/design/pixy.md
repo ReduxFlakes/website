@@ -14,7 +14,7 @@ eleventyNavigation:
 <p><b>Icons:</b> 14</p>
 <p><b>Version:</b> 0.0.1</p>
 <p><b>View Size:</b> 24x24 and 48x48 (PNG and SVG)</p>
-<p><b>Pack Size:</b> 18,3 KB (unpacked)</p>
+<p><b>Pack Size:</b> 78,3 KB (unpacked)</p>
 <p><a href="#license">License Information</a></p>
 </section>
 

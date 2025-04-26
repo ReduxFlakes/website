@@ -16,6 +16,6 @@ This sites uses Neocities and Nekoweb for site hosting, below is the correspondi
 
 ## Third Party Services
 
-I currently use [file.garden]() to host the files for the [Remasters page](/downloads/remasters). It's privacy policy can be found below.
+I currently use [File Garden](https://filegarden.com/) to host the files on the [Remasters page](/downloads/remasters).
 
 

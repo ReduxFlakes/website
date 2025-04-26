@@ -1,5 +1,18 @@
 export default [
   {
+    date: "2025-04-26 19:10:00",
+    content:"Lot of fixes and small additions.",
+    list: [
+      "Added new stuff to the <a href=\"/work/design/\">design</a> page",
+      "Kickstarted the <a href=\"/sites/\">related sites</a> page",
+      "Improved <a href=\"/about/\">about</a> page with new credits sections and better attribution (with template)",
+      "Restructured the design page",
+      "Improvements on CSS (improved tables, made all headings bold, fixed focus for specifci elements, and added style for textarea element)",
+      "Improved some grammar",
+      "Fixed guestbook banner"
+    ]
+  },
+  {
     date: "2025-04-20 01:47:00",
     content: "Fixed Tinylytics and hopefully Discord website connection."
   },

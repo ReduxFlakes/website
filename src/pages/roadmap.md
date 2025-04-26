@@ -1,27 +1,27 @@
 ---
 title: Roadmap
 description: Progress on new stuff for the site (fancy name for a to-do list)
-modified: 2025-04-17T18:31:00.00Z
+modified: 2025-04-26T19:17:00.00Z
 eleventyNavigation:
   for: Footer
 ---
 
-- ~~Implement advanced navigation~~
-- ~~Implement breadcrumbs~~
-- ~~Make new and improved update & changelog section~~
+- ~~Implement advanced navigation~~ 17/04/2025
+- ~~Implement breadcrumbs~~ 17/04/2025
+- ~~Make new and improved update & changelog section~~ 17/04/2025
 - Create the index page for "Work"
 - Create the Digital Garden
 - Create the download center
   - ~~Create directory for my YouTube remaster~~ 17/04/2025
   - Create GCam Config directory
 - Create shrines
-- Make the [Related Sites page](/sites)
+- ~~Make the [Related Sites page](/sites)~~ 26/04/2025
 - Make the website accessible & responsive
-  - ~~Navigation~~
-  - ~~Table Of Contents~~
-  - ~~Check blog feeds~~
+  - ~~Navigation~~ 17/04/2025
+  - ~~Table Of Contents~~ 17/04/2025
+  - ~~Check blog feeds for errors~~ 17/04/2025
   - Improve mobile view
-- ~~Add webmaster sidebar on the homepage~~
+- ~~Add webmaster sidebar on the homepage~~ 17/04/2025
 
 ## QoL
 
@@ -29,5 +29,6 @@ eleventyNavigation:
 - Implement aria-current on the navigation
 - Improve blog tags
 - Improve projects page
+- Cleanup CSS
 
 

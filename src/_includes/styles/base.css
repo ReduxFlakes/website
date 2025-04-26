@@ -114,13 +114,6 @@ h6 {
   line-height: 1.2em;
 }
 
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-}
-
 .anchor {
   visibility: hidden;
   font-weight: normal;
@@ -187,10 +180,15 @@ table {
   width: 100%;
 }
 
+.table-overflow {
+  overflow: auto;
+}
+
 thead {
   position: sticky;
   top: 0;
   z-index: 2;
+  background: var(--container);
   }
 
 td, th {
@@ -203,8 +201,11 @@ tr:hover {
   background: var(--container);
 }
 
-tr:nth-child(even) {
-  background-color: #0000005b;
+textarea {
+  background: var(--container);
+  color: var(--foreground);
+  border-color: var(--stroke);
+  
 }
 
 @media (prefers-reduced-motion: reduce) {

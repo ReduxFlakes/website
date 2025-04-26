@@ -10,6 +10,8 @@ eleventyNavigation:
 
 ## Welcome
 
+> Fireplace in the mall
+
 I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from Portugal that focuses on privacy, simplicity, and performance. This is my personal website where I talk about various things from life, ongoing projects, musics, and resource & guides. [Learn more about me](/about)
 
 </article>
@@ -35,8 +37,8 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from 
 </div>
 
 
-<div class="auto-flex">
-<a href="https://reduxflakes.atabook.org/" style="font-size:1.0125em;"><b>Sign my guestbook!</b></a>
+<div class="auto-flex" style="font-size:1.075em">
+<a href="https://reduxflakes.atabook.org/" style="color:#7FFF00"><b>Sign my guestbook!</b></a>
 <p>Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a href="https://neocities.org/site/reduxflakes">Neocities</a></p>
 </div>
 
@@ -136,10 +138,10 @@ If you like my site, you can link me by using the buttons below!
 
 <p>{{ entry.content | safe }}</p>
 {% if entry.list %}
-  <p>Some of the changes:</p>
+  <p><b>Changes:</b></p>
     <ul style="padding:0 2rem;">
     {% for item in entry.list %}
-      <li>{{item}}</li>
+      <li>{{item | safe}}</li>
     {% endfor %}
     </ul>
   {% endif %}
@@ -148,6 +150,6 @@ If you like my site, you can link me by using the buttons below!
 
 <hr>
 
-Older updates are available in the [changelogs page](/changelog).
+Looking for older updates? Check the [changelog page](/changelog)!
 
 </section>

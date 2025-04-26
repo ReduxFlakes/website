@@ -289,3 +289,7 @@ input[type="checkbox"]:checked::before {
   outline: 1px solid var(--primary);
   border-color: var(--primary);
 }
+
+a:has(.classic-btn) {
+  display: block;
+}
