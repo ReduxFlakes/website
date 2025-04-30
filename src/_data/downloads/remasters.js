@@ -31,5 +31,15 @@ export default [
         "https://file.garden/aAEXMwgY3QmuIjxE/Remasters/FEX/Subways%20Of%20Your%20Mind.wav",
         "https://mega.nz/file/4FZ0XbwQ#vmqEe7pe_mo6azTbHzHImyAZwkglttfUZpQFt56n5VY"
         ]
+    },
+    {
+        title: "The Burns - Sidewalks",
+        time: "4:00",
+        size: "26,9 MiB",
+        format: "FLAC",
+        youtube: "https://youtu.be/dJwfeHI15oE",
+        sources: [
+        "https://file.garden/aAEXMwgY3QmuIjxE/Remasters/The%20Burns/The%20Burns%20-%20Sidewalks.flac",
+        ]
     }
 ]
