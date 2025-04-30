@@ -1,5 +1,13 @@
 export default [
   {
+    date: "2025-04-30 09:48:00",
+    content:"New stuff on the remasters page!",
+    list: [
+      "Now every single item in the remasters download page have an ID, so you can link them now",
+      "Made improvements on mobile",
+    ]
+  },
+  {
     date: "2025-04-26 19:10:00",
     content:"Lot of fixes and small additions.",
     list: [
