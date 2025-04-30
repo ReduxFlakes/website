@@ -293,3 +293,9 @@ input[type="checkbox"]:checked::before {
 a:has(.classic-btn) {
   display: block;
 }
+
+@media (max-width: 600px) {
+  .mobile {
+    display: none;
+  }
+}
