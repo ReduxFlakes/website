@@ -25,7 +25,7 @@ eleventyNavigation:
   </thead>
   <tbody>
   {%- for item in downloads.remasters | reverse -%}
-  <tr>
+  <tr id="{{item.title | slugify }}">
   {%- if not item.description -%}
       <td colspan="2">{{item.title}}</td>  
   {%- else -%}

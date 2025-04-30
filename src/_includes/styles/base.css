@@ -198,7 +198,12 @@ td, th {
 }
 
 tr:hover {
-  background: var(--container);
+ background: var(--container);
+}
+
+tr:target {
+  background: #421b2773;
+  border: 4px solid #FE618E;
 }
 
 textarea {
