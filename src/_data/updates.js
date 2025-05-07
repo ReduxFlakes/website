@@ -1,5 +1,13 @@
 export default [
   {
+    date: "2025-04-07 08:00:00",
+    content:"New entries on the remasters page",
+    list: [
+      "Added 3 new entries on the remasters page for the band: 3D (A Fish In Sea)",
+      "The Burns - Avail is now available in FLAC",
+    ]
+  },
+  {
     date: "2025-04-30 09:48:00",
     content:"New stuff on the remasters page!",
     list: [
