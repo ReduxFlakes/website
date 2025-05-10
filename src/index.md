@@ -58,6 +58,21 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from 
 </div>
 </details>
 
+### Sites I like / Inspired on
+
+<details>
+<summary>Click to load buttons</summary>
+<div class="auto-flex button-grid">
+  {%- for button in buttons.likes -%}
+  {%- if button.img -%}
+      <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img -%} loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
+  {%- else -%}
+        <a href="{{button.url}}" style="min-width:88px;min-height:31px;">{{button.title}}</a>
+  {%- endif -%}
+{% endfor %}
+</div>
+</details>
+
 
 ### Link me!
 

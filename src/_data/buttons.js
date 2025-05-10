@@ -11,6 +11,11 @@ export default {
       url: "https://bytemoth.neocities.org/",
     },
     {
+      title: "Daniele's Website",
+      img: "danieles.jpg",
+      url: "https://daniele63.com/"
+    },
+    {
       title: "Fabled",
       img: "fabled.gif",
       url: "https://fabled.day",
@@ -19,6 +24,11 @@ export default {
       title: "Aristasian Reminiscence",
       img: "aristasiabutton.gif",
       url: "https://aristasia.guide/",
+    },
+    {
+      title: "Frutiger Aero Archive",
+      img: "frutigeraeroarchive.png",
+      url: "https://frutigeraeroarchive.org/"
     },
     {
       title: "Leilukin's Hub",
@@ -66,6 +76,16 @@ export default {
       url: "https://wlodekm.nekoweb.org/",
     },
     {
+      title: "Yudosai",
+      img: "yudosai.png",
+      url: "https://yudo.cc/",
+    },
+    {
+      title: "Slushienova",
+      img: "slush.jpg",
+      url: "https://slushienova.neocities.org/",
+    },
+    {
       title: "Houdini",
       img: "houdininokia.gif",
       url: "https://erikhoudini.com/",
@@ -79,6 +99,16 @@ export default {
       title: "Hifumi's Weebsite",
       img: "lhfm.png",
       url: "https://lhfm.neocities.org/",
+    },
+    {
+      title: "NorthSilver",
+      img: "northsilver.png",
+      url: "https://northsilversite.neocities.org/",
+    },
+    {
+      title: "Fan0102",
+      img: "fan0102.gif",
+      url: "https://somefan0102.neocities.org/"
     },
     {
       title: "Coloured",
@@ -106,18 +136,48 @@ export default {
       url: "https://luxfero.nekoweb.org/en/",
     },
     {
+      title: "NomnomNami",
+      img: "nomnomnami.gif",
+      url: "https://nomnomnami.com/"
+    },
+    {
       title: "yatagarasu",
       img: "yatagarasu.gif",
       url: "https://yatagarasu.nekoweb.org/",
     },
     {
+      title: "visualculture",
+      img: "visualculture.png",
+      url: "https://visualculture.vc/"
+    },
+    {
+      title: "dabric",
+      img: "dabric.png",
+      url: "https://dabric.xyz/"
+    },
+    {
+      title: "GrayBox",
+      img: "graybox.gif",
+      url: "https://graybox.lol/"
+    },
+    {
+      title: "concon.sou",
+      img: "concon.gif",
+      url: "https://concon.soy/"
+    },
+    {
+      title: "tfpXE",
+      img: "tfpxe.gif",
+      url: "https://tfpxe.wtf/",
+    },
+    {
       title: "Plushspace",
-      img:"plushspace.gif",
+      img: "plushspace.gif",
       url: "https://plushspace.uwu.ai/",
     },
     {
       title: "soulwebb",
-      img:"soulwebb.gif",
+      img: "soulwebb.gif",
       url: "https://soulwebb.ing/",
     },
     {
@@ -131,15 +191,47 @@ export default {
       url: "https://layercake.nekoweb.org/"
     },
     {
+      title: "Dannarchy",
+      img: "dannarchy.gif",
+      url: "https://dannarchy.com"
+    },
+    {
+      title: "NeoCities",
+      img: "neo-neighborhoods.gif",
+      url: "https://neo-neighborhoods.neocities.org/"
+    },
+    {
       title: "Miko",
       url: "https://miko.nekoweb.org/"
     },
     {
       title: "Demgoze",
       url: "https://demgoze.nekoweb.org/"
+    },
+    {
+      title: "scuti",
+      url: "https://scuti.neocities.org/"
+    },
+    {
+      title: "Lukas Zone",
+      url: "https://lukaszone.neocities.org/"
+    },
+    {
+      title: "Flux Veritas",
+      url: "https://belarius.neocities.org/"
     }
   ],
   likes: [
+    {
+      title: "32bit cafe",
+      img: "32bitty.png",
+      url: "https://32bit.cafe/",
+    },
+    {
+      title: "Melonking",
+      img: "melonking.gif",
+      url: "https://melonking.net/",
+    },
     {
       title: "Absolute Realm",
       img: "absolute-realm.gif",
@@ -151,9 +243,9 @@ export default {
       url: "https://melankorin.net/",
     },
     {
-      title: "www.cozynet.org",
+      title: "CozyNet",
       img: "cozybro88.gif",
-      url: "https://www.cozynet.org",
+      url: "https://www.cozynet.org/",
     },
     {
       title: "Daudix",
@@ -175,11 +267,7 @@ export default {
       img: "dimden.gif",
       url: "https://dimden.dev/",
     },
-    {
-      title: "CozyNet",
-      img: "cozybro88.gif",
-      url: "https://www.cozynet.org/",
-    },
+
     {
       title: "june's web page",
       img: "webcatz.png",
@@ -256,5 +344,44 @@ export default {
       img: "sizeofcat.jpg",
       url: "https://sizeof.cat/",
     },
+    {
+      title: "RoBu",
+      img: "rbuchanan.png",
+      url: "https://rbuchanan.neocities.org/"
+    }, {
+      title: "2Bit",
+      img: "2bit.png",
+      url: "https://2bit.neocities.org/"
+    },
+    {
+      title: "newchapter.org",
+      img: "newchapter.gif",
+      url: "https://newchapter.neocities.org"
+    },
+    {
+      title: "Koinuko",
+      img: "koinuko.gif",
+      url: "https://koinuko.pink/"
+    },
+    {
+      title: "Bootleg64",
+      img: "bl64.png",
+      url: "https://bootleg64.neocities.org/"
+    },
+    {
+      title: "TEOMODO",
+      img: "teomodo.gif",
+      url: "https://teomodo.net/"
+    },
+    {
+      title: "Cyuucat",
+      img: "cyuu.gif",
+      url: "https://cyuucat.moe/"
+    },
+    {
+      title: "lempamo",
+      img: "lempamo.png",
+      url: "https://lempamo.glitch.me/"
+    }
   ],
 };

@@ -1,8 +1,8 @@
 ---
 title: 2025 Website Redesign
 date: 2025-04-15 02:09:58
-modified: 2025-04-26 18:35:00
-description: Talking about the new website redesign, from the reasons why to what is up for the future
+modified: 2025-05-10 11:19:00
+description: Talking about the new website redesign
 toc: false
 tags: ["website","life"]
 ---
