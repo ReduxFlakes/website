@@ -1,7 +1,16 @@
 export default [
   {
-    date: "2025-04-07 08:00:00",
-    content:"New entries on the remasters page",
+    date: "2025-05-10 12:26:00",
+    content: "Changes relating to buttons",
+    list: [
+      "Added a bunch of new buttons to the friends and inspiration section",
+      "Inspiration buttons are now available on the homepage as \"Sites I Like\"",
+      "Fixed broken/missing buttons"
+    ]
+  },
+  {
+    date: "2025-05-07 08:00:00",
+    content: "New entries on the remasters page",
     list: [
       "Added 3 new entries on the remasters page for the band: 3D (A Fish In Sea)",
       "The Burns - Avail is now available in FLAC",
@@ -9,7 +18,7 @@ export default [
   },
   {
     date: "2025-04-30 09:48:00",
-    content:"New stuff on the remasters page!",
+    content: "New stuff on the remasters page!",
     list: [
       "Now every single item in the remasters download page have an ID, so you can link them now",
       "Made improvements on mobile",
@@ -17,7 +26,7 @@ export default [
   },
   {
     date: "2025-04-26 19:10:00",
-    content:"Lot of fixes and small additions.",
+    content: "Lot of fixes and small additions.",
     list: [
       "Added new stuff to the <a href=\"/work/design/\">design</a> page",
       "Kickstarted the <a href=\"/sites/\">related sites</a> page",
@@ -34,7 +43,7 @@ export default [
   },
   {
     date: "2025-04-17 18:50:00",
-    content:"New redesign, with lots of new features and content!",
+    content: "New redesign, with lots of new features and content!",
     list: [
       "New design and layout with some bits of Frutiger Aero",
       "New navigation system",

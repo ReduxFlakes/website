@@ -19,7 +19,7 @@ eleventyNavigation:
   <p><b>Changes:</b></p>
     <ul style="padding:0 2rem;">
     {% for item in entry.list %}
-      <li>{{item}}</li>
+      <li>{{item | safe}}</li>
     {% endfor %}
     </ul>
   {% endif %}
