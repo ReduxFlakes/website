@@ -10,18 +10,14 @@ html {
   scroll-behavior: smooth;
   text-size-adjust: none;
   color-scheme: dark;
-}
-
-html {
-  font: 1.05rem / 1.45 var(--font);
-  letter-spacing: -.01em;
-  background: url("/public/bg.png");
+  font: 1.08rem / 1.45 var(--font);
+  letter-spacing: -.03em;
+  background: var(--app-background);
   color: var(--foreground);
 }
 
 body {
   background: var(--background);
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 dl dd:not(:last-child) {
@@ -48,13 +44,14 @@ ol[role="list"] {
   margin: 0;
 }
 
-ul[role="list"] li + li::before  {
+ul[role="list"] li+li::before {
   content: "\02022";
   margin-inline: 0.35em 0.35em;
 }
 
 
-ul,ol {
+ul,
+ol {
   padding: 0 2rem;
 }
 
@@ -87,8 +84,8 @@ summary {
 h1:target,
 h2:target,
 h3:target {
-  background: hsla(313, 100%, 75%, 0.25);
-  color: rgb(255, 157, 183);
+  background: hsla(220, 100%, 75%, 0.3);
+  color: rgb(176, 219, 255);
 }
 
 img::selection {
@@ -120,9 +117,9 @@ h6 {
   opacity: 0;
 }
 
-h1:hover > .anchor,
-h2:hover > .anchor,
-h3:hover > .anchor {
+h1:hover>.anchor,
+h2:hover>.anchor,
+h3:hover>.anchor {
   visibility: visible;
   opacity: 1;
 }
@@ -139,7 +136,7 @@ h3:hover > .anchor {
   left: 0.25em;
 }
 
-.stack > * + * {
+.stack>*+* {
   --_space: var(--spacer, 1em);
   margin-top: var(--_space);
 }
@@ -166,13 +163,7 @@ blockquote {
 }
 
 small {
-color: var(--foreground-subtle);
-}
-
-aside{
-  border-radius: 3px;
-  background:linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.3));
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.75);
+  color: var(--foreground-subtle);
 }
 
 table {
@@ -189,16 +180,17 @@ thead {
   top: 0;
   z-index: 2;
   background: var(--container);
-  }
+}
 
-td, th {
+td,
+th {
   border: 1px solid var(--stroke);
   text-align: left;
   padding: 0.4rem var(--breathing-space);
 }
 
 tr:hover {
- background: var(--container);
+  background: var(--container);
 }
 
 tr:target {
@@ -210,7 +202,14 @@ textarea {
   background: var(--container);
   color: var(--foreground);
   border-color: var(--stroke);
-  
+
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("/public/geist.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 @media (prefers-reduced-motion: reduce) {

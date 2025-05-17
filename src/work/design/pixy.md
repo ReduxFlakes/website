@@ -11,15 +11,22 @@ eleventyNavigation:
 ## About
 
 <section class="box">
-<p><b>Icons:</b> 14</p>
-<p><b>Version:</b> 0.0.1</p>
+<p><b>Icons:</b> 15</p>
+<p><b>Version:</b> 0.1.0</p>
 <p><b>View Size:</b> 24x24 and 48x48 (PNG and SVG)</p>
-<p><b>Pack Size:</b> 78,3 KB (unpacked)</p>
+<p><b>Pack Size:</b> 60,0 KB (unpacked)</p>
 <p><a href="#license">License Information</a></p>
 </section>
 
 
-<a href="https://file.garden/aAEXMwgY3QmuIjxE/Design/Pixy%20Icon%20Pack/Pixy-0_0_1.7z" class="button">Download (.7z)</a>
+<a href="https://file.garden/aAEXMwgY3QmuIjxE/Design/Pixy%20Icon%20Pack/Pixy-0_1_0.zip" class="button">Download (.zip)</a>
+
+## Changelog
+
+**Version 0.1.0**:
+
+- Improved 4 icons (Neko.FM, Nekoweb, Minecraft, Figma)
+- Added a new icon for Instagram
 
 ### License
 

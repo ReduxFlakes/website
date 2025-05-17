@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
   {% include "head.njk" %}
-  <body>
+  <body class="app">
     <a href="#main-content" class="acs-skip">Skip to main content</a>
-    {% include "toolbar.njk" %}
+    {% include "partials/app/toolbar.njk" %}
     {% include "header.njk" %}
-    {% include "nav.njk" %}
     {% include "breadcrumbs.njk" %}
     <main>
       {% block base %}

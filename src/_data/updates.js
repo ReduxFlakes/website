@@ -1,5 +1,14 @@
 export default [
   {
+    date: "2025-05-17 17:40:00",
+    content: "Design changed and other new additions.",
+    list: [
+      "I'm moving back to my older design and layout from the end of 2024, now using SurfScape Steel design system as base (pretty incomplete)",
+      "New release of Pixy Icon Pack, version 0.1.0!",
+      "I now have Instagram! (daily brain rot and depression intake)"
+    ]
+  },
+  {
     date: "2025-05-10 12:26:00",
     content: "Changes relating to buttons",
     list: [

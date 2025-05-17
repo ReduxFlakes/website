@@ -1,12 +1,24 @@
 :root {
-  --font: "Arial", sans-serif;
-  --background: hsla(0, 0%, 14%, 0.9);
-  --container: hsl(12, 7%, 11%);
-  --foreground: #fbe6c7;
-  --primary: #fb9668;
-  --foreground-subtle: #d5c2a1;
-  --stroke: #574d49;
+  --font: "Geist", system-ui, Arial, sans-serif;
+  --background: hsla(0, 0%, 12%);
+  --container: var(--app-container);
+  --foreground: #ececec;
+  --foreground-subtle: #b9b9b9;
+  --stroke: var(--app-border-color);
   --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
   --breathing-space: 0.8rem;
-  --viewport: 984px;
+  --viewport: 1180px;
+
+  --primary: hsl(199, 100%, 80%);
+  --on-primary: hsl(206, 32%, 15%);
+  --app-background: hsl(206, 0%, 5%);
+  --app-container: hsl(0, 0%, 18%);
+  --app-foreground: hsl(0, 0%, 96%);
+  --app-border-color: hsl(208, 5%, 29%);
+
+  --steel-desktop-border: 1px solid var(--app-border-color);
+  --steel-default-border: 1px solid var(--app-border-color);
+  --steel-mobile-border: none;
+
+  --app-layout-aside: 500px;
 }
