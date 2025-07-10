@@ -2,11 +2,8 @@
 title: Projects
 description: "Personal projects, both active and abandoned"
 icon: farm-components
-eleventyNavigation:
-  parent: Work
-  key: Projects
-  order: 2
-  tag: "Recommended"
+collection: main
+order: 2
 ---
 
 > Ordered from most popular/active to inactive/abandoned

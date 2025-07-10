@@ -3,10 +3,8 @@ title: Things I Use
 description: Interested on what tools I use? You've come to the right place!
 icon: pixelophilia-app
 modified: 2025-03-03T16:00:00.00Z
-eleventyNavigation:
-  key: Uses
-  parent: Origins
-  order: 2
+key: Uses
+parent: Resources
 ---
 
 ## Desktop (Windows 10)

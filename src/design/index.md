@@ -4,7 +4,6 @@ description: Random design and art, from buttons & icons, to mockups.
 icon: farm-color-wheel
 eleventyNavigation:
   key: Design
-  parent: Work
   order: 3
 ---
 

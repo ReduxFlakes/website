@@ -1,10 +1,8 @@
 ---
 title: Support
 description: Ways you can support me (with or without money)
-eleventyNavigation:
-  key: Support
-  parent: Origins
-  order: 3
+parent: About
+excludeFromNavigationCollection: true
 ---
 
 If you like my work and have the option to support me monetary, you can donate me trough my Ko-Fi page using the button below :D.

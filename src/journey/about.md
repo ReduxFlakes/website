@@ -1,11 +1,13 @@
 ---
 title: About
 description: Information about me and this website
-icon: farm-user
-eleventyNavigation:
-  key: About
-  parent: Origins
-  order: 0
+hero:
+  actions:
+    - label: Support Me
+      link: "/support"
+order: 4
+collection: main
+isMultipage: true
 ---
 
 ## The webmaster
@@ -34,7 +36,7 @@ If you want to know what I'm up to check either my [now page](/now) or [my socia
 
 <p style="text-align:center;">These are all the websites that inspired me to create my site, from design to content, so thank you everyone on the list for <i>helping me</i>, go visit them all!</p>
 
-<div  class="auto-flex button-grid">
+<div class="auto-flex button-grid">
   {% for button in buttons.likes %}
   {% if button.url %}
     <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore ></a>
@@ -60,7 +62,6 @@ The following icons are the ones found in the nav bar and respective menus.
 - Pixelophilia Icons :: omercetin » CC Attribution-Noncommercial-No Derivate 4.0
 - WooCons :: Janik Baumgartner » GPL
 
-
 #### CSS & other code
 
 - Opacity effect when hovering buttons - Original idea and code of [jbcarreon123](https://jbcarreon123.nekoweb.org/)
@@ -68,7 +69,6 @@ The following icons are the ones found in the nav bar and respective menus.
 - Zoom effect when hovering buttons - Code of [Daudix](https://daudix.one/)
 
 - Table of Contents Eleventy filter - Original code of [uncenter](https://github.com/uncenter/eleventy-plugin-toc)
-
 
 ## License
 

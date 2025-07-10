@@ -1,15 +1,29 @@
-<header class="hero stack" style="--spacer:0.5em;">
-    <h1>{{title or meta.title}}</h1>
-    <p>{{description or hero.description or meta.description}}</p>
-    {% if post %}
-        <p class="secondary" >Posted in: <time datetime="{{date}}">{{date | formatPostDate}}</time>
-        </p>
+<header class="page-header stack">
+    {% if hero.title %}
+        {% set hero_title = hero.title | safe %}
     {% endif %}
-    {% if modified %}
-        <p class="secondary" {%if post%}style="margin-top:0;"{%else%}style="margin-top:0.25em;"{%endif%}>Modified in: <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
-        </p>
+    <h1>{{ hero_title or title or meta.title}}</h1>
+    {% if description != false %}
+        <p>{{hero.description or description or meta.description}}</p>
     {% endif %}
-    {% if post %}
-        <p class="secondary" style="margin-top:0;">Read time: {{ 'text' | timeToRead }}</p>
-    {% endif %}
-</header>
+    {% if hero.actions %}
+        <div class="auto-flex">
+            {% for item in hero.actions %}
+                <a href="{{item.link}}" class="button {% if not item.type -%}button--primary{% else -%}steel-button--{{item.type}}{%- endif -%}">{{item.label}}
+
+                {% endfor %}
+            </div>
+            <p style="font-size:0.9em; opacity:0.8;">{{hero.footer | safe }}</p>
+        {% endif %}
+        {% if date %}
+            <p>
+            Published in  <time datetime="{{date}}">{{date | formatPostDate}}</time>
+            </p>
+        {% endif %}
+        {% if modified %}
+            <p>
+            Modified in  <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
+            </p>
+        {% endif %}
+
+    </header>

@@ -1,0 +1,15 @@
+<header class="app-header stack" style="--spacer:0.5em;">
+    <h1>{{title or meta.title}}</h1>
+    <p>{{description or hero.description or meta.description}}</p>
+    {% if post %}
+        <p class="secondary" >Posted in: <time datetime="{{date}}">{{date | formatPostDate}}</time>
+        </p>
+    {% endif %}
+    {% if modified %}
+        <p class="secondary" {%if post%}style="margin-top:0;"{%else%}style="margin-top:0.25em;"{%endif%}>Modified in: <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
+        </p>
+    {% endif %}
+    {% if post %}
+        <p class="secondary" style="margin-top:0;">Read time: {{ 'text' | timeToRead }}</p>
+    {% endif %}
+</header>

@@ -1,24 +1,12 @@
 :root {
   --font: "Geist", system-ui, Arial, sans-serif;
-  --background: hsla(0, 0%, 12%);
-  --container: var(--app-container);
-  --foreground: #ececec;
-  --foreground-subtle: #b9b9b9;
-  --stroke: var(--app-border-color);
+  --background: hsl(344, 2%, 10%);
+  --primary: hsl(344, 100%, 82%);
+  --foreground: hsl(344, 64%, 92%);
+  --foreground-secondary: hsl(344, 24%, 72%);
+  --stroke: hsl(344, 4%, 28%);
   --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
-  --breathing-space: 0.8rem;
-  --viewport: 1180px;
-
-  --primary: hsl(199, 100%, 80%);
-  --on-primary: hsl(206, 32%, 15%);
-  --app-background: hsl(206, 0%, 5%);
-  --app-container: hsl(0, 0%, 18%);
-  --app-foreground: hsl(0, 0%, 96%);
-  --app-border-color: hsl(208, 5%, 29%);
-
-  --steel-desktop-border: 1px solid var(--app-border-color);
-  --steel-default-border: 1px solid var(--app-border-color);
-  --steel-mobile-border: none;
-
-  --app-layout-aside: 500px;
+  --content-vw: 73ch;
+  --sidebar-size: 320px;
+  color-scheme: dark;
 }

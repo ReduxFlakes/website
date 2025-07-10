@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
   {% include "head.njk" %}
-  <body class="app">
-    <a href="#main-content" class="acs-skip">Skip to main content</a>
-    {% include "partials/app/toolbar.njk" %}
-    {% include "header.njk" %}
-    {% include "breadcrumbs.njk" %}
-    <main>
-      {% block base %}
+  <body>
+    {% include "partials/nav.njk" %}
+    <main class="stack">
+      {% include "breadcrumbs.njk" %}
+      {% include "header.njk" %}
+      {{content | safe }}
+      {% include "footer.njk" %}
+    </main>
+    {% include "partials/aside.njk" %}
+    {# <a href="#main-content" class="acs-skip">Skip to main content</a>
+    {% include "partials/app/nav.njk" %}
+    {% block base %}
+      <main id="main-content">
+
         <article id="main-content" class="stack">
           {% if isInConstruction %}
             <p class="notice notice--warning" role="alert">
@@ -15,22 +22,8 @@
           {% endif %}
           {{ content | safe }}
         </article>
-      {% endblock base %}
-    </main>
-    {% include "footer.njk" %}
-    <script>
-      if (document.querySelector('details')) {
-        const details = document.querySelectorAll('details');
-        details.forEach((targetDetail) => {
-          targetDetail.addEventListener("click", () => {
-            details.forEach((detail) => {
-              if (detail !== targetDetail) {
-                detail.removeAttribute("open");
-              }
-            });
-          });
-        });
-      }
-    </script>
+      </main>
+    {% endblock base %}
+    {% include "footer.njk" %}#}
   </body>
 </html>

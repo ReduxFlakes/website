@@ -3,7 +3,6 @@
   "permalink": "/blog/{{ page.fileSlug }}/",
   "eleventyComputed": {
     "eleventyNavigation": {
-      "parent": "Blog",
       "key": "{{ title | safe }}",
       "excludeFromNav": true
     }

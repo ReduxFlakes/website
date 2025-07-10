@@ -29,19 +29,10 @@
     {% css "base" %}
     {% include "styles/base.css" %}
     {% endcss %}
-    {% css "post" %}
-    {% include "styles/post.css" %}
-    {% endcss %}
     <style>
         {% getBundle "css", "base" %}
     </style>
-    {% if post %}
-        <style>
-            {% getBundle "css", "post" %}
-        </style>
-    {% endif %}
     {% css %}
-
     {% include "styles/style.css" %}
     {% endcss %}
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">

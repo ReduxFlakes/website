@@ -1,7 +1,7 @@
 ---
 title: Blog
+order: 1
 description: Life, projects, site updates, and other rambles...
-icon: "farm-post"
 pagination:
   data: collections.posts
   size: 4
@@ -10,6 +10,11 @@ pagination:
 paginationPrevText: 'Newer posts'
 paginationNextText: 'Older posts'
 permalink: "/blog{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/"
+eleventyComputed:
+    key: "Blog"
+    collection: "{% if pagination.pageNumber === 0 %}main{% endif %}"
+    eleventyNavigation:
+      isMultipage: true
 ---
 
 {% if pagination.pageNumber == 0 %}

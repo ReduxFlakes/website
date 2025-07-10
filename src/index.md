@@ -1,24 +1,17 @@
 ---
-description: "Software developer and designer from Portugal"
-eleventyNavigation:
-  key: Home
+title: Home
+hero:
+  title: "Welcome!"
+  description: "I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from Portugal that focuses on privacy, simplicity, and performance. This is my personal website where I talk about various things from life, ongoing projects, musics, and resource & guides."
+  actions:
+    - label: See Projects
+      link: "#projects"
+    - label: More About Me!
+      link: about
+      type: minimal
+collection: main
+order: 0
 ---
-
-<div class="sider">
-
-<article class="stack">
-
-## Welcome
-
-> Fireplace in the mall
-
-I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from Portugal that focuses on privacy, simplicity, and performance. This is my personal website where I talk about various things from life, ongoing projects, musics, and resource & guides. [Learn more about me](/about)
-
-</article>
-
-{% include "partials/webmaster.njk" %}
-
-</div>
 
 ## Latest Post
 
@@ -26,28 +19,31 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from 
 {{ component('post-listing', {title: post.data.title, date: post.date, description: post.data.description, href: post.url, subheading: true }) }}
 {% endfor %}
 
-## Links
+---
 
-### On the web
+## Projects
 
-<div class="auto-flex button-grid"style="gap:1rem;">
-{%- for item in meta.socials -%}
-    <a href="{{item.url}}" style="display:flex;flex-direction:column;align-items:center;"><img src="/public/icons/pixy/{{item.name | slugify}}.png" alt="" aria-hidden="true" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore>{{item.name}}</a>
-{%- endfor -%}
+<div class="auto-grid">
+
+<section class="card">
+<h3>SurfScape</h3>
+<p class="secondary">A organisation with the main purpose of developing ethical software and services</p>
+</section>
+<section class="card">
+<h3>Celer</h3>
+<p class="secondary">A organisation with the main purpose of developing ethical software and services</p>
+</section>
+<section class="card">
+<h3>_outofbnds_</h3>
+<p class="secondary">A organisation with the main purpose of developing ethical software and services</p>
+</section>
 </div>
-
-
-<div class="auto-flex" style="font-size:1.075em">
-<a href="https://reduxflakes.atabook.org/" style="color:#7FFF00"><b>Sign my guestbook!</b></a>
-<p>Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a href="https://neocities.org/site/reduxflakes">Neocities</a></p>
-</div>
-
 
 ### Friends
 
 <details>
 <summary>Click to load buttons</summary>
-<div class="auto-flex button-grid">
+<div class="button-grid steel-flex">
   {%- for button in buttons.friends -%}
   {%- if button.img -%}
       <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img -%} loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
@@ -62,7 +58,7 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from 
 
 <details>
 <summary>Click to load buttons</summary>
-<div class="auto-flex button-grid">
+<div class="button-grid steel-flex">
   {%- for button in buttons.likes -%}
   {%- if button.img -%}
       <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img -%} loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
@@ -73,6 +69,12 @@ I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from 
 </div>
 </details>
 
+## Links
+
+<div class="steel-flex" style="font-size:1.075em">
+<a href="https://reduxflakes.atabook.org/" style="color:#7FFF00"><b>Sign my guestbook!</b></a>
+<p>Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a href="https://neocities.org/site/reduxflakes">Neocities</a></p>
+</div>
 
 ### Link me!
 

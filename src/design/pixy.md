@@ -4,6 +4,7 @@ description: Pixel art icon pack for use in personal sites
 eleventyNavigation:
   key: Pixy Icon Pack
   parent: Design
+  tag: "Recommended"
 ---
 
 <img src="/public/img/pixy_banner.png" alt="A banner showcasing all the icons included in the Pixy Icon Pack in a 2 row column each containing 7 icons." class="banner" eleventy:ignore>

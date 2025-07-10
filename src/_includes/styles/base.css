@@ -9,15 +9,9 @@
 html {
   scroll-behavior: smooth;
   text-size-adjust: none;
-  color-scheme: dark;
-  font: 1.08rem / 1.45 var(--font);
-  letter-spacing: -.03em;
-  background: var(--app-background);
-  color: var(--foreground);
-}
-
-body {
+  font: 1.2rem / 1.5 var(--font);
   background: var(--background);
+  color: var(--foreground-secondary);
 }
 
 dl dd:not(:last-child) {
@@ -33,7 +27,7 @@ dd {
 }
 
 :focus {
-  outline: 2px solid var(--foreground);
+  outline: 2px solid var(--primary);
 }
 
 ul[role="list"],
@@ -80,24 +74,13 @@ summary {
   cursor: default;
 }
 
-::selection,
-h1:target,
-h2:target,
-h3:target {
-  background: hsla(220, 100%, 75%, 0.3);
-  color: rgb(176, 219, 255);
-}
-
-img::selection {
-  background: hsla(279, 100%, 75%, 0.25);
-}
-
 a {
   color: var(--primary);
   text-decoration: underline 2px;
 }
 
 a:hover {
+  background: var(--on-primary);
   text-decoration: none;
 }
 
@@ -107,14 +90,21 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: -0.01em;
+  letter-spacing: -.025em;
   line-height: 1.2em;
+  color: var(--foreground);
+}
+
+strong,
+b {
+  color: var(--foreground);
 }
 
 .anchor {
   visibility: hidden;
   font-weight: normal;
   opacity: 0;
+  transition: 95ms all ease-in-out;
 }
 
 h1:hover>.anchor,
@@ -141,6 +131,17 @@ h3:hover>.anchor {
   margin-top: var(--_space);
 }
 
+
+
+.stack h1+*,
+.stack *+h2,
+.stack *+h3,
+.stack *+h4,
+.stack *+h5,
+.stack *+h6 {
+  margin-top: calc(var(--_space) - 0.2em);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -160,10 +161,6 @@ blockquote {
   background: var(--container);
   font-style: italic;
   border-left: 0.25em solid var(--primary);
-}
-
-small {
-  color: var(--foreground-subtle);
 }
 
 table {

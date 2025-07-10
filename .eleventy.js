@@ -12,6 +12,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import timeToRead from "eleventy-plugin-time-to-read";
 import filters from "./config/filters.js";
 import { DateTime } from "luxon";
+import logToConsole from 'eleventy-plugin-console-plus'
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -27,9 +28,10 @@ export default async function (eleventyConfig) {
     },
   });
   eleventyConfig.addPlugin(timeToRead);
+  eleventyConfig.addPlugin(logToConsole);
 
   eleventyConfig.addPassthroughCopy("src/public");
-  eleventyConfig.addPassthroughCopy({"src/_includes/styles/nekofm.css": "nekofm.css"});
+  eleventyConfig.addPassthroughCopy({ "src/_includes/styles/nekofm.css": "nekofm.css" });
 
   /* layout aliases */
   eleventyConfig.addLayoutAlias("base", "base.njk");
@@ -78,13 +80,13 @@ export default async function (eleventyConfig) {
     return (
       `{%- from "util/component.njk" import component with context -%}\n` +
       content
-    );  
+    );
   });
 
   /* collections */
   eleventyConfig.addCollection("posts", function (collection) {
     return [
-      ...collection.getFilteredByGlob("src/writings/blog/content/**/*.md"),
+      ...collection.getFilteredByGlob("src/blog/content/**/*.md"),
     ].reverse();
   });
 

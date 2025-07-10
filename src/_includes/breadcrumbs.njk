@@ -1,5 +1,6 @@
-{% if eleventyNavigation.key and eleventyNavigation.key != "Home" %}
-    {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, {includeSelf: true}) %}
+{% if eleventyNavigation.key and eleventyNavigation.key != "Home" and excludeFromNavigation != true %}
+    {% set key = eleventyNavigation.key %}
+    {% set navPages = collections.all | eleventyNavigationBreadcrumb(key, {includeSelf: true}) %}
     <nav aria-label="Breadcrumb" class="breadcrumb">
         <ol>
             <li>

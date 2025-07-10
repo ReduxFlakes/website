@@ -1,7 +1,56 @@
 @import url(properties.css);
 @import url(app.css);
 
-/* end:toolbar */
+
+body {
+  display: grid;
+  grid-template-areas: "nav nav" "main aside";
+  grid-template-columns: 1fr var(--sidebar-size);
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+  max-width: var(--content-vw);
+  margin: 0 auto;
+}
+
+aside {
+  padding: 1rem;
+  border-left: 1px solid var(--stroke);
+  grid-area: aside;
+}
+
+
+.button-grid {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+.page-header {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.page-header p {
+  font-size: 1.05em;
+}
+
+/* old code */
+.app-header {
+  background: #f5c2e723;
+  padding: 1rem;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.app-nav {
+  border-bottom: 1px solid var(--stroke);
+}
+
+
 
 
 nav.breadcrumb {
@@ -39,7 +88,6 @@ a:has(img.icon) {
 
 }
 
-
 sup>a>.icon {
   --icon-size: 18px;
 }
@@ -48,20 +96,6 @@ sup>a>.icon {
   text-decoration: underline dotted;
 }
 
-
-.hero {
-  padding: var(--breathing-space);
-}
-
-main {
-  padding: var(--breathing-space);
-  min-height: 25rem;
-}
-
-footer {
-  border-top: 1px dashed var(--stroke);
-  padding: 1rem;
-}
 
 a:has(svg) {
   display: inline-flex;
@@ -99,6 +133,7 @@ a:has(svg) {
 .auto-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5rem;
 }
 
 .notice {
@@ -124,26 +159,30 @@ a:has(svg) {
 
 /* from daudix (https://daudix.one/home/#badges) */
 .classic-btn {
-  transition: all 0.2s, transform var(--transition-bezier);
   image-rendering: pixelated;
 }
 
-.classic-btn:hover {
-  transform: scale(1.5);
+.button-grid a {
+  transition: all 0.2s, transform var(--transition-bezier);
+}
+
+.button-grid a:hover {
+  transform: scale(1.25);
   rotate: -8deg;
   z-index: 2;
+  background: transparent;
 }
 
 /* from jb (jbcarreon123.nekoweb.org) */
-.button-grid:has(.classic-btn:hover) .classic-btn:not(:hover) {
-  opacity: 0.25;
+
+.button-grid.steel-flex {
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
-.scroll {
-  max-height: 15rem;
-  overflow: auto;
-  border: 1px solid var(--stroke);
-  padding: 1rem;
+.button-grid:has(a:hover) a:not(:hover) {
+  filter: blur(2px) saturate(0);
+  opacity: 0.25;
 }
 
 webring-container {
@@ -202,17 +241,19 @@ input[type="checkbox"]:checked::before {
 }
 
 .button {
-  padding: 0.35rem 0.5rem;
-  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.95em;
+  border-radius: 0.35em;
+  padding: 0.35rem 0.75rem;
+  color: var(--background);
   background: var(--foreground);
-  border-bottom: 5px solid hsl(36, 30%, 57%);
   transition: 125ms ease-in-out all;
+  text-decoration: none;
 }
 
 .button:hover {
   color: var(--foreground);
   background: var(--background);
-  outline: 1px solid var(--primary);
+  outline: 3px solid var(--primary);
   border-color: var(--primary);
 }
 

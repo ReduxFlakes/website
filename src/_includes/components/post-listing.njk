@@ -1,9 +1,9 @@
-<section class="post-listing">
-    {% if params.subheading %}
+<section class="post-listing card">
+    {%- if params.subheading -%}
         <h3>{{ params.title }}</h3>
-    {% else %}
+    {%- else -%}
         <h2>{{ params.title }}</h2>
-    {% endif %}
+    {%- endif -%}
     <p class="secondary">
         <small>
             <time datetime="{{params.date}}">{{params.date | formatPostDate}}</time>

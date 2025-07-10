@@ -1,0 +1,25 @@
+<header class="top-header">
+    <nav class="main-nav">
+        <a href="/" class="nav__title">ReduxFlakes</a>
+        {%- for entry in collections.all | eleventyNavigation %}
+            {% if entry.collection == "main" %}
+                {% if entry.children.length and entry.isMultipage != true %}
+                    <details>
+                        <summary>{{entry.title}}</summary>
+                        <nav>
+                            <ul>
+                                {% for item in entry.children %}
+                                    <li>
+                                        <a href="{{item.url}}">{{item.title}}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </details>
+                {% else %}
+                    <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+                {% endif %}
+            {% endif %}
+        {%- endfor %}
+    </nav>
+</header>
