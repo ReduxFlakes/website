@@ -29,7 +29,6 @@ aside {
   flex-wrap: wrap;
 }
 
-
 .page-header {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--stroke);
@@ -49,9 +48,6 @@ aside {
 .app-nav {
   border-bottom: 1px solid var(--stroke);
 }
-
-
-
 
 nav.breadcrumb {
   margin-left: auto;
@@ -124,7 +120,6 @@ a:has(svg) {
 .box--fluid {
   max-width: initial;
 }
-
 
 .secondary~*.secondary {
   margin-left: 1rem;

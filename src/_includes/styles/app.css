@@ -4,6 +4,7 @@
 }
 
 .main-nav {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -22,12 +23,19 @@
 
 .main-nav a:not(.nav__title),
 .main-nav summary {
+    --_this-spacing: var(--this-spacing, 0.3rem 0.75rem);
     color: var(--foreground-secondary);
     text-decoration: none;
+    padding: var(--_this-spacing);
     border-radius: 0.35em;
-    padding: 0.3rem 0.75rem;
     transition: 125ms all ease-in-out;
     cursor: pointer;
+}
+
+
+.main-nav details[open] summary {
+    outline: 1px solid var(--primary);
+    color: var(--foreground);
 }
 
 .main-nav a[aria-current="page"] {
@@ -37,8 +45,33 @@
 
 .main-nav a:not(.nav__title):hover,
 .main-nav summary:hover {
-    background: hsla(226, 64%, 88%, 0.15);
+    background: hsla(344, 64%, 88%, 0.125);
 }
+
+.nav-dropdown-content {
+    position: absolute;
+    left: 1rem;
+    top: 4rem;
+    width: 100%;
+    background: var(--background);
+    border-radius: 0.35em;
+    border: 1px solid var(--stroke);
+}
+
+nav.nav-dropdown-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav.nav-dropdown-content ul li a {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
 
 .card {
     display: block;

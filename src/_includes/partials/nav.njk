@@ -4,13 +4,16 @@
         {%- for entry in collections.all | eleventyNavigation %}
             {% if entry.collection == "main" %}
                 {% if entry.children.length and entry.isMultipage != true %}
-                    <details>
+                    <details class="nav-dropdown" open>
                         <summary>{{entry.title}}</summary>
-                        <nav>
+                        <nav class="nav-dropdown-content">
                             <ul>
                                 {% for item in entry.children %}
                                     <li>
-                                        <a href="{{item.url}}">{{item.title}}</a>
+                                        <a href="{{item.url}}">
+                                            <b>{{item.title}}</b>
+                                            <small>{{item.data.description}}</small>
+                                        </a>
                                     </li>
                                 {% endfor %}
                             </ul>
