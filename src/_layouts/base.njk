@@ -2,28 +2,16 @@
 <html lang="{{ meta.lang }}">
   {% include "head.njk" %}
   <body>
+    <a href="#main-content" class="acs-skip">Skip to main content</a>
     {% include "partials/nav.njk" %}
-    <main class="stack">
-      {% include "breadcrumbs.njk" %}
-      {% include "header.njk" %}
-      {{content | safe }}
-      {% include "footer.njk" %}
-    </main>
-    {% include "partials/aside.njk" %}
-    {# <a href="#main-content" class="acs-skip">Skip to main content</a>
-    {% include "partials/app/nav.njk" %}
+    {% include "breadcrumbs.njk" %}
     {% block base %}
-      <main id="main-content">
-
-        <article id="main-content" class="stack">
-          {% if isInConstruction %}
-            <p class="notice notice--warning" role="alert">
-              <img src="/public/icons/farm-vlc.png" alt=""> This page is in construction, so expect broken features and/or missing content.</p>
-          {% endif %}
-          {{ content | safe }}
-        </article>
+      <main class="stack">
+        {% include "header.njk" %}
+        {{content | safe }}
       </main>
     {% endblock base %}
-    {% include "footer.njk" %}#}
+    {% include "footer.njk" %}
+
   </body>
 </html>

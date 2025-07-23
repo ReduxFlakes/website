@@ -131,17 +131,6 @@ h3:hover>.anchor {
   margin-top: var(--_space);
 }
 
-
-
-.stack h1+*,
-.stack *+h2,
-.stack *+h3,
-.stack *+h4,
-.stack *+h5,
-.stack *+h6 {
-  margin-top: calc(var(--_space) - 0.2em);
-}
-
 img {
   display: block;
   max-width: 100%;

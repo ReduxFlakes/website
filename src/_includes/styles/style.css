@@ -1,27 +1,24 @@
 @import url(properties.css);
-@import url(app.css);
-
 
 body {
-  display: grid;
-  grid-template-areas: "nav nav" "main aside";
-  grid-template-columns: 1fr var(--sidebar-size);
+  max-width: var(--viewport);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
 }
 
 main {
-  grid-area: main;
-  padding: 1rem;
-  max-width: var(--content-vw);
-  margin: 0 auto;
-}
-
-aside {
-  padding: 1rem;
-  border-left: 1px solid var(--stroke);
-  grid-area: aside;
+  padding: 1rem 0;
 }
 
 
+/* TODO: refactor following code */
 .button-grid {
   display: flex;
   align-items: center;
@@ -29,25 +26,6 @@ aside {
   flex-wrap: wrap;
 }
 
-.page-header {
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--stroke);
-}
-
-.page-header p {
-  font-size: 1.05em;
-}
-
-/* old code */
-.app-header {
-  background: #f5c2e723;
-  padding: 1rem;
-  border-bottom: 1px solid var(--stroke);
-}
-
-.app-nav {
-  border-bottom: 1px solid var(--stroke);
-}
 
 nav.breadcrumb {
   margin-left: auto;
@@ -81,11 +59,6 @@ a:has(img.icon) {
   --_size: var(--icon-size, 24px);
   width: var(--_size);
   height: var(--_size);
-
-}
-
-sup>a>.icon {
-  --icon-size: 18px;
 }
 
 *[title] {
@@ -105,25 +78,7 @@ a:has(svg) {
   gap: 0.5rem;
 }
 
-.secondary {
-  display: inline-block;
-  color: var(--foreground-subtle);
-  font-size: 1em;
-}
 
-.box {
-  padding: 0.5em;
-  max-width: max-content;
-  border: 1px solid var(--foreground-subtle);
-}
-
-.box--fluid {
-  max-width: initial;
-}
-
-.secondary~*.secondary {
-  margin-left: 1rem;
-}
 
 .auto-grid {
   display: grid;
@@ -186,55 +141,6 @@ webring-container {
   height: max-content;
 }
 
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: var(--form-backgroun);
-  margin: 0;
-  font: inherit;
-  color: var(--foreground);
-  width: 1.2em;
-  height: 1.2em;
-  border: 0.15em solid hsla(48, 87%, 88%, 0.5);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-input[type="checkbox"]::before {
-  content: "";
-  width: 0.65em;
-  height: 0.65em;
-}
-
-input[type="checkbox"]:checked::before {
-  background-color: var(--foreground);
-  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-}
-
-.sider {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-.sider> :last-child {
-  flex-basis: 18rem;
-  flex-grow: 1;
-}
-
-.sider> :first-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-inline-size: 65%;
-}
-
-.banner {
-  margin: 0 auto;
-  border: 1px solid var(--stroke);
-  box-shadow: 0px 2px 5px 0px black;
-}
-
 .button {
   font-size: 0.95em;
   border-radius: 0.35em;
@@ -254,53 +160,4 @@ input[type="checkbox"]:checked::before {
 
 a:has(.classic-btn) {
   display: block;
-}
-
-@media (max-width: 600px) {
-
-  .mobile {
-    display: none;
-  }
-}
-
-
-@media (max-width: 960px) {
-  .app-toolbar {
-    flex-direction: column;
-  }
-
-  .app-toolbar__title {
-    text-align: center;
-    width: 100%;
-    border-bottom: var(--steel-mobile-border);
-  }
-
-  .app-toolbar details>summary {
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width: 1180px) {
-  :root {
-    --steel-mobile-border: 1px solid var(--stroke);
-    --steel-desktop-border: none;
-  }
-
-  .app {
-    margin: 0;
-  }
-}
-
-.tip {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  font-size: 0.85em;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  padding: 0.8rem var(--breathing-space) 0 var(--breathing-space);
-}
-
-.tip svg {
-  width: 16px;
-  height: 16px;
 }
