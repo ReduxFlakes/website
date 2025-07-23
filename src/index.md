@@ -4,11 +4,8 @@ hero:
   title: "Welcome!"
   description: "I'm ReduxFlakes (or reduc for close friends), I'm a developer and designer from Portugal that focuses on privacy, simplicity, and performance. This is my personal website where I talk about various things from life, ongoing projects, musics, and resource & guides."
   actions:
-    - label: See Projects
-      link: "#projects"
     - label: More About Me!
       link: about
-      type: minimal
 collection: main
 order: 0
 ---
@@ -21,23 +18,16 @@ order: 0
 
 ---
 
-## Projects
+## To-Do
 
-<div class="auto-grid">
+I've bought a new laptop which means I'll be working hard on the site once again. As of now the site is just serving as a skeleton to provide some information about me. So in the upcoming days/weeks the design and content will be in constant change. Below is some of the ideas that I want to implement on the site.
 
-<section class="card">
-<h3>SurfScape</h3>
-<p class="secondary">A organisation with the main purpose of developing ethical software and services</p>
-</section>
-<section class="card">
-<h3>Celer</h3>
-<p class="secondary">A organisation with the main purpose of developing ethical software and services</p>
-</section>
-<section class="card">
-<h3>_outofbnds_</h3>
-<p class="secondary">A organisation with the main purpose of developing ethical software and services</p>
-</section>
-</div>
+- Do an original but still minimal desing and layout
+- Start writing for the blog again (have some ideas for post already)
+- Update and improve the projects page
+- Add Last.FM widget
+
+## Links
 
 ### Friends
 
@@ -69,7 +59,7 @@ order: 0
 </div>
 </details>
 
-## Links
+### On The Web
 
 <div class="steel-flex" style="font-size:1.075em">
 <a href="https://reduxflakes.atabook.org/" style="color:#7FFF00"><b>Sign my guestbook!</b></a>

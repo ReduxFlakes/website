@@ -1,5 +1,14 @@
 export default [
   {
+    date: "2025-07-23 01:13:00",
+    content: "I'm back",
+    list: [
+      "Made a simple design for now until I think of something better and original",
+      "Added a new section on the homepage of things to do on the site",
+      "Improved homepage heading structure",
+    ]
+  },
+  {
     date: "2025-05-17 17:40:00",
     content: "Design changed and other new additions.",
     list: [
