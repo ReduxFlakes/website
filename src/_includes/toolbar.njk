@@ -1,0 +1,11 @@
+<header class="toolbar mobile">
+    {%- set update = updates | first -%}
+    <a href="/changelog/">
+        <p>Latest update :: <time datetime="{{update.date | dateToISO}}">{{ update.date | formatEUDate }}</time>
+        </p>
+    </a>
+    <nav>
+        <a href="https://reduxflakes.atabook.org"><img class="icon" src="/public/icons/koloria-mail.png" alt="" aria-hidden="true">Guestbook</a>
+        <a href="/sites"><img class="icon" src="/public/icons/sfeers-earth.png" alt="" aria-hidden="true">Others Sites</a>
+    </nav>
+</header>
