@@ -1,0 +1,69 @@
+{% set navigation = collections.all | eleventyNavigation %}
+
+{# create the object for the categories while checking if the category has any children #}
+{% set categories = [] %}
+{% for item in navigation %}
+    {% if item.key != "Home" %}
+        {% if item.children.length %}
+            {% set categories = categories.concat([item]) %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% macro navlink(url, title, construction, description, icon, category) %}
+    <dt >
+        <a href="{{ url }}" aria-label="Navigate to the {{title}} page in the {{ category }} category">
+            {% if icon %}
+                <img src="/public/icons/{{icon}}.png" alt="" aria-hidden="true" class="icon">
+            {% endif %}
+            {% if construction %}
+                <i>{{ title }}</i>
+                {%else%}
+                {{title}}
+            {% endif %}
+        </a>
+    </dt>
+    <dd>{{description}}</dd>
+{% endmacro %}
+
+{# creates the menu with the categories and the menus with the links for every category #}
+
+<nav class="navbar" aria-label="ReduxFlakes Main Navigation">
+    {%- for entry in categories -%}
+        {# {% if env.environment == "development" and loop.first %}
+            <details id="cat-{{entry.key | slugify}}" open class="nav-item" >
+            {% else %} #}
+        <details id="cat-{{entry.key | slugify}}">
+            {# {% endif %} #}
+            <summary aria-controls="nav-{{entry.key | slugify }}">
+                {% if entry.icon %}
+                    <img src="/public/icons/{{entry.icon}}.png" alt="" aria-hidden="true" class="icon">
+                {% elif entry.data.icon %}
+                    <img src="/public/icons/{{entry.data.icon}}.png" alt="" aria-hidden="true" class="icon">
+                {% endif %}
+                {{ entry.title }}</summary>
+            <section class="stack" style="--spacer:0.5em;">
+                <h2 style="font-size:1.25rem;">{{entry.data.title}}</h2>
+                <p>{{entry.data.description}}</p>
+                <hr>
+                <dl id="nav-{{entry.key | slugify }}" aria-label="{{entry.title}} submenu" class="">
+                    {# show category link if the same has a url/permalink enabled #}
+                    {% if entry.url %}
+                        {{navlink(entry.url, entry.data.title, entry.data.isInConstruction, entry.data.description, entry.data.icon,entry.key)}}
+                    {% endif %}
+                    {# for the links inside a category #}
+                    {% for item in entry.children %}
+                        {{navlink(item.url, item.title, item.data.isInConstruction, item.data.description, item.data.icon, item.parent)}}
+                    {% endfor %}
+                </dl>
+                {% for item in entry.children %}
+                    {% if entry.data.isInConstruction or item.data.isInConstruction %}
+                        <p>
+                            <small>Pages with <i>italicized</i> titles are still under construction.</small>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </section>
+        </details>
+    {%- endfor -%}
+</nav>
