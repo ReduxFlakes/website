@@ -118,7 +118,7 @@ export default {
     {
       title: "Jak2K",
       img: "jak2k.webp",
-      url: "https://jak2k.schwanenberg.name/",
+      url: "https://jak2k.eu/",
     },
     {
       title: "Thin Liquid",
@@ -191,6 +191,51 @@ export default {
       url: "https://layercake.nekoweb.org/"
     },
     {
+      title: "PixelGlade",
+      img: "pixelglade.png",
+      url: "https://pixelglade.net.au/"
+    },
+    {
+      title: "FOGGYBEAR42",
+      img: "foggybear42.gif",
+      url: "https://foggybear42.net/"
+    },
+    {
+      title: "Atari404",
+      img: "atari404.gif",
+      url: "https://atari404.neocities.org/"
+    },
+    {
+      title: "ShinyEXE",
+      img: "shinyexe.gif",
+      url: "https://shinyexe.neocities.org/"
+    },
+    {
+      title: "Geeky Jay",
+      img: "geeky-jay.gif",
+      url: "https://geeky-jay.neocities.org/"
+    },
+    {
+      title: "Superbug",
+      img: "superbug.gif",
+      url: "https://superbug.neocities.org/"
+    },
+    {
+      title: "Pinkderg",
+      img: "pinkderg.gif",
+      url: "https://pinkderg.art/"
+    },
+    {
+      title: "ELEVATOR 2 THE MOON",
+      img: "elevatorttm.gif",
+      url: "https://elevator-to-the-moon.neocities.org/"
+    },
+    {
+      title: "HELLSTAR ARES",
+      img: "hellstarares.gif",
+      url: "https://hellstarares.rip/"
+    },
+    {
       title: "Dannarchy",
       img: "dannarchy.gif",
       url: "https://dannarchy.com"
@@ -199,6 +244,11 @@ export default {
       title: "NeoCities",
       img: "neo-neighborhoods.gif",
       url: "https://neo-neighborhoods.neocities.org/"
+    },
+    {
+      title: "Tapeykatt's Place",
+      img: "tapeykatt.gif",
+      url: "https://tapeykatt.neocities.org/",
     },
     {
       title: "Miko",
@@ -219,6 +269,38 @@ export default {
     {
       title: "Flux Veritas",
       url: "https://belarius.neocities.org/"
+    },
+    {
+      title: "madoxy",
+      url: "https://madoxy.neocities.org/"
+    },
+    {
+      title: "splashy",
+      url: "https://splashy.neocities.org/"
+    },
+    {
+      title: "xandra",
+      url: "https://xandra.cc/"
+    },
+    {
+      title: "KWTC",
+      url: "https://kidwiththechemicalz.net/"
+    },
+    {
+      title: "danielStrawb",
+      url: "https://danielsblog.neocities.org/"
+    },
+    {
+      title: "lehr",
+      url: "https://jlehr.neocities.org/"
+    },
+    {
+      title: "nolove",
+      url: "https://nolove.neocities.org/"
+    },
+    {
+      title: "Caesár",
+      url: "https://caesar.wtf/"
     }
   ],
   likes: [
@@ -267,7 +349,11 @@ export default {
       img: "dimden.gif",
       url: "https://dimden.dev/",
     },
-
+    {
+      title: "HykicNova",
+      img: "hykicnova.png",
+      url: "https://nova.nekoweb.org/"
+    },
     {
       title: "june's web page",
       img: "webcatz.png",
