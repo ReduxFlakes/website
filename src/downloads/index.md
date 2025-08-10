@@ -4,5 +4,5 @@ description: Stuff available to download
 icon: farm-download-cloud
 isInConstruction: true
 key: Downloads
-parent: Resources
+order: 4
 ---

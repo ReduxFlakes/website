@@ -9,9 +9,15 @@
 html {
   scroll-behavior: smooth;
   text-size-adjust: none;
-  font: 1.2rem / 1.5 var(--font);
+  color-scheme: dark;
+}
+
+html {
+  font: 1.05rem / 1.5 var(--font);
+  letter-spacing: -.005em;
   background: var(--background);
-  color: var(--foreground-secondary);
+  color: var(--foreground);
+
 }
 
 dl dd:not(:last-child) {
@@ -27,7 +33,7 @@ dd {
 }
 
 :focus {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--foreground);
 }
 
 ul[role="list"],
@@ -70,8 +76,57 @@ summary {
   border: none;
 }
 
+button,
+details summary,
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 1px solid var(--stroke);
+  background: #181825;
+  padding: 0.6rem 0.75rem;
+  line-height: 1;
+  width: max-content;
+  border-radius: var(--radius);
+  color: var(--foreground);
+  text-decoration: none;
+  transition: 125ms ease-in-out all;
+}
+
+button:hover,
+details summary:hover,
+.button:hover {
+  background: var(--container);
+}
+
+
 summary {
   cursor: default;
+}
+
+details summary {
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+  border-color: var(--stroke);
+  color: var(--container);
+  background: var(--primary);
+}
+
+details[open] summary:hover:not(:focus) {
+  opacity: 0.85;
+}
+
+::selection,
+h1:target,
+h2:target,
+h3:target {
+  background: hsla(228, 17%, 64%, 0.3);
+
 }
 
 a {
@@ -80,7 +135,6 @@ a {
 }
 
 a:hover {
-  background: var(--on-primary);
   text-decoration: none;
 }
 
@@ -90,21 +144,25 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: -.025em;
+  letter-spacing: -0.01em;
   line-height: 1.2em;
-  color: var(--foreground);
 }
 
-strong,
-b {
-  color: var(--foreground);
+h2:has(span),
+h2:has(div),
+h3:has(span),
+h3:has(div),
+h4:has(span),
+h4:has(div) {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 .anchor {
   visibility: hidden;
   font-weight: normal;
   opacity: 0;
-  transition: 95ms all ease-in-out;
 }
 
 h1:hover>.anchor,
@@ -127,8 +185,19 @@ h3:hover>.anchor {
 }
 
 .stack>*+* {
-  --_space: var(--spacer, 1em);
+  --_space: var(--spacer, 1.25rem);
   margin-top: var(--_space);
+}
+
+.stack h2,
+.stack h3,
+.stack h4 {
+  --spacer: 1rem;
+}
+
+
+article.stack hr {
+  margin: 1.5rem 0;
 }
 
 img {
@@ -151,6 +220,11 @@ blockquote {
   font-style: italic;
   border-left: 0.25em solid var(--primary);
 }
+
+small {
+  color: var(--foreground-subtle);
+}
+
 
 table {
   border-collapse: collapse;
@@ -191,11 +265,32 @@ textarea {
 
 }
 
-@font-face {
-  font-family: "Geist";
-  src: url("/public/geist.woff2") format("woff2-variations");
-  font-weight: 100 900;
-  font-style: normal;
+a:has(img.icon) {
+  display: inline-flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+progress {
+  width: 100%;
+  height: 1rem;
+  border-radius: var(--radius);
+  color: var(--primary);
+  border: none;
+  border-radius: 0;
+  background-color: var(--container);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--container);
+}
+
+progress::-webkit-progress-value {
+  background: var(--primary);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--primary);
 }
 
 @media (prefers-reduced-motion: reduce) {

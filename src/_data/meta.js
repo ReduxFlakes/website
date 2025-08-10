@@ -24,13 +24,12 @@ export default {
     },
     {
       name: "Instagram",
-      url: "https://www.instagram.com/nothernvanguard/",
+      url: "https://instagram.com/@reduxflakes",
     },
     {
       name: "Mastodon",
       url: "https://fosstodon.org/@redux",
     },
-
     {
       name: "Last.fm",
       url: "https://www.last.fm/user/reduxflakes",

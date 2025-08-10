@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: dark) {
   .path-1, .path-2, .path-3, .path-4, .path-5 {
-    fill: #FBF1C7;
+    fill: #ff9bb5ff;
   }
   .path-1, .path-2, .path-3, .path-4 {
     fill-opacity:0.4;

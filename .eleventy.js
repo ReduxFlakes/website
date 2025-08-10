@@ -13,12 +13,14 @@ import timeToRead from "eleventy-plugin-time-to-read";
 import filters from "./config/filters.js";
 import { DateTime } from "luxon";
 import logToConsole from 'eleventy-plugin-console-plus'
+import pluginTOC from "@uncenter/eleventy-plugin-toc";
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyLucideicons);
+  eleventyConfig.addPlugin(logToConsole);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     htmlOptions: {
       imgAttributes: {
@@ -28,10 +30,14 @@ export default async function (eleventyConfig) {
     },
   });
   eleventyConfig.addPlugin(timeToRead);
-  eleventyConfig.addPlugin(logToConsole);
+  eleventyConfig.addPlugin(pluginTOC, {
+    ignoredElements: ["a"],
+    wrapper: function (toc) {
+      return `<nav class="toc">${toc}</nav>`;
+    },
+  });
 
   eleventyConfig.addPassthroughCopy("src/public");
-  eleventyConfig.addPassthroughCopy({ "src/_includes/styles/nekofm.css": "nekofm.css" });
 
   /* layout aliases */
   eleventyConfig.addLayoutAlias("base", "base.njk");
@@ -86,11 +92,13 @@ export default async function (eleventyConfig) {
   /* collections */
   eleventyConfig.addCollection("posts", function (collection) {
     return [
-      ...collection.getFilteredByGlob("src/blog/content/**/*.md"),
+      ...collection.getFilteredByGlob("src/writing/blog/content/**/*.md"),
     ].reverse();
   });
 
-  /* html and css optimization */
+  /* bundles & html and css optimization */
+  eleventyConfig.addBundle("html")
+
   eleventyConfig.addBundle("css", {
     transforms: [
       async function (content) {

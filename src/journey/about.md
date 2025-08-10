@@ -1,22 +1,19 @@
 ---
 title: About
 description: Information about me and this website
-hero:
-  actions:
-    - label: Support Me
-      link: "/support"
-order: 4
-collection: main
-isMultipage: true
+icon: farm-user
+key: About
+parent: Origins
+order: 0
 ---
 
 ## The webmaster
 
-Hi, my name is ReduxFlakes, also known as reduc to close friends. I'm a CS student from Portugal that likes music, programming (I'm bad at it though), design (web and software), gaming, and retro tech stuff. I'm an advocate on privacy, FLOSS and freedom of speech.
+Hi, my name is ReduxFlakes. I'm a software developer and designer from Portugal. I love music, programming (I'm bad at it though), design (web and software), gaming, and retro tech. I'm an advocate on privacy (although I'm not the most hardcore), FLOSS and freedom of speech.
 
 I mostly do websites, design mockups of software, music remastering (that I upload to [YouTube](https://www.youtube.com/@reduxflakes)), and other projects that I'll never released because I'm too ambitious and I procrastinate a lot :p.
 
-If you want to know what I'm up to check either my [now page](/now) or [my socials](/#on-the-web)!
+If you want to know what I'm up to, check either my [now page](/now) or [my socials](/#socials)!
 
 {% if env.host == "neocities" %}
 
@@ -36,7 +33,7 @@ If you want to know what I'm up to check either my [now page](/now) or [my socia
 
 <p style="text-align:center;">These are all the websites that inspired me to create my site, from design to content, so thank you everyone on the list for <i>helping me</i>, go visit them all!</p>
 
-<div class="auto-flex button-grid">
+<div  class="auto-flex button-grid">
   {% for button in buttons.likes %}
   {% if button.url %}
     <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore ></a>

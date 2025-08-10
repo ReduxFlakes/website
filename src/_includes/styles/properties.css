@@ -1,12 +1,19 @@
 :root {
-  --font: "Geist", system-ui, Arial, sans-serif;
-  --background: hsl(344, 2%, 12%);
-  --primary: hsl(344, 100%, 82%);
-  --foreground: hsl(344, 64%, 92%);
-  --foreground-secondary: hsl(344, 24%, 72%);
-  --stroke: hsl(344, 4%, 28%);
+  --font: system-ui, sans-serif;
+  --background: hsl(240, 21%, 15%);
+  --container: hsl(237, 16%, 23%);
+  --container-low: hsl(240, 23%, 9%);
+  --foreground: hsl(226, 64%, 88%);
+  --primary: hsl(217, 92%, 76%);
+  --foreground-subtle: #7F849C;
+  --stroke: hsl(234, 13%, 31%);
+  --warning: #F9E2AF;
   --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
-  --viewport: 67ch;
-
+  --breathing-space: 1rem;
+  --radius: 0.3rem;
+  --viewport: 980px;
   color-scheme: dark;
 }
+
+
+/* themes */

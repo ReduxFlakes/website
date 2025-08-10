@@ -1,6 +1,5 @@
 ---
-
-permalink: "blog/tag/{{ tag | slugify }}/"
+permalink: "/writing/blog/tag/{{ tag | slugify }}/"
 pagination: 
     data: collections
     size: 1
@@ -8,9 +7,9 @@ pagination:
     addAllPagesToCollections: true
 eleventyComputed:
     title: "Tagged with: {{ tag }}"
-    eleventyNavigation:
-        parent: Blog
-        key: "{{ tag }}"
+    parent: Blog
+    key: "{{ tag }}"
+    excludeFromNav: true
 ---
 
 {% set taglist = collections[tag] | reverse %}

@@ -1,20 +1,12 @@
 export default [
   {
-    date: "2025-07-23 01:13:00",
-    content: "I'm back",
+    date: "2025-08-10 01:12:00",
+    content: "Another redesign because I'm never happy :p",
     list: [
-      "Made a simple design for now until I think of something better and original",
-      "Added a new section on the homepage of things to do on the site",
-      "Improved homepage heading structure",
-    ]
-  },
-  {
-    date: "2025-05-17 17:40:00",
-    content: "Design changed and other new additions.",
-    list: [
-      "I'm moving back to my older design and layout from the end of 2024, now using SurfScape Steel design system as base (pretty incomplete)",
-      "New release of Pixy Icon Pack, version 0.1.0!",
-      "I now have Instagram! (daily brain rot and depression intake)"
+      "New design and layout, featuring a cleaner look and Catppuccin Mocha for the color scheme",
+      "New sidebar that shows status, currently playing song, and a todo section for upcoming stuff",
+      "Improved the navigation",
+      "Improved the projects page (still not as good as I want it to be)",
     ]
   },
   {

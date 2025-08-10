@@ -3,15 +3,44 @@
   {% include "head.njk" %}
   <body>
     <a href="#main-content" class="acs-skip">Skip to main content</a>
-    {% include "partials/nav.njk" %}
-    {% include "breadcrumbs.njk" %}
-    {% block base %}
-      <main class="stack">
-        {% include "header.njk" %}
-        {{content | safe }}
-      </main>
-    {% endblock base %}
+    {% include "toolbar.njk" %}
+    {% include "nav.njk" %}
+    {% include "header.njk" %}
+    <main {% if (aside_enabled == true or aside_enabled == "true") and not is_home -%}class="has-aside"{% elif is_home %}class="has-aside home"{%- endif %}>
+      {% include "breadcrumbs.njk" %}
+      {% block base %}
+        <article id="main-content" class="stack">
+          {% if isInConstruction %}
+            <p class="notice notice--warning" role="alert">
+              <img src="/public/icons/farm-vlc.png" alt=""> This page is in construction, so expect broken features and/or missing content.</p>
+          {% endif %}
+          {{ content | safe }}
+        </article>
+      {% endblock base %}
+      {%- if aside_enabled -%}
+        <aside class="page-aside">
+          {% getBundle "html",
+          "aside" %}
+        </aside>
+      {% endif %}
+
+    </main>
     {% include "footer.njk" %}
+    {% block scripts %}{% endblock scripts %}
+    <script>
+      if (document.querySelector('details')) {
+        const details = document.querySelectorAll('details');
+        details.forEach((targetDetail) => {
+          targetDetail.addEventListener("click", () => {
+            details.forEach((detail) => {
+              if (detail !== targetDetail) {
+                detail.removeAttribute("open");
+              }
+            });
+          });
+        });
+      }
+    </script>
 
   </body>
 </html>

@@ -9,10 +9,16 @@ export default {
                     return data.key
                 }
             },
-            parent: (data) => data.parent,
+            parent: (data) => {
+                if (!data.parent) {
+                    return null
+                } else {
+                    return data.parent
+                }
+            },
             order: (data) => data.order,
             collection: (data) => data.collection,
-            isMultipage: (data) => data.isMultipage || false,
+            marker: (data) => data.marker,
         },
     },
 }

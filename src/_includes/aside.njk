@@ -1,0 +1,73 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+{# creates an object with pages (incl. sub-pages) that contain the marker object which is used to organize pages throughout the site #}
+{% set recommended = [] %}
+{% for item in navPages %}
+    {% for children in item.children %}
+        {% for marker in children.marker %}
+            {% if marker == "Recommended" %}
+                {% set recommended = recommended.concat([children]) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    {% for marker in item.marker %}
+        {% if marker == "Recommended" %}
+            {% set recommended = recommended.concat([item]) %}
+        {% endif %}
+    {% endfor %}
+
+{% endfor %}
+
+<section class="aside-block ">
+    <h2>Status</h2>
+    <div id="statuscafe">
+        <div id="statuscafe-username"></div>
+        <div id="statuscafe-content"></div>
+    </div>
+    <script src="https://status.cafe/current-status.js?name=reduxflakes" defer></script>
+</section>
+
+<section class="aside-block lastfm-widget "   >
+    <h2>
+        <span id="loadingStatus"></span>
+        <span id="playState">Last played was</span>
+    </h2>
+    <img src="" alt="" id="albumCover">
+    <h3 id="name"></h3>
+    <p id="artist"></p>
+
+    <small id="albumName"></small>
+
+    <details>
+        <summary>Show recents</summary>
+        <ol id="lastfm-history"></ol>
+    </details>
+</section>
+
+<section class="aside-block">
+    <h2>To-do</h2>
+    <progress id="file" max="100" value="54"></progress>
+    <small>Current progress: 54%</small>
+    <ul>
+        <li>Theme switcher</li>
+        <li>Gaming page</li>
+        <li>Better projects page</li>
+        <li>Gallery for showcasing mockups</li>
+        <li>Download center</li>
+        <li>Gear page</li>
+    </ul>
+</section>
+
+<section class="aside-block">
+    <h2>
+          Recommended Pages</h2>
+    <nav>
+        <ul role="list">
+            {%- for entry in recommended -%}
+                <li>
+                    <a href="{{entry.url}}">{{entry.data.title}}</a>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </nav>
+</section>

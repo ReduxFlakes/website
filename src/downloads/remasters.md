@@ -5,9 +5,8 @@ icon: pixelophilia-speaker
 notice:
   type: info
   content: The donwload center is still a work in progress so please expect bugs or missing content.
-eleventyNavigation:
-  key: Music Remasters
-  parent: Downloads
+key: Music Remasters
+parent: Downloads
 ---
 
 <div class="table-overflow">
@@ -53,5 +52,5 @@ eleventyNavigation:
 
 - Mirror 1 = File Garden
 - Mirror 2 = Mega.NZ
-  
+
 </section>

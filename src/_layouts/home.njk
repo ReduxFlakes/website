@@ -1,0 +1,89 @@
+{% extends "./base.njk" %}
+
+{% set aside_enabled = true %}
+{% set is_home = true %}
+
+{% html "aside" %}
+{%- include "aside.njk" -%}
+{% endhtml %}
+
+{% block scripts %}
+    <script type="text/javascript" defer>
+        console.log('JS connected');
+        let user = 'ReduxFlakes';
+        let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+
+        window.onload = function () {
+            fetchLastfm();
+            fetchHistory();
+        }
+
+        setInterval(fetchHistory, 60000)
+        setInterval(fetchLastfm, 8000)
+
+        function fetchLastfm() {
+            fetch(url)
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (json) {
+                    console.log(json);
+                    const track = json['track'];
+                    const t = '#text';
+                    const small = '0';
+                    const medium = '1';
+                    const large = '2';
+                    const xl = '3';
+                    const loadingStatus = document.getElementById('loadingStatus');
+                    const playTitle = document.getElementById('playState');
+                    const art = document.getElementById('albumCover');
+
+                    if (!track['image'][large][t]) {
+                        art.style.display = 'none';
+                    } else {
+                        art.src = track['image'][large][t];
+                        art.style.display = 'block';
+                    }
+
+                    const name = document.getElementById('name');
+                    const artist = document.getElementById('artist');
+                    const album = document.getElementById('albumName');
+                    name.innerText = track['name'];
+                    artist.innerText = track['artist'][t];
+                    album.innerText = track['album'][t];
+
+                    //play boolean
+                    let playBoo = track['@attr']['nowplaying'];
+
+                    console.log(playBoo);
+                    if (playBoo) { //if there's something in play boolean, say 'now playing'
+                        playTitle.innerText = 'Now Playing';
+                        loadingStatus.style.background = '#A6E3A1';
+                    } else {
+                        playTitle.innerText = 'Error';
+                    }
+
+                });
+        }
+
+        function fetchHistory() {
+            fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=reduxflakes&api_key=c59918e6eac0070e14ca1db741ed8bcf&limit=4&format=json')
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (json) {
+                    const tracks = json.recenttracks.track;
+                    const history = document.getElementById('lastfm-history');
+                    history.innerHTML = '';
+                    tracks.forEach(function (item) {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<a href="${item
+                            .url}">${item
+                            .name} - ${item
+                            .artist['#text']}</a>`;
+                        history.appendChild(li);
+                    });
+                });
+        }
+    </script>
+{% endblock scripts %}

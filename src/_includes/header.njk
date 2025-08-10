@@ -1,29 +1,20 @@
-<header class="page-header stack">
-    {% if hero.title %}
-        {% set hero_title = hero.title | safe %}
-    {% endif %}
-    <h1>{{ hero_title or title or meta.title}}</h1>
-    {% if description != false %}
-        <p>{{hero.description or description or meta.description}}</p>
-    {% endif %}
-    {% if hero.actions %}
-        <div class="auto-flex">
-            {% for item in hero.actions %}
-                <a href="{{item.link}}" class="button {% if not item.type -%}button--primary{% else -%}steel-button--{{item.type}}{%- endif -%}">{{item.label}}
+<header class="hero stack" style="--spacer:0.5em;">
+    <h1>{{title or meta.title}}</h1>
+    <p>{{description or hero.description or meta.description}}</p>
+    {% if post or modified %}
 
-                {% endfor %}
-            </div>
-            <p style="font-size:0.9em; opacity:0.8;">{{hero.footer | safe }}</p>
-        {% endif %}
-        {% if date %}
-            <p>
-            Published in  <time datetime="{{date}}">{{date | formatPostDate}}</time>
-            </p>
-        {% endif %}
-        {% if modified %}
-            <p>
-            Modified in  <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
-            </p>
-        {% endif %}
-
-    </header>
+        <div class="hero-meta">
+            {% if post %}
+                <p class="secondary">{%- lucide "calendar-plus" -%}  Posted in: <time datetime="{{date}}">{{date | formatPostDate}}</time>
+                </p>
+            {% endif %}
+            {% if modified %}
+                <p class="secondary">{%- lucide "file-pen-line" -%}  Modified in: <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
+                </p>
+            {% endif %}
+            {% if post %}
+                <p class="secondary">{%- lucide "timer" -%} Read time: {{ 'text' | timeToRead }}</p>
+            {% endif %}
+        </div>
+    {% endif %}
+</header>

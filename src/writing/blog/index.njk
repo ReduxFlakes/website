@@ -1,0 +1,65 @@
+---
+title: Blog
+description: Life, projects, site updates, and other rambles and articles...
+icon: "farm-post"
+pagination:
+  data: collections.posts
+  size: 4
+  alias: posts
+  addAllPagesToCollections: true
+paginationPrevText: 'Newer posts'
+paginationNextText: 'Older posts'
+permalink: "/writing/blog{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/"
+eleventyComputed:
+  key: "{% if pagination.pageNumber > 0 %} Page {{ pagination.pageNumber }}{% else %}Blog{% endif %}"
+  parent: "{% if pagination.pageNumber > 0 %}Blog{% else %}Writing{% endif %}"
+  aside_enabled: "{% if pagination.pageNumber == 0 %}true{% else %}false{% endif %}"
+---
+
+{% if pagination.pageNumber == 0 %}
+
+  {% html "aside" %}
+  <section class="aside-block">
+    <h2>Tags</h2>
+
+    <nav>
+      {% set tagCloud = collections.posts | tagCloud %}
+      {% for tag, count in tagCloud %}
+        <a href="tag/{{ tag | slugify }}">{{ tag }}</a>
+      {% endfor %}
+    </nav>
+  </section>
+
+  <section class="aside-block">
+    <h2>Feeds</h2>
+    <nav class="auto-flex" aria-label="Blog feed subscriptions">
+      <a href="/blog/feed.xml"><img src="/public/img/buttons/general/80-rss.png" alt="" aria-hidden="true" style="image-rendering:pixelated;" eleventy:ignore>RSS Feed</a>
+      <a href="/blog/atom.xml"><img src="/public/img/buttons/general/80-atom.png" alt="" aria-hidden="true" style="image-rendering:pixelated;"  eleventy:ignore>Atom Feed</a>
+      <a href="/blog/feed.json"><img src="/public/img/buttons/general/80-json.png" alt="" aria-hidden="true" style="image-rendering:pixelated;" eleventy:ignore>JSON Feed</a>
+    </nav>
+  </section>
+
+  {% endhtml %}
+
+{% endif %}
+
+{% for post in posts %}
+  {{ component('post-listing', {title: post.data.title, date: post.date, description: post.data.description, href: post.url }) }}
+{% endfor %}
+
+{% if pagination.href.next or pagination.href.previous %}
+  <footer>
+    <nav class="pagination__inner" aria-label="Pagination links">
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+          <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+        </a>
+      {% endif %}
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+          {{ paginationNextText if paginationNextText else 'Next' }}
+        </a>
+      {% endif %}
+    </nav>
+  </footer>
+{% endif %}

@@ -7,20 +7,19 @@
 
 {% block base %}
     {%- if toc_enabled -%}
-        <input type="checkbox" id="toc-toggle" name="toggle_toc" aria-controls="toc" checked>
-        <label for="toc-toggle" data-toggle-label></label>
-        {{ content | generateTOC | safe }}
+        <aside>
+            <section id="toc">
+                <h2>Table of Contents</h2>
+                {{ content | toc(tags=['h2', 'h3']) | safe }}
+            </section>
+        </aside>
         <article class="stack" style="font-size: 1.15em;line-height: 1.6;padding-top:1.0rem;">
         {% else %}
             <article class="stack" style="font-size: 1.15em;line-height: 1.6;">
             {%- endif -%}
             {{ content | safe }}
-            <img src="/public/branding/signature.svg" alt="ReduxFlakes logo with a cross with light beige color and a propeller behind, serving as a signature to the blog post">
+
             <p>~ Redux</p>
-            {% if lastModified %}
-                <footer>
-                    <p>Last updated in {{lastModified}}</p>
-                </footer>
-            {% endif %}
+            <img src="/public/branding/signature.svg" alt="ReduxFlakes logo with a cross with light beige color and a propeller behind, serving as a signature to the blog post" eleventy:ignore class="signature">
         </article>
     {% endblock %}

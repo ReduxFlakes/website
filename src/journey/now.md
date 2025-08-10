@@ -2,11 +2,9 @@
 title: Now
 description: Stuff I've been doing recently
 icon: farm-clock
-modified: 2025-04-17T18:16:00.00Z
-eleventyNavigation:
-  key: Now
-  parent: Origins
-  order: 1
+modified: 2025-08-10T00:58:00.00Z
+parent: Origins
+order: 1
 ---
 
 ## Checkup
@@ -14,25 +12,22 @@ eleventyNavigation:
 <dl>
 <dt>This website</dt>
   <dd>Recently did a big revamp and I'm currently trying to push new content.</dd>
-<dt><a href="https://team.indieseas.net/">Indiefellas</a></dt>
-<dd>Recently joined the indiefellas project as designer and frontend developer.</dd>
+  <dt>SurfScape</dt>
+  <dd>Recently bought a domain (<a href="https://surfscape.eu">surfscape.eu</a>) so now SurfScape has a real platform to grow.</dd>
   <dt>Celer</dt>
-  <dd>The toolbox for Windows</dd>
-      <dt>A directory</dt>
-  <dd>A new website that will serve as a directory of personal sites and services from both the clearnet and the tor network that I like.</dd>
+  <dd>Currently porting the app to WinUI 3 with an improved base and a more modular approach</dd>
 </dl>
 
 ## What I've been playing
 
-1. Minecraft (survival and OneBlock)
-2. GunsUp! Mobile
-3. Brawl Stars ([My profile on brawltime.ninja](https://brawltime.ninja/profile/YRGCY0PJQ)).
-4. Kingdom Rush
+1. GTA V - recently finished the game, loved it!
+2. Call of Duty Black Ops 2 Multiplayer
+3. GTA IV - probably my favorite GTA game
+4. Infinitode 2 - I love the music
 
 ## What I've been watching
 
-- Regular Show (Season 3)
-- The Amazing World Of Gumball (Season 1)
+- Instagram and YouTube slop
 
 ## What I'm Listening
 
