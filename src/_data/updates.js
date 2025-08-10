@@ -1,5 +1,14 @@
 export default [
   {
+    date: "2025-08-10 11:15:24",
+    content: "Button updates",
+    list: [
+      "Updates button links",
+      "Added new buttons to the friends section",
+      "Added summary field on the blog feeds"
+    ]
+  },
+  {
     date: "2025-08-10 01:12:00",
     content: "Another redesign because I'm never happy :p",
     list: [
