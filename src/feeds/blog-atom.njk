@@ -37,6 +37,7 @@
       <link href="{{ absolutePostUrl }}"/>
       <updated>{{ post.date | dateToRfc3339 }}</updated>
       <id>{{ absolutePostUrl }}</id>
+      <description>{{post.data.description}}</description>
       <content type="html">{{ post.content | renderTransforms(post.data.page, base) }}</content>
     </entry>
   {%- endfor %}

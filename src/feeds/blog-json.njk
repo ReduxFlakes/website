@@ -38,6 +38,7 @@
       "id": "{{ absolutePostUrl }}",
       "url": "{{ absolutePostUrl }}",
       "title": "{{ post.data.title }}",
+      "description": "{{post.data.description}}",
       "content_html": {% if post.content %}{{ post.content | renderTransforms(post.data.page, base) | dump | safe }}
   {% else %}""{% endif %},
       "date_published": "{{ post.date | dateToRfc3339 }}"

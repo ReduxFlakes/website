@@ -32,6 +32,7 @@
       <item>
         <title>{{ post.data.title }}</title>
         <link>{{ absolutePostUrl }}</link>
+        <summary>{{post.data.description}}</summary>
         <description>{{ post.content | renderTransforms(post.data.page, base) }}</description>
         <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
         <dc:creator>{{ metadata.author.name }}</dc:creator>
