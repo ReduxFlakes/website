@@ -4,11 +4,69 @@ export default {
       title: "LRS",
       img: "LRS.gif",
       url: "https://lastroseofsummer.neocities.org",
+
     },
     {
       title: "ByteMoth",
       img: "bytemoth.png",
       url: "https://bytemoth.neocities.org/",
+      eleventy: "ignore"
+    },
+    {
+      title: "Jak2K",
+      img: "jak2k.webp",
+      url: "https://jak2k.eu/",
+      eleventy: "ignore"
+    },
+    {
+      title: "Daudix",
+      img: "daudix.gif",
+      url: "https://daudix.one/",
+    },
+    {
+      title: "Thin Liquid",
+      img: "thnlqd.png",
+      url: "https://thinliquid.dev/",
+      eleventy: "ignore"
+    },
+    {
+      title: "jbcarreon123",
+      img: "jbcarreon123.png",
+      url: "https://jbcarreon123.nekoweb.org",
+      eleventy: "ignore"
+    },
+    {
+      title: "OpenBooks",
+      img: "openbooks.gif",
+      url: "https://openbooks.neocities.org",
+    },
+    {
+      title: "Badgraph1csghost",
+      img: "badgraph1csghost.png",
+      url: "https://badgraph1csghost.neocities.org/",
+      eleventy: "ignore"
+    },
+    {
+      title: "joosh's Homepage!",
+      img: "jooshRice.gif",
+      url: "https://joo.sh/",
+    },
+    {
+      title: "fLaMEd fury",
+      img: "fury.gif",
+      url: "https://flamedfury.com/",
+    },
+    {
+      title: "rice.place",
+      img: "riceplace.png",
+      url: "https://rice.place/",
+      eleventy: "ignore"
+    },
+    {
+      title: "Velvet Blue",
+      img: "velvetblue.png",
+      url: "https://velvetblue.neocities.org",
+      eleventy: "ignore"
     },
     {
       title: "Daniele's Website",
@@ -28,43 +86,17 @@ export default {
     {
       title: "Frutiger Aero Archive",
       img: "frutigeraeroarchive.png",
-      url: "https://frutigeraeroarchive.org/"
+      url: "https://frutigeraeroarchive.org/",
+      eleventy: "ignore"
     },
     {
       title: "Leilukin's Hub",
       img: "leilukins-hub.png",
       url: "https://leilukin.neocities.org",
+      eleventy: "ignore"
     },
-    {
-      title: "OpenBooks",
-      img: "openbooks.gif",
-      url: "https://openbooks.neocities.org",
-    },
-    {
-      title: "Badgraph1csghost",
-      img: "badgraph1csghost.png",
-      url: "https://badgraph1csghost.neocities.org/",
-    },
-    {
-      title: "joosh's Homepage!",
-      img: "jooshRice.gif",
-      url: "https://joo.sh/",
-    },
-    {
-      title: "fLaMEd fury",
-      img: "fury.gif",
-      url: "https://flamedfury.com/",
-    },
-    {
-      title: "rice.place",
-      img: "riceplace.png",
-      url: "https://rice.place/",
-    },
-    {
-      title: "Velvet Blue",
-      img: "velvetblue.png",
-      url: "https://velvetblue.neocities.org",
-    },
+
+
     {
       title: "july.lol",
       img: "lonelyjuly.gif",
@@ -74,11 +106,13 @@ export default {
       title: "Wlodekm",
       img: "wlodekm.png",
       url: "https://wlodekm.nekoweb.org/",
+      eleventy: "ignore"
     },
     {
       title: "Yudosai",
       img: "yudosai.png",
       url: "https://yudo.cc/",
+      eleventy: "ignore"
     },
     {
       title: "Slushienova",
@@ -94,41 +128,32 @@ export default {
       title: "Bulltown.neo",
       img: "bulltown.png",
       url: "https://bulltown.neocities.org",
+      eleventy: "ignore"
     },
     {
       title: "Hifumi's Weebsite",
       img: "lhfm.png",
       url: "https://lhfm.neocities.org/",
+      eleventy: "ignore"
     },
     {
       title: "NorthSilver",
       img: "northsilver.png",
       url: "https://northsilversite.neocities.org/",
+      eleventy: "ignore"
     },
     {
       title: "Fan0102",
       img: "fan0102.gif",
       url: "https://somefan0102.neocities.org/"
     },
+
+
     {
       title: "Coloured",
       img: "conline.png",
       url: "https://coloured.neocities.org/",
-    },
-    {
-      title: "Jak2K",
-      img: "jak2k.webp",
-      url: "https://jak2k.eu/",
-    },
-    {
-      title: "Thin Liquid",
-      img: "thnlqd.png",
-      url: "https://thinliquid.dev/",
-    },
-    {
-      title: "jbcarreon123",
-      img: "jbcarreon123.png",
-      url: "https://jbcarreon123.nekoweb.org",
+      eleventy: "ignore"
     },
     {
       title: "Lux Fero",
@@ -148,12 +173,14 @@ export default {
     {
       title: "visualculture",
       img: "visualculture.png",
-      url: "https://visualculture.vc/"
+      url: "https://visualculture.vc/",
+      eleventy: "ignore"
     },
     {
       title: "dabric",
       img: "dabric.png",
-      url: "https://dabric.xyz/"
+      url: "https://dabric.xyz/",
+      eleventy: "ignore"
     },
     {
       title: "GrayBox",
@@ -183,7 +210,8 @@ export default {
     {
       title: "ui(ooo-eee)",
       img: "oooeee.png",
-      url: "https://oooeee.nekoweb.org/"
+      url: "https://oooeee.nekoweb.org/",
+      eleventy: "ignore"
     },
     {
       title: "Layercake",
@@ -193,7 +221,8 @@ export default {
     {
       title: "PixelGlade",
       img: "pixelglade.png",
-      url: "https://pixelglade.net.au/"
+      url: "https://pixelglade.net.au/",
+      eleventy: "ignore"
     },
     {
       title: "FOGGYBEAR42",
@@ -227,8 +256,9 @@ export default {
     },
     {
       title: "ELEVATOR 2 THE MOON",
-      img: "elevatorttm.gif",
-      url: "https://elevator-to-the-moon.neocities.org/"
+      img: "elevatorttm.png",
+      url: "https://elevator-to-the-moon.neocities.org/",
+      eleventy: "ignore"
     },
     {
       title: "HELLSTAR ARES",
