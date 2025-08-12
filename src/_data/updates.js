@@ -1,5 +1,17 @@
 export default [
   {
+    date: "2025-08-12 17:26:24",
+    content: "General optimizations",
+    list: [
+      "Added a blogroll (on Digital Garden) with support for OPML feed",
+      "Optimized most buttons in the friends sections (64.6KB -> 24KB)",
+      "Improved the LastFM widget which now uses my own proxy",
+      "Moved some of the old pages to the new navigation",
+      "Added a new button section on the footer",
+      "Made some CSS tweaks around the footer and the button-grid"
+    ]
+  },
+  {
     date: "2025-08-10 11:15:24",
     content: "Button updates",
     list: [

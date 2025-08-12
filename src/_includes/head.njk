@@ -1,11 +1,11 @@
 <head>
-    {% if title %}
-        {% set page_title = [title, " - ", meta.title] | join %}
+    {% if title -%}
+        {%- set page_title = [title, " - ", meta.title] | join -%}
     {% endif %}
     {%- if env.host == "neocities" -%}
-        {% set host = meta.url_neo -%}
+        {%- set host = meta.url_neo -%}
     {%- else -%}
-        {% set host = meta.url_neko -%}
+        {%- set host = meta.url_neko -%}
     {%- endif -%}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,16 +26,15 @@
     <meta property="og:locale" content="{{meta.lang}}">
     <meta property="article:author" content="{{ meta.webmaster.name }}"/>
     <meta name="generator" content="{{ eleventy.generator }}"/>
-    {% css "base" %}
-    {% include "styles/base.css" %}
-    {% endcss %}
+    {% css "base" -%}
+    {%- include "styles/base.css" -%}
+    {%- endcss -%}
     <style>
         {% getBundle "css", "base" %}
     </style>
-
-    {% css %}
-    {% include "styles/style.css" %}
-    {% endcss %}
+    {% css -%}
+    {%- include "styles/style.css" -%}
+    {%- endcss -%}
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
     {%- if env.environment == "production" -%}
         <script src="https://tinylytics.app/embed/dcJBJt8md3MZEExK1rry.js" defer></script>

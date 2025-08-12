@@ -1,0 +1,26 @@
+---json
+{
+  "permalink": "/blogroll.opml",
+  "eleventyExcludeFromCollections": true,
+  "title": "ReduxFlakes Blogroll Subscriptions"
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl"?>
+<opml version="2.0">
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        {%- for item in blogroll %}
+            <outline 
+    title="{{item.title}}" 
+xmlUrl="{{item.feed}}" 
+type="rss" 
+ htmlUrl="{{item.url}}" 
+description="{{item.description}}"
+/>
+        {%- endfor %}
+
+    </body>
+</opml>

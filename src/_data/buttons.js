@@ -95,8 +95,6 @@ export default {
       url: "https://leilukin.neocities.org",
       eleventy: "ignore"
     },
-
-
     {
       title: "july.lol",
       img: "lonelyjuly.gif",
@@ -147,8 +145,6 @@ export default {
       img: "fan0102.gif",
       url: "https://somefan0102.neocities.org/"
     },
-
-
     {
       title: "Coloured",
       img: "conline.png",
@@ -419,7 +415,6 @@ export default {
       img: "solinus.gif",
       url: "https://solinus.neocities.org/",
     },
-
     {
       title: "meows.zip",
       img: "meowsdotzip.png",
@@ -500,4 +495,24 @@ export default {
       url: "https://lempamo.glitch.me/"
     }
   ],
+  special: [
+    {
+      title: "OpenBooks",
+      img: "friends/openbooks.gif",
+      url: "https://openbooks.neocities.org",
+    },
+    {
+      title: "Brainmade",
+      img: "general/brain-made.svg",
+      url: "https://brainmade.org/",
+    },
+    {
+      title: "Bring Back the Headphone Jack",
+      img: "general/bring-back-the-headphone-jack.gif"
+    },
+    {
+      title: "Made with CSS Grid",
+      img: "general/css-grid.gif"
+    },
+  ]
 };

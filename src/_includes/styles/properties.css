@@ -5,7 +5,7 @@
   --container-low: hsl(240, 23%, 9%);
   --foreground: hsl(226, 64%, 88%);
   --primary: hsl(217, 92%, 76%);
-  --foreground-subtle: #7F849C;
+  --foreground-subtle: hsl(230, 13%, 61%);
   --stroke: hsl(234, 13%, 31%);
   --warning: #F9E2AF;
   --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);

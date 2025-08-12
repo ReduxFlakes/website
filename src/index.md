@@ -63,11 +63,11 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
   <div class="auto-flex button-grid">
     {%- for button in buttons.friends -%}
     {%- if button.img -%}
-    <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/friends/{{button.img}}"
-        alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img -%}
+    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/img/buttons/friends/{{button.img}}"
+        alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img or button.eleventy == "ignore" -%}
         loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
     {%- else -%}
-    <a href="{{button.url}}" style="min-width:88px;min-height:31px;">{{button.title}}</a>
+    <a href="{{button.url}}" style="min-width:88px;min-height:31px;" class="btn">{{button.title}}</a>
     {%- endif -%}
     {% endfor %}
   </div>
@@ -80,11 +80,11 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
   <div class="auto-flex button-grid">
     {%- for button in buttons.likes -%}
     {%- if button.img -%}
-    <a href="{{button.url}}" title="{{button.title}}"><img src="/public/img/buttons/{{button.img}}"
+    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/img/buttons/{{button.img}}"
         alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img -%}
         loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
     {%- else -%}
-    <a href="{{button.url}}" style="min-width:88px;min-height:31px;">{{button.title}}</a>
+    <a href="{{button.url}}" style="min-width:88px;min-height:31px;" class="btn">{{button.title}}</a>
     {%- endif -%}
     {% endfor %}
   </div>
@@ -163,7 +163,7 @@ If you like my site, you can link me by using the buttons below!
   <config key="type" value="gruvbox-dark"></config>
   <config key="font" value="Overused Grotesk, Arial, sans-serif"></config>
   <config key="fill" value="true"></config>
-  <script src="https://palette.nekoweb.org/webring.js" defer async></script>
+  <script src="https://palette.nekoweb.org/pmoring.js" defer async data-type="catppuccin-mocha"/>
 </webring-container>
 
 {% endif %}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
-  {% include "head.njk" %}
+  {% include "head.njk" -%}
   <body>
     <a href="#main-content" class="acs-skip">Skip to main content</a>
     {% include "toolbar.njk" %}
@@ -23,7 +23,6 @@
           "aside" %}
         </aside>
       {% endif %}
-
     </main>
     {% include "footer.njk" %}
     {% block scripts %}{% endblock scripts %}

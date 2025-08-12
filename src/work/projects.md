@@ -3,7 +3,7 @@ title: Projects
 description: "Personal projects (active, archived, and ideas)"
 icon: farm-components
 parent: Work
-order: 2
+order: 1
 marker: ["Recommended"]
 ---
 

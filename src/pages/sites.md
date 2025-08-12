@@ -9,13 +9,11 @@ This page contains sites that I either created, have ownership, or I'm involved 
 
 - [reduxflakes.neocities.org](https://reduxflakes.neocities.org) - My personal website, Neocities mirror (the OG).
 
-- [surfscape.neocities.org](https://surfscape.neocities.org) - The site for my project, SurfScape.
+- [surfscape.eu](https://surfscape.eu) - The site for the SurfScape Project, an umbrella for more ambitious projects.
+
+  - [surfscape.neocities.org](https://surfscape.neocities.org)
+  - [surfscape.nekoweb.org](https://surfscape.nekoweb.org)
 
 - [https://reduxflakes.atabook.org/](https://reduxflakes.atabook.org/) - My guestbook, hosted on atabook.org.
 
 - [https://team.indieseas.net/](https://team.indieseas.net/) - A project I'm involved in, currently with the roles of frontend development and design.
-
-
-
-
-

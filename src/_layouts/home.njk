@@ -9,81 +9,58 @@
 
 {% block scripts %}
     <script type="text/javascript" defer>
-        console.log('JS connected');
-        let user = 'ReduxFlakes';
-        let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
 
         window.onload = function () {
             fetchLastfm();
-            fetchHistory();
         }
 
-        setInterval(fetchHistory, 60000)
-        setInterval(fetchLastfm, 8000)
+        setInterval(fetchLastfm, 6000);
 
         function fetchLastfm() {
-            fetch(url)
-                .then(function (response) {
-                    return response.json()
-                })
-                .then(function (json) {
-                    console.log(json);
-                    const track = json['track'];
-                    const t = '#text';
-                    const small = '0';
-                    const medium = '1';
-                    const large = '2';
-                    const xl = '3';
+            fetch("https://lastfm-worker.contact-surfscape.workers.dev/?user=reduxflakes")
+                .then(response => response.json())
+                .then(json => {
+                    const recentTracks = json['recentTracks'];
+                    if (!recentTracks || recentTracks.length === 0) 
+                        return;
+                    
+                    const currentTrack = recentTracks[0];
+
                     const loadingStatus = document.getElementById('loadingStatus');
                     const playTitle = document.getElementById('playState');
                     const art = document.getElementById('albumCover');
-
-                    if (!track['image'][large][t]) {
-                        art.style.display = 'none';
-                    } else {
-                        art.src = track['image'][large][t];
-                        art.style.display = 'block';
-                    }
-
                     const name = document.getElementById('name');
                     const artist = document.getElementById('artist');
                     const album = document.getElementById('albumName');
-                    name.innerText = track['name'];
-                    artist.innerText = track['artist'][t];
-                    album.innerText = track['album'][t];
 
-                    //play boolean
-                    let playBoo = track['@attr']['nowplaying'];
+                    if (!currentTrack.albumCover) {
+                        art.style.display = 'none';
+                    } else if (currentTrack.albumCover !== art.src) {
+                        art.src = currentTrack.albumCover;
+                        art.style.display = 'block';
+                    }
 
-                    console.log(playBoo);
-                    if (playBoo) { //if there's something in play boolean, say 'now playing'
+                    name.innerText = currentTrack.song;
+                    artist.innerText = currentTrack.artist;
+                    album.innerText = currentTrack.album;
+
+                    if (currentTrack.nowPlaying) {
                         playTitle.innerText = 'Now Playing';
                         loadingStatus.style.background = '#A6E3A1';
                     } else {
-                        playTitle.innerText = 'Error';
+                        playTitle.innerText = 'Last Played';
+                        loadingStatus.style.background = '';
                     }
 
-                });
-        }
-
-        function fetchHistory() {
-            fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=reduxflakes&api_key=c59918e6eac0070e14ca1db741ed8bcf&limit=4&format=json')
-                .then(function (response) {
-                    return response.json()
-                })
-                .then(function (json) {
-                    const tracks = json.recenttracks.track;
                     const history = document.getElementById('lastfm-history');
                     history.innerHTML = '';
-                    tracks.forEach(function (item) {
+                    recentTracks.forEach(item => {
                         const li = document.createElement('li');
-                        li.innerHTML = `<a href="${item
-                            .url}">${item
-                            .name} - ${item
-                            .artist['#text']}</a>`;
+                        li.innerHTML = `<a href="${item.songUrl}">${item.song} - ${item.artist}</a>`;
                         history.appendChild(li);
                     });
-                });
+                })
+                .catch(err => console.error("Error fetching Last.fm data:", err));
         }
     </script>
 {% endblock scripts %}

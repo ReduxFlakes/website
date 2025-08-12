@@ -1,14 +1,14 @@
-{% set navigation = collections.all | eleventyNavigation %}
+{% set navigation = collections.all | eleventyNavigation -%}
 
 {# create the object for the categories while checking if the category has any children #}
-{% set categories = [] %}
-{% for item in navigation %}
-    {% if item.key != "Home" %}
-        {% if item.children.length %}
-            {% set categories = categories.concat([item]) %}
-        {% endif %}
-    {% endif %}
-{% endfor %}
+{%- set categories = [] -%}
+{%- for item in navigation -%}
+    {%- if item.key != "Home" -%}
+        {%- if item.children.length -%}
+            {%- set categories = categories.concat([item]) -%}
+        {%- endif -%}
+    {%- endif -%}
+{%- endfor -%}
 
 {% macro navlink(url, title, construction, description, icon, category) %}
     <li >
@@ -26,7 +26,6 @@
             <p>{{description}}</p>
         </a>
     </li>
-
 {% endmacro %}
 
 {# creates the menu with the categories and the menus with the links for every category #}
@@ -39,11 +38,11 @@
         <details id="cat-{{entry.key | slugify}}">
             {#{% endif %}#}
             <summary aria-controls="nav-{{entry.key | slugify }}">
-                {% if entry.icon %}
+                {% if entry.icon -%}
                     <img src="/public/icons/{{entry.icon}}.png" alt="" aria-hidden="true" class="icon">
-                {% elif entry.data.icon %}
+                {%- elif entry.data.icon -%}
                     <img src="/public/icons/{{entry.data.icon}}.png" alt="" aria-hidden="true" class="icon">
-                {% endif %}
+                {%- endif -%}
                 {{ entry.title }}</summary>
             <section class="stack" style="--spacer:0.5em;">
                 <h2 style="font-size:1.25rem;">{{entry.data.title}}</h2>
@@ -51,21 +50,25 @@
                 <hr>
                 <ul id="nav-{{entry.key | slugify }}" aria-label="{{entry.title}} submenu" class="navbar-list">
                     {# show category link if the same has a url/permalink enabled #}
-                    {% if entry.url %}
+                    {% if entry.url -%}
                         {{navlink(entry.url, entry.data.title, entry.data.isInConstruction, entry.data.description, entry.data.icon,entry.key)}}
-                    {% endif %}
+                    {%- endif -%}
                     {# for the links inside a category #}
-                    {% for item in entry.children %}
-                        {{navlink(item.url, item.title, item.data.isInConstruction, item.data.description, item.data.icon, item.parent)}}
-                    {% endfor %}
+                    {%- for item in entry.children -%}
+                        {%- if item.url -%}
+                            {{navlink(item.url, item.title, item.data.isInConstruction, item.data.description, item.data.icon, item.parent)}}
+                        {%- endif -%}
+                    {%- endfor -%}
             </ul>
-            {% for item in entry.children %}
-                {% if entry.data.isInConstruction or item.data.isInConstruction %}
+            {%- set constructionEnabled = false -%}
+            {%- for item in entry.children -%}
+                {%- if (entry.data.isInConstruction or item.data.isInConstruction) and (entry.url != "" or item.url != "") and constructionEnabled != true -%}
+                    {% set constructionEnabled = true-%}
                     <p>
                         <small>Pages with <i>italicized</i> titles are still under construction.</small>
                     </p>
-                {% endif %}
-            {% endfor %}
+                {%- endif -%}
+            {%- endfor -%}
         </section>
     </details>
 {%- endfor -%}

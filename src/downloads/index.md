@@ -1,8 +1,7 @@
 ---
-title: Download Center
-description: Stuff available to download
+permalink: false
+title: Downloads
+description: My download center
 icon: farm-download-cloud
-isInConstruction: true
-key: Downloads
 order: 4
 ---

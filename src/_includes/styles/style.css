@@ -434,12 +434,12 @@ a:has(svg) {
 }
 
 /* from daudix (https://daudix.one/home/#badges) */
-.button-grid a {
+.button-grid .btn {
   transition: all 0.2s, transform var(--transition-bezier);
   image-rendering: pixelated;
 }
 
-.button-grid a:hover {
+.button-grid .btn:hover {
   transform: scale(1.25);
   rotate: -8deg;
   z-index: 2;
@@ -447,7 +447,7 @@ a:has(svg) {
 }
 
 /* from jb (jbcarreon123.nekoweb.org) */
-.button-grid:has(a:hover) a:not(:hover) {
+.button-grid:has(.btn:hover) .btn:not(:hover) {
   filter: blur(2px) saturate(0);
   opacity: 0.25;
 }

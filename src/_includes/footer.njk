@@ -7,7 +7,18 @@
     {% endif %}
 {% endfor %}
 
-<footer class="main-footer">
+<footer class="main-footer stack" style="--spacer:0.25em;">
+    <div class="auto-flex button-grid">
+        {% for item in buttons.special %}
+            {% if item.url -%}
+                <a href="{{item.url}}" class="btn">
+                    <img src="/public/img/buttons/{{item.img}}" alt="{{item.title}}" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore>
+                </a>
+            {%- else -%}
+                <img src="/public/img/buttons/{{item.img}}" alt="{{item.title}}" width="88" height="31" class="btn classic-btn" loading="lazy" decoding="async" eleventy:ignore>
+            {%- endif -%}
+        {% endfor %}
+    </div>
     <nav class="auto-flex">
         {% for entry in footerLinks %}
             <a href="{{entry.url}}">{{entry.title}}</a>
