@@ -1,5 +1,15 @@
 export default [
   {
+    date: "2025-08-13 09:02:00",
+    content: "New feature and other content updates",
+    list: [
+      "Tinylytics kudos are now enabled on the blog so now you can like/kudo my posts!",
+      "Added 2 new buttons to the friends section",
+      "Various CSS tweaks",
+      "Content updates"
+    ]
+  },
+  {
     date: "2025-08-12 17:26:24",
     content: "General optimizations",
     list: [
