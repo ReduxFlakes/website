@@ -262,6 +262,16 @@ export default {
       url: "https://hellstarares.rip/"
     },
     {
+      title: "The yeepsite",
+      img: "yeepsite.svg",
+      url: "https://yeepsite.nekoweb.org/"
+    },
+    {
+      title: "uksz hub",
+      img: "uksz.gif",
+      url: "https://uksz.org/"
+    },
+    {
       title: "Dannarchy",
       img: "dannarchy.gif",
       url: "https://dannarchy.com"
