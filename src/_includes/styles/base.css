@@ -82,6 +82,7 @@ details summary,
   display: flex;
   align-items: center;
   gap: 0.5em;
+  line-height: 1;
   border: 1px solid var(--stroke);
   background: #181825;
   padding: 0.6rem 0.75rem;
@@ -99,6 +100,12 @@ details summary:hover,
   background: var(--container);
 }
 
+button:disabled,
+button[disabled],
+.button:disabled,
+.button[disabled] {
+  opacity: 0.75;
+}
 
 summary {
   cursor: default;

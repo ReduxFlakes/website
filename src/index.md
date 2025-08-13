@@ -41,9 +41,9 @@ post.url, subheading: true }) }}
 
 ### Socials
 
-<div class="auto-flex button-grid" style="gap:1rem 2.5rem;justify-content:center;">
+<div class="auto-grid button-grid" style="gap:1rem;--size:48px;">
   {%- for item in meta.socials -%}
-  <a href="{{item.url}}" style="display:flex;flex-direction:column;align-items:center;"><img
+  <a href="{{item.url}}" style="display:flex;flex-direction:column;align-items:center;" class="btn"><img
       src="/public/icons/pixy/{{item.name | slugify}}.png" alt="" aria-hidden="true" class="classic-btn" loading="lazy"
       decoding="async" eleventy:ignore>{{item.name}}</a>
   {%- endfor -%}
