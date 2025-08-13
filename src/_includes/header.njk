@@ -14,7 +14,11 @@
             {% endif %}
             {% if post %}
                 <p class="secondary">{%- lucide "timer" -%} Read time: {{ 'text' | timeToRead }}</p>
+
             {% endif %}
         </div>
+        {% if post %}
+            <button class="tinylytics_kudos button--transparent" data-path="{{ page.url }}"></button>
+        {% endif %}
     {% endif %}
 </header>
