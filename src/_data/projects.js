@@ -2,7 +2,7 @@ export default {
   active: [
     {
       title: "SurfScape",
-      tags: ["popular"],
+      tags: ["collective", "software"],
       description:
         "An umbrella for all kinds of ambitious project related to web services, privacy, design, and minimalism.",
       actions: [

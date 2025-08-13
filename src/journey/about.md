@@ -65,8 +65,6 @@ The following icons are the ones found in the nav bar and respective menus.
 
 - Zoom effect when hovering buttons - Code of [Daudix](https://daudix.one/)
 
-- Table of Contents Eleventy filter - Original code of [uncenter](https://github.com/uncenter/eleventy-plugin-toc)
-
 ## License
 
 This website content, unless specified, is licensed under [Creative Commons 4.0 DEED](https://creativecommons.org/licenses/by/4.0/deed.en) and it's source code, unless specified, is licensed under [GPL-2.0 Only](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
