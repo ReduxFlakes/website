@@ -40,6 +40,60 @@
         });
       }
     </script>
+    {% if env.environment == "production" and is_home == true%}
+      <script>
+        /* based on https://maxpixels.moe/resources/nekoweb-stats */
+        let domain = "reduxflakes.nekoweb.org";
+        let user = "reduxflakes";
 
+        (async () => {
+          try {
+            const nekoRequest = await fetch(`https://nekoweb.org/api/site/info/${domain}`,);
+            const neoRequest = await fetch(`https://neocities.org/api/info?sitename=${user}`)
+            const nekoJson = await request.json();
+            const neoJson = await request.json();
+
+            const neoCreated = new Date(neoJson.created_at).toLocaleDateString();
+            const neoUpdated = new Date(neoJson.last_updated).toLocaleDateString();
+
+            const nekoCreated = new Date(nekoJson.created_at).toLocaleDateString();
+            const nekoUpdated = new Date(nekoJson.updated_at).toLocaleDateString();
+
+            if (document.getElementById("nekoCreated")) 
+              document
+                .getElementById("nekoCreated")
+                .innerHTML = `Created ${nekoCreated}`;
+            if (document.getElementById("nekoUpdated")) 
+              document
+                .getElementById("nekoUpdated")
+                .innerHTML = `Updated ${nekoUpdated}`;
+            if (document.getElementById("nekoVisitors")) 
+              document
+                .getElementById("nekoVisitors")
+                .innerHTML = `Visits ${nekoJson.views}`;
+            if (document.getElementById("nekoFollowers")) 
+              document
+                .getElementById("nekoFollowers")
+                .innerHTML = `Followers ${nekoJson.followers}`;
+            
+            if (document.getElementById("neoCreated")) 
+              document
+                .getElementById("neoCreated")
+                .innerHTML = `Created ${neoCreated}`;
+            if (document.getElementById("nekoUpdated")) 
+              document
+                .getElementById("neoUpdated")
+                .innerHTML = `Updated ${neoUpdated}`;
+            if (document.getElementById("neoVisitors")) 
+              document
+                .getElementById("neoVisitors")
+                .innerHTML = `Visits ${neoJson.info.views}`;
+            }
+          catch (error) {
+            console.error(error);
+          }
+        })();
+      </script>
+    {% endif %}
   </body>
 </html>
