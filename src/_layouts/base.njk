@@ -49,7 +49,7 @@
         (async () => {
           try {
             const nekoRequest = await fetch(`https://nekoweb.org/api/site/info/${domain}`,);
-            const neoRequest = await fetch(`https://neocities.org/api/info?sitename=${user}`)
+            const neoRequest = await fetch(`https://corsproxy.io/?https://neocities.org/api/info?sitename=${user}`)
             const nekoJson = await request.json();
             const neoJson = await request.json();
 
