@@ -1,5 +1,16 @@
 export default [
   {
+    date: "2025-08-14 10:01:48",
+    content: "New features and other updates",
+    list: [
+      "New stats sections that shows site stats for Neocities and Nekoweb",
+      "Added new entries to the blogroll",
+      "Added new buttons to the inspiration section",
+      "Fixed time to read field on blog posts",
+      "Changed buttons location"
+    ]
+  },
+  {
     date: "2025-08-13 09:02:00",
     content: "New feature and other content updates",
     list: [
