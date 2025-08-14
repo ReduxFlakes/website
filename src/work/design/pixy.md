@@ -4,7 +4,7 @@ description: Pixel art icon pack for use in personal sites
 parent: Design
 ---
 
-<img src="/public/img/pixy_banner.png" alt="A banner showcasing all the icons included in the Pixy Icon Pack in a 2 row column each containing 7 icons." class="banner" eleventy:ignore>
+<img src="/public/pixy_banner.png" alt="A banner showcasing all the icons included in the Pixy Icon Pack in a 2 row column each containing 7 icons." class="banner" eleventy:ignore>
 
 <section class="box">
 <p><b>Icons:</b> 15</p>

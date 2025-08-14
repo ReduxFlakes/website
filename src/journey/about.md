@@ -36,7 +36,7 @@ If you want to know what I'm up to, check either my [now page](/now) or [my soci
 <div  class="auto-flex button-grid">
   {% for button in buttons.likes %}
   {% if button.url %}
-    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/img/buttons/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore ></a>
+    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/buttons/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore ></a>
   {% else %}
   <a href="{{button.url}}" class="btn" >{{button.title}}</a>
   {% endif %}

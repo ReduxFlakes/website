@@ -12,10 +12,10 @@
         {% for item in buttons.special %}
             {% if item.url -%}
                 <a href="{{item.url}}" class="btn">
-                    <img src="/public/img/buttons/{{item.img}}" alt="{{item.title}}" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore>
+                    <img src="/public/buttons/{{item.img}}" alt="{{item.title}}" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore>
                 </a>
             {%- else -%}
-                <img src="/public/img/buttons/{{item.img}}" alt="{{item.title}}" width="88" height="31" class="btn classic-btn" loading="lazy" decoding="async" eleventy:ignore>
+                <img src="/public/buttons/{{item.img}}" alt="{{item.title}}" width="88" height="31" class="btn classic-btn" loading="lazy" decoding="async" eleventy:ignore>
             {%- endif -%}
         {% endfor %}
     </div>

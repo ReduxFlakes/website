@@ -16,5 +16,5 @@ order: 2
 You can load this blogroll on your preferred feed reader by using the OPML feed below.
 
 <a href="/blogroll.opml" class="button">
-<img src="/public/img/buttons/general/80-opml.png" alt="" aria-hidden="true" style="display:inline;image-rendering:pixelated;" eleventy:ignore> OPML Feed
+<img src="/public/buttons/general/80-opml.png" alt="" aria-hidden="true" style="display:inline;image-rendering:pixelated;" eleventy:ignore> OPML Feed
 </a>
