@@ -2,7 +2,6 @@
     <h1>{{title or meta.title}}</h1>
     <p>{{description or hero.description or meta.description}}</p>
     {% if post or modified %}
-
         <div class="hero-meta">
             {% if post %}
                 <p class="secondary">{%- lucide "calendar-plus" -%}  Posted in: <time datetime="{{date}}">{{date | formatPostDate}}</time>
@@ -13,11 +12,10 @@
                 </p>
             {% endif %}
             {% if post %}
-                <p class="secondary">{%- lucide "timer" -%} Read time: {{ 'text' | timeToRead }}</p>
-
+                <p class="secondary">{%- lucide "timer" -%} Read time: {{ content | timeToRead }}</p>
             {% endif %}
         </div>
-        {% if post %}
+        {% if post and env.environment == "production" %}
             <button class="tinylytics_kudos button--transparent" data-path="{{ page.url }}"></button>
         {% endif %}
     {% endif %}
