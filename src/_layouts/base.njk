@@ -49,9 +49,10 @@
         (async () => {
           try {
             const nekoRequest = await fetch(`https://nekoweb.org/api/site/info/${domain}`,);
-            const neoRequest = await fetch(`https://corsproxy.io/?https://neocities.org/api/info?sitename=${user}`)
-            const nekoJson = await request.json();
-            const neoJson = await request.json();
+            const neoRequest = await fetch(`https://corsproxy.io/?https://neocities.org/api/info?sitename=${user}`);
+
+            const neoJson = await neoRequest.json();
+            const nekoJson = await nekoRequest.json();
 
             const neoCreated = new Date(neoJson.created_at).toLocaleDateString();
             const neoUpdated = new Date(neoJson.last_updated).toLocaleDateString();
