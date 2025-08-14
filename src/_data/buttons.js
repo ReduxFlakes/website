@@ -366,11 +366,6 @@ export default {
       url: "https://www.cozynet.org/",
     },
     {
-      title: "Daudix",
-      img: "daudix.gif",
-      url: "https://daudix.one/",
-    },
-    {
       title: "Freeplay",
       img: "free.gif",
       url: "https://freeplay.floof.company/",
@@ -503,7 +498,48 @@ export default {
       title: "lempamo",
       img: "lempamo.png",
       url: "https://lempamo.glitch.me/"
+    },
+    {
+      title: "elke.cafe",
+      img: "elkecafe.gif",
+      url: "https://elke.cafe/"
+    },
+    {
+      title: "ari melody",
+      img: "arimelody.gif",
+      url: "https://arimelody.space/"
+    },
+    {
+      title: "Lars",
+      img: "lars.png",
+      url: "https://larsfrommars.neocities.org/"
+    },
+    {
+      title: "sneexy",
+      img: "sneexy.svg",
+      url: "https://sneexy.pages.gay/"
+    },
+    {
+      title: "olivia",
+      img: "olivia.png",
+      url: "https://floof.gay/"
+    },
+    {
+      title: "pancakes",
+      img: "pancakes.png",
+      url: "https://pancakes.gay/"
+    },
+    {
+      title: "natty",
+      img: "natty.png",
+      url: "https://natty.gay/"
+    },
+    {
+      title: "N",
+      img: "n.png",
+      url: "https://n.cyrneko.eu/"
     }
+
   ],
   special: [
     {
@@ -524,5 +560,10 @@ export default {
       title: "Made with CSS Grid",
       img: "general/css-grid.gif"
     },
+    {
+      tile: "Catppuccin",
+      img: "general/catppuccin.gif",
+      url: "https://catppuccin.com/"
+    }
   ]
 };
