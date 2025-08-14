@@ -63,7 +63,7 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
   <div class="auto-flex button-grid">
     {%- for button in buttons.friends -%}
     {%- if button.img -%}
-    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/img/buttons/friends/{{button.img}}"
+    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/buttons/friends/{{button.img}}"
         alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img or button.eleventy == "ignore" -%}
         loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
     {%- else -%}
@@ -80,7 +80,7 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
   <div class="auto-flex button-grid">
     {%- for button in buttons.likes -%}
     {%- if button.img -%}
-    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/img/buttons/{{button.img}}"
+    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/buttons/{{button.img}}"
         alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img -%}
         loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
     {%- else -%}
@@ -90,16 +90,20 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
   </div>
 </details>
 
+### Fanlists
+
+<a href="https://fanlistings.melankorin.net/radiohead/" title="Against Demons, the Radiohead fanlisting" aria-label="Against Demons, the Radiohead fanlisting"><img src="/public/badges/against_demons_fanlist.png" alt="Badge for the Against Demons Radiohead fanlist"></a>
+
 ### Link me!
 
 If you like my site, you can link me by using the buttons below!
 
 <div class="auto-flex">
 
-<img src="/public/img/buttons/reduc_anim.gif" alt="Redux animated button" class="classic-btn" loading="lazy"
+<img src="/public/buttons/reduc_anim.gif" alt="Redux animated button" class="classic-btn" loading="lazy"
     decoding="async" eleventy:ignore>
 
-<img src="/public/img/buttons/reduc.webp" alt="Redux static button" class="classic-btn" loading="lazy"
+<img src="/public/buttons/reduc.webp" alt="Redux static button" class="classic-btn" loading="lazy"
     decoding="async">
 
 </div>
