@@ -58,6 +58,7 @@ The following icons are the ones found in the nav bar and respective menus.
 - Sfeers Icons Pack :: emey87 » CC Attribution-Noncommercial-No Derivate 4.0
 - Pixelophilia Icons :: omercetin » CC Attribution-Noncommercial-No Derivate 4.0
 - WooCons :: Janik Baumgartner » GPL
+- Danish Royalty Free Icons :: Jonas Rask Design » Freeware
 
 #### CSS & other code
 
