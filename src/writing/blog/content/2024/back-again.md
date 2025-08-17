@@ -2,7 +2,7 @@
 title: Back again
 description: Talking about my history with creating websites, coming back with blogging and a snippet on my future projects.
 date: 2024-03-14 14:19:45
-tags: ["website", "life"]
+tags: ["Website", "Life"]
 ---
 
 I've started creating personal websites back in 2020 when I got interest in developing software, especially around the web. I remember watching a crash course of 2 hours about the basics of HTML. At the time I started making random niche websites about Discord bots that I developed, since I was really interested in Python and creating Discord servers & bots at the time (both interests have changed drastically now 😜). I remember that if I learned how to write HTML, that would then help me share my projects to people, however I had no concept of personal sites and even more about the indie/open web like Neocities and personal blogs since I really didn't care or rather know about digital privacy which is something most people on Neocities are interested on!

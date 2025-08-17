@@ -2,7 +2,7 @@
 title: Restarting...
 description: Talking about the new site design, the loss of a friend and upcoming projects and updates.
 date: 2024-12-30 12:03:00
-tags: ["website", "life"]
+tags: ["Website", "Life"]
 ---
 
 I finally got a drop of motivation to restart my personal website once again for the... I don't even know how many redesigns I made so forget it. Anyways, welcome to my new website, inspired by Swiss and minimalism design that I fell in love earlier this year.

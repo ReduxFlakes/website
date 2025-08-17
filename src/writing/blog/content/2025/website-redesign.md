@@ -4,7 +4,7 @@ date: 2025-04-15 02:09:58
 modified: 2025-05-10 11:19:00
 description: Talking about the new website redesign
 toc: false
-tags: ["website","life"]
+tags: ["Website", "Life"]
 ---
 
 I've once again redesigned the website, why? I don't know, but it does look cooler now I guess? I hope so... Anyway welcome to the new site, new features and hopefully new content soon!

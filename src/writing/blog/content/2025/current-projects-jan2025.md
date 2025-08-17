@@ -3,7 +3,7 @@ title: What I've been doing this past month
 date: 2025-02-02 12:21:00
 modified: 2025-04-12T16:14:00.00Z
 description: An update on what I've been doing this last month and some upcoming projects and updates.
-tags: ["projects"]
+tags: ["Projects"]
 ---
 
 Welcome back again! I've been a bit lazy on updating this website, unfortunately there's been a lot of things happening, from working on other projects to school work (tests and presentations) and I <i>haven't had the time to work on this website</i> (it's my fault because I'm addicted to YouTube 😔).

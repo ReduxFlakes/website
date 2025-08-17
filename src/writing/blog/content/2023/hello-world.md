@@ -2,7 +2,7 @@
 title: "Hello World!"
 description: "A small introduction to my blog!"
 date: "2023-01-10 23:19:45"
-tags: ["website"]
+tags: ["Website"]
 toc: false
 ---
 

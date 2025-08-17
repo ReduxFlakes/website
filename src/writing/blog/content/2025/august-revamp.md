@@ -2,7 +2,7 @@
 title: August Revamp
 date: 2025-08-10 01:49:00
 description: Going through the new design & layout and other projects updates
-tags: ["website", "projects"]
+tags: ["Website", "Projects"]
 ---
 
 ## Another redesign!?
