@@ -553,6 +553,10 @@ export default {
       url: "https://brainmade.org/",
     },
     {
+      title: "Trans rights now",
+      img: "general/transnow.gif"
+    },
+    {
       title: "Bring Back the Headphone Jack",
       img: "general/bring-back-the-headphone-jack.gif"
     },
