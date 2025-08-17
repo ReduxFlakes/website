@@ -27,8 +27,8 @@
     {% include "footer.njk" %}
     {% block scripts %}{% endblock scripts %}
     <script>
-      if (document.querySelector('details')) {
-        const details = document.querySelectorAll('details');
+      if (document.querySelector('.nav-details')) {
+        const details = document.querySelectorAll('.nav-details');
         details.forEach((targetDetail) => {
           targetDetail.addEventListener("click", () => {
             details.forEach((detail) => {
@@ -54,16 +54,10 @@
             const neoJson = await neoRequest.json();
             const nekoJson = await nekoRequest.json();
 
-            const neoCreated = new Date(neoJson.created_at).toLocaleDateString();
-            const neoUpdated = new Date(neoJson.last_updated).toLocaleDateString();
+            const neoCreated = new Date(neoJson.info.created_at).toLocaleDateString();
 
             const nekoCreated = new Date(nekoJson.created_at).toLocaleDateString();
-            const nekoUpdated = new Date(nekoJson.updated_at).toLocaleDateString();
 
-            if (document.getElementById("nekoCreated")) 
-              document
-                .getElementById("nekoCreated")
-                .innerHTML = `Created ${nekoCreated}`;
             if (document.getElementById("nekoUpdated")) 
               document
                 .getElementById("nekoUpdated")
@@ -77,11 +71,7 @@
                 .getElementById("nekoFollowers")
                 .innerHTML = `Followers ${nekoJson.followers}`;
             
-            if (document.getElementById("neoCreated")) 
-              document
-                .getElementById("neoCreated")
-                .innerHTML = `Created ${neoCreated}`;
-            if (document.getElementById("nekoUpdated")) 
+            if (document.getElementById("neoUpdated")) 
               document
                 .getElementById("neoUpdated")
                 .innerHTML = `Updated ${neoUpdated}`;
