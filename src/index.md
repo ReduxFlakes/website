@@ -19,9 +19,9 @@ post.url, subheading: true }) }}
 
 ## Popular Projects
 
-{% for item in projects.active | limit(1) %}
-
-  <section class="card stack" style="--spacer:0.5em;margin-top:1rem;">
+<div class="auto-grid">
+{%- for item in projects.active | limit(1) -%}
+  <section class="card stack" style="--spacer:0.5em;">
     <h3>{{ item.title }}</h3>
 {%- if item.tags -%}
     <div class="flex-h">{%- for tag in item.tags -%}<span class="label">{{tag}}</span>{%- endfor -%}</div>
@@ -33,7 +33,22 @@ post.url, subheading: true }) }}
           <a href="{{action.url}}" class="button">{{action.label}}</a>
         {% endfor %}
   </section>
-{% endfor %}
+{%- endfor -%}
+{%- for item in projects.involved | limit(1) -%}
+  <section class="card stack" style="--spacer:0.5em;">
+    <h3>{{ item.title }}</h3>
+{%- if item.tags -%}
+    <div class="flex-h">{%- for tag in item.tags -%}<span class="label">{{tag}}</span>{%- endfor -%}</div>
+    {%- endif -%}
+      <p>
+          {{item.description }}
+      </p>
+        {% for action in item.actions %}
+          <a href="{{action.url}}" class="button">{{action.label}}</a>
+        {% endfor %}
+  </section>
+{%- endfor -%}
+</div>
 
 ---
 
@@ -41,7 +56,7 @@ post.url, subheading: true }) }}
 
 ### Socials
 
-<div class="auto-grid button-grid" style="gap:1rem;--size:48px;">
+<div class="auto-grid button-grid" style="gap:1rem;--size:72px;">
   {%- for item in meta.socials -%}
   <a href="{{item.url}}" style="display:flex;flex-direction:column;align-items:center;" class="btn"><img
       src="/public/icons/pixy/{{item.name | slugify}}.png" alt="" aria-hidden="true" class="classic-btn" loading="lazy"
