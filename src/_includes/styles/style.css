@@ -4,6 +4,7 @@ body {
   max-width: var(--viewport);
   outline: 1px solid var(--stroke);
   margin-inline: auto;
+  background: var(--background);
 }
 
 
@@ -43,14 +44,13 @@ body {
   flex: 1 1 auto;
 }
 
-.navbar details>summary {
-  all: unset;
+.navbar details.nav-details summary {
   user-select: none;
   display: flex;
   justify-content: center;
   gap: 0.5em;
   /* for touch */
-  height: 28px;
+  height: 48px;
   align-items: center;
   padding: 0.5rem var(--breathing-space);
   flex-shrink: 0;
@@ -60,6 +60,11 @@ body {
   flex-basis: 100%;
   transition: 125ms all ease-out;
   border-bottom: 1px solid var(--stroke);
+}
+
+.navbar details summary[aria-current] {
+  color: var(--primary);
+  background: hsl(240, 21%, 20%);
 }
 
 .navbar:has(details[open]) details:not([open])>summary:not(:hover) {
@@ -129,6 +134,14 @@ body {
   transition: background 125ms ease-in-out;
 }
 
+.navbar .navbar-list li a[aria-current] {
+  background: hsl(240, 22%, 12%);
+}
+
+.navbar .navbar-list li a[aria-current] p {
+  color: var(--foreground);
+}
+
 .navbar .navbar-list :first-child a {
   border-top: 1px solid var(--stroke);
   border-top-left-radius: calc(var(--radius) / 2);
@@ -177,9 +190,6 @@ body {
   font-size: 0.95rem;
   color: var(--foreground-subtle);
 }
-
-
-
 
 /* end:menu */
 
@@ -348,20 +358,35 @@ nav.breadcrumb li+li::before {
 /* components */
 
 .card {
+  outline: 1px solid transparent;
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
   padding: var(--breathing-space);
+  transition: 150ms ease-in-out all;
+}
+
+.card:hover,
+.button:hover {
+  outline: 1px solid var(--stroke);
+  outline-offset: -0.25rem;
 }
 
 .label {
   display: inline-block;
-  padding: 0.5em 0.75rem;
+  padding: 0.5em 0.9em;
   line-height: 1;
   background: var(--container-low);
   color: var(--foreground);
-  border-radius: var(--radius);
+  text-decoration: none;
+  border-radius: 24px;
   font-size: 0.9rem;
   font-weight: normal;
+  transition: var(--transition-bezier);
+}
+
+a.label:hover {
+  outline: 1px solid var(--stroke);
+  background: var(--container);
 }
 
 .notice {
@@ -403,6 +428,7 @@ nav.breadcrumb li+li::before {
 .auto-grid {
   --_minsize: var(--size, 100px);
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(var(--_minsize), 1fr));
 }
 
