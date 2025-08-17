@@ -19,7 +19,9 @@ body {
 
 .toolbar a {
   align-self: stretch;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
   padding: 0.4rem var(--breathing-space);
   font-size: 0.9em;
   text-decoration: none;
