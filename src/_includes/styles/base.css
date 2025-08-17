@@ -10,12 +10,9 @@ html {
   scroll-behavior: smooth;
   text-size-adjust: none;
   color-scheme: dark;
-}
-
-html {
   font: 1.05rem / 1.5 var(--font);
   letter-spacing: -.005em;
-  background: var(--background);
+  background: var(--container-low);
   color: var(--foreground);
 
 }
@@ -77,7 +74,6 @@ summary {
 }
 
 button,
-details summary,
 .button {
   display: flex;
   align-items: center;
@@ -95,7 +91,6 @@ details summary,
 }
 
 button:hover,
-details summary:hover,
 .button:hover {
   background: var(--container);
 }
@@ -107,25 +102,33 @@ button[disabled],
   opacity: 0.75;
 }
 
-summary {
-  cursor: default;
+
+details:not(.nav-details) {
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 0.5em 0.5em 0;
+  background: var(--container-low);
 }
 
-details summary {
+details:not(.nav-details)>summary {
   list-style-type: none;
   cursor: pointer;
-  font-size: 0.95rem;
+  margin: -0.5em -0.5em 0;
+  padding: 0.4em 0.6em;
+  transition: var(--transition-bezier);
 }
 
-details[open] summary {
-  margin-bottom: 1rem;
-  border-color: var(--stroke);
-  color: var(--container);
-  background: var(--primary);
+details:not(.nav-details)>summary:hover {
+  background: var(--container);
 }
 
-details[open] summary:hover:not(:focus) {
-  opacity: 0.85;
+details:not(.nav-details)[open]:not(.nav-details) {
+  padding: 0.5em;
+}
+
+details:not(.nav-details)[open]>summary {
+  border-bottom: 1px solid var(--stroke);
+  margin-bottom: 0.5em;
 }
 
 ::selection,
