@@ -55,6 +55,12 @@ export default {
         "Modern launcher for the V-Rally 2 game. Some of the features include: patching for modern systems, no CD crack, download manager, and easier setup of settings.",
       tags: ["launcher", "utility", "modding", "C#", "WPF"],
     },
+    {
+      title: "Celer for Linux",
+      description:
+        "The Celer Windows toolbox but ported to Linux",
+      tags: ["utility", "privacy", "linux", "celer", "surfscape"],
+    },
   ],
   inactive: [
     {
