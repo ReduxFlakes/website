@@ -11,6 +11,7 @@ paginationPrevText: 'Newer posts'
 paginationNextText: 'Older posts'
 permalink: "/writing/blog{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/"
 eleventyComputed:
+  content_css: false
   key: "{% if pagination.pageNumber > 0 %} Page {{ pagination.pageNumber }}{% else %}Blog{% endif %}"
   parent: "{% if pagination.pageNumber > 0 %}Blog{% else %}Writing{% endif %}"
   aside_enabled: "{% if pagination.pageNumber == 0 %}true{% else %}false{% endif %}"
@@ -24,7 +25,8 @@ eleventyComputed:
       {%- set tagCloud = collections.posts | tagCloud -%}
       {%- for tag, count in tagCloud -%}
         <a class="label" href="tag/{{ tag | slugify }}">{{ tag }}
-          {{ count }}</a>
+          <small>{{ count }}</small>
+        </a>
       {%- endfor -%}
     </nav>
   </section>

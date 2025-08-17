@@ -35,6 +35,14 @@
     {% css -%}
     {%- include "styles/style.css" -%}
     {%- endcss -%}
+    {% css "content" -%}
+    {%- include "styles/content.css" -%}
+    {%- endcss -%}
+    {% if content_css != false %}
+        <style>
+            {% getBundle "css", "content" %}
+        </style>
+    {% endif %}
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
     {%- if env.environment == "production" -%}
         <script src="https://tinylytics.app/embed/dcJBJt8md3MZEExK1rry.js?kudos=❤️" defer></script>

@@ -1,0 +1,4 @@
+h2[id] {
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--stroke);
+}

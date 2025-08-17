@@ -2,6 +2,7 @@
 key: Home
 description: "Software developer and designer from Portugal"
 layout: home.njk
+content_css: false
 ---
 
 ## Hi!
