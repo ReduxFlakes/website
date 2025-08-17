@@ -17,16 +17,15 @@ eleventyComputed:
 ---
 
 {% if pagination.pageNumber == 0 %}
-
   {% html "aside" %}
   <section class="aside-block">
     <h2>Tags</h2>
-
-    <nav>
-      {% set tagCloud = collections.posts | tagCloud %}
-      {% for tag, count in tagCloud %}
-        <a href="tag/{{ tag | slugify }}">{{ tag }}</a>
-      {% endfor %}
+    <nav class="auto-flex">
+      {%- set tagCloud = collections.posts | tagCloud -%}
+      {%- for tag, count in tagCloud -%}
+        <a class="label" href="tag/{{ tag | slugify }}">{{ tag }}
+          {{ count }}</a>
+      {%- endfor -%}
     </nav>
   </section>
 
