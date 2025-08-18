@@ -287,6 +287,11 @@ export default {
       url: "https://tapeykatt.neocities.org/",
     },
     {
+      title: "Avedo's Line n Sinker",
+      img: "avedo.png",
+      url: "https://avedo-storyhub.neocities.org/"
+    },
+    {
       title: "Miko",
       url: "https://miko.nekoweb.org/"
     },
