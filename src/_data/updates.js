@@ -1,5 +1,21 @@
 export default [
   {
+    date: "2025-08-18 21:20:48",
+    content: "New content, fixes, and tweaks",
+    list: [
+      'Added hardware section to <a href="/uses">/uses</a>',
+      "Improved blog tags",
+      "Improved the navbar, now showing the aria-current state for both categories and links",
+      "Small CSS and JS tweaks",
+      "Fixed toolbar on old browsers",
+      "Fixed order on navigation",
+      "Removed unused stuff",
+      "Fixed grammar",
+      "Updated buttons",
+      "Updated projects",
+    ]
+  },
+  {
     date: "2025-08-14 10:01:48",
     content: "New features and other updates",
     list: [
