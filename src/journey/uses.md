@@ -1,24 +1,36 @@
 ---
 title: Things I Use
-description: Interested on what tools I use? You've come to the right place!
+description: The hardware and software I use on a daily basis
 icon: pixelophilia-app
-modified: 2025-08-10T01:04:00.00Z
-
+modified: 2025-08-17T18:53:00.00Z
 parent: Origins
 order: 2
 ---
 
-## Desktop (Windows 11)
+## Hardware
 
-### Software (most to least used)
+### Main Computer
 
-- Brave (thinking of moving to Firefox once again)
-- Visual Studio and VS Code - Yes Visual Studio as in the IDE, I've tried building desktop apps with web technologies using Tauri and SvelteKit and even though I love it I just end up messing around with the design a little to much and since I use Windows anyway I decided to go with WPF and WinUI 3 through .NET and C#.
+- **Lenovo IdeaPad Slim 5i 9gen** (14", Intel Core Ultra 5 125H, 32GB, 1TB) - Windows 11 Pro debloated
 
-- [Windows Terminal](https://github.com/microsoft/terminal) - Self explanatory.
+<img src="/public/img/win11.png" alt="My Windows 11 Pro desktop with a blue sky showing the sun and some clouds as background" eleventy:ignore  loading="lazy" decoding="async">
 
-- [Greenshot](https://getgreenshot.org) - Screenshot utility because Windows one is shit.
+### Main Phone
 
-- [XnViewMP](https://www.xnview.com/en/xnviewmp/) - Photo viewer because Windows one is shit.
+- **Xiaomi 11 Lite 5G NE** (6,1", Snapdragon 778G, 8GB, 128GB) - Lineage OS 22.2 with MindTheGapps
 
-- Discord with [Vencord](https://vencord.dev) and [OpenAsar](https://openasar.dev).
+## Software
+
+- Web Browser: **Brave**, Firefox and Pale Moon for testing sites.
+
+- Code Editor: **Visual Studio Code** (I have disabled telemetry).
+
+- IDE: Depends on what I'm currently working on but at the moment it's **Visual Studio Community 2022**.
+
+- Other dev tools: **Git**, **Windows Terminal**, **Node.js**, **GNU Privacy Guard**, **Gpg4win**, **Bun**, **pnpm**, **GitHub Desktop**.
+
+- Music & Audio: **Audacity**, **YouTube Music**, **foobar2000**, **FL Studio**, [**Peace**](https://sourceforge.net/projects/peace-equalizer-apo-extension/).
+
+- Image & Video: **Figma**, **Greenshot**, **Paint.NET**, **Kdenlive**, **OBS Studio**.
+
+- **Discord** with [Vencord](https://vencord.dev) and [OpenAsar](https://openasar.dev).
