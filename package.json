@@ -8,14 +8,14 @@
     "url": "https://github.com/reduxflakes/website.git"
   },
   "scripts": {
-    "start": "eleventy --serve --watch",
+    "start": "pnpm dlx @11ty/eleventy --serve --watch",
     "start:nekoweb": "cross-env HOST_TYPE=nekoweb eleventy --serve",
     "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
     "build": "eleventy",
     "build:prod": "cross-env BUILD_TYPE=production eleventy && npm run html-minify",
     "build:neo": "cross-env BUILD_TYPE=production HOST_TYPE=neocities eleventy",
     "build:neko": "cross-env BUILD_TYPE=production HOST_TYPE=nekoweb eleventy",
-    "debug": "cross-env DEBUG=Eleventy* eleventy --serve"
+    "debug": "cross-env DEBUG=Eleventy* eleventy --serve --watch"
   },
   "keywords": [],
   "author": "reduxflakes",

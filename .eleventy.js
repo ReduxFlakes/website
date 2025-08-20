@@ -113,8 +113,15 @@ export default async function (eleventyConfig) {
   });
 
   return {
-    passthroughFileCopy: true,
+    templateFormats: [
+      "md",
+      "njk",
+      "html",
+      "liquid",
+      "11ty.js",
+    ],
     markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
     dir: {
       input: "src",
       includes: "_includes",
