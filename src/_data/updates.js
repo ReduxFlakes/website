@@ -1,5 +1,12 @@
 export default [
   {
+    date: "2025-08-22 16:13:48",
+    content: "Updates on the support page",
+    list: [
+      'Added new methods on the <a href="/support">support page</a> that you can use to support me!'
+    ]
+  },
+  {
     date: "2025-08-18 21:20:48",
     content: "New content, fixes, and tweaks",
     list: [
