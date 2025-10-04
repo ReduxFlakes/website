@@ -14,7 +14,6 @@ html {
   letter-spacing: -.005em;
   background: var(--container-low);
   color: var(--foreground);
-
 }
 
 dl dd:not(:last-child) {
@@ -80,7 +79,7 @@ button,
   gap: 0.5em;
   line-height: 1;
   border: 1px solid var(--stroke);
-  background: #181825;
+  background: var(--container-low);
   padding: 0.6rem 0.75rem;
   line-height: 1;
   width: max-content;
@@ -135,7 +134,7 @@ details:not(.nav-details)[open]>summary {
 h1:target,
 h2:target,
 h3:target {
-  background: hsla(228, 17%, 64%, 0.3);
+  background: hsla(353, 17%, 64%, 0.3);
 
 }
 
