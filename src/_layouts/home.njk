@@ -43,6 +43,7 @@
                     name.innerText = currentTrack.song;
                     artist.innerText = currentTrack.artist;
                     album.innerText = currentTrack.album;
+                    name.href = currentTrack.songUrl;
 
                     if (currentTrack.nowPlaying) {
                         playTitle.innerText = 'Now Playing';
