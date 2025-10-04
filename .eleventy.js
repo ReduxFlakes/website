@@ -95,7 +95,18 @@ export default async function (eleventyConfig) {
       ...collection.getFilteredByGlob("src/writing/blog/content/**/*.md"),
     ].reverse();
   });
-
+  ~
+    /* shortcode */
+    eleventyConfig.addShortcode("card", function (item) {
+      const tags = item.tags ? item.tags.map(tag => `<span class="label">${tag}</span>`).join('') : '';
+      const actions = item.actions ? item.actions.map(action => `<a href="${action.url}" class="button">${action.label}</a>`).join('') : '';
+      return `<section class="card stack" style="--spacer:0.5em;">
+        <h3>${item.title}</h3>
+        ${tags ? `<div class="flex-h">${tags}</div>` : ''}
+        <p>${item.description}</p>
+        ${actions}
+      </section>`;
+    });
   /* bundles & html and css optimization */
   eleventyConfig.addBundle("html")
 
