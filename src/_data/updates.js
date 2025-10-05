@@ -1,5 +1,15 @@
 export default [
   {
+    date: "2025-10-05 18:02:48",
+    content: "Long time no see, here's some updates",
+    list: [
+      "Added my music player to the site, missing some features but it works fine for now",
+      "Added a theme switcher (more themes coming soon, contact me if you want to contribute themes)!",
+      "Small CSS tweaks",
+      "Removed research section (I didn't have a use for it)",
+    ]
+  },
+  {
     date: "2025-08-22 16:13:48",
     content: "Updates on the support page",
     list: [
