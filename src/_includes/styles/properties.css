@@ -1,17 +1,4 @@
 /* themes */
-
-.forest {
-  --background: hsl(105, 21%, 15%);
-  --container: hsl(105, 16%, 23%);
-  --container-low: hsl(105, 23%, 9%);
-  --foreground: hsl(105, 64%, 88%);
-  --primary: hsl(105, 92%, 80%);
-  --foreground-subtle: hsl(105, 13%, 61%);
-  --stroke: hsl(105, 13%, 31%);
-  --warning: #F9E2AF;
-  color-scheme: dark;
-}
-
 :root {
   --font: system-ui, sans-serif;
   --background: hsl(353, 21%, 15%);
@@ -26,5 +13,18 @@
   --breathing-space: 1rem;
   --radius: 0.3rem;
   --viewport: 980px;
+  color-scheme: dark;
+}
+
+.forest {
+  --background: hsl(105, 21%, 15%);
+  --container: hsl(105, 16%, 23%);
+  --container-low: hsl(105, 23%, 9%);
+  --foreground: hsl(105, 64%, 88%);
+  --primary: hsl(105, 92%, 80%);
+  --foreground-subtle: hsl(105, 13%, 61%);
+  --stroke: hsl(105, 13%, 31%);
+  --warning: #F9E2AF;
+
   color-scheme: dark;
 }

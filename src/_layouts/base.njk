@@ -24,6 +24,19 @@
         </aside>
       {% endif %}
     </main>
+    <div class="player-container" id="player">
+      <div class="pc-meta">
+        <img id="image-test" width="72px" height="72px">
+        <p>
+          <span class="pc__title" id="title">Click play</span><br>
+          <span class="pc__artist" id="playerArtist">No artist</span></p>
+      </div>
+      <div class="pc-btns">
+        <button class="prev" id="previous" disabled>{%- lucide "skip-back" -%}</button>
+        <button class="play" id="play">{%- lucide "play" -%}</button>
+        <button class="next" id="next" disabled>{%- lucide "skip-forward" -%}</button>
+      </div>
+    </div>
     {% include "footer.njk" %}
     {% block scripts %}{% endblock scripts %}
     <script>
@@ -86,5 +99,178 @@
         })();
       </script>
     {% endif %}
+    <script>
+      let musicPlaylist = [
+        {
+          title: "Victim Of Changes",
+          artist: "Judas Priest",
+          cover: "https://utfs.io/f/wvk9F1dvICYmA48IYEwshX3K9lo7nFkaPIE5ON4L8cp0rWDx",
+          source: "https://utfs.io/f/wvk9F1dvICYmea2khZOstMohc2VCX1ZFK6ayrN59I0WOpeET"
+        }, {
+          title: "Solitude",
+          artist: "Black Sabbath",
+          cover: "https://utfs.io/f/wvk9F1dvICYmORFbdtK54CoHFLIjtaeDUzYy3ikcKPG8mrwE",
+          source: "https://utfs.io/f/wvk9F1dvICYmwHUWESMdvICYm8sVEqziGNPjOFk6dhHSLJMt"
+        }, {
+          title: "Lipstick Traces",
+          artist: "UFO",
+          cover: "https://utfs.io/f/wvk9F1dvICYmdU08QbqXrUD8u47exiSBgyWLt3dVYbapNRcA",
+          source: "https://utfs.io/f/wvk9F1dvICYmAT86ThwshX3K9lo7nFkaPIE5ON4L8cp0rWDx"
+        }, {
+          title: "Caught Somewhere In Time",
+          artist: "Iron Maiden",
+          cover: "https://utfs.io/f/wvk9F1dvICYmUywqXQRMrF1bz5cKReQCtWXwsS7B2HG3PYuL",
+          source: "https://utfs.io/f/wvk9F1dvICYmtfBBbHvK3Hp5BeRIajyMPsgvSmzbDuXFNCYw"
+        }, {
+          title: "Savage",
+          artist: "Judas Priest",
+          cover: "https://utfs.io/f/wvk9F1dvICYmpSAMK19aLuTtzpshUWkdoFIlJMO3n5e180KG",
+          source: "https://utfs.io/f/wvk9F1dvICYmAk8Mm9wshX3K9lo7nFkaPIE5ON4L8cp0rWDx"
+        }, {
+          title: "Children of The Earth",
+          artist: "Praying Mantis",
+          cover: "https://utfs.io/f/wvk9F1dvICYmDe3at1kuGkMYngmbwC81HUILtevsBOy4XpTf",
+          source: "https://utfs.io/f/wvk9F1dvICYmaYQ2WCf5vj8qn3TUQysDJcuhWmIbGkKi4ex7"
+        }
+
+      ]
+
+      function changeStateMC(elem) {
+        if (elem.checked) {
+          localStorage.setItem("disableMusicPlayer", "false");
+          location.reload();
+        } else {
+          localStorage.setItem("disableMusicPlayer", "true");
+          location.reload();
+        }
+      }
+
+      let title = document.getElementById("title");
+      let artist = document.getElementById("playerArtist");
+      let player = document.getElementById("player");
+      let image = document.getElementById("image-test");
+
+      let btnPlay = document.getElementById("play");
+      let btnPrev = document.getElementById("previous");
+      let btnNext = document.getElementById("next");
+      let btnIcon = document.getElementById("btnIcon");
+
+      let toggleMusicPlayer = document.getElementById("toggle-music-player");
+
+      let audioEngine = new Audio();
+      let isPlaying = false;
+      let currentSong = 0;
+
+      btnPlay.addEventListener("click", playerEngine);
+      btnPrev.addEventListener("click", playerPrev);
+      btnNext.addEventListener("click", playerNext);
+
+      addEventListener("load", (event) => {
+        if (localStorage.getItem("disableMusicPlayer") === "false" || localStorage.getItem("disableMusicPlayer") === null) {
+          player.style.display = "flex";
+          toggleMusicPlayer.checked = true;
+        } else {
+          player.style.display = "none";
+          toggleMusicPlayer.checked = false;
+        }
+        if (localStorage.getItem("isPlaying") == "true" && localStorage.getItem("musicIndex") && localStorage.getItem("musicPostion")) {
+          currentSong = parseInt(localStorage.getItem("musicIndex"));
+          audioEngine.currentTime = parseFloat(localStorage.getItem("musicPostion"));
+        }
+      })
+
+      audioEngine.addEventListener('ended', function () {
+        if (currentSong < musicPlaylist.length - 1) {
+          currentSong++;
+          loadMusic(currentSong);
+          playMusic();
+        } else {
+          currentSong = 0;
+          loadMusic(currentSong);
+          playMusic();
+        }
+      });
+
+      addEventListener("beforeunload", (event) => {
+        if (isPlaying) {
+          localStorage.setItem("isPlaying", isPlaying);
+          localStorage.setItem("musicIndex", currentSong);
+          localStorage.setItem("musicPostion", audioEngine.currentTime);
+        }
+      })
+
+      function loadMusic(id) {
+        title.innerHTML = musicPlaylist[id].title;
+        artist.innerHTML = musicPlaylist[id].artist;
+        image.src = musicPlaylist[id].cover;
+        audioEngine.src = musicPlaylist[id].source;
+      }
+
+      function playerEngine() {
+        btnPrev.disabled = false;
+        btnNext.disabled = false;
+        if (!isPlaying) {
+          if (audioEngine.src === musicPlaylist[currentSong].source && audioEngine.paused) {
+            playMusic();
+          } else {
+            loadMusic(currentSong);
+            playMusic();
+          }
+        } else if (localStorage.getItem("isPlaying") == "true" && audioEngine.paused) {
+          loadMusic(localStorage.getItem("musicIndex"));
+          audioEngine.currentTime = parseFloat(localStorage.getItem("musicPostion"));
+          playMusic();
+        } else {
+          pauseMusic();
+        }
+      }
+
+      function pauseMusic() {
+        audioEngine.pause();
+        isPlaying = false;
+        localStorage.setItem("isPlaying", isPlaying);
+        btnPlay.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>';
+      }
+
+      function playMusic() {
+        audioEngine.play();
+        isPlaying = true;
+        localStorage.setItem("isPlaying", isPlaying);
+        btnPlay.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pause-icon lucide-pause"><rect x="14" y="3" width="5" height="18" rx="1"/><rect x="5" y="3" width="5" height="18" rx="1"/></svg>';
+      }
+
+      function playerPrev() {
+        if (currentSong > 0) {
+          currentSong = currentSong - 1;
+          loadMusic(currentSong);
+          playMusic();
+          /* restart the song if it's the first one in the playlist */
+        } else if (currentSong = musicPlaylist.length) {
+          currentSong = 0;
+          loadMusic(currentSong);
+          playMusic();
+        }
+      }
+
+      function playerNext() {
+        if (currentSong < musicPlaylist.length) {
+          currentSong = currentSong + 1;
+          loadMusic(currentSong);
+          playMusic();
+        } else if (currentSong = musicPlaylist.length) {
+          currentSong = 0;
+          loadMusic(currentSong);
+          playMusic();
+        }
+      }
+    </script>
+    <script>
+      document
+        .querySelector('#theme-switcher')
+        .value = localStorage
+        .getItem("theme")
+          ? localStorage.getItem("theme")
+          : "default";
+    </script>
   </body>
 </html>

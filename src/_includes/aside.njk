@@ -48,10 +48,9 @@
 
 <section class="aside-block">
     <h2>To-do</h2>
-    <progress id="file" max="100" value="60"></progress>
-    <small>Current progress: 60%</small>
+    <progress id="file" max="100" value="72"></progress>
+    <small>Current progress: 72%</small>
     <ul>
-        <li>Theme switcher</li>
         <li>Gaming page</li>
         <li>Better projects page</li>
         <li>Gallery for showcasing mockups</li>
@@ -88,4 +87,21 @@
             {%- endfor -%}
         </ul>
     </nav>
+</section>
+
+<section class="aside-block">
+    <h2>Site Preferences</h2>
+    <div class="auto-flex">
+        <input type="checkbox" class="toggle" id="toggle-music-player"  onchange="changeStateMC(this)">
+        <label for="toggle-music-player">Toggle Music Player</label>
+    </div>
+    <small>This will reload the page</small>
+    <div class="auto-flex">
+        <label for="theme-switcher">Change Theme</label>
+
+        <select name="themes" id="theme-switcher" onchange="setTheme(this.value)">
+            <option value="default" selected="selected">Wine (default)</option>
+            <option value="forest">Forest</option>
+        </select>
+    </div>
 </section>

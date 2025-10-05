@@ -1,0 +1,105 @@
+.player-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    padding: 1rem;
+}
+
+@media (min-width: 770px) {
+    .player-container {
+        box-shadow: 0px 0px 4px 0px black;
+        min-width: 18rem;
+        transition: 150ms all ease-in-out;
+        height: 6.5rem;
+        position: fixed;
+        margin: 0 1rem 1rem 0;
+        right: 0;
+        bottom: 0;
+        scale: 0.75;
+        transform: translate(3rem, 1rem);
+        border: 1px solid var(--stroke);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius);
+        background: rgba(34, 20, 28, 0.25);
+    }
+
+    .player-container:hover {
+        transform: none;
+        height: 9.5rem;
+        scale: 1;
+    }
+
+    .player-container:not(:hover) .pc-btns {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.pc-meta img {
+    position: relative;
+    z-index: 10;
+}
+
+.player-container img:not([src]) {
+    visibility: hidden;
+}
+
+.pc-meta::before {
+    content: "?";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 1rem;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    background: rgb(67, 11, 11);
+}
+
+.pc-meta {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.pc__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.pc__artist {
+    opacity: 0.8;
+}
+
+.pc-btns {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    transition: 150ms all ease-in-out;
+}
+
+
+.player-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    width: 100%;
+    background: hsla(321, 25%, 05%, 0.4);
+    border: 1px solid var(--stroke);
+    cursor: pointer;
+}
+
+.player-container button:hover {
+    background: var(--container);
+}
+
+.player-container button[disabled] {
+    cursor: default;
+    opacity: 0.5;
+}

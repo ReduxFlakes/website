@@ -47,4 +47,22 @@
     {%- if env.environment == "production" -%}
         <script src="https://tinylytics.app/embed/dcJBJt8md3MZEExK1rry.js?kudos=❤️" defer></script>
     {%- endif -%}
+    <script>
+
+        if (localStorage.getItem("theme")) {
+            document.documentElement.className = localStorage.getItem("theme");
+        } else {
+            setTheme("default");
+        }
+
+        function setTheme(themeName) {
+            localStorage.setItem("theme", themeName);
+            if (themeName === "default") {
+                document.documentElement.className = null;
+            } else {
+                document.documentElement.className = themeName;
+            }
+
+        }
+    </script>
 </head>
