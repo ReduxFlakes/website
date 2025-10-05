@@ -2,7 +2,7 @@
 title: Now
 description: Stuff I've been doing recently
 icon: farm-clock
-modified: 2025-08-10T00:58:00.00Z
+modified: 2025-10-05T22:35:00.00Z
 parent: Origins
 order: 1
 ---
@@ -10,20 +10,19 @@ order: 1
 ## Checkup
 
 <dl>
-<dt>This website</dt>
-  <dd>Recently did a big revamp and I'm currently trying to push new content.</dd>
-  <dt>SurfScape</dt>
-  <dd>Recently bought a domain (<a href="https://surfscape.eu">surfscape.eu</a>) so now SurfScape has a real platform to grow.</dd>
-  <dt>Celer</dt>
-  <dd>Currently porting the app to WinUI 3 with an improved base and a more modular approach</dd>
+<dt>YouTube Channel</dt>
+  <dd>I've came back on doing content for my YouTube channel, most recently uploaded my [second OSM episode](https://youtu.be/DTzlX3_R-WY).</dd>
 </dl>
 
 ## What I've been playing
 
-1. GTA V - recently finished the game, loved it!
-2. Call of Duty Black Ops 2 Multiplayer
-3. GTA IV - probably my favorite GTA game
-4. Infinitode 2 - I love the music
+1. The Finals
+2. Counter Strike 2 (mostly competitive and deathmatch)
+3. Infinitode 2 - The chiptune selection is amazing
+4. Genshin Impact - Came back to the game after my friends _forced_ me to play it
+5. Mindustry - When I don't have any motivation to do anything
+6. GTA IV - probably my favorite GTA game
+7. GTA V
 
 ## What I've been watching
 
