@@ -23,10 +23,6 @@ export default {
       url: "https://youtube.com/@reduxflakes",
     },
     {
-      name: "Instagram",
-      url: "https://instagram.com/@reduxflakes",
-    },
-    {
       name: "Mastodon",
       url: "https://fosstodon.org/@redux",
     },
