@@ -1,4 +1,5 @@
 @import url(properties.css);
+@import url(player.css);
 
 body {
   max-width: var(--viewport);
@@ -7,6 +8,43 @@ body {
   background: var(--background);
 }
 
+input[type="checkbox"] {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--container-low);
+  margin: 0;
+  font: inherit;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--stroke);
+  border-radius: 0;
+}
+
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background: var(--primary);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+select {
+  border: 1px solid var(--stroke);
+  border-radius: 0;
+  padding: 0.25rem;
+  background: var(--container-low);
+  color: var(--foreground);
+  font: inherit;
+  font-size: 0.8em;
+}
 
 /* start:toolbar */
 
@@ -66,7 +104,7 @@ body {
 
 .navbar details summary[aria-current] {
   color: var(--primary);
-  background: hsl(240, 21%, 20%);
+  background: var(--container);
 }
 
 .navbar:has(details[open]) details:not([open])>summary:not(:hover) {
@@ -88,7 +126,7 @@ body {
 
 .navbar details summary:hover {
   outline: 1px dashed var(--stroke);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.35);
   opacity: 1;
 }
 
@@ -137,7 +175,7 @@ body {
 }
 
 .navbar .navbar-list li a[aria-current] {
-  background: hsl(240, 22%, 12%);
+  background: var(--background);
 }
 
 .navbar .navbar-list li a[aria-current] p {
@@ -271,9 +309,6 @@ nav.breadcrumb li+li::before {
 }
 
 
-
-
-
 /* desktop only */
 @media (min-width: 48rem) {
   main.has-aside {
@@ -354,7 +389,7 @@ nav.breadcrumb li+li::before {
 .lastfm-widget h2 span#loadingStatus {
   width: 0.8em;
   height: 0.8em;
-  background: #6C7086;
+  background: var(--container-low);
 }
 
 /* components */
@@ -423,6 +458,7 @@ a.label:hover {
 
 .auto-flex {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
@@ -473,6 +509,10 @@ a:has(svg) {
   rotate: -8deg;
   z-index: 2;
   background: transparent;
+}
+
+.button-grid :nth-child(even).btn:hover {
+  rotate: 8deg;
 }
 
 /* from jb (jbcarreon123.nekoweb.org) */
