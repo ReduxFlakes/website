@@ -20,34 +20,12 @@ post.url, subheading: true }) }}
 
 ## Popular Projects
 
-<div class="auto-grid">
+<div class="auto-grid" style="--size: 250px;">
 {%- for item in projects.active | limit(1) -%}
-  <section class="card stack" style="--spacer:0.5em;">
-    <h3>{{ item.title }}</h3>
-{%- if item.tags -%}
-    <div class="flex-h">{%- for tag in item.tags -%}<span class="label">{{tag}}</span>{%- endfor -%}</div>
-    {%- endif -%}
-      <p>
-          {{item.description }}
-      </p>
-        {% for action in item.actions %}
-          <a href="{{action.url}}" class="button">{{action.label}}</a>
-        {% endfor %}
-  </section>
+ {%- card item -%}
 {%- endfor -%}
 {%- for item in projects.involved | limit(1) -%}
-  <section class="card stack" style="--spacer:0.5em;">
-    <h3>{{ item.title }}</h3>
-{%- if item.tags -%}
-    <div class="flex-h">{%- for tag in item.tags -%}<span class="label">{{tag}}</span>{%- endfor -%}</div>
-    {%- endif -%}
-      <p>
-          {{item.description }}
-      </p>
-        {% for action in item.actions %}
-          <a href="{{action.url}}" class="button">{{action.label}}</a>
-        {% endfor %}
-  </section>
+  {%- card item -%}
 {%- endfor -%}
 </div>
 
