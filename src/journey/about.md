@@ -34,13 +34,13 @@ If you want to know what I'm up to, check either my [now page](/now) or [my soci
 <p style="text-align:center;">These are all the websites that inspired me to create my site, from design to content, so thank you everyone on the list for <i>helping me</i>, go visit them all!</p>
 
 <div  class="auto-flex button-grid">
-  {% for button in buttons.likes %}
-  {% if button.url %}
+  {%- for button in buttons.likes -%}
+  {%- if button.url -%}
     <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/buttons/{{button.img}}" alt="{{button.title}} button" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore ></a>
-  {% else %}
+  {%- else -%}
   <a href="{{button.url}}" class="btn" >{{button.title}}</a>
-  {% endif %}
-  {% endfor %}
+  {%- endif -%}
+  {%- endfor -%}
 </div>
 
 ### Credits
@@ -65,6 +65,8 @@ The following icons are the ones found in the nav bar and respective menus.
 - Opacity effect when hovering buttons - Original idea and code of [jbcarreon123](https://jbcarreon123.nekoweb.org/)
 
 - Zoom effect when hovering buttons - Code of [Daudix](https://daudix.one/)
+
+- Music player was made by me, [source code available on GitHub](https://github.com/ReduxFlakes/csmpjs)
 
 ## License
 
