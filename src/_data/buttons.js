@@ -292,6 +292,11 @@ export default {
       url: "https://avedo-storyhub.neocities.org/"
     },
     {
+      title: "Systemic Cyclops",
+      img: "cycl.gif",
+      url: "https://systemiccyclops.neocities.org/"
+    },
+    {
       title: "Miko",
       url: "https://miko.nekoweb.org/"
     },
