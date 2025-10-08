@@ -13,6 +13,18 @@ export default {
       ]
     },
     {
+      title: "customWin",
+      tags: ["Windows", "software"],
+      description:
+        "Collection of Windows applications with the purpose of helping customize the system. Now part of the SurfScape project.",
+      actions: [
+        {
+          label: "GitHub",
+          url: "https://github.com/customwin",
+        }
+      ]
+    },
+    {
       title: "CSMPJS",
       description: "A customizable, simple, music player in JS.",
       actions: [
