@@ -438,8 +438,10 @@ a.label:hover {
 }
 
 .notice--warning {
+  color: var(--warning);
   border: 1px solid var(--warning);
-  background: var(--container-low);
+  background: var(--warning-container);
+  box-shadow: 0px 0px 2px 0px var(--warning);
   border-radius: var(--radius);
 }
 

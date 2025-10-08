@@ -8,7 +8,8 @@
   --primary: hsl(353, 92%, 80%);
   --foreground-subtle: hsl(353, 13%, 61%);
   --stroke: hsl(353, 13%, 31%);
-  --warning: #F9E2AF;
+  --warning: hsl(27, 71%, 70%);
+  --warning-container: #3e1e0b;
   --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
   --breathing-space: 1rem;
   --radius: 0.3rem;
@@ -24,7 +25,20 @@
   --primary: hsl(105, 92%, 80%);
   --foreground-subtle: hsl(105, 13%, 61%);
   --stroke: hsl(105, 13%, 31%);
-  --warning: #F9E2AF;
+  --warning: hsl(47, 71%, 70%);
+  --warning-container: hsl(47, 70%, 14%);
+  color-scheme: dark;
+}
 
+.midnight {
+  --background: hsl(218, 21%, 15%);
+  --container: hsl(218, 16%, 23%);
+  --container-low: hsl(218, 23%, 9%);
+  --foreground: hsl(218, 64%, 88%);
+  --primary: hsl(218, 92%, 80%);
+  --foreground-subtle: hsl(218, 13%, 61%);
+  --stroke: hsl(218, 13%, 31%);
+  --warning: hsl(43, 71%, 70%);
+  --warning-container: hsl(43, 70%, 14%);
   color-scheme: dark;
 }
