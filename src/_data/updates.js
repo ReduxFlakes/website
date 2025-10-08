@@ -1,5 +1,15 @@
 export default [
   {
+    date: "2025-10-09 00:13:48",
+    content: "A new theme and some tweaks and fixes",
+    list: [
+      "Added a new theme called Midnight, inspired by my old theme based on Catppuccin",
+      "Added a new site to the friends list (Systemic Cyclops)",
+      "Improved the colors for the warning notice on all themes",
+      "Fixed bug where pages with a key equal to a tag would be grouped as the same parent of that tag (ex: the project page would be grouped under Blog because the tag Projects also exists)",
+    ]
+  },
+  {
     date: "2025-10-05 18:02:48",
     content: "Long time no see, here's some updates",
     list: [
