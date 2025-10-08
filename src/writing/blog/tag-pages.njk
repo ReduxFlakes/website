@@ -9,7 +9,7 @@ eleventyComputed:
     title: "Tagged with: {{ tag }}"
     description: false
     parent: Blog
-    key: "{{ tag }}"
+    key: "{%- if collections[tag].data.parent == 'Blog' -%}{{ tag }}{%- endif -%}"
     excludeFromNav: true
 ---
 
