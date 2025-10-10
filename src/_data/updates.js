@@ -1,5 +1,13 @@
 export default [
   {
+    date: "2025-10-10 16:53:48",
+    content: "Accessibility fixes and some design improvements on the homepage and project page",
+    list: [
+      "Various accessibility fixes to the music player and footer",
+      "Added icons for the heading in the homepage and project page",
+    ]
+  },
+  {
     date: "2025-10-09 00:13:48",
     content: "A new theme and some tweaks and fixes",
     list: [
