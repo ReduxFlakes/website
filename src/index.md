@@ -9,7 +9,7 @@ content_css: false
 
 I'm ReduxFlakes, a developer and designer from Portugal with a focus on privacy and minimalism. This is my personal space on the web where I share most of the stuff I do. You can find my blog, current projects and ideas, downloads, and other goodies and extras! If you want to know more about me, check the [about page](/about). See ya!
 
-## Latest Blog Post
+## {% lucide "rss" %} Latest Blog Post
 
 {% for post in collections.posts | limit(1) %}
 {{ component('post-listing', {title: post.data.title, date: post.date, description: post.data.description, href:
@@ -18,7 +18,7 @@ post.url, subheading: true }) }}
 
 ---
 
-## Popular Projects
+## {% lucide "box" %} Popular Projects
 
 <div class="auto-grid" style="--size: 250px;">
 {%- for item in projects.active | limit(1) -%}
@@ -31,7 +31,7 @@ post.url, subheading: true }) }}
 
 ---
 
-## Links
+## {% lucide "globe" %} Links
 
 ### Socials
 
@@ -104,7 +104,7 @@ If you like my site, you can link me by using the buttons below!
 
 ---
 
-## Webrings
+## {% lucide "link" %} Webrings
 
 {% if env.host == "neocities" %}
 
@@ -168,7 +168,7 @@ If you like my site, you can link me by using the buttons below!
 
 <hr>
 
-## Latest Update
+## {% lucide "milestone" %} Latest Update
 
 {% for entry in updates | limit(1) -%}
 

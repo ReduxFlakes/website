@@ -160,13 +160,16 @@ h6 {
 
 h2:has(span),
 h2:has(div),
+h2:has(svg),
 h3:has(span),
 h3:has(div),
+h3:has(svg),
 h4:has(span),
-h4:has(div) {
+h4:has(div),
+h4:has(svg) {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.25em;
 }
 
 .anchor {

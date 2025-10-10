@@ -7,7 +7,7 @@ order: 1
 marker: ["Recommended"]
 ---
 
-## Active
+## {% lucide "check" -%} Active
 
 {% for item in projects.active %}
 
@@ -25,7 +25,7 @@ marker: ["Recommended"]
   </section>
 {% endfor %}
 
-## Involed In
+## {% lucide "users" -%} Involed In
 
 {% for item in projects.involved %}
 
@@ -43,7 +43,7 @@ marker: ["Recommended"]
   </section>
 {% endfor %}
 
-## Ideas
+## {% lucide "lightbulb" -%} Ideas
 
 {% for item in projects.ideas %}
 
@@ -61,7 +61,7 @@ marker: ["Recommended"]
   </section>
 {% endfor %}
 
-## Inactive
+## {% lucide "archive" -%} Inactive
 
 > This section is still being worked on and thus I haven't readded the links
 
