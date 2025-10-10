@@ -14,7 +14,7 @@
         <a href="{{ url }}" aria-label="Navigate to the {{title}} page in the {{ category }} category" {% if page.url === url %}aria-current="page"{% endif %}>
             <span class="link-header">
                 {% if icon %}
-                    <img src="/public/icons/{{icon}}.png" alt="" aria-hidden="true" class="icon">
+                    <img src="/public/icons/{{icon}}.png" alt="" aria-hidden="true" class="icon" eleventy:ignore>
                 {% endif %}
                 {% if construction %}
                     <i>{{ title }}</i>
@@ -36,9 +36,9 @@
             {#{% endif %}#}
             <summary aria-controls="nav-{{entry.key | slugify }}"  {% if entry.key === parent or entry.key === title %}aria-current="true"{% endif %}>
                 {% if entry.icon -%}
-                    <img src="/public/icons/{{entry.icon}}.png" alt="" aria-hidden="true" class="icon">
+                    <img src="/public/icons/{{entry.icon}}.png" alt="" aria-hidden="true" class="icon" eleventy:ignore>
                 {%- elif entry.data.icon -%}
-                    <img src="/public/icons/{{entry.data.icon}}.png" alt="" aria-hidden="true" class="icon">
+                    <img src="/public/icons/{{entry.data.icon}}.png" alt="" aria-hidden="true" class="icon" eleventy:ignore>
                 {%- endif -%}
                 {{ entry.title }}</summary>
             <section class="stack" style="--spacer:0.5em;">

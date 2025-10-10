@@ -575,7 +575,7 @@ export default {
       img: "general/css-grid.gif"
     },
     {
-      tile: "Catppuccin",
+      title: "Catppuccin",
       img: "general/catppuccin.gif",
       url: "https://catppuccin.com/"
     }

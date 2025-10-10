@@ -170,21 +170,21 @@ If you like my site, you can link me by using the buttons below!
 
 ## Latest Update
 
-{% for entry in updates | limit(1) %}
+{% for entry in updates | limit(1) -%}
 
   <p><b class="flex-h"><time
         datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}<time></b></p>
 
   <p>{{ entry.content | safe }}</p>
-  {% if entry.list %}
+  {%- if entry.list -%}
   <p><b>Changes:</b></p>
   <ul style="padding:0 2rem;">
-    {% for item in entry.list %}
+    {%- for item in entry.list -%}
     <li>{{item | safe}}</li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
-  {% endif %}
+  {%- endif -%}
   </p>
-  {% endfor %}
+  {%- endfor %}
 
 <small>Looking for older updates? Check the [changelog page](/changelog)!</small>

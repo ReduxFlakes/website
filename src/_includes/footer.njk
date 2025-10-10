@@ -11,7 +11,7 @@
     <div class="auto-flex button-grid">
         {% for item in buttons.special %}
             {% if item.url -%}
-                <a href="{{item.url}}" class="btn">
+                <a href="{{item.url}}" class="btn" aria-label="{{item.title}}" title="{{item.title}}" target="_blank" rel="noopener">
                     <img src="/public/buttons/{{item.img}}" alt="{{item.title}}" width="88" height="31" class="classic-btn" loading="lazy" decoding="async" eleventy:ignore>
                 </a>
             {%- else -%}

@@ -32,9 +32,9 @@
           <span class="pc__artist" id="playerArtist">No artist</span></p>
       </div>
       <div class="pc-btns">
-        <button class="prev" id="previous" disabled>{%- lucide "skip-back" -%}</button>
-        <button class="play" id="play">{%- lucide "play" -%}</button>
-        <button class="next" id="next" disabled>{%- lucide "skip-forward" -%}</button>
+        <button class="prev" id="previous" disabled aria-label="Previous Song" title="Previous Song">{%- lucide "skip-back" -%}</button>
+        <button class="play" id="play" aria-label="Play/Pause" title="Play/Pause">{%- lucide "play" -%}</button>
+        <button class="next" id="next" disabled aria-label="Next Song" title="Next song">{%- lucide "skip-forward" -%}</button>
       </div>
     </div>
     {% include "footer.njk" %}
