@@ -431,10 +431,13 @@ a.label:hover {
   overflow: hidden;
   display: flex;
   align-items: center;
-  width: max-content;
   margin: 0 auto;
   gap: 0.5em;
   padding: 0.5rem var(--breathing-space);
+}
+
+.notice picture {
+  flex-shrink: 0;
 }
 
 .notice--warning {

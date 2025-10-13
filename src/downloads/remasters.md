@@ -9,6 +9,12 @@ key: Music Remasters
 parent: Downloads
 ---
 
+<div class="notice notice--warning" role="alert">
+  <img src="/public/icons/farm-vlc.png" alt=""> 
+  <p>
+  This page is deprecated and will be removed in the near future. The <a href="https://file.garden/aAEXMwgY3QmuIjxE/Remasters">File Garden</a> will be the new replacement.</p>
+  </div>
+
 <div class="table-overflow">
 <table style="min-width:700px">
   <caption style="text-align:left">Currently available (from most recent to oldest)</caption>
