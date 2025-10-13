@@ -1,5 +1,15 @@
 export default [
   {
+    date: "2025-10-13 23:23:48",
+    content: "New Pixy Icon Pack release and other small additions",
+    list: [
+      "Released Pixy Icon Pack v0.2.0",
+      "Removed unused icons",
+      "Added new project idea",
+      "Deprecation of the remasters page (replaced with File Garden)"
+    ]
+  },
+  {
     date: "2025-10-10 16:53:48",
     content: "Accessibility fixes and some design improvements on the homepage and project page",
     list: [
