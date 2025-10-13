@@ -27,6 +27,10 @@ export default {
       url: "https://fosstodon.org/@redux",
     },
     {
+      name: "Steam",
+      url: "https://steamcommunity.com/id/reduxflakes/",
+    },
+    {
       name: "Last.fm",
       url: "https://www.last.fm/user/reduxflakes",
     },
