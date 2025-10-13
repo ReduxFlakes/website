@@ -62,6 +62,12 @@ export default {
   ],
   ideas: [
     {
+      title: "Obsidian in the format of Encarta",
+      description:
+        "Desktop application that replicates the look and feel of Microsoft Encarta encyclopedia but with the purpose of being a knowledge base app.",
+      tags: ["software", "desktop", "surfscape", "productivity"],
+    },
+    {
       title: "V-Rally 2 Launcher",
       description:
         "Modern launcher for the V-Rally 2 game. Some of the features include: patching for modern systems, no CD crack, download manager, and easier setup of settings.",
