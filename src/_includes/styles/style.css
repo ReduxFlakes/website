@@ -378,7 +378,7 @@ nav.breadcrumb li+li::before {
 
 .aside-block h2,
 .aside-block h3 {
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 .lastfm-widget img {

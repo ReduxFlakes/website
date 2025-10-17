@@ -1,6 +1,6 @@
 /* themes */
 :root {
-  --font: system-ui, sans-serif;
+  --font: "Geist", system-ui, sans-serif;
   --background: hsl(353, 21%, 15%);
   --container: hsl(353, 16%, 23%);
   --container-low: hsl(353, 23%, 9%);
