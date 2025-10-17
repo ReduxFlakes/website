@@ -326,7 +326,7 @@ nav.breadcrumb li+li::before {
   }
 
   main>article {
-    max-width: 77ch;
+    max-width: 42rem;
     margin: 0 auto;
   }
 
