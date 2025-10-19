@@ -30,7 +30,7 @@
   color-scheme: dark;
 }
 
-.midnight {
+.ocean {
   --background: hsl(218, 21%, 15%);
   --container: hsl(218, 16%, 23%);
   --container-low: hsl(218, 23%, 9%);
@@ -40,5 +40,18 @@
   --stroke: hsl(218, 13%, 31%);
   --warning: hsl(43, 71%, 70%);
   --warning-container: hsl(43, 70%, 14%);
+  color-scheme: dark;
+}
+
+.midnight {
+  --background: hsl(0, 0%, 13%);
+  --container: hsl(0, 0%, 23%);
+  --container-low: hsl(0, 0%, 9%);
+  --foreground: hsl(0, 0%, 88%);
+  --primary: hsl(206, 24%, 75%);
+  --foreground-subtle: hsl(0, 0%, 61%);
+  --stroke: hsl(0, 0%, 31%);
+  --warning: hsl(18, 44%, 64%);
+  --warning-container: hsl(18, 18%, 14%);
   color-scheme: dark;
 }
