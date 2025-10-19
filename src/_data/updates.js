@@ -1,5 +1,13 @@
 export default [
   {
+    date: "2025-10-20 00:07:20",
+    content: "More design tweaks and a new theme",
+    list: [
+      "Changed default font to Geist",
+      "Added a new theme called Midnight with the other one being renamed to Ocean",
+    ]
+  },
+  {
     date: "2025-10-13 23:23:48",
     content: "New Pixy Icon Pack release and other small additions",
     list: [
