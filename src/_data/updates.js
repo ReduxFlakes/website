@@ -1,5 +1,15 @@
 export default [
   {
+    date: "2025-10-26 20:02:00",
+    content: "New services page, and other minor updates",
+    list: [
+      "Finally created the services page where I list live services that I offer (currently only listing my Last.FM proxy)",
+      "Added a toolbar on the homepage that links to a page for donating to support Gaza emergency response",
+      "Updated various pages (about, uses, and now)",
+      "Small grammar fixes"
+    ]
+  },
+  {
     date: "2025-10-20 00:07:20",
     content: "More design tweaks and a new theme",
     list: [
