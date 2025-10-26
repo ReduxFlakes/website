@@ -9,7 +9,7 @@ order: 0
 
 ## The webmaster
 
-Hi, my name is ReduxFlakes. I'm a software developer and designer from Portugal. I love music, programming (I'm bad at it though), design (web and software), gaming, and retro tech. I'm an advocate on privacy (although I'm not the most hardcore), FLOSS and freedom of speech.
+Hi, my name is ReduxFlakes. I'm a software developer and designer from Portugal. I love music, programming (I'm bad at it though), design (web and software), gaming, and retro tech. I'm an advocate for privacy (although I'm not the most hardcore), FLOSS and freedom of speech.
 
 I mostly do websites, design mockups of software, music remastering (that I upload to [YouTube](https://www.youtube.com/@reduxflakes)), and other projects that I'll never released because I'm too ambitious and I procrastinate a lot :p.
 
@@ -57,8 +57,6 @@ The following icons are the ones found in the nav bar and respective menus.
 - Koloria Icons Pack :: Graphic Rating (Andy Gongea) » Freeware
 - Sfeers Icons Pack :: emey87 » CC Attribution-Noncommercial-No Derivate 4.0
 - Pixelophilia Icons :: omercetin » CC Attribution-Noncommercial-No Derivate 4.0
-- WooCons :: Janik Baumgartner » GPL
-- Danish Royalty Free Icons :: Jonas Rask Design » Freeware
 
 #### CSS & other code
 
