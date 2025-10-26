@@ -571,6 +571,7 @@ a:has(.classic-btn) {
 .support-pal a {
   width: 100%;
   justify-content: center;
+  text-align: center;
 }
 
 .support-pal a:hover {
