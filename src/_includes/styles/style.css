@@ -554,3 +554,25 @@ a:has(.classic-btn) {
   background: none;
   padding: 0.5rem;
 }
+
+.support-pal {
+  color: rgb(255, 163, 163);
+  background: rgb(59, 2, 2);
+  font-weight: 500;
+  font-size: 1.1em;
+  justify-content: center;
+}
+
+.support-pal img {
+  width: 32px;
+  height: 32px;
+}
+
+.support-pal a {
+  width: 100%;
+  justify-content: center;
+}
+
+.support-pal a:hover {
+  background: rgba(255, 163, 163, 0.1);
+}
