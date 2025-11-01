@@ -37,4 +37,4 @@ Do note that I also want to provide a widget code so anyone can implement it cor
 </section>
 ```
 
-The JavaScript is [available on GitHub](github.com/ReduxFlakes/website/blob/main/src/_layouts/home.njk#L10).
+The JavaScript is [available on GitHub](https://github.com/ReduxFlakes/website/blob/main/src/_layouts/home.njk#L10).
