@@ -1,5 +1,13 @@
 export default [
   {
+    date: "2025-11-01 13:26:21",
+    content: "Added the Gaming page! Also other minor updates",
+    list: [
+      "I've finally created the gaming page! It's basically a list of the games I'm currently playing and the games I've finished. There's still a lot of games missing, but it's a start.",
+      "Small fixes."
+    ]
+  },
+  {
     date: "2025-10-26 20:02:00",
     content: "New services page, and other minor updates",
     list: [
