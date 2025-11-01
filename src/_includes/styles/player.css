@@ -21,7 +21,7 @@
         border: 1px solid var(--stroke);
         backdrop-filter: blur(10px);
         border-radius: var(--radius);
-        background: rgba(34, 20, 28, 0.25);
+        background: rgba(27, 27, 27, 0.25);
     }
 
     .player-container:hover {
@@ -56,7 +56,9 @@
     position: absolute;
     font-size: 2rem;
     color: white;
-    background: rgb(67, 11, 11);
+    background: rgb(0, 0, 0);
+    outline: 1px solid var(--stroke);
+    border-radius: 4px;
 }
 
 .pc-meta {
