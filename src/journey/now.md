@@ -13,16 +13,12 @@ order: 1
 <dt>Celer</dt>
 <dd>I've decided to scrap the idea of porting the app to WinUI3 and so I'm now slowly fixing and improving the current WPF app for a future beta release.</dd>
 <dt>YouTube Channel</dt>
-  <dd>Recently finished a remaster of Eastern Wind that was requested by a subscriber. [Watch it!](https://youtu.be/RIWzSQIoaHQ).</dd>
+  <dd>Recently finished a remaster of Eastern Wind that was requested by a subscriber. <a href="https://youtu.be/RIWzSQIoaHQ">Watch it!</a></dd>
 </dl>
 
 ## What I've been playing
 
-1. Zenless Zone Zero - Saw some of my friends playing it and I'm loving it so far!
-2. Genshin Impact - Came back to the game after my friends _forced_ me to play it
-3. Counter Strike 2 (mostly competitive and deathmatch)
-4. Infinitode 2 - The chiptune selection is amazing
-5. The Finals
+> Moved to [Gaming](/gaming)
 
 ## What I've been watching
 

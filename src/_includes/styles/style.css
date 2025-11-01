@@ -538,6 +538,18 @@ webring-container {
   height: max-content;
 }
 
+.gaming-shelf a {
+  transition: all 0.2s, transform var(--transition-bezier);
+}
+
+.gaming-shelf a:hover {
+  transform: scale(1.05);
+}
+
+.gaming-shelf:has(a:hover) a:not(:hover) {
+  filter: blur(2px) saturate(0);
+  opacity: 0.25;
+}
 
 .banner {
   margin: 0 auto;
