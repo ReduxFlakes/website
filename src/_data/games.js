@@ -62,5 +62,10 @@ export default {
         banner: "flatout2.webp",
         store_link: "https://store.steampowered.com/app/2990/FlatOut_2/"
     },
+    {
+        title: "FlatOut Ultimate Carnage",
+        banner: "flatoutuc.png",
+        store_link: "https://store.steampowered.com/app/12360/FlatOut_Ultimate_Carnage_Collectors_Edition/"
+    },
     ]
 }
