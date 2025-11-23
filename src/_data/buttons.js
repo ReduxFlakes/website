@@ -548,6 +548,11 @@ export default {
       title: "N",
       img: "n.png",
       url: "https://n.cyrneko.eu/"
+    },
+    {
+      title: "Aman",
+      img: "zeffo.gif",
+      url: "https://zeffo.me/"
     }
 
   ],
