@@ -1,5 +1,17 @@
 export default [
   {
+    date: "2025-11-23 00:59:21",
+    content: "Small updates",
+    list: [
+      "Tweaked the default theme which is now more pinkish",
+      "The gaming shelf now shows the game titles when hovering over the cover",
+      "Added Celer to the projects list",
+      "Added new site to the likes section",
+      "Minor updates to the Awesome YT page",
+      "Small CSS tweaks"
+    ]
+  },
+  {
     date: "2025-11-01 13:26:21",
     content: "Added the Gaming page! Also other minor updates",
     list: [
