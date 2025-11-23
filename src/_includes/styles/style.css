@@ -539,11 +539,42 @@ webring-container {
 }
 
 .gaming-shelf a {
-  transition: all 0.2s, transform var(--transition-bezier);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s, transform var(--transition-bezier);
+}
+
+.gaming-shelf a::before {
+  content: attr(data-name);
+  position: absolute;
+  bottom: 0;
+  font-size: 1.3rem;
+  background: linear-gradient(to bottom, transparent 0%, hsla(0, 0%, 0%, 0.3) 10%, black 100%);
+  width: 100%;
+  font-weight: 600;
+  color: var(--foreground);
+  padding: 0.5rem;
+  opacity: 0%;
+  visibility: hidden;
+  transition: all .4s ease-in-out;
+
+}
+
+.gaming-shelf a:hover::before {
+  opacity: 100%;
+  visibility: visible;
 }
 
 .gaming-shelf a:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  rotate: -2deg;
+  z-index: 100;
+}
+
+.gaming-shelf a:nth-child(even):hover {
+  rotate: 2deg;
 }
 
 .gaming-shelf:has(a:hover) a:not(:hover) {
