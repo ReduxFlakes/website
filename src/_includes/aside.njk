@@ -27,7 +27,7 @@
     <script src="https://status.cafe/current-status.js?name=reduxflakes" defer></script>
 </section>
 
-<section class="aside-block lastfm-widget "   >
+<section class="aside-block lastfm-widget">
     <h2>
         <span id="loadingStatus"></span>
         <span id="playState">Last played was</span>
@@ -75,8 +75,7 @@
 {% endif %}
 
 <section class="aside-block">
-    <h2>
-          Recommended Pages</h2>
+    <h2>Recommended Pages</h2>
     <nav>
         <ul role="list">
             {%- for entry in recommended -%}
@@ -97,9 +96,8 @@
     <small>This will reload the page</small>
     <div class="auto-flex">
         <label for="theme-switcher">Change Theme</label>
-
         <select name="themes" id="theme-switcher" onchange="setTheme(this.value)">
-            <option value="default" selected="selected">Rose</option>
+            <option value="default" selected="selected">Pink (Default)</option>
             <option value="forest">Forest</option>
             <option value="ocean">Ocean</option>
             <option value="midnight">Midnight</option>
