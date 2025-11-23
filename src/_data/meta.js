@@ -31,6 +31,10 @@ export default {
       url: "https://steamcommunity.com/id/reduxflakes/",
     },
     {
+      name: "Spotify",
+      url: "https://open.spotify.com/user/316gsg33rezoh3rgvx6ebsyk7dya",
+    },
+    {
       name: "Last.fm",
       url: "https://www.last.fm/user/reduxflakes",
     },
