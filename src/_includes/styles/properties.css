@@ -1,15 +1,15 @@
 /* themes */
 :root {
   --font: "Geist", system-ui, sans-serif;
-  --background: hsl(353, 21%, 15%);
-  --container: hsl(353, 16%, 23%);
-  --container-low: hsl(353, 23%, 9%);
-  --foreground: hsl(353, 64%, 88%);
-  --primary: hsl(353, 92%, 80%);
-  --foreground-subtle: hsl(353, 13%, 61%);
-  --stroke: hsl(353, 13%, 31%);
+  --background: hsl(338, 21%, 15%);
+  --container: hsl(338, 16%, 23%);
+  --container-low: hsl(338, 23%, 9%);
+  --foreground: hsl(338, 64%, 88%);
+  --primary: hsl(338, 92%, 80%);
+  --foreground-subtle: hsl(338, 13%, 61%);
+  --stroke: hsl(338, 13%, 31%);
   --warning: hsl(27, 71%, 70%);
-  --warning-container: #3e1e0b;
+  --warning-container: hsl(22, 70%, 14%);
   --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
   --breathing-space: 1rem;
   --radius: 0.3rem;
