@@ -1,8 +1,9 @@
 ---
-title: Awesome YouTube
+title: "Awesome YouTube"
 description: Channels, playlists, and other content from YouTube that I love
 icon: farm-youtube
 parent: Extras
+modified: 2025-11-23T00:53:00.00Z
 marker: ["Recommended"]
 ---
 
@@ -13,3 +14,4 @@ marker: ["Recommended"]
 ## Playlists
 
 - [Peak FLDE Content](https://youtube.com/playlist?list=PLGjHXr0nvFe2iXqSIK0_gHB5E22gXcmjr) - Peak chiptune!
+- [Best Live](https://www.youtube.com/playlist?list=PLT46wXTdSpp7-xBPJ9bNc2me4qv9f2x69) - Songs I love performed live!
