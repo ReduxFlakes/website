@@ -13,6 +13,22 @@ export default {
       ]
     },
     {
+      title: "Celer",
+      tags: ["software", "surfscape", "Windows"],
+      description:
+        "The advanced, open source, friendly, and cutest toolbox for Windows 10 & 11!",
+      actions: [
+        {
+          label: "GitHub Repository",
+          url: "https://github.com/surfscape/celer",
+        },
+        {
+          label: "Celer on SurfScape",
+          url: "https://surfscape.eu/projects/celer",
+        }
+      ]
+    },
+    {
       title: "customWin",
       tags: ["Windows", "software"],
       description:
