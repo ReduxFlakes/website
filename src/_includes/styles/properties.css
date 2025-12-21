@@ -57,13 +57,13 @@
 }
 
 .liminal {
-  --background: hsl(0, 0%, 98%);
+  --background: hsl(0, 0%, 96%);
   --container: hsl(0, 0%, 90%);
-  --container-low: hsl(0, 0%, 86%);
-  --foreground: hsl(0, 0%, 18%);
-  --primary: hsl(206, 44%, 29%);
-  --foreground-subtle: hsl(0, 0%, 38%);
-  --stroke: hsl(0, 0%, 70%);
+  --container-low: hsl(0, 0%, 90%);
+  --foreground: hsl(0, 0%, 24%);
+  --primary: hsl(206, 44%, 32%);
+  --foreground-subtle: hsl(0, 0%, 40%);
+  --stroke: hsl(0, 0%, 75%);
   --warning: hsl(18, 54%, 30%);
   --warning-container: hsl(18, 20%, 85%);
   color-scheme: light;
