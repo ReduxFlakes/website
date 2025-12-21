@@ -22,6 +22,21 @@ Games that I'm actively playing (on a weekly basis)
 
 </div>
 
+## I Love
+
+Games that I love but haven't played these last few days
+
+<div class="auto-grid gaming-shelf" style="--size:120px">
+{% for item in games.own %}
+
+<a data-name="{{item.title}}" aria-label="{{item.title}}" href="{{item.store_link}}">
+<img src="/public/games/{{item.banner}}" alt="{{item.title}} banner" eleventy:ignore>
+</a>
+
+{% endfor %}
+
+</div>
+
 ## Completed
 
 Games that I've finished

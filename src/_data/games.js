@@ -1,24 +1,14 @@
 export default {
     inRotation: [
         {
-            title: "Zenless Zone Zero",
-            banner: "zzz.webp",
-            store_link: "https://zenless.hoyoverse.com/"
-        },
-        {
-            title: "FlatOut Ultimate Carnage",
-            banner: "flatoutuc.png",
-            store_link: "https://store.steampowered.com/app/12360/FlatOut_Ultimate_Carnage_Collectors_Edition/"
-        },
-        {
             title: "Counter Strike 2",
             banner: "cs2.png",
             store_link: "https://store.steampowered.com/app/730/CounterStrike_2/"
         },
         {
-            title: "The Finals",
-            banner: "finals.png",
-            store_link: "https://store.steampowered.com/app/2073850/THE_FINALS/"
+            title: "Bloon TD 6",
+            banner: "bloonstd6.jpg",
+            store_link: "https://store.steampowered.com/app/960090/Bloons_TD_6/"
         },
         {
             title: "Infinitode 2",
@@ -26,9 +16,14 @@ export default {
             store_link: "https://store.steampowered.com/app/937310/Infinitode_2__Infinite_Tower_Defense/"
         },
         {
-            title: "Genshin Impact",
-            banner: "genshin.webp",
-            store_link: "https://genshin.hoyoverse.com"
+            title: "GTA V",
+            banner: "gtav.jpg",
+            store_link: "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/"
+        },
+        {
+            title: "GTA IV",
+            banner: "gtaiv.webp",
+            store_link: "https://store.steampowered.com/app/12210/Grand_Theft_Auto_IV_The_Complete_Edition/"
         },
         {
             title: "Team Fortress 2",
@@ -36,11 +31,33 @@ export default {
             store_link: "https://store.steampowered.com/app/440/Team_Fortress_2/"
         },
         {
-            title: "GTA IV",
-            banner: "gtaiv.webp",
-            store_link: "https://store.steampowered.com/app/12210/Grand_Theft_Auto_IV_The_Complete_Edition/"
+            title: "Minecraft",
+            banner: "minecraft.png",
+            store_link: "https://www.minecraft.net/"
+        },
+    ],
+    own: [
+        {
+            title: "FlatOut Ultimate Carnage",
+            banner: "flatoutuc.png",
+            store_link: "https://store.steampowered.com/app/12360/FlatOut_Ultimate_Carnage_Collectors_Edition/"
+        },
+        {
+            title: "The Finals",
+            banner: "finals.png",
+            store_link: "https://store.steampowered.com/app/2073850/THE_FINALS/"
+        },
+        {
+            title: "Zenless Zone Zero",
+            banner: "zzz.webp",
+            store_link: "https://zenless.hoyoverse.com/"
         },
 
+        {
+            title: "Genshin Impact",
+            banner: "genshin.webp",
+            store_link: "https://genshin.hoyoverse.com"
+        },
     ],
     complete: [{
         title: "Half Life 2",
@@ -66,6 +83,11 @@ export default {
         title: "FlatOut Ultimate Carnage",
         banner: "flatoutuc.png",
         store_link: "https://store.steampowered.com/app/12360/FlatOut_Ultimate_Carnage_Collectors_Edition/"
+    },
+    {
+        title: "GTA V",
+        banner: "gtav.jpg",
+        store_link: "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/"
     },
     ]
 }
