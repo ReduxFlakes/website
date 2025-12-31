@@ -4,12 +4,18 @@ export default {
       title: "LRS",
       img: "LRS.gif",
       url: "https://lastroseofsummer.neocities.org",
-
     },
     {
       title: "ByteMoth",
       img: "bytemoth.png",
       url: "https://bytemoth.neocities.org/",
+      eleventy: "ignore"
+    },
+    {
+      title: "immjs",
+      img: "https://immjs.dev/88x31s/immjs.dev.gif",
+      externalimg: true,
+      url: "https://immjs.dev/",
       eleventy: "ignore"
     },
     {
