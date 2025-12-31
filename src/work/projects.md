@@ -19,9 +19,13 @@ marker: ["Recommended"]
       <p>
           {{item.description }}
       </p>
-        {% for action in item.actions %}
+      {%- if item.actions -%}
+      <div class="flex-h">
+        {%- for action in item.actions -%}
           <a href="{{action.url}}" class="button">{{action.label}}</a>
-        {% endfor %}
+        {%- endfor -%}
+        </div>
+        {%- endif -%}
   </section>
 {% endfor %}
 
@@ -37,9 +41,13 @@ marker: ["Recommended"]
       <p>
           {{item.description }}
       </p>
-        {% for action in item.actions %}
+      {%- if item.actions -%}
+      <div class="flex-h">
+        {%- for action in item.actions -%}
           <a href="{{action.url}}" class="button">{{action.label}}</a>
-        {% endfor %}
+        {%- endfor -%}
+        </div>
+        {%- endif -%}
   </section>
 {% endfor %}
 
@@ -55,9 +63,13 @@ marker: ["Recommended"]
       <p>
           {{item.description }}
       </p>
-        {% for action in item.actions %}
+      {%- if item.actions -%}
+      <div class="flex-h">
+        {%- for action in item.actions -%}
           <a href="{{action.url}}" class="button">{{action.label}}</a>
-        {% endfor %}
+        {%- endfor -%}
+        </div>
+        {%- endif -%}
   </section>
 {% endfor %}
 
@@ -75,8 +87,12 @@ marker: ["Recommended"]
       <p>
           {{item.description }}
       </p>
-        {% for action in item.actions %}
+      {%- if item.actions -%}
+      <div class="flex-h">
+        {%- for action in item.actions -%}
           <a href="{{action.url}}" class="button">{{action.label}}</a>
-        {% endfor %}
+        {%- endfor -%}
+        </div>
+        {%- endif -%}
   </section>
 {% endfor %}

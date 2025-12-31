@@ -1,5 +1,16 @@
 export default [
   {
+    date: "2025-12-21 19:34:21",
+    content: "Some updates and new blog post!",
+    list: [
+      "Published a new post about my move to Linux and how my experience has been so far",
+      "Updates to the gaming page (+ new section)",
+      "Updates to the projects page with some fixes, a new idea, and a new project i'm involved in",
+      "Tweaked the default theme once again",
+      "Added new theme called Liminal, which is the first light theme available",
+    ]
+  },
+  {
     date: "2025-11-23 00:59:21",
     content: "Small updates",
     list: [

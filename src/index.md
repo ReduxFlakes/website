@@ -37,7 +37,8 @@ post.url, subheading: true }) }}
 
 <div class="auto-grid button-grid" style="gap:1rem;--size:72px;">
   {%- for item in meta.socials -%}
-  <a href="{{item.url}}" style="display:flex;flex-direction:column;align-items:center;" class="btn"><img
+  <a href="{{item.url}}" style="display:flex;flex-direction:column;align-items:center;" class="btn">
+  <img
       src="/public/icons/pixy/{{item.name | slugify}}.png" alt="" aria-hidden="true" class="classic-btn" loading="lazy"
       decoding="async" eleventy:ignore>{{item.name}}</a>
   {%- endfor -%}
@@ -57,7 +58,8 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
   <div class="auto-flex button-grid">
     {%- for button in buttons.friends -%}
     {%- if button.img -%}
-    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/buttons/friends/{{button.img}}"
+    <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="
+    {%- if button.externalimg -%}{{button.img}}{%- else -%}/public/buttons/friends/{{button.img}}{%-endif-%}"
         alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img or button.eleventy == "ignore" -%}
         loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
     {%- else -%}

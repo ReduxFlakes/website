@@ -8,10 +8,12 @@
 {% block base %}
     {%- if toc_enabled -%}
         <aside>
-            <section id="toc">
-                <h2>Table of Contents</h2>
+            <details style="max-width: max-content;" id="toc">
+                <summary>
+                    <strong>Table of Contents</strong>
+                </summary>
                 {{ content | toc(tags=['h2', 'h3']) | safe }}
-            </section>
+            </details>
         </aside>
         <article class="stack" style="font-size: 1.15em;line-height: 1.6;padding-top:1.0rem;">
         {% else %}

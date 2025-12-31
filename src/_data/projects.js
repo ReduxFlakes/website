@@ -95,6 +95,12 @@ export default {
         "The Celer Windows toolbox but ported to Linux",
       tags: ["utility", "privacy", "linux", "celer", "surfscape"],
     },
+    {
+      title: "Network bandwidth monitor for Linux",
+      description:
+        "Basically the same thing found in Android, Windows, and other OSes where it shows what apps/services have used the most bandwidth over a certain period of time.",
+      tags: ["utility", "linux"],
+    },
   ],
   inactive: [
     {
@@ -104,7 +110,7 @@ export default {
     },
     {
       title: "SurfKit",
-      description: "The UI framework and design language made by SurfScape.",
+      description: "The (old) UI framework and design language made by SurfScape.",
       url: "https://github.com/surfscape/surfkit",
     },
     {
