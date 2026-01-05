@@ -1,6 +1,10 @@
 export default [
   {
-    date: "2025-12-32 19:37:10",
+    date: "2026-01-05 21:43:10",
+    content: "Fixed wrong date in the previous update",
+  },
+  {
+    date: "2025-12-31 19:37:10",
     content: "Happy New Year!!",
     list: [
       "Added new button to the friends section",
