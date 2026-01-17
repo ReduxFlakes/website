@@ -13,21 +13,19 @@
         transition: 150ms all ease-in-out;
         height: 6.5rem;
         position: fixed;
-        margin: 0 1rem 1rem 0;
-        right: 0;
-        bottom: 0;
-        scale: 0.75;
-        transform: translate(3rem, 1rem);
+        right: 1rem;
+        bottom: 1rem;
+        zoom: 0.75;
         border: 1px solid var(--stroke);
         backdrop-filter: blur(10px);
         border-radius: var(--radius);
-        background: rgba(27, 27, 27, 0.25);
+        background: rgba(0, 0, 0, 0.15);
     }
 
     .player-container:hover {
         transform: none;
         height: 9.5rem;
-        scale: 1;
+        zoom: 1;
     }
 
     .player-container:not(:hover) .pc-btns {
@@ -55,7 +53,7 @@
     height: 72px;
     position: absolute;
     font-size: 2rem;
-    color: white;
+    color: var(--foreground);
     background: rgb(0, 0, 0);
     outline: 1px solid var(--stroke);
     border-radius: 4px;
@@ -83,18 +81,14 @@
     transition: 150ms all ease-in-out;
 }
 
-
 .player-container button {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
-    background: transparent;
-    border: none;
     width: 100%;
-    background: hsla(321, 25%, 05%, 0.4);
+    background: rgba(0, 0, 0, 0.15);
     border: 1px solid var(--stroke);
-    cursor: pointer;
 }
 
 .player-container button:hover {
@@ -102,6 +96,5 @@
 }
 
 .player-container button[disabled] {
-    cursor: default;
-    opacity: 0.5;
+    opacity: 0.35;
 }
