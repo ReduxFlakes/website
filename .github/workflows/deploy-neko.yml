@@ -35,7 +35,6 @@ jobs:
         uses: indiefellas/deploy2nekoweb@main
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
-          nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
           nekoweb-domain: "reduxflakes.nekoweb.org"
           nekoweb-username: "reduxflakes"
           directory: "_site"
