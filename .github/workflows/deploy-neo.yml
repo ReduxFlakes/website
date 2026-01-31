@@ -1,10 +1,10 @@
 name: Deploy to neocities
 
-# run on changes to main branch or when manually triggered
+# run on changes to stable branch or when manually triggered
 on:
   push:
     branches:
-      - main
+      - stable
   workflow_dispatch:
 
 env:
@@ -19,8 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm i
-      - run: npm run build:neo
+      - run: deno i
+      - run: deno task build:neo
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:
