@@ -9,12 +9,13 @@
   },
   "scripts": {
     "start": "eleventy --serve --watch",
+    "start:fast": "eleventy --serve --watch --incremental",
     "start:nekoweb": "cross-env HOST_TYPE=nekoweb eleventy --serve",
     "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
     "build": "eleventy",
-    "build:prod": "cross-env BUILD_TYPE=production eleventy && npm run html-minify",
-    "build:neo": "cross-env BUILD_TYPE=production HOST_TYPE=neocities eleventy",
-    "build:neko": "cross-env BUILD_TYPE=production HOST_TYPE=nekoweb eleventy",
+    "build:prod": "cross-env BUILD_TYPE=production eleventy && deno task html-minify",
+    "build:neo": "cross-env HOST_TYPE=neocities && deno task build:prod",
+    "build:neko": "cross-env HOST_TYPE=nekoweb && deno task build:prod",
     "debug": "cross-env DEBUG=Eleventy* eleventy --serve --watch"
   },
   "keywords": [],

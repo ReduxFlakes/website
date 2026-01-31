@@ -1,0 +1,14 @@
+{
+    "tasks": {
+        "start": "eleventy --serve --watch",
+        "start:fast": "eleventy --serve --watch --incremental",
+        "start:nekoweb": "HOST_TYPE=nekoweb eleventy --serve",
+        "start:all": "BUILD_TYPE=production HOST_TYPE=all eleventy --serve",
+        "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
+        "build": "eleventy",
+        "build:prod": "BUILD_TYPE=production eleventy && deno task html-minify",
+        "build:neo": "HOST_TYPE=neocities && deno task build:prod",
+        "build:neko": "HOST_TYPE=nekoweb && deno task build:prod",
+        "debug": "DEBUG=Eleventy* eleventy --serve --watch"
+    }
+}
