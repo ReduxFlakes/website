@@ -22,6 +22,15 @@ export default {
   limit: (arr, limit) => {
     return arr.slice(0, limit);
   },
+  filterByKey: (arr, key, value) => {
+    return arr.filter(item => {
+      return item[key] === value;
+    });
+  },
+  sortBy: (arr, prop) => {
+    var res = arr.sort(({ [prop]: a }, { [prop]: b }) => b - a);
+    return res;
+  },
   tagCloud: (collection) => {
     const tagCount = {};
     collection.forEach((item) => {
