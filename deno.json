@@ -7,8 +7,8 @@
         "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
         "build": "eleventy",
         "build:prod": "BUILD_TYPE=production eleventy && deno task html-minify",
-        "build:neo": "HOST_TYPE=neocities && deno task build:prod",
-        "build:neko": "HOST_TYPE=nekoweb && deno task build:prod",
+        "build:neo": "HOST_TYPE=neocities BUILD_TYPE=production eleventy && deno task html-minify",
+        "build:neko": "HOST_TYPE=nekoweb BUILD_TYPE=production eleventy && deno task html-minify",
         "debug": "DEBUG=Eleventy* eleventy --serve --watch"
     }
 }
