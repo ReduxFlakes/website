@@ -1,0 +1,26 @@
+{% extends "./empty.njk" %}
+
+{% set navigation = collections.all | eleventyNavigation("Shrines") -%}
+
+{%- set categories = [] -%}
+{%- for item in navigation -%}
+  {%- if item.data.shrineId == "zzz" and item.url != "/extras/shrines/zzz/" -%}
+    {%- set categories = categories.concat([item]) -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{% block body %}
+  <header>
+    <img src="/public/img/shrines/zzz.png" alt="Zenless Zone Zero logo">
+    <nav>
+      {%- for link in categories -%}
+        <a class="button" href="{{link.url}}">
+          {{link.title}}</a>
+
+      {%- endfor -%}
+    </nav>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+{% endblock %}

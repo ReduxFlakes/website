@@ -1,0 +1,34 @@
+<header class="hero stack" {% if icon -%}style="--backdrop-icon: url({{rawIcon}})"{%- endif %}>
+    <h1>{{title or meta.title}}</h1>
+    {% if description != false %}
+        <p>{{description or hero.description or meta.description}}</p>
+    {% endif %}
+    {% if post or modified %}
+        <div class="hero-meta">
+            {% if post %}
+                <p class="secondary">{%- lucide "calendar-plus" -%} Posted in: <time datetime="{{date}}">{{date | formatPostDate}}</time>
+                </p>
+            {% endif %}
+            {% if modified %}
+                <p class="secondary">{%- lucide "file-pen-line" -%} Modified in: <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
+                </p>
+            {% endif %}
+            {% if post %}
+                <p class="secondary">{%- lucide "timer" -%} Read time: {{ content | timeToRead }}</p>
+            {% endif %}
+        </div>
+        {% if post and tags %}
+            <nav>
+                <p style="display:inline-block;margin-right: 0.25em;">
+                    <small>Tagged</small>
+                </p>
+                {% for item in tags %}
+                    <a href="../tag/{{item | slugify }}" class="label">{{item}}</a>
+                {% endfor %}
+            </nav>
+        {% endif %}
+    {%- endif -%}
+    {%- if isRefresh -%}
+        <img src="/public/icons/farm-new.png" aria-hidden="true"  alt="" class="new-indicator">
+    {%- endif -%}
+</header>

@@ -1,0 +1,25 @@
+{% extends "./base.njk" %}
+
+{% set post = true %}
+
+{# Check if toc is not defined or if it's true in the frontmatter #}
+{% set toc_enabled = toc is not defined or toc %}
+
+{% if toc_enabled %}
+  {% set aside_enabled = true %}
+  {% set aside_acs = "top" %}
+  {% html "aside" %}
+  <section class="aside-block">
+    <h2>Table Of Contents</h2>
+    {{ content | toc(tags=['h2', 'h3']) | safe }}
+  </section>
+  {% endhtml %}
+{% endif %}
+
+{% block base %}
+  <article class="stack" style="font-size: 1.125em;letter-spacing:0em;line-height: 1.6;">
+    {{ content | safe }}
+    <p>~ Redux</p>
+    <img src="/public/branding/signature.svg" alt="ReduxFlakes logo with a cross with light beige color and a propeller behind, serving as a signature to the blog post"  class="signature">
+  </article>
+{% endblock %}

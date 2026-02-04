@@ -1,0 +1,15 @@
+<a href="{{params.href}}" class="post-listing card">
+    <section class="stack" style="--spacer: 0.25em;">
+        {%- if params.subheading -%}
+            <h3>{{ params.title }}</h3>
+        {%- else -%}
+            <h2>{{ params.title }}</h2>
+        {%- endif -%}
+        <p class="secondary">
+            <small>
+                <time datetime="{{params.date}}">{{params.date | formatPostDate}}</time>
+            </small>
+        </p>
+        <p>{{ params.description }}</p>
+    </section>
+</a>

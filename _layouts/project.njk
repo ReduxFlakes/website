@@ -1,0 +1,10 @@
+{% extends "./base.njk" %}
+
+{% block base %}
+    <article class="stack" {% if util.vwsize -%}style="--vw-size:{{util.vwsize}}em;"{%- endif -%}>
+        {%- if projectInfo.banner -%}
+            <img src="/public/{{projectInfo.banner}}" alt="{{projectInfo.banner}}" width="900">
+        {%- endif -%}
+        {{- content | safe -}}
+    </article>
+{% endblock %}

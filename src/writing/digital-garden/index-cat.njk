@@ -1,0 +1,38 @@
+---
+pagination:
+  data: collections.digitalGarden
+  size: 1
+  alias: posts
+  addAllPagesToCollections: true
+paginationPrevText: 'Newer posts'
+paginationNextText: 'Older posts'
+permalink: "/writing/digital-garden/{{posts.title | slugify}}/"
+eleventyComputed:
+  parent: "Digital Garden"
+  key: "{{ posts.title }}"
+  title: "{{ posts.title }}"
+  description: "{{posts.description}}"
+---
+
+{% renderTemplate "md" %}
+  
+## Notes
+
+{% endrenderTemplate %}
+
+{% for post in posts.children %}
+  {{ component('post-listing', {title: post.title, date: post.date, description: post.data.description, href:
+post.url }) }}
+{% endfor %}
+
+{% renderTemplate "md" %}
+  
+## Tags
+
+{% endrenderTemplate %}
+
+<auto-flex>
+  {% for tag in posts.tags %}
+    <a href="../tags/{{tag | slugify}}" class="label">{{tag}}</a>
+  {% endfor %}
+</auto-flex>

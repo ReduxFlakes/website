@@ -1,0 +1,15 @@
+<header class="toolbar mobile">
+  <a href="/" class="go-home">
+    {%lucide "house"%}
+  </a>
+  {%- set update = updates | first -%}
+  <a href="/changelog/">
+    <p>Latest update :: <time datetime="{{update.date | dateToISO}}">{{ update.date | formatEUDate }}</time>
+    </p>
+  </a>
+  <nav>
+    <a href="/feedback"><img class="icon" src="/public/icons/farm-form.png" alt="" aria-hidden="true" width="32" height="32">Feedback<img src="/public/icons/farm-new.png" alt="" aria-visibility="hidden" class="icon" style="--icon-size:18px;align-self:flex-start;"></a>
+    <a href="https://reduxflakes.atabook.org"><img class="icon" src="/public/icons/koloria-mail.png" alt="" aria-hidden="true" width="32" height="32">Guestbook</a>
+    <a href="/sites"><img class="icon" src="/public/icons/sfeers-earth.png" alt="" aria-hidden="true" width="32" height="32">Related Sites</a>
+  </nav>
+</header>

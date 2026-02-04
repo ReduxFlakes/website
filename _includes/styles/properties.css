@@ -1,0 +1,86 @@
+/* themes */
+:root {
+  --font: "Geist", system-ui, sans-serif;
+  --background: hsl(188, 21%, 14%);
+  --container-trans: hsla(188, 21%, 15%, 0.6);
+  --container-low: hsl(188, 23%, 9%);
+  --background-high: hsl(188, 21%, 16%);
+  --background-low: hsl(188, 21%, 12%);
+  --container: hsl(188, 16%, 23%);
+  --foreground: hsl(188, 64%, 88%);
+  --primary: hsl(188, 92%, 80%);
+  --foreground-subtle: hsl(188, 13%, 67%);
+  --stroke: hsl(188, 13%, 31%);
+  --warning: hsl(21, 92%, 80%);
+  --selection: hsla(188, 17%, 64%, 0.35);
+  --shadow: hsla(189, 21%, 43%, 0.8);
+  --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
+  --transition-smooth: cubic-bezier(0.79, 0.33, 0.56, 0.64);
+  --breathing-space: 1rem;
+  --radius: 0.3rem;
+  --viewport: 990px;
+  color-scheme: dark;
+}
+
+.purple {
+  --background: hsl(274, 21%, 15%);
+  --container-trans: hsla(274, 21%, 15%, 0.6);
+  --background-high: hsl(257, 21%, 16%);
+  --background-low: hsl(257, 21%, 12%);
+  --container: hsl(274, 16%, 23%);
+  --container-low: hsl(274, 23%, 9%);
+  --foreground: hsl(274, 64%, 88%);
+  --primary: hsl(257, 75%, 80%);
+  --foreground-subtle: hsl(274, 13%, 67%);
+  --stroke: hsl(274, 13%, 31%);
+  --selection: hsla(257, 17%, 64%, 0.35);
+  --shadow: hsla(274, 21%, 43%, 0.8);
+}
+
+.green-man {
+  --background: hsl(85, 70%, 13%);
+  --container-trans: hsla(85, 70%, 13%, 0.6);
+  --background-high: hsl(85, 70%, 12%);
+  --background-low: hsl(85, 70%, 10%);
+  --container: hsl(85, 70%, 17%);
+  --container-low: hsl(85, 70%, 8%);
+  --foreground: hsl(85, 70%, 88%);
+  --primary: hsl(85, 89%, 46%);
+  --foreground-subtle: hsl(85, 36%, 67%);
+  --stroke: hsl(85, 57%, 25%);
+  --selection: hsla(85, 20%, 64%, 0.35);
+  --shadow: hsla(85, 21%, 43%, 0.8);
+  color-scheme: dark;
+}
+
+.ocean {
+  --background: hsl(218, 21%, 15%);
+  --container-trans: hsla(218, 21%, 15%, 0.6);
+  --background-high: hsl(218, 21%, 16%);
+  --background-low: hsl(218, 21%, 12%);
+  --container: hsl(218, 16%, 23%);
+  --container-low: hsl(218, 23%, 9%);
+  --foreground: hsl(218, 64%, 88%);
+  --primary: hsl(218, 92%, 80%);
+  --foreground-subtle: hsl(218, 13%, 67%);
+  --stroke: hsl(218, 13%, 31%);
+  --selection: hsla(218, 17%, 64%, 0.35);
+  --shadow: hsla(218, 21%, 43%, 0.8);
+  color-scheme: dark;
+}
+
+.neue {
+  --background: hsl(0, 0%, 11%);
+  --container-trans: hsla(0, 0%, 11%, 0.6);
+  --background-high: hsl(0, 0%, 16%);
+  --background-low: hsl(0, 0%, 8%);
+  --container: hsl(0, 0%, 20%);
+  --container-low: hsl(0, 0%, 5%);
+  --foreground: hsl(0, 0%, 88%);
+  --primary: hsl(227, 38%, 82%);
+  --foreground-subtle: hsl(0, 0%, 67%);
+  --stroke: hsl(0, 0%, 26%);
+  --selection: hsla(254, 100%, 95%, 0.35);
+  --shadow: hsla(0, 0%, 100%, 0.4);
+  color-scheme: dark;
+}

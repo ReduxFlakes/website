@@ -1,0 +1,110 @@
+<section class="aside-block">
+  <h2>Webmaster</h2>
+  <div class="auto-flex" >
+    <img class="avatar" src="/public/soldier_11.webp" alt="Picture of Agent Soldier 11 from ZZZ" title="Picture of Agent Soldier 11 from ZZZ" width="72" height="72" >
+    <div style="font-size:0.9em;">
+      <p>ReduxFlakes</p>
+      <p>they/them</p>
+      <p>19</p>
+    </div>
+    <div class="bi"></div>
+  </div>
+  {% if env.host == "nekoweb" or "all" %}
+    <iframe src="https://nekoweb.org/frame/follow" frameborder="0" width="170" height="28" loading="lazy"></iframe>
+  {% endif %}
+  <h3>Status</h3>
+  <p class="noscript-alert">status cafe requires JavaScript</p>
+  <div id="statuscafe" style="margin-top: 0;">
+    <div id="statuscafe-username"></div>
+    <div id="statuscafe-content"></div>
+  </div>
+  <script src="https://status.cafe/current-status.js?name=reduxflakes" defer></script>
+</section>
+
+<section class="aside-block lastfm-widget noscript">
+  <h2>
+    <span id="loadingStatus"></span>
+    <span id="playState">Loading...</span>
+  </h2>
+  <small class="noscript-alert">Requires JS</small>
+  <img src="" alt="" id="albumCover" height="174" widget="174">
+  <h3 >
+    <a href="" id="name" target="_blank" rel="noopener"></a>
+  </h3>
+  <p id="artist"></p>
+
+  <small id="albumName"></small>
+
+  <details>
+    <summary>Show recents</summary>
+    <ol id="lastfm-history"></ol>
+  </details>
+</section>
+{% if env.environment == "production" %}
+  <section class="aside-block noscript">
+    <h2>Site Stats</h2>
+    <h3>Nekoweb Stats</h3>
+    <p id="nekoCreated"></p>
+    <p id="nekoVisitors"></p>
+    <p id="nekoFollowers"></p>
+    <h3>Neocities</h3>
+    <p id="neoCreated"></p>
+    <p id="neoVisitors"></p>
+    <iframe src="https://incr.easrng.net/badge?key=reduxflakes" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0" loading="lazy"></iframe>
+  </section>
+{% endif %}
+<section class="aside-block">
+  <h2>Advertisements</h2>
+  <iframe width="256" height="256" style="border:none;" src="https://dimden.neocities.org/navlink/" loading="lazy"></iframe>
+  <a href="https://discord.gg/dY4GSudRxv"><img src="/public/discord_banner.png" alt=""  style="image-rendering:pixelated;"></a>
+</section>
+<section class="aside-block">
+  <h2>Recommended Pages</h2>
+  <nav>
+    <ul>
+      {%- for entry in  collections.recommended -%}
+        <li>
+          <a href="{{entry.url}}">{{entry.data.title}}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+</section>
+{% set globalProgress = 85 %}
+<section class="aside-block">
+  <h2>To-do</h2>
+  <progress max="100" value="{{globalProgress}}"></progress>
+  <small>Current progress: {{globalProgress}}%</small>
+  <ul>
+    <li>Shrines</li>
+    <li>Digital Garden</li>
+    <li>Resources</li>
+    <li>Gallery for showcasing mockups</li>
+  </ul>
+  <p>
+    <small>Ordered by progress</small>
+  </p>
+  <a href="/roadmap">{% lucide "list-todo" %} Roadmap</a>
+</section>
+<section class="aside-block noscript">
+  <h2>Site Preferences</h2>
+  <div class="auto-flex">
+    <input type="checkbox" class="toggle" id="toggle-music-player"  onchange="toggleMP(this)">
+    <label for="toggle-music-player">Toggle Music Player</label>
+  </div>
+  <small>This will reload the page</small>
+  <div class="auto-flex">
+    <input type="checkbox" class="toggle" id="toggle-sticky-navbar"  onchange="toggleSN(this)">
+    <label for="toggle-sticky-navbar">Toggle Sticky Navbar</label>
+  </div>
+  <div class="auto-flex">
+    <label for="theme-switcher">Change Theme</label>
+    <select name="themes" id="theme-switcher" onchange="setTheme(this.value)">
+      <option value="default" selected="selected">Teal (default)</option>
+      <option value="purple">Purple</option>
+      <option value="green-man">Green Man</option>
+      <option value="ocean">Ocean</option>
+      <option value="neue">Neue</option>
+    </select>
+  </div>
+</section>

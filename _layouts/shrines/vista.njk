@@ -1,0 +1,25 @@
+{% extends "./empty.njk" %}
+
+{% set navigation = collections.all | eleventyNavigation("Shrines") -%}
+
+{%- set categories = [] -%}
+{%- for item in navigation -%}
+    {%- if item.data.shrineId == "vista" and item.url != "/extras/shrines/vista/" -%}
+        {%- set categories = categories.concat([item]) -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{% block body %}
+    <header>
+        <nav>
+            {%- for link in categories -%}
+                <a class="button" href="{{link.url}}">
+                    {{link.title}}</a>
+
+            {%- endfor -%}
+        </nav>
+    </header>
+    <main>
+        {{ content | safe }}
+    </main>
+{% endblock %}

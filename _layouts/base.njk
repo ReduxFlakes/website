@@ -1,0 +1,356 @@
+<!--
+I'm so sorry for making this site so convoluted :sob:
+-->
+{%- from "util/component.njk" import component with context -%}
+
+{# Global Variables #}
+{% if icon %}
+  {% set rawIcon = ["/public/icons/", icon, ".png"] | join %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="{{ meta.lang }}">
+  {% include "head.njk" -%}
+  {% block override %}
+    <body>
+      <a href="#main-content" class="acs-skip">Skip to main content</a>
+      {% if aid_banner %}
+        <header class="toolbar mobile aid">
+          <a href="https://secure.afsc.org/a/gazaer?ms=WEB24NB1010PI">
+            <img src="/public/icons/palestinian.png" alt="Flag of Palestine" height="16" width="16">Support Gaza emergency response</a>
+          <a href="https://u24.gov.ua/">
+            <img src="/public/icons/ukraine.png" alt="Flag of Ukraine" width="16" height="16">Support Ukraine Against Russian Invasion</a>
+        </header>
+      {% endif %}
+      {% include "toolbar.njk" %}
+      {% include "nav.njk" %}
+      {% include "header.njk" %}
+      <main {% if post == true -%}id="main-content"{%- endif %} {% if (aside_enabled == true or aside_enabled == "true") and not is_home -%}class="has-aside"{% elif is_home %}class="has-aside home"{%- endif %}>
+        {% include "breadcrumbs.njk" %}
+        {% if aside_enabled and aside_acs == "top" %}
+          <aside class="page-aside">
+            {% getBundle "html",
+            "aside" %}
+          </aside>
+        {% endif %}
+        {%- block base -%}
+          <article id="main-content" class="stack" {% if util.vwsize -%}style="--vw-size:{{util.vwsize}}em;"{%- endif -%}>
+            {%- if isInConstruction -%}
+              {{ component('notice',{description: "This page is in construction, so expect broken features and/or missing content."}) }}
+            {%- endif -%}
+            {{- content | safe -}}
+          </article>
+        {%- endblock base -%}
+        {%- if aside_enabled and not aside_acs -%}
+          <aside class="page-aside">
+            {% getBundle "html",
+            "aside" %}
+          </aside>
+        {% endif %}
+      </main>
+      <div class="player-container" id="player">
+        <div class="pc-meta">
+          <img id="image-test" width="72px" height="72px">
+          <p>
+            <span class="pc__title" id="title">Click play</span><br>
+            <span class="pc__artist" id="playerArtist">No artist</span></p>
+        </div>
+        <div class="pc-btns">
+          <button class="prev" id="previous" disabled aria-label="Previous Song" title="Previous Song">{%- lucide "skip-back" -%}</button>
+          <button class="play" id="play" aria-label="Play/Pause" title="Play/Pause">{%- lucide "play" -%}</button>
+          <button class="next" id="next" disabled aria-label="Next Song" title="Next song">{%- lucide "skip-forward" -%}</button>
+        </div>
+      </div>
+      {% include "footer.njk" %}
+      {% block scripts %}{% endblock scripts %}
+      <script>
+        if (document.querySelector('.nav-details')) {
+          const details = document.querySelectorAll('.nav-details');
+          details.forEach((targetDetail) => {
+            targetDetail.addEventListener("click", () => {
+              details.forEach((detail) => {
+                if (detail !== targetDetail) {
+                  detail.removeAttribute("open");
+                }
+              });
+            });
+          });
+        }
+      </script>
+      {% if env.environment == "production" and is_home == true%}
+        <script>
+          /* based on https://maxpixels.moe/resources/nekoweb-stats */
+          let domain = "reduxflakes.nekoweb.org";
+          let user = "reduxflakes";
+
+          (async () => {
+            try {
+              const nekoRequest = await fetch(`https://nekoweb.org/api/site/info/${domain}`,);
+              const neoRequest = await fetch(`https://corsproxy.io/?https://neocities.org/api/info?sitename=${user}`);
+
+              const neoJson = await neoRequest.json();
+              const nekoJson = await nekoRequest.json();
+
+              const neoCreated = new Date(neoJson.info.created_at).toLocaleDateString();
+
+              const nekoCreated = new Date(nekoJson.created_at).toLocaleDateString();
+
+              if (document.getElementById("nekoUpdated")) 
+                document
+                  .getElementById("nekoUpdated")
+                  .innerHTML = `Updated ${nekoUpdated}`;
+              if (document.getElementById("nekoVisitors")) 
+                document
+                  .getElementById("nekoVisitors")
+                  .innerHTML = `Visits ${nekoJson.views}`;
+              if (document.getElementById("nekoFollowers")) 
+                document
+                  .getElementById("nekoFollowers")
+                  .innerHTML = `Followers ${nekoJson.followers}`;
+              
+              if (document.getElementById("neoUpdated")) 
+                document
+                  .getElementById("neoUpdated")
+                  .innerHTML = `Updated ${neoUpdated}`;
+              if (document.getElementById("neoVisitors")) 
+                document
+                  .getElementById("neoVisitors")
+                  .innerHTML = `Visits ${neoJson.info.views}`;
+              }
+            catch (error) {
+              console.error(error);
+            }
+          })();
+        </script>
+      {% endif %}
+      <script>
+        let musicPlaylist = [
+          {
+            title: "Broken Heart",
+            artist: "4mat",
+            artistLink: "https://4mat.bandcamp.com/",
+            cover: "https://2dqbgwcncv.ufs.sh/f/z4DBZx5GVIfEMb9Az4xZ07bJqAnwfXpWNFhuIzEg3jdircRl",
+            source: "https://2dqbgwcncv.ufs.sh/f/z4DBZx5GVIfE5mIdN4ye9tPSIZ6HXCsbYclvk8oqa37WVxO4"
+          }, {
+            title: "So Close",
+            artist: "floppi",
+            source: "  https://2dqbgwcncv.ufs.sh/f/z4DBZx5GVIfEJWICX5rNBATM3Z7oGqacg2vkWEhltVCQUfDn"
+          }
+
+        ]
+
+        function toggleMP(elem) {
+          if (elem.checked) {
+            localStorage.setItem("disableMusicPlayer", "false");
+            location.reload();
+          } else {
+            localStorage.setItem("disableMusicPlayer", "true");
+            location.reload();
+          }
+        }
+
+        let title = document.getElementById("title");
+        let artist = document.getElementById("playerArtist");
+        let player = document.getElementById("player");
+        let image = document.getElementById("image-test");
+
+        let btnPlay = document.getElementById("play");
+        let btnPrev = document.getElementById("previous");
+        let btnNext = document.getElementById("next");
+        let btnIcon = document.getElementById("btnIcon");
+
+        let toggleMusicPlayer = document.getElementById("toggle-music-player");
+
+        let audioEngine = new Audio();
+        let isPlaying = false;
+        let currentSong = 0;
+
+        btnPlay.addEventListener("click", playerEngine);
+        btnPrev.addEventListener("click", playerPrev);
+        btnNext.addEventListener("click", playerNext);
+
+        addEventListener("load", (event) => {
+          if (localStorage.getItem("disableMusicPlayer") === "false" || localStorage.getItem("disableMusicPlayer") === null) {
+            player.style.display = "flex";
+            if (toggleMusicPlayer) 
+              toggleMusicPlayer.checked = true;
+            }
+          else {
+            player.style.display = "none";
+            if (toggleMusicPlayer) 
+              toggleMusicPlayer.checked = false;
+            }
+          if (localStorage.getItem("isPlaying") == "true" && localStorage.getItem("musicIndex") && localStorage.getItem("musicPostion")) {
+            currentSong = parseInt(localStorage.getItem("musicIndex"));
+            audioEngine.currentTime = parseFloat(localStorage.getItem("musicPostion"));
+          }
+        })
+
+        audioEngine.addEventListener('ended', function () {
+          if (currentSong < musicPlaylist.length - 1) {
+            currentSong++;
+            loadMusic(currentSong);
+            playMusic();
+          } else {
+            currentSong = 0;
+            loadMusic(currentSong);
+            playMusic();
+          }
+        });
+
+        addEventListener("beforeunload", (event) => {
+          if (isPlaying) {
+            localStorage.setItem("isPlaying", isPlaying);
+            localStorage.setItem("musicIndex", currentSong);
+            localStorage.setItem("musicPostion", audioEngine.currentTime);
+          }
+        })
+
+        function loadMusic(id) {
+          title.innerHTML = musicPlaylist[id].title;
+          artist.innerHTML = musicPlaylist[id].artist;
+          image.src = musicPlaylist[id].cover;
+          audioEngine.src = musicPlaylist[id].source;
+        }
+
+        function playerEngine() {
+          btnPrev.disabled = false;
+          btnNext.disabled = false;
+          if (!isPlaying) {
+            if (audioEngine.src === musicPlaylist[currentSong].source && audioEngine.paused) {
+              playMusic();
+            } else {
+              loadMusic(currentSong);
+              playMusic();
+            }
+          } else if (localStorage.getItem("isPlaying") == "true" && audioEngine.paused) {
+            loadMusic(localStorage.getItem("musicIndex"));
+            audioEngine.currentTime = parseFloat(localStorage.getItem("musicPostion"));
+            playMusic();
+          } else {
+            pauseMusic();
+          }
+        }
+
+        function pauseMusic() {
+          audioEngine.pause();
+          isPlaying = false;
+          localStorage.setItem("isPlaying", isPlaying);
+          btnPlay.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>';
+        }
+
+        function playMusic() {
+          audioEngine.play();
+          isPlaying = true;
+          localStorage.setItem("isPlaying", isPlaying);
+          btnPlay.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pause-icon lucide-pause"><rect x="14" y="3" width="5" height="18" rx="1"/><rect x="5" y="3" width="5" height="18" rx="1"/></svg>';
+        }
+
+        function playerPrev() {
+          if (currentSong > 0) {
+            currentSong = currentSong - 1;
+            loadMusic(currentSong);
+            playMusic();
+            /* restart the song if it's the first one in the playlist */
+          } else if (currentSong = musicPlaylist.length) {
+            currentSong = 0;
+            loadMusic(currentSong);
+            playMusic();
+          }
+        }
+
+        function playerNext() {
+          if (currentSong < musicPlaylist.length) {
+            currentSong = currentSong + 1;
+            loadMusic(currentSong);
+            playMusic();
+          } else if (currentSong = musicPlaylist.length) {
+            currentSong = 0;
+            loadMusic(currentSong);
+            playMusic();
+          }
+        }
+      </script>
+      <script>
+        if (document.querySelector('#theme-switcher')) 
+          document
+            .querySelector('#theme-switcher')
+            .value = localStorage.getItem("theme")
+              ? localStorage.getItem("theme")
+              : "default";
+        
+        let toggleStickyNavbar = document.getElementById("toggle-sticky-navbar");
+
+        document.addEventListener('DOMContentLoaded', function () {
+          if (localStorage.getItem("toggleStickyNav") === "false" || localStorage.getItem("toggleStickyNav") === null) {
+            if (toggleStickyNavbar) 
+              toggleStickyNavbar.checked = false;
+            }
+          else {
+            document
+              .querySelector(".main-nav")
+              .classList
+              .add("sticky");
+            if (toggleStickyNavbar) 
+              toggleStickyNavbar.checked = true;
+            }
+          });
+
+        function toggleSN(elem) {
+          if (elem.checked) {
+            localStorage.setItem("toggleStickyNav", "true");
+            document
+              .querySelector(".main-nav")
+              .classList
+              .add("sticky");
+          } else {
+            localStorage.setItem("toggleStickyNav", "false");
+            document
+              .querySelector(".main-nav")
+              .classList
+              .remove("sticky");
+          }
+        }
+      </script>
+    </body>
+    {% css "anim" -%}
+    {%- include "styles/animations.css" -%}
+    {%- endcss -%}
+    <style>
+      {% getBundle "css", "anim" %}
+    </style>
+    {% if is_home %}
+      <style>
+        :root {
+          --backdrop-icon: url("/public/redux.png");
+        }
+        body {
+          animation: 800ms cubic-bezier(0.49, 0.65, 0.62, 0.41) 0s 1 fadeIn;
+        }
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          20% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        .hero::before {
+          --hero-trans-delay: 800ms;
+          image-rendering: initial;
+        }
+
+        #lastfm-history {
+          padding: 0 1.25em;
+        }
+
+        #lastfm-history a {
+          display: inline;
+        }
+      </style>
+    {% endif %}
+  {% endblock override %}
+</html>

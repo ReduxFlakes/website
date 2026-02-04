@@ -1,0 +1,27 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+{% set footerLinks = [] %}
+{% for item in navPages | filterByKey("for", "Footer") %}
+  {% set footerLinks = footerLinks.concat([item]) %}
+{% endfor %}
+
+<footer class="main-footer stack" style="--spacer:0.35em;">
+  <div class="auto-flex button-grid">
+    {% for item in buttons.special %}
+      {% if item.url -%}
+        <a href="{{item.url}}" class="btn" aria-label="{{item.title}}" title="{{item.title}}" target="_blank" rel="noopener">
+          <img src="/public/buttons/{{item.img}}" alt="{{item.title}}" width="88" height="31" class="classic-btn">
+        </a>
+      {%- else -%}
+        <img src="/public/buttons/{{item.img}}" alt="{{item.title}}" width="88" height="31" class="btn classic-btn" title="{{item.title}}"  >
+      {%- endif -%}
+    {% endfor %}
+  </div>
+  <nav class="auto-flex">
+    {% for entry in footerLinks | sortBy("order") %}
+      <a href="{{entry.url}}">{{entry.title}}</a>
+    {% endfor %}
+  </nav>
+  <p>&copy; 2021 - 2026 ReduxFlakes.</p>
+  <p>Built with <a href="https://www.11ty.dev/">11ty</a> & procrastination, and hosted for free thanks to <a href="https://neocities.org/">Neocities</a> and <a href="https://nekoweb.org/">Nekoweb</a>.</p>
+</footer>

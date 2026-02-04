@@ -1,0 +1,23 @@
+{% extends "../base.njk" %}
+
+{%- set override_title = [shrineTitle, " - ", "Shrines", " - ", meta.title] | join -%}
+
+{% set shrine_style = ["styles/shrines/", shrineId, ".css"] | join %}
+
+{% set shrine = true %}
+{% set favicon = icon %}
+
+{% block override %}
+    <body class="shrine">
+        <a href="../" class="go-back">Go back</a>
+        {% block body %}
+            {{content | safe}}
+        {% endblock body %}
+    </body>
+    {% css "shrine" -%}
+    {%- include shrine_style -%}
+    {%- endcss -%}
+    <style>
+        {% getBundle "css", "shrine" %}
+    </style>
+{% endblock override %}

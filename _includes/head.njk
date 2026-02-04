@@ -1,0 +1,92 @@
+<head>
+  {% if title -%}
+    {%- set page_title = [title, " - ", meta.title] | join -%}
+  {% endif %}
+  {%- if env.host == "neocities" -%}
+    {%- set host = meta.url_neo -%}
+  {%- else -%}
+    {%- set host = meta.url_neko -%}
+  {%- endif -%}
+  {% set favicon = "/public/branding/favicon.svg" %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark"/>
+  <meta name="CCBot" content="nofollow">
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+  <title>{{override_title or page_title or meta.title}}</title>
+  <meta name="description" content="{% if description %}{{description}}{% else %}{{ meta.description }}{% endif %}">
+  <base href="{{page.url}}">
+  <link rel="canonical" href="{{host}}">
+  <link rel="shortcut icon" href="{{favicon}}" type="image/svg+xml">
+  <meta property="og:url" content="{{host}}{{ page.url }}">
+  <meta property="og:title" content="{{page_title or meta.title}}">
+  <meta property="og:site_name" content="{{ meta.title }}"/>
+  <meta property="og:description" content="{%- if description -%}{{description}}{%- else -%}{{meta.description}}{%- endif -%}">
+  <meta property="og:locale" content="{{meta.lang}}">
+  <meta property="og:image" content="{{rawIcon or favicon}}">
+  <meta property="article:author" content="{{ meta.webmaster.name }}"/>
+  <meta name="generator" content="{{ eleventy.generator }}"/>
+  {% css "base" -%}
+  {%- include "styles/base.css" -%}
+  {% if content_css != false %}
+    {%- include "styles/content.css" -%}
+  {% endif %}
+  {%- endcss -%}
+  <style>
+    {% getBundle "css", "base" %}
+  </style>
+  {%- if env.environment == "production" -%}
+    <script data-goatcounter="https://reduxflakes.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+  {%- endif -%}
+  {% if not shrine or shrine == false %}
+    {% css -%}
+    {%- include "styles/style.css" -%}
+    {%- include "styles/components.css" -%}
+    {%- endcss %}
+    <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+    <script>
+      if (localStorage.getItem("theme")) {
+        document.documentElement.className = localStorage.getItem("theme");
+      } else {
+        setTheme("default");
+      }
+
+      function setTheme(themeName) {
+        localStorage.setItem("theme", themeName);
+        if (themeName === "default") {
+          document.documentElement.className = null;
+        } else {
+          document.documentElement.className = themeName;
+        }
+
+      }
+    </script>
+  {% endif %}
+  <style>
+    .noscript-alert {
+      display: none;
+    }
+  </style>
+  <noscript>
+    <style>
+      .noscript-alert {
+        display: block;
+      }
+
+      {%- if is_home == true -%}
+        #neossg,
+        #statuscafe,
+        #statuscafe-title,
+        .lastfm-widget,
+        .noscript,
+        .player-container,
+        .site-stats {
+          display: none;
+        }
+      {%- endif -%}
+    </style>
+  </noscript>
+</head>

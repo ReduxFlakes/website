@@ -1,0 +1,22 @@
+<a href="{{params.href}}" class="card icon-card">
+    <section>
+        {% lucide params.icon or "link" %}
+        {%- if params.subheading -%}
+            <h3>{{ params.title }}</h3>
+        {%- else -%}
+            <h2>{{ params.title }}</h2>
+        {%- endif -%}
+        {%- if params.description -%}
+            <p>{{ params.description }}</p>
+        {%- endif -%}
+        {%- if params.extras -%}
+            <auto-flex class="justify">
+                {% for item in params.extras -%}
+                    <p>
+                        <small>{{item}}</small>
+                    </p>
+                {%- endfor %}
+            </auto-flex>
+        {%- endif -%}
+    </section>
+</a>
