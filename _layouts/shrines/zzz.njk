@@ -11,16 +11,19 @@
 
 {% block body %}
   <header>
-    <img src="/public/img/shrines/zzz.png" alt="Zenless Zone Zero logo">
+    <a href="/extras/shrines/zzz"><img src="/public/img/shrines/zzz.png" alt="Zenless Zone Zero logo"></a>
     <nav>
       {%- for link in categories -%}
         <a class="button" href="{{link.url}}">
-          {{link.title}}</a>
-
+          {{link.data.title}}</a>
       {%- endfor -%}
     </nav>
   </header>
   <main>
     {{ content | safe }}
   </main>
+  <footer>
+    <p>This shrine is not affiliated with or endorsed by miHoYo or Netmarble.</p>
+    <p>&copy; 2026 ReduxFlakes</p>
+  </footer>
 {% endblock %}

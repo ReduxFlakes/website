@@ -705,6 +705,16 @@ export default {
   ],
   special: [
     {
+      title: "Neocities",
+      img: "general/neocities.gif",
+      url: "https://neocities.org/"
+    },
+    {
+      title: "Nekoweb",
+      img: "general/nekoweb.gif",
+      url: "https://nekoweb.org/"
+    },
+    {
       title: "OpenBooks",
       img: "friends/openbooks.gif",
       url: "https://openbooks.neocities.org",
@@ -714,6 +724,7 @@ export default {
       img: "general/nkko.png",
       url: "https://team.indieseas.net/"
     },
+
     {
       title: "plasma",
       img: "general/plasmanow.gif",
@@ -741,12 +752,18 @@ export default {
     },
     {
       title: "Bitwarden Password Manager",
-      img: "general/bitwarden.gif"
+      img: "general/bitwarden.gif",
+      url: "https://bitwarden.com"
     },
     {
       title: "Catppuccin",
       img: "general/catppuccin.gif",
       url: "https://catppuccin.com/",
     },
+    {
+      title: "webchnl",
+      img: "general/webchnl.gif",
+      url: "https://webchnl.com/"
+    }
   ],
 };

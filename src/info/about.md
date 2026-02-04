@@ -4,6 +4,7 @@ description: Information about me and this website
 icon: farm-user
 key: About
 parent: Info
+modified: 2026-02-04 18:36:00
 order: 0
 ---
 
@@ -46,6 +47,7 @@ If you want to know what I'm up to, check either my [now page](/now) or [my soci
 ### Credits
 
 - [Eleventy](https://www.11ty.dev/) - The SSG I use to build this website, helps on cutting the copy/paste and makes things more consistent (great for someone who is perfectionist).
+- [Geist by Vercel](https://vercel.com/font) - The main font I use on the site.
 
 #### Icons
 

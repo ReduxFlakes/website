@@ -569,6 +569,7 @@ nav.breadcrumb li+li::before {
 .lastfm-widget img {
   margin: 1rem auto;
   border: 1px solid var(--stroke);
+
   transition: all 0.2s, transform 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
 }
 
@@ -869,6 +870,10 @@ a:has(svg) {
 
 a:has(.classic-btn) {
   display: flex;
+}
+
+.classic-btn {
+  image-rendering: pixelated;
 }
 
 .aid {

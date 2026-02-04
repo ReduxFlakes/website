@@ -1,11 +1,29 @@
 export default [
   {
-    date: "2026-02-05 01:11:24",
-    content: "HUGE UPDATE! New content, improved design, and more features :3",
+    date: "2026-02-04 21:41:24",
+    content: "HUGE UPDATE! Lot's of rework, optimizations, and hopefully a bit of new content for y'all :3",
     list: [
-      "Added a feedback form to know everyone's opinion on the current state of the site :D",
-      "Updated some themes (including the removal of the default pink theme which has been replaced with the new teal theme but also the addition of a new theme (purple) and made the midnight theme darker",
-      "Cleaned up the player css"
+      "New content! Digital garden is now done (just missing the content xD), there's new projects added to the list, shrines are also working but I haven't got to make any of them yet.",
+      "New buttons everywhere! I've added missing people on the friends section, updated buttons that had changed, and removed broken links. There's also a lot more buttons in the footer now promoting stuff I like!",
+      "Redesigned the toolbars, nav menus, homepage, and projects page.",
+      "The homepage has been reworked with a new introduction, an announcements list that shows everything new I've recently worked/done, and the latest update has been changed to a more simplified section called What's New.",
+      "Improve general layout",
+      "The site is a bit more modular although I do not recommend using it as a template, maybe I'll start doing 11ty templats? (maybe :D)",
+      "Homepage sidebar has also been updated with new sections (webmaster and advertisements), and reordered some sections.",
+      "The blog has been improved for both desktop and mobile with the toc being moved to the sidebar",
+      "The toolbar now has a link for a feedback form so you can send me your opinions and suggestions on the new design! (I'll appreciate a lot if anyone fills it up <3)",
+      "I've replaced the site's telemetry from Tinylytics to GoatCounter which means the kudo option under blog posts have been removed.",
+      "I've readded the increment widget which is available on the homepage under the Stats section on the sidebar.",
+      "Updated the social media section with new socials and a new design",
+      "The navbar can now be sticky if you want and can be enabled under the Site Preferences section on the sidebar",
+      "Improved general design",
+      "Reworked themes with the default now being teal",
+      "Finally updated the roadmap page!",
+      "Improved the styling on the music player",
+      "Finally updated the music player playlist",
+      "Small tweaks on the last.fm widget on the homepage sidebar",
+      "Images are now optimized so the site should load even faster!",
+      "There's probably more but I'm tired of remembering and writing everything I've done ~_~"
     ]
   },
   {

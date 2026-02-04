@@ -4,6 +4,7 @@ description: Ever-growing collection of articles and notes
 parent: Writing
 icon: farm-plant
 order: 1
+isRefresh: true
 util:
   vwsize: 45
 ---
@@ -14,8 +15,10 @@ If you don't know what a digital garden is, it's basically a personal space wher
 
 ## Categories
 
-<auto-grid>
-{% for item in collections.digitalGarden %}
+{% if collections.digitalGarden.length > 0 %}
+
+</auto-grid>
+{% for item in collections.digitalGarden -%}
   {% if item.tags.length > 1 %}
     {% set tagsCount =  [item.tags.length, " Tags"] | join %}
   {% else %}
@@ -28,5 +31,11 @@ If you don't know what a digital garden is, it's basically a personal space wher
   {% endif %}
   
   {{ component('link-icon-card', {title: item.title, icon: item.icon, subheading: true, href: item.url, extras: [postNoteCount, tagsCount]}) }}
-{% endfor %}
-</auto-grid>
+{%- endfor %}
+<auto-grid>
+
+{% else %}
+
+No categories available :(
+
+{% endif %}

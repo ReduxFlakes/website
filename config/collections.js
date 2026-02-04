@@ -70,7 +70,7 @@ export const getDigitalGardenCollections = collectionApi => {
                     key: item.data.title,
                     parent: item.data.digitalGarden.category
                 },
-                tags: itemTags // Individual tags for this specific post 
+                tags: itemTags
             });
         }
     });

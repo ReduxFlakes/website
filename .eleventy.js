@@ -17,7 +17,7 @@ import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines
 
 export default async function (eleventyConfig) {
   eleventyConfig.setServerOptions({
-    watch: ["./src/**", "./config/filters.js", "./config/collections.js"],
+    watch: ["./src/**", "./config/**"],
   });
   eleventyConfig.addPassthroughCopy("src/public/");
 

@@ -1,5 +1,7 @@
 {
     "shrineTitle": "Windows Vista",
     "shrineId": "vista",
-    "parent": "Windows Vista"
+    "parent": "Windows Vista",
+    "permalink": false,
+    "draft": true
 }

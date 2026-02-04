@@ -51,7 +51,7 @@
         {%- endif -%}
         <span>{{ entry.title }}
           {%- for item in entry.children -%}
-            {%- if item.data.isRefresh or item.isRefresh -%}
+            {%- if item.data.isRefresh or item.isRefresh or entry.data.isRefresh -%}
               <sup style="display:inline"><img src="/public/icons/farm-new.png" alt="" aria-visibility="hidden" class="icon" style="--icon-size:18px;align-self:flex-start;"></sup>
             {%- endif -%}
           {%- endfor -%}

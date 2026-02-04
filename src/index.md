@@ -36,18 +36,9 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
 
 ## {% lucide "milestone" %} What's New? <small><time datetime="{{ latestUpdate.date | dateToISO }}">{{ latestUpdate.date | formatDateTime }}<time></small>
 
-<p>{{ latestUpdate.content | safe }}</p>
-{%- if latestUpdate.list -%}
-  <p><b>Changes</b></p>
-  <ul style="padding:0 2em;">
-    {%- for item in latestUpdate.list -%}
-    <li>{{item | safe}}</li>
-    {%- endfor -%}
-  </ul>
-  {%- endif -%}
-</p>
+> {{ latestUpdate.content | safe }}
 
-<small>Looking for older updates? Check the [changelog page](/changelog)!</small>
+<small>Looking for older updates or more information? Check the [changelog page](/changelog)!</small>
 
 </section>
 
@@ -132,7 +123,7 @@ If you like my site, you can link me by using the buttons below!
 <div class="auto-flex">
 
 <img src="/public/buttons/reduc_anim.gif" alt="Redux animated button" class="classic-btn" loading="lazy"
-    decoding="async" >
+    decoding="async">
 
 <img src="/public/buttons/reduc.webp" alt="Redux static button" class="classic-btn" loading="lazy"
     decoding="async">

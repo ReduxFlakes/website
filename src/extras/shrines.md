@@ -3,16 +3,15 @@ title: Shrines
 description: Small sites of stuff I love
 icon: farm-flower
 parent: Extras
+isInConstruction: true
+isRefresh: true
 order: 0
 ---
 
 <div class="auto-grid">
 {%- for shrine in collections.shrines -%}
-
-<section class="card-shrine" style="--accent: {{shrine.data.accent}};" data-status="{{shrine.data.status}}">
-<h2>{{shrine.data.title}}</h2>
-<p>{{shrine.data.description}}</p>
-<a href="{{shrine.url}}" class="button button--transparent">Access</a>
-</section>
+{%- if not shrine.data.draft or shrine.url -%}
+  {{ component('link-icon-card', {title: shrine.data.title, description: shrine.data.description, href: shrine.url, extras: [shrine.data.status]}) }}
+{%- endif -%}
 {%- endfor -%}
 </div>
