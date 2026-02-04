@@ -90,7 +90,7 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
     {%- if button.img -%}
     <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="
     {%- if button.externalimg -%}{{button.img}}{%- else -%}/public/buttons/friends/{{button.img}}{%-endif-%}"
-        alt="{{button.title}} button" width="88" height="31" class="classic-btn"></a>
+        alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if button.externalimg -%}eleventy:ignore{%- endif -%}></a>
     {%- else -%}
     <a href="{{button.url}}" style="min-width:88px;min-height:31px;" class="btn">{{button.title}}</a>
     {%- endif -%}
@@ -107,8 +107,7 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
     {%- for button in buttons.likes -%}
     {%- if button.img -%}
     <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/buttons/{{button.img}}"
-        alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img -%}
-        loading="lazy" decoding="async"  {%- endif -%}></a>
+        alt="{{button.title}} button" width="88" height="31" class="classic-btn"></a>
     {%- else -%}
     <a href="{{button.url}}" style="min-width:88px;min-height:31px;" class="btn">{{button.title}}</a>
     {%- endif -%}
@@ -123,7 +122,7 @@ If you like my site, you can link me by using the buttons below!
 <div class="auto-flex">
 
 <img src="/public/buttons/reduc_anim.gif" alt="Redux animated button" class="classic-btn" loading="lazy"
-    decoding="async">
+    decoding="async" c>
 
 <img src="/public/buttons/reduc.webp" alt="Redux static button" class="classic-btn" loading="lazy"
     decoding="async">
