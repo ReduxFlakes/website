@@ -5,42 +5,81 @@ layout: home.njk
 content_css: false
 ---
 
-## Hi!
+{{ component('notice',{description: "I'm currently reworking the base of the entire site, so some stuff might look inconsistent or missing but don't worry. "}) }}
 
-I'm ReduxFlakes, a developer and designer from Portugal with a focus on privacy and minimalism. This is my personal space on the web where I share most of the stuff I do. You can find my blog, current projects and ideas, downloads, and other goodies and extras! If you want to know more about me, check the [about page](/about). See ya!
+<auto-grid style="--size:15em;">
+<section class="blok">
+
+## Welcome!
+
+Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from Portugal. I'm known for creating the collective [SurfScape](https://surfscape.eu), the [Celer](https://surfscape.eu/celer) toolbox but also for doing [remasters on YouTube](https://youtube.com/@reduxflakes).
+
+<a href="/about" style="margin-top:0.5em">More about me {% lucide "arrow-down-right" %}</a>
+
+</section>
+
+<section class="blok">
+
+## Announcements
+
+<ul class="slim-list">
+{%- for item in announcements -%}
+  <li><a href="{{item.link}}">{{item.title}}</a><small> - <time datetime="{{item.date}}">{{item.date  | formatEUDate}}</time></small></li>
+{%- endfor -%}
+</ul>
+</section>
+</auto-grid>
+
+<section class="blok stack" style="--spacer: 0.5em;margin-top:1rem;">
+
+{% set latestUpdate = updates[0] %}
+
+## {% lucide "milestone" %} What's New? <small><time datetime="{{ latestUpdate.date | dateToISO }}">{{ latestUpdate.date | formatDateTime }}<time></small>
+
+<p>{{ latestUpdate.content | safe }}</p>
+{%- if latestUpdate.list -%}
+  <p><b>Changes</b></p>
+  <ul style="padding:0 2em;">
+    {%- for item in latestUpdate.list -%}
+    <li>{{item | safe}}</li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</p>
+
+<small>Looking for older updates? Check the [changelog page](/changelog)!</small>
+
+</section>
 
 ## {% lucide "rss" %} Latest Blog Post
 
-{% for post in collections.posts | limit(1) %}
+{% for post in collections.posts | limit(1) -%}
 {{ component('post-listing', {title: post.data.title, date: post.date, description: post.data.description, href:
 post.url, subheading: true }) }}
-{% endfor %}
-
----
-
-## {% lucide "box" %} Popular Projects
-
-<div class="auto-grid" style="--size: 250px;">
-{%- for item in projects.active | limit(1) -%}
- {%- card item -%}
 {%- endfor -%}
-{%- for item in projects.involved | limit(1) -%}
-  {%- card item -%}
-{%- endfor -%}
-</div>
 
----
+<a href="/writing/blog" style="--spacer:0.5em">View blog {% lucide "arrow-down-right" %}</a>
+
+## {% lucide "box" %} Project Showcase
+
+<auto-grid style="--size: 16em;">
+{% for cat in projects -%}
+  {% for project in cat.items | filterByKey("partOf", "popular") -%}
+    {%- card project -%}
+  {%- endfor %}
+{%- endfor -%}
+</auto-grid>
+<a href="/work/projects" style="--spacer:0.5em">View all projects {% lucide "arrow-down-right" %}</a>
 
 ## {% lucide "globe" %} Links
 
 ### Socials
 
-<div class="auto-grid button-grid" style="gap:1rem;--size:72px;">
+<div class="auto-grid button-grid" style="gap:0.5em;--size:12em;">
   {%- for item in meta.socials -%}
-  <a href="{{item.url}}" style="display:flex;flex-direction:column;align-items:center;" class="btn">
+  <a href="{{item.url}}" class="btn social-btn">
   <img
-      src="/public/icons/pixy/{{item.name | slugify}}.png" alt="" aria-hidden="true" class="classic-btn" loading="lazy"
-      decoding="async" eleventy:ignore>{{item.name}}</a>
+      src="/public/icons/pixy/{{item.name | slugify}}.png" alt="" aria-hidden="true" width="38" height="38" eleventy:ignore class="classic-btn" >{{item.name}}</a>
   {%- endfor -%}
 </div>
 
@@ -54,14 +93,13 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
 ### Friends
 
 <details>
-  <summary>Click to load buttons</summary>
+  <summary><p>Click to toggle the buttons! <small>(bandwidth warning!)</small></p></summary>
   <div class="auto-flex button-grid">
     {%- for button in buttons.friends -%}
     {%- if button.img -%}
     <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="
     {%- if button.externalimg -%}{{button.img}}{%- else -%}/public/buttons/friends/{{button.img}}{%-endif-%}"
-        alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img or button.eleventy == "ignore" -%}
-        loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
+        alt="{{button.title}} button" width="88" height="31" class="classic-btn"></a>
     {%- else -%}
     <a href="{{button.url}}" style="min-width:88px;min-height:31px;" class="btn">{{button.title}}</a>
     {%- endif -%}
@@ -72,23 +110,20 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
 ### Sites I like / Inspired on
 
 <details>
-  <summary>Click to load buttons</summary>
+  <summary>
+  <p>Click to toggle the buttons! <small>(bandwidth warning!)</small></p></summary>
   <div class="auto-flex button-grid">
     {%- for button in buttons.likes -%}
     {%- if button.img -%}
     <a href="{{button.url}}" title="{{button.title}}" class="btn"><img src="/public/buttons/{{button.img}}"
         alt="{{button.title}} button" width="88" height="31" class="classic-btn" {%- if ".gif" in button.img -%}
-        loading="lazy" decoding="async" eleventy:ignore {%- endif -%}></a>
+        loading="lazy" decoding="async"  {%- endif -%}></a>
     {%- else -%}
     <a href="{{button.url}}" style="min-width:88px;min-height:31px;" class="btn">{{button.title}}</a>
     {%- endif -%}
     {% endfor %}
   </div>
 </details>
-
-### Fanlists
-
-<a href="https://fanlistings.melankorin.net/radiohead/" title="Against Demons, the Radiohead fanlisting" aria-label="Against Demons, the Radiohead fanlisting"><img src="/public/badges/against_demons_fanlist.png" alt="Badge for the Against Demons Radiohead fanlist"></a>
 
 ### Link me!
 
@@ -97,32 +132,34 @@ If you like my site, you can link me by using the buttons below!
 <div class="auto-flex">
 
 <img src="/public/buttons/reduc_anim.gif" alt="Redux animated button" class="classic-btn" loading="lazy"
-    decoding="async" eleventy:ignore>
+    decoding="async" >
 
 <img src="/public/buttons/reduc.webp" alt="Redux static button" class="classic-btn" loading="lazy"
     decoding="async">
 
 </div>
 
----
+### Fanlists
+
+<a href="https://fanlistings.melankorin.net/radiohead/" title="Against Demons, the Radiohead fanlisting" aria-label="Against Demons, the Radiohead fanlisting"><img src="/public/badges/against_demons_fanlist.png" alt="Badge for the Against Demons Radiohead fanlist"></a>
 
 ## {% lucide "link" %} Webrings
 
-{% if env.host == "neocities" %}
+Some webrings might be missing because JS is currently disabled/not working. [- .noscript-alert -]
 
-### 🌐 NeoSSG Webring
+{% if env.host == "neocities" or "all" %}
 
-<div id="neossg">
+### 🌐 NeoSSG Webring [- .noscript -]
+
+<div class="noscript" id="neossg">
   <script type="text/javascript" src="https://neossg.neocities.org/onionring-variables.js" defer async></script>
   <script type="text/javascript" src="https://neossg.neocities.org/onionring-widget.js" defer async></script>
 </div>
 
-### 💽 Null Webring
+### 💽 Null Webring [- .noscript -]
 
-<div class="auto-flex">
-
+<div class="auto-flex noscript">
   <script src="https://nuthead.neocities.org/ring/ring.js" defer async></script>
-
 </div>
 
 ### 🤖 No AI
@@ -133,7 +170,7 @@ If you like my site, you can link me by using the buttons below!
   <a href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
 </div>
 
-{% elif env.host == "nekoweb" %}
+{% elif env.host == "nekoweb" or "all" %}
 
 ### 💧 Bucket Webring
 
@@ -157,36 +194,4 @@ If you like my site, you can link me by using the buttons below!
     title="Next up">{% lucide "arrow-right" %}</a>
 </div>
 
-### 🎨 palette webring
-
-<webring-container>
-  <config key="type" value="gruvbox-dark"></config>
-  <config key="font" value="Overused Grotesk, Arial, sans-serif"></config>
-  <config key="fill" value="true"></config>
-  <script src="https://palette.nekoweb.org/pmoring.js" defer async data-type="catppuccin-mocha"/>
-</webring-container>
-
 {% endif %}
-
-<hr>
-
-## {% lucide "milestone" %} Latest Update
-
-{% for entry in updates | limit(1) -%}
-
-  <p><b class="flex-h"><time
-        datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}<time></b></p>
-
-  <p>{{ entry.content | safe }}</p>
-  {%- if entry.list -%}
-  <p><b>Changes:</b></p>
-  <ul style="padding:0 2rem;">
-    {%- for item in entry.list -%}
-    <li>{{item | safe}}</li>
-    {%- endfor -%}
-  </ul>
-  {%- endif -%}
-  </p>
-  {%- endfor %}
-
-<small>Looking for older updates? Check the [changelog page](/changelog)!</small>

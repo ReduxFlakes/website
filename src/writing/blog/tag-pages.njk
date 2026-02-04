@@ -1,7 +1,7 @@
 ---
 permalink: "/writing/blog/tag/{{ tag | slugify }}/"
 pagination: 
-    data: collections
+    data: collections.postTags
     size: 1
     alias: tag
     addAllPagesToCollections: true
@@ -9,7 +9,7 @@ eleventyComputed:
     title: "Tagged with: {{ tag }}"
     description: false
     parent: Blog
-    key: "{%- if collections[tag].data.parent == 'Blog' -%}{{ tag }}{%- endif -%}"
+    key: "{{ tag }}"
     excludeFromNav: true
 ---
 

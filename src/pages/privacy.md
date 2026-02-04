@@ -1,13 +1,14 @@
 ---
 title: Privacy Statement
 description: The privacy measures of this website
-eleventyNavigation:
-  for: Footer
+for: Footer
+order: 1
+modified: 2026-02-01 01:22:03
 ---
 
-This website uses [Tinylytics](https://tinylytics.app/) to gather the number of visits the site has. It's not used to track users or collect personal data. It's compliant with GDPR and does not use cookies.
+This website uses [GoatCounter](https://goatcounter.com/) to gather the number of visits the site has. It's not used to track users or collect personal data. It's compliant with GDPR and does not use cookies.
 
-<a href="https://tinylytics.app/public/5HHwsUJz9sdyGAGcFQRx" class="button">View website traffic</a>
+## Hosting
 
 This sites uses Neocities and Nekoweb for site hosting, below is the corresponding privacy policies for both.
 
@@ -16,6 +17,4 @@ This sites uses Neocities and Nekoweb for site hosting, below is the correspondi
 
 ## Third Party Services
 
-I currently use [File Garden](https://filegarden.com/) to host the files on the [Remasters page](/downloads/remasters).
-
-
+[File Garden](https://filegarden.com/) is currently used to host some of the downloads on the site (mainly the [Pixy Icon Pack](/work/design/pixy)), and [Tally](https://tally.so) is used for embedding forms (currently used in the [Feedback page](/feedback)).

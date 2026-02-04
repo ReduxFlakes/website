@@ -4,7 +4,7 @@ description: A design system for the big screen
 parent: Design
 ---
 
-<img src="/public/return_banner.png" alt="A dark-themed banner displaying 'Return Design System' in white text at the center, with a stylized orange and gray arrow graphic above it. '1.0 RC2' is written in light gray at the top-left corner, and 'By ReduxFlakes' appears in light gray at the bottom-left corner." class="banner" eleventy:ignore>
+<img src="/public/return_banner.png" alt="A dark-themed banner displaying 'Return Design System' in white text at the center, with a stylized orange and gray arrow graphic above it. '1.0 RC2' is written in light gray at the top-left corner, and 'By ReduxFlakes' appears in light gray at the bottom-left corner." class="banner" >
 
 ## About
 

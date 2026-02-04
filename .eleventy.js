@@ -10,24 +10,42 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import timeToRead from "eleventy-plugin-time-to-read";
-import filters from "./config/filters.js";
 import { DateTime } from "luxon";
-import logToConsole from 'eleventy-plugin-console-plus'
 import pluginTOC from "@uncenter/eleventy-plugin-toc";
+import filters from "./config/filters.js";
+import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines, recommended } from "./config/collections.js";
 
 export default async function (eleventyConfig) {
+  eleventyConfig.setServerOptions({
+    watch: ["./src/**", "./config/filters.js", "./config/collections.js"],
+  });
+  eleventyConfig.addPassthroughCopy("src/public/");
+
+  //########## Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyLucideicons);
-  eleventyConfig.addPlugin(logToConsole);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["webp", "jpeg"],
+    widths: [480, 800, 1000],
+
     htmlOptions: {
       imgAttributes: {
         loading: "lazy",
         decoding: "async",
       },
     },
+    pictureAttributes: {},
+    sharpOptions: {
+      animated: true,
+    },
+    sharpWebpOptions: {
+      nearLossless: true
+    },
+    sharpJpegOptions: {
+      quality: 92
+    }
   });
   eleventyConfig.addPlugin(timeToRead);
   eleventyConfig.addPlugin(pluginTOC, {
@@ -37,13 +55,12 @@ export default async function (eleventyConfig) {
     },
   });
 
-  eleventyConfig.addPassthroughCopy("src/public");
-
-  /* layout aliases */
+  //########## Layouts
   eleventyConfig.addLayoutAlias("base", "base.njk");
   eleventyConfig.addLayoutAlias("post", "post.njk");
+  eleventyConfig.addLayoutAlias("layout", "layout.njk");
 
-  /* filters */
+  //########## Filters
   Object.keys(filters).forEach((filterName) => {
     eleventyConfig.addFilter(filterName, filters[filterName]);
   });
@@ -63,6 +80,15 @@ export default async function (eleventyConfig) {
     }
     return localDate;
   });
+
+  //########## Collections
+  eleventyConfig.addCollection('posts', getBlogPosts);
+  eleventyConfig.addCollection('postTags', getBlogPostsTags);
+  eleventyConfig.addCollection('digitalGarden', getDigitalGardenCollections);
+  eleventyConfig.addCollection('shrines', getShrines);
+  eleventyConfig.addCollection('recommended', recommended);
+
+
   /* plugins */
   const md = markdownIt({ html: true });
   md.use(markdownItAttrs, {
@@ -89,27 +115,22 @@ export default async function (eleventyConfig) {
     );
   });
 
-  /* collections */
-  eleventyConfig.addCollection("posts", function (collection) {
-    return [
-      ...collection.getFilteredByGlob("src/writing/blog/content/**/*.md"),
-    ].reverse();
+  /* shortcode */
+  eleventyConfig.addShortcode("card", function (item) {
+    const tags = item.tags ? item.tags.map(tag => `<span class="label">${tag}</span>`).join('') : '';
+    const actions = item.actions ? item.actions.map(action => `<a href="${action.url}" class="button">${action.label}</a>`).join('') : '';
+    return `<section class="card stack" style="--spacer:0.5em;">
+    <h3>${item.title}</h3>
+    ${tags ? `<div class="auto-flex">${tags}</div>` : ''}
+    <p>${item.description}</p>
+    ${actions ? `<div class="auto-flex">${actions}</div>` : ''}
+    </section>`;
   });
-  ~
-    /* shortcode */
-    eleventyConfig.addShortcode("card", function (item) {
-      const tags = item.tags ? item.tags.map(tag => `<span class="label">${tag}</span>`).join('') : '';
-      const actions = item.actions ? item.actions.map(action => `<a href="${action.url}" class="button">${action.label}</a>`).join('') : '';
-      return `<section class="card stack" style="--spacer:0.5em;">
-        <h3>${item.title}</h3>
-        ${tags ? `<div class="flex-h">${tags}</div>` : ''}
-        <p>${item.description}</p>
-        ${actions}
-      </section>`;
-    });
+
+
+
   /* bundles & html and css optimization */
   eleventyConfig.addBundle("html")
-
   eleventyConfig.addBundle("css", {
     transforms: [
       async function (content) {
@@ -128,16 +149,15 @@ export default async function (eleventyConfig) {
       "md",
       "njk",
       "html",
-      "liquid",
       "11ty.js",
     ],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dir: {
-      input: "src",
-      includes: "_includes",
-      layouts: "_layouts",
-      data: "_data",
+      input: "src/",
+      includes: "../_includes",
+      layouts: "../_layouts",
+      data: "../_data",
       output: "_site",
     },
   };

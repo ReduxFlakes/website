@@ -2,6 +2,7 @@
 title: Blog
 description: Life, projects, site updates, and other rambles and articles...
 icon: "farm-post"
+order: 0
 pagination:
   data: collections.posts
   size: 4
@@ -33,10 +34,10 @@ eleventyComputed:
 
   <section class="aside-block">
     <h2>Feeds</h2>
-    <nav class="auto-flex" aria-label="Blog feed subscriptions">
-      <a href="/blog/feed.xml"><img src="/public/buttons/general/80-rss.png" alt="" aria-hidden="true" style="image-rendering:pixelated;" eleventy:ignore>RSS Feed</a>
-      <a href="/blog/atom.xml"><img src="/public/buttons/general/80-atom.png" alt="" aria-hidden="true" style="image-rendering:pixelated;"  eleventy:ignore>Atom Feed</a>
-      <a href="/blog/feed.json"><img src="/public/buttons/general/80-json.png" alt="" aria-hidden="true" style="image-rendering:pixelated;" eleventy:ignore>JSON Feed</a>
+    <nav aria-label="Blog feed subscriptions" class="auto-flex">
+      <a class="label" href="/blog/feed.xml">{% lucide "rss" %} RSS</a>
+      <a class="label" href="/blog/atom.xml">{% lucide "atom" %} Atom Feed</a>
+      <a class="label" href="/blog/feed.json">{% lucide "file-braces" %} JSON Feed</a>
     </nav>
   </section>
 

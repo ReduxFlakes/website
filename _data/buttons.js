@@ -710,7 +710,29 @@ export default {
       url: "https://openbooks.neocities.org",
     },
     {
-      title: "Trans rights now",
+      title: "nkko",
+      img: "general/nkko.png",
+      url: "https://team.indieseas.net/"
+    },
+    {
+      title: "plasma",
+      img: "general/plasmanow.gif",
+      url: "https://plasma.nekoweb.org/"
+    },
+    {
+      title: "This site has received 80+ Platinum",
+      img: "general/80plusplat.png"
+    },
+    {
+      title: "Made with CSS Grid",
+      img: "general/css-grid.gif",
+    },
+    {
+      title: "Bookmark this page!",
+      img: "general/bookmark.gif",
+    },
+    {
+      title: "Trans rights now!",
       img: "general/transnow.gif",
     },
     {
@@ -718,8 +740,8 @@ export default {
       img: "general/bring-back-the-headphone-jack.gif",
     },
     {
-      title: "Made with CSS Grid",
-      img: "general/css-grid.gif",
+      title: "Bitwarden Password Manager",
+      img: "general/bitwarden.gif"
     },
     {
       title: "Catppuccin",

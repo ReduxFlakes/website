@@ -1,9 +1,9 @@
 {
   "layout": "post",
   "permalink": "/writing/blog/{{ page.fileSlug }}/",
+  "parent": "Blog",
   "eleventyComputed": {
     "key": "{{ title | safe }}",
-    "parent": "Blog",
     "excludeFromNav": true
   }
 }
