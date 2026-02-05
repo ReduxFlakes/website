@@ -722,7 +722,7 @@ export default {
     {
       title: "nkko",
       img: "general/nkko.png",
-      url: "https://team.indieseas.net/"
+      url: "https://nkko.link/"
     },
 
     {
