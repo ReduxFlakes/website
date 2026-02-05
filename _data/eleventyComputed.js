@@ -8,7 +8,10 @@ function calcDays(startDate) {
 
 export default {
     eleventyNavigation: (data) => {
-        if (!data.eleventyExcludeFromCollections) {
+        if (data.eleventyNavigation) return data.eleventyNavigation;
+        // Skip adding navigation for pages that opt out using either
+        // `eleventyExcludeFromCollections` (older name) or `excludeFromNav` (templates)
+        if (!data.eleventyExcludeFromCollections && !data.excludeFromNav) {
             return {
                 key: data.key || data.title,
                 parent: data.parent || null,
@@ -24,6 +27,6 @@ export default {
         if (!data.isRefresh && data.modified && calcDays(data.modified) < 16) {
             return true;
         }
-        return data.isRefresh;
+        return data.isRefresh || undefined;
     }
 }

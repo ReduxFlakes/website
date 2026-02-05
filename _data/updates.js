@@ -1,5 +1,15 @@
 export default [
   {
+    date: "2026-02-05 12:08:01",
+    content: "Fixed layout and styling issues as well as updated some pages and links.",
+    list: [
+      "Updated the [now](/now) page",
+      "Updated the [uses(/uses) page",
+      "Updated link on the nkko button in the footer",
+      "Fixed navigation mapping issues"
+    ]
+  },
+  {
     date: "2026-02-04 21:41:24",
     content: "HUGE UPDATE! Lot's of rework, optimizations, and hopefully a bit of new content for y'all :3",
     list: [

@@ -3,6 +3,7 @@ title: Blogroll
 description: Directory of sites that I read & recommend
 icon: farm-feed-find
 parent: Resources
+isRefresh: false
 order: 2
 ---
 

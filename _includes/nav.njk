@@ -38,11 +38,8 @@
 
 <nav class="navbar main-nav" aria-label="ReduxFlakes Main Navigation">
   {%- for entry in categories -%}
-    {#{% if env.environment == "development" and loop.first %}
-            <details id="cat-{{entry.key | slugify}}" open class="nav-item" >
-            {% else %} #}
+
     <details id="cat-{{entry.key | slugify}}" class="nav-details">
-      {#{% endif %}#}
       <summary aria-controls="nav-{{entry.key | slugify }}"  {% if entry.key === parent or entry.key === title %}aria-current="true"{% endif %}>
         {% if entry.icon -%}
           <img src="/public/icons/{{entry.icon}}.png" alt="" aria-hidden="true" class="icon" >
@@ -50,11 +47,15 @@
           <img src="/public/icons/{{entry.data.icon}}.png" alt="" aria-hidden="true" class="icon" >
         {%- endif -%}
         <span>{{ entry.title }}
-          {%- for item in entry.children -%}
-            {%- if item.data.isRefresh or item.isRefresh or entry.data.isRefresh -%}
-              <sup style="display:inline"><img src="/public/icons/farm-new.png" alt="" aria-visibility="hidden" class="icon" style="--icon-size:18px;align-self:flex-start;"></sup>
-            {%- endif -%}
-          {%- endfor -%}
+          {% set navIsRefresh = false %}
+          {% for item in entry.children %}
+            {% if entry.data.isRefresh or item.data.isRefresh %}
+              {% set navIsRefresh = true %}
+            {% endif %}
+          {% endfor %}
+          {%- if navIsRefresh -%}
+            <sup style="display:inline"><img src="/public/icons/farm-new.png" alt="" aria-visibility="hidden" class="icon" style="--icon-size:18px;align-self:flex-start;"></sup>
+          {%- endif -%}
         </span>
       </summary>
       <section class="stack" style="--spacer:0.5em;">

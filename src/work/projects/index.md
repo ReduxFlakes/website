@@ -2,10 +2,10 @@
 title: Projects
 description: "Projects I'm involved in (incl. active, archived, and ideas)"
 icon: farm-components
-parent: Work
 order: 1
 modified: 2026-01-30 20:27:00
 marker: ["Recommended"]
+parent: Work
 util:
   vwsize: 50
 ---

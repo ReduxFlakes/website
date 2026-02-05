@@ -4,7 +4,6 @@ description: Ever-growing collection of articles and notes
 parent: Writing
 icon: farm-plant
 order: 1
-isRefresh: true
 util:
   vwsize: 45
 ---

@@ -2,7 +2,7 @@
 title: Now
 description: Stuff I've been doing recently
 icon: farm-clock
-modified: 2025-10-26T00:49:00.00Z
+modified: 2026-02-05 12:09:00
 parent: Info
 order: 1
 ---
@@ -11,20 +11,17 @@ order: 1
 
 <dl>
 <dt>Celer</dt>
-<dd>I've decided to scrap the idea of porting the app to WinUI3 and so I'm now slowly fixing and improving the current WPF app for a future beta release.</dd>
+<dd>A few days ago I released the <a href="https://surfscape.eu/celer"> second public beta</a> of Celer.</dd>
+<dt>V-Renaissance</dt>
+<dd>Started working on a new project. V-Renaissance is a launcher for the game series V-Rally that would allow all the games to be installed and patched on modern machines.</dd>
 <dt>YouTube Channel</dt>
-  <dd>Recently finished a remaster of Eastern Wind that was requested by a subscriber. <a href="https://youtu.be/RIWzSQIoaHQ">Watch it!</a></dd>
+  <dd>Uploaded a remaster of Some Die For Money (Open Eye Studio Demo) by 3D Fish In Sea. <a href="https://youtu.be/2bXS9bcdyT8">Watch it!</a></dd>
 </dl>
-
-## What I've been playing
-
-> Moved to [Gaming](/gaming)
 
 ## What I've been watching
 
-- Instagram and YouTube slop
-- Lain with a friend of mine
+- ohnepixel on youtube
 
 ## What I'm Listening
 
-If you want to check what I'm listening to, you can view my [Last.FM](https://www.last.fm/user/ReduxFlakes), [ListenBrainz](https://listenbrainz.org/user/reduxflakes/), or [Libre.FM](https://libre.fm/user/reduxflakes) profiles. (Last.FM is always updated).
+If you want to check what I'm listening to, you can view my [Last.FM](https://www.last.fm/user/ReduxFlakes).

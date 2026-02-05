@@ -3,7 +3,7 @@ title: Design
 description: Random design and art, from buttons & icons, to mockups.
 icon: farm-color-wheel
 parent: Work
-order: 3
+order: 2
 ---
 
 ## Icon Packs & Buttons
