@@ -831,16 +831,17 @@ a:has(svg) {
   content: attr(data-name);
   position: absolute;
   bottom: 0;
-  font-size: 1.3rem;
-  background: linear-gradient(to bottom, transparent 0%, hsla(0, 0%, 0%, 0.3) 10%, black 100%);
+  font-size: 1.25rem;
+  backdrop-filter: blur(4px) saturate(1.2);
+  border-top: 1px solid var(--container-trans);
+  background: var(--container-trans);
   width: 100%;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--foreground);
-  padding: 0.5rem;
+  padding: 0.5em;
   opacity: 0%;
   visibility: hidden;
-  transition: all .4s ease-in-out;
-
+  transition: all .5s cubic-bezier(0.17, 0.89, 0.32, 0.98);
 }
 
 .gaming-shelf a:hover::before {
@@ -849,13 +850,13 @@ a:has(svg) {
 }
 
 .gaming-shelf a:hover {
-  transform: scale(1.1);
-  rotate: -2deg;
+  transform: scale(1.075);
+  rotate: -1deg;
   z-index: 100;
 }
 
 .gaming-shelf a:nth-child(even):hover {
-  rotate: 2deg;
+  rotate: 1deg;
 }
 
 .gaming-shelf:has(a:hover) a:not(:hover) {

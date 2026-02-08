@@ -1,5 +1,13 @@
 export default [
   {
+    date: "2026-02-08 01:27:05",
+    content: "Small CSS updates",
+    list: [
+      "Fixed gaming page grid",
+      "Fixed nekoweb follow button style"
+    ]
+  },
+  {
     date: "2026-02-05 12:08:01",
     content: "Fixed layout and styling issues as well as updated some pages and links.",
     list: [
