@@ -33,6 +33,9 @@
   {% if content_css != false %}
     {%- include "styles/content.css" -%}
   {% endif %}
+  {% if util.prism %}
+    {%- include "styles/prism.css" -%}
+  {% endif %}
   {%- endcss -%}
   <style>
     {% getBundle "css", "base" %}

@@ -13,6 +13,7 @@ import timeToRead from "eleventy-plugin-time-to-read";
 import { DateTime } from "luxon";
 import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import filters from "./config/filters.js";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines, recommended } from "./config/collections.js";
 
 export default async function (eleventyConfig) {
@@ -54,6 +55,7 @@ export default async function (eleventyConfig) {
       return `<nav class="toc">${toc}</nav>`;
     },
   });
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   //########## Layouts
   eleventyConfig.addLayoutAlias("base", "base.njk");

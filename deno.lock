@@ -4,6 +4,7 @@
     "npm:@11ty/eleventy-img@^6.0.4": "6.0.4",
     "npm:@11ty/eleventy-navigation@^1.0.5": "1.0.5",
     "npm:@11ty/eleventy-plugin-rss@^2.0.4": "2.0.4",
+    "npm:@11ty/eleventy-plugin-syntaxhighlight@^5.0.2": "5.0.2",
     "npm:@11ty/eleventy@^4.0.0-alpha.6": "4.0.0-alpha.6_posthtml@0.16.7",
     "npm:@grimlink/eleventy-plugin-lucide-icons@^2.1.12": "2.1.12",
     "npm:@uncenter/eleventy-plugin-toc@^1.0.3": "1.0.3",
@@ -100,6 +101,12 @@
         "@11ty/posthtml-urls",
         "debug",
         "posthtml"
+      ]
+    },
+    "@11ty/eleventy-plugin-syntaxhighlight@5.0.2": {
+      "integrity": "sha512-T6xVVRDJuHlrFMHbUiZkHjj5o1IlLzZW+1IL9eUsyXFU7rY2ztcYhZew/64vmceFFpQwzuSfxQOXxTJYmKkQ+A==",
+      "dependencies": [
+        "prismjs"
       ]
     },
     "@11ty/eleventy-utils@2.0.7": {
@@ -1431,6 +1438,9 @@
         "posthtml-render"
       ]
     },
+    "prismjs@1.30.0": {
+      "integrity": "sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw=="
+    },
     "prr@1.0.1": {
       "integrity": "sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw=="
     },
@@ -1656,6 +1666,7 @@
         "npm:@11ty/eleventy-img@^6.0.4",
         "npm:@11ty/eleventy-navigation@^1.0.5",
         "npm:@11ty/eleventy-plugin-rss@^2.0.4",
+        "npm:@11ty/eleventy-plugin-syntaxhighlight@^5.0.2",
         "npm:@11ty/eleventy@^4.0.0-alpha.6",
         "npm:@grimlink/eleventy-plugin-lucide-icons@^2.1.12",
         "npm:@uncenter/eleventy-plugin-toc@^1.0.3",

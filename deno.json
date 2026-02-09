@@ -10,5 +10,6 @@
         "build:neo": "HOST_TYPE=neocities BUILD_TYPE=production eleventy && deno task html-minify",
         "build:neko": "HOST_TYPE=nekoweb BUILD_TYPE=production eleventy && deno task html-minify",
         "debug": "DEBUG=Eleventy* eleventy --serve --watch"
-    }
+    },
+    "allowScripts": ["npm:sharp@0.33.5"]
 }
