@@ -701,6 +701,21 @@ export default {
       title: "Andrei",
       img: "andrei.gif",
       url: "andrei.xyz"
+    },
+    {
+      title: "srsxnsh",
+      img: "srsxnsh.gif",
+      url: "https://srsxnsh.xyz/"
+    },
+    {
+      title: "junyaverse",
+      img: "junya.gif",
+      url: "https://cutiesin.tech/"
+    },
+    {
+      title: "Gideon",
+      img: "gideon.gif",
+      url: "https://gideon.sh/"
     }
   ],
   special: [
@@ -764,6 +779,15 @@ export default {
       title: "webchnl",
       img: "general/webchnl.gif",
       url: "https://webchnl.com/"
+    },
+    {
+      title: "Made with VS Code",
+      img: "general/vscode.png",
+      url: "https://code.visualstudio.com/"
+    },
+    {
+      title: "Don't Feed The AI!",
+      img: "general/notfeedai.gif",
     }
   ],
 };
