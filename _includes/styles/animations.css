@@ -10,7 +10,7 @@
     right: 0;
     position: absolute;
     z-index: -1;
-    background: linear-gradient(to bottom, transparent, var(--background-low) 94%);
+    background: linear-gradient(to bottom, transparent, #341B27 94%), url("/public/noise.png");
 }
 
 .hero::before {

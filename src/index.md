@@ -12,7 +12,7 @@ content_css: false
 
 ## Welcome!
 
-Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from Portugal. I'm known for creating the collective [SurfScape](https://surfscape.eu), the [Celer](https://surfscape.eu/celer) toolbox but also for doing [remasters on YouTube](https://youtube.com/@reduxflakes).
+Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from Portugal. I'm known for creating the collective {% externalLink "https://surfscape.eu", "SurfScape" %}, the {% externalLink "https://surfscape.eu/celer", "Celer" %} toolbox and for also doing {% externalLink "https://youtube.com/@reduxflakes", "remasters on YouTube" %}.
 
 <a href="/about" style="margin-top:0.5em">More about me {% lucide "arrow-down-right" %}</a>
 
@@ -42,14 +42,24 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
 
 </section>
 
-## {% lucide "rss" %} Latest Blog Post
-
 {% for post in collections.posts | limit(1) -%}
-{{ component('post-listing', {title: post.data.title, date: post.date, description: post.data.description, href:
-post.url, subheading: true }) }}
+
+<a href="{{post.url}}" class="post-listing card">
+<strong>{% lucide "notebook-text" %}  Latest blog post</strong>
+    <section class="stack" style="--spacer: 0.3em;">
+            <h2>{{ post.data.title }}</h2>
+        <p class="secondary">
+            <small>
+                <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
+            </small>
+        </p>
+        <p>{{ post.data.description }}</p>
+    </section>
+</a>
+
 {%- endfor -%}
 
-<a href="/writing/blog" style="--spacer:0.5em">View blog {% lucide "arrow-down-right" %}</a>
+<a href="/blog" style="--spacer:0.5em">View blog {% lucide "arrow-down-right" %}</a>
 
 ## {% lucide "box" %} Project Showcase
 
@@ -73,18 +83,16 @@ post.url, subheading: true }) }}
       src="/public/icons/pixy/{{item.name | slugify}}.png" alt="" aria-hidden="true" width="38" height="38" eleventy:ignore class="classic-btn" >{{item.name}}</a>
   {%- endfor -%}
 </div>
-
-<a href="https://reduxflakes.atabook.org/" style="color:#A6E3A1"><b>Sign my guestbook!</b></a>
-
+<a href="https://reduxflakes.atabook.org/" class="card guestbook-card" style="--spacer:0.5rem;">Sign my guestbook!</a>
+<div class="auto-grid button-grid" style="gap:0.5em;--spacer:0.5rem;">
+ <a class="btn social-btn" href="https://nekoweb.org/follow/reduxflakes">Follow me on Nekoweb</a>
+<a class="btn social-btn" href="https://neocities.org/site/reduxflakes">Follow me on Neocities</a>
 </div>
 
-Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
-      href="https://neocities.org/site/reduxflakes">Neocities</a></p>
-
-### Friends
+### Friends ({{buttons.friends.length}})
 
 <details>
-  <summary><p>Click to toggle the buttons! <small>(bandwidth warning!)</small></p></summary>
+  <summary>Show buttons :3 <small>(bandwidth warning!)</small></summary>
   <div class="auto-flex button-grid">
     {%- for button in buttons.friends -%}
     {%- if button.img -%}
@@ -98,11 +106,10 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
   </div>
 </details>
 
-### Sites I like / Inspired on
+### Sites I like / Inspired on ({{buttons.likes.length}})
 
 <details>
-  <summary>
-  <p>Click to toggle the buttons! <small>(bandwidth warning!)</small></p></summary>
+  <summary>Show buttons :3 <small>(bandwidth warning!)</small></summary>
   <div class="auto-flex button-grid">
     {%- for button in buttons.likes -%}
     {%- if button.img -%}
@@ -115,73 +122,82 @@ Follow me on <a href="https://nekoweb.org/follow/reduxflakes">Nekoweb</a> & <a
   </div>
 </details>
 
-### Link me!
-
-If you like my site, you can link me by using the buttons below!
-
-<div class="auto-flex">
-
-<img src="/public/buttons/reduc_anim.gif" alt="Redux animated button" class="classic-btn" loading="lazy"
-    decoding="async" c>
-
-<img src="/public/buttons/reduc.webp" alt="Redux static button" class="classic-btn" loading="lazy"
-    decoding="async">
-
-</div>
-
-### Fanlists
-
-<a href="https://fanlistings.melankorin.net/radiohead/" title="Against Demons, the Radiohead fanlisting" aria-label="Against Demons, the Radiohead fanlisting"><img src="/public/badges/against_demons_fanlist.png" alt="Badge for the Against Demons Radiohead fanlist"></a>
-
 ## {% lucide "link" %} Webrings
 
 Some webrings might be missing because JS is currently disabled/not working. [- .noscript-alert -]
 
 {% if env.host == "neocities" or "all" %}
 
-### 🌐 NeoSSG Webring [- .noscript -]
+<div class="auto-grid" style="--size:15em;">
+
+<section class="card stack noscript">
+
+### NeoSSG Webring
 
 <div class="noscript" id="neossg">
   <script type="text/javascript" src="https://neossg.neocities.org/onionring-variables.js" defer async></script>
   <script type="text/javascript" src="https://neossg.neocities.org/onionring-widget.js" defer async></script>
 </div>
+</section>
 
-### 💽 Null Webring [- .noscript -]
+<section class="card stack noscript">
+
+### Null's Webring
 
 <div class="auto-flex noscript">
   <script src="https://nuthead.neocities.org/ring/ring.js" defer async></script>
 </div>
+</section>
 
-### 🤖 No AI
+<section class="card stack">
+
+### No AI
 
 <div class="auto-flex" style="align-items:center;">
-  <a href="https://baccyflap.com/noai/?prv&s=rzr" target="_top" title="Go back">{% lucide "arrow-left" %}</a>
-  <a href="https://baccyflap.com/noai" target="_blank" rel="noopener"> no ai </a>
-  <a href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
+  <a class="button button--icon" href="https://baccyflap.com/noai/?prv&s=rzr" target="_top" title="Go back">{% lucide "arrow-left" %}</a>
+  <a class="button" href="https://baccyflap.com/noai" target="_blank" rel="noopener">{% lucide "globe" %} no ai</a>
+  <a class="button button--icon" href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
 </div>
 
-{% elif env.host == "nekoweb" or "all" %}
+</section>
 
-### 💧 Bucket Webring
-
-<div class="auto-flex" style="align-items:center;">
-  <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes" target="_top" title="Go back">{% lucide
-    "arrow-left" %}</a>
-  <a href="https://webring.bucketfish.me" target="_blank" rel="noopener"> bucket </a>
-  <a href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" title="Next up">{% lucide
-    "arrow-right" %}</a>
-</div>
-
-### 💻 SSGRing
-
-<div class="auto-flex" style="align-items:center;">
-  <a href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=prev" title="Go back">{%
-    lucide "arrow-left" %}</a>
-  <a href="https://jbcarreon123.nekoweb.org/webrings/ssgring" target="_blank" rel="noopener"> SSGRing </a>
-  <a href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?way=rand" title="Random">{% lucide "shuffle"
-    %}</a>
-  <a href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=next" target="_top"
-    title="Next up">{% lucide "arrow-right" %}</a>
 </div>
 
 {% endif %}
+
+{% if env.host == "nekoweb" or "all" %}
+
+<div class="auto-grid" style="--size:15em;">
+
+<section class="card stack">
+
+### Bucket Webring
+
+<div class="auto-flex" style="align-items:center;">
+  <a class="button button--icon" href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes" target="_top" title="Go back">{% lucide
+    "arrow-left" %}</a>
+  <a class="button" href="https://webring.bucketfish.me" target="_blank" rel="noopener">{% lucide "globe" %} bucket </a>
+  <a class="button button--icon" href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" title="Next up">{% lucide
+    "arrow-right" %}</a>
+</div>
+
+</section>
+
+<section class="card stack">
+
+### SSGRing
+
+<div class="auto-flex" style="align-items:center;">
+  <a class="button button--icon" href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=prev" title="Go back">{%
+    lucide "arrow-left" %}</a>
+  <a class="button" href="https://jbcarreon123.nekoweb.org/webrings/ssgring" target="_blank" rel="noopener">{% lucide "globe" %} SSGRing </a>
+  <a class="button button--icon" href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?way=rand" title="Random">{% lucide "shuffle"
+    %}</a>
+  <a class="button button--icon" href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=next" target="_top"
+    title="Next up">{% lucide "arrow-right" %}</a>
+</div>
+
+</section>
+</div>
+
+{% endif -%}

@@ -1,9 +1,9 @@
 ---
 title: Services
-description: Live services, public APIs, and open comissions
+description: Live services and public APIs
 icon: farm-appview
 parent: Work
-order: 3
+order: 4
 util:
   prism: true
 ---

@@ -11,16 +11,19 @@ order: 0
 
   <p><b class="flex-h"><img src="/public/icons/farm-new.png" alt="" aria-visibility="hidden" class="icon"> <time datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}<time></b></p>
 {% else %}  
-<p style="color:var(--foreground-subtle)"><time datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}<time></b></p>
+<p style="color:var(--foreground-muted)"><time datetime="{{ entry.date | dateToISO }}">{{ entry.date | formatDateTime }}<time></b></p>
 
 {% endif %}
 
-<p>{{ entry.content | safe }}</p>
+{{ entry.content | safe }}
 {% if entry.list %}
+
   <p><b>Changes:</b></p>
     <ul style="padding:0 2rem;">
     {% for item in entry.list %}
-      <li>{{item | safe}}</li>
+      <li>
+{{item | safe}}
+      </li>
     {% endfor %}
     </ul>
   {% endif %}

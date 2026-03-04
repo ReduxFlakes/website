@@ -7,9 +7,89 @@
 }
 
 @font-face {
-  font-family: 'Geist';
-  font-weight: 100 900;
-  src: url('/public/fonts/geist.woff2') format('woff2-variations');
+  font-family: "Inter";
+  src:
+    local("Inter Bold Italic"),
+    local("Inter-BoldItalic"),
+    url("/public/fonts/Inter-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    local("Inter Bold"),
+    local("Inter-Bold"),
+    url("/public/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    local("Inter Italic"),
+    local("Inter-Italic"),
+    url("/public/fonts/Inter-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    local("Inter Light Italic"),
+    local("Inter-LightItalic"),
+    url("/public/fonts/Inter-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    local("Inter Light"),
+    local("Inter-Light"),
+    url("/public/fonts/Inter-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    local("Inter Medium Italic"),
+    local("Inter-MediumItalic"),
+    url("/public/fonts/Inter-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    local("Inter Medium"),
+    local("Inter-Medium"),
+    url("/public/fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    local("Inter Regular"),
+    local("Inter-Regular"),
+    url("/public/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -42,24 +122,18 @@ dd {
   margin-left: 1em;
 }
 
-:focus {
-  outline: 2px solid var(--foreground);
+:focus:not(h1, h2, h3, h4, h5, h6) {
+  outline: 2px solid var(--primary);
 }
-
-
 
 ul[role="list"],
 ol[role="list"] {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  gap: 0.5em;
   padding: 0;
   margin: 0;
-}
-
-ul[role="list"] li+li::before {
-  content: "\02022";
-  margin-inline: 0.35em 0.35em;
 }
 
 
@@ -67,7 +141,6 @@ ul,
 ol {
   padding: 0 2rem;
 }
-
 
 img,
 picture,
@@ -90,12 +163,11 @@ summary {
   border: none;
 }
 
-
-
 a {
   display: inline-block;
   color: var(--primary);
   text-decoration: underline 1px;
+  text-underline-offset: 0.2em;
 }
 
 a:hover {
@@ -109,9 +181,9 @@ a:has(svg) {
 }
 
 a:has(svg) svg {
-  width: 1.2em;
-  height: 1.2em;
-  font-size: 1.2em;
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
 }
 
 h1,
@@ -139,14 +211,14 @@ h4:has(svg) {
 }
 
 .anchor {
-  visibility: hidden;
   font-weight: normal;
   opacity: 0;
 }
 
 h1:hover>.anchor,
 h2:hover>.anchor,
-h3:hover>.anchor {
+h3:hover>.anchor,
+.anchor:focus {
   visibility: visible;
   opacity: 1;
 }
@@ -154,24 +226,29 @@ h3:hover>.anchor {
 .acs-skip {
   position: absolute;
   top: -100px;
-  background: var(--container);
 }
 
 .acs-skip:focus,
 .acs-skip:focus-within {
-  top: 0.25em;
-  left: 0.25em;
+  left: 0;
+  top: 0;
+  background: var(--container);
+  padding: 0.5em 0.75em;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.4);
+  z-index: 90;
+  border-top-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.3rem;
+  outline: 2px solid var(--primary);
 }
 
 .stack>*+* {
-  --_space: var(--spacer, 1.15em);
+  --_space: var(--spacer, 1em);
   margin-top: var(--_space);
 }
 
 .stack h2 {
   --spacer: 1.275em;
 }
-
 
 article.stack hr {
   margin: 1.5rem 0;
@@ -192,16 +269,17 @@ hr {
 }
 
 blockquote {
-  padding: 0.5rem 1rem;
+  padding: 0.5em 1em 0.5em 0.7em;
   background: var(--container);
-  color: var(--foreground-subtle);
-  border-left: 0.25em solid var(--primary);
+  color: var(--foreground);
+  border-inline-start: 0.3em solid var(--primary);
+  border-radius: 0.3em;
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.125);
 }
 
 small {
-  color: var(--foreground-subtle);
+  color: var(--foreground-muted);
 }
-
 
 table {
   border-collapse: collapse;
@@ -232,14 +310,13 @@ tr:hover {
 
 tr:target {
   background: #421b2773;
-  border: 4px solid #FE618E;
+  border: 4px solid #fe618e;
 }
 
 textarea {
   background: var(--container);
   color: var(--foreground);
   border-color: var(--stroke);
-
 }
 
 a:has(img.icon) {
@@ -253,11 +330,11 @@ progress {
   height: 0.75rem;
   color: var(--primary);
   border: none;
-  background-color: var(--container);
+  background-color: var(--container-high);
 }
 
 progress::-webkit-progress-bar {
-  background-color: var(--container);
+  background-color: var(--container-high);
 }
 
 progress::-webkit-progress-value,

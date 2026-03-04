@@ -38,30 +38,24 @@
 
 <nav class="navbar main-nav" aria-label="ReduxFlakes Main Navigation">
   {%- for entry in categories -%}
-
-    <details id="cat-{{entry.key | slugify}}" class="nav-details">
-      <summary aria-controls="nav-{{entry.key | slugify }}"  {% if entry.key === parent or entry.key === title %}aria-current="true"{% endif %}>
+    {% set navIsRefresh = false %}
+    {% for item in entry.children %}
+      {% if entry.data.isRefresh or item.data.isRefresh %}
+        {% set navIsRefresh = true %}
+      {% endif %}
+    {% endfor %}
+    <details id="cat-{{entry.key | slugify}}" class="nav-details dropdown"  {% if navIsRefresh -%}data-update="true"{%- endif -%}>
+      <summary aria-controls="nav-{{entry.key | slugify }}"  {% if entry.key === parent or entry.key === title %}aria-current="true"{% endif %} class="button button--transparent">
         {% if entry.icon -%}
           <img src="/public/icons/{{entry.icon}}.png" alt="" aria-hidden="true" class="icon" >
         {%- elif entry.data.icon -%}
           <img src="/public/icons/{{entry.data.icon}}.png" alt="" aria-hidden="true" class="icon" >
         {%- endif -%}
-        <span>{{ entry.title }}
-          {% set navIsRefresh = false %}
-          {% for item in entry.children %}
-            {% if entry.data.isRefresh or item.data.isRefresh %}
-              {% set navIsRefresh = true %}
-            {% endif %}
-          {% endfor %}
-          {%- if navIsRefresh -%}
-            <sup style="display:inline"><img src="/public/icons/farm-new.png" alt="" aria-visibility="hidden" class="icon" style="--icon-size:18px;align-self:flex-start;"></sup>
-          {%- endif -%}
-        </span>
+        {{ entry.title }}
       </summary>
       <section class="stack" style="--spacer:0.5em;">
         <h2 style="font-size:1.25rem;">{{entry.data.title}}</h2>
         <p>{{entry.data.description}}</p>
-        <hr>
         <ul id="nav-{{entry.key | slugify }}" aria-label="{{entry.title}} submenu" class="navbar-list">
           {# show category link if the same has a url/permalink enabled #}
           {% if entry.url -%}

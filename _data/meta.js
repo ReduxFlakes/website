@@ -15,6 +15,14 @@ export default {
       url: "https://github.com/reduxflakes",
     },
     {
+      name: "Mastodon",
+      url: "https://fosstodon.org/@redux",
+    },
+    {
+      name: "Bluesky",
+      url: "https://bsky.app/profile/reduxflakes.bsky.social",
+    },
+    {
       name: "Discord",
       url: "https://discord.gg/dY4GSudRxv",
     },
@@ -23,21 +31,14 @@ export default {
       url: "https://youtube.com/@reduxflakes",
     },
     {
-      name: "Bluesky",
-      url: "https://bsky.app/profile/reduxflakes.bsky.social",
-    },
-    {
-      name: "Mastodon",
-      url: "https://fosstodon.org/@redux",
+      name: "Instagram",
+      url: "https://www.instagram.com/fireplaceinthemall/"
     },
     {
       name: "Steam",
       url: "https://steamcommunity.com/id/reduxflakes/",
     },
-    {
-      name: "Spotify",
-      url: "https://open.spotify.com/user/316gsg33rezoh3rgvx6ebsyk7dya",
-    },
+
     {
       name: "Last.fm",
       url: "https://www.last.fm/user/reduxflakes",

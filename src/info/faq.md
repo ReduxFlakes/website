@@ -1,11 +1,11 @@
 ---
 title: FAQ
-description: Questions/Anwsers related to the webmaster or this website
+description: Questions/Anwsers related to me and this website
 parent: Info
 order: 5
 ---
 
-> This page contains NSFL topics like depression and suicide
+{{ component('notice',{type: "danger", icon: "octagon-alert" ,description: "This page contains NSFL topics like depression and suicide, you have been warned!"}) }}
 
 <details>
 <summary>Why is this website so ugly?</summary>

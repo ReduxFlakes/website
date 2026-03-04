@@ -1,0 +1,78 @@
+  #lastfm-history {
+      padding: 0 1.25em;
+  }
+
+  #lastfm-history a {
+      display: inline;
+  }
+
+  .guestbook-card {
+      position: relative;
+      text-align: center;
+      color: var(--foreground-strong);
+      font-weight: 500;
+      font-size: 1.15rem;
+      z-index: 1;
+      background: linear-gradient(75deg, hsl(1, 50%, 18%), hsl(299, 50%, 18%));
+      overflow: hidden;
+  }
+
+  .guestbook-card:hover::before {
+      scale: 1.2;
+      opacity: 0.6;
+  }
+
+  .guestbook-card::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      opacity: 0.5;
+      background-position: center;
+      background-size: cover;
+      transform: rotate(10deg);
+      inset-inline-end: 0.5rem;
+      inset-block-start: -0.5rem;
+      width: 205px;
+      height: 72.18px;
+      background-image: url("/public/img/atabook-banner.png");
+      transition: 125ms all ease-in-out;
+  }
+
+
+  aside section.webmaster-block {
+      margin: 0;
+      padding: 1rem;
+      border-bottom: 1px solid var(--stroke);
+      background: linear-gradient(to bottom, hsla(329, 98%, 42%, 0.1) 15%, hsla(304, 50%, 44%, 0.1), hsla(220, 100%, 33%, 0.1) 70%);
+  }
+
+  .lastfm-widget img {
+      margin: 1rem auto;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  }
+
+
+  .lastfm-widget h2 span#loadingStatus {
+      width: 0.75em;
+      height: 0.75em;
+      border-radius: 0.15rem;
+      background: var(--background);
+  }
+
+  .lastfm-widget span#loadingStatus.flashing {
+      animation: 1400ms flashing cubic-bezier(0.30, 0.67, 0.30, 0.69) infinite;
+  }
+
+  @keyframes flashing {
+      0% {
+          opacity: 1;
+      }
+
+      50% {
+          opacity: 0.4;
+      }
+
+      100% {
+          opacity: 1;
+      }
+  }

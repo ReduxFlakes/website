@@ -15,6 +15,7 @@ import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import filters from "./config/filters.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines, recommended } from "./config/collections.js";
+import { externalLink, postCard } from "./config/shortcodes.js"
 
 export default async function (eleventyConfig) {
   eleventyConfig.setServerOptions({
@@ -27,27 +28,29 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyLucideicons);
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["webp", "jpeg"],
-    widths: [480, 800, 1000],
+  if (process.env.BUILD_TYPE == "production") {
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+      formats: ["webp", "jpeg"],
+      widths: [480, 800, 1000],
 
-    htmlOptions: {
-      imgAttributes: {
-        loading: "lazy",
-        decoding: "async",
+      htmlOptions: {
+        imgAttributes: {
+          loading: "lazy",
+          decoding: "async",
+        },
       },
-    },
-    pictureAttributes: {},
-    sharpOptions: {
-      animated: true,
-    },
-    sharpWebpOptions: {
-      nearLossless: true
-    },
-    sharpJpegOptions: {
-      quality: 92
-    }
-  });
+      pictureAttributes: {},
+      sharpOptions: {
+        animated: true,
+      },
+      sharpWebpOptions: {
+        nearLossless: true
+      },
+      sharpJpegOptions: {
+        quality: 92
+      }
+    });
+  }
   eleventyConfig.addPlugin(timeToRead);
   eleventyConfig.addPlugin(pluginTOC, {
     ignoredElements: ["a"],
@@ -118,18 +121,8 @@ export default async function (eleventyConfig) {
   });
 
   /* shortcode */
-  eleventyConfig.addShortcode("card", function (item) {
-    const tags = item.tags ? item.tags.map(tag => `<span class="label">${tag}</span>`).join('') : '';
-    const actions = item.actions ? item.actions.map(action => `<a href="${action.url}" class="button">${action.label}</a>`).join('') : '';
-    return `<section class="card stack" style="--spacer:0.5em;">
-    <h3>${item.title}</h3>
-    ${tags ? `<div class="auto-flex">${tags}</div>` : ''}
-    <p>${item.description}</p>
-    ${actions ? `<div class="auto-flex">${actions}</div>` : ''}
-    </section>`;
-  });
-
-
+  eleventyConfig.addShortcode("card", postCard);
+  eleventyConfig.addShortcode("externalLink", externalLink);
 
   /* bundles & html and css optimization */
   eleventyConfig.addBundle("html")

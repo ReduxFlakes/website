@@ -1,15 +1,25 @@
 <header class="toolbar mobile">
-  <a href="/" class="go-home">
-    {%lucide "house"%}
-  </a>
-  {%- set update = updates | first -%}
-  <a href="/changelog/">
-    <p>Latest update :: <time datetime="{{update.date | dateToISO}}">{{ update.date | formatEUDate }}</time>
-    </p>
+  <a href="/" class="button button--transparent button--icon" title="Home">
+    {% lucide "house" %}
   </a>
   <nav>
-    <a href="/feedback"><img class="icon" src="/public/icons/farm-form.png" alt="" aria-hidden="true" width="32" height="32">Feedback<img src="/public/icons/farm-new.png" alt="" aria-visibility="hidden" class="icon" style="--icon-size:18px;align-self:flex-start;"></a>
-    <a href="https://reduxflakes.atabook.org"><img class="icon" src="/public/icons/koloria-mail.png" alt="" aria-hidden="true" width="32" height="32">Guestbook</a>
-    <a href="/sites"><img class="icon" src="/public/icons/sfeers-earth.png" alt="" aria-hidden="true" width="32" height="32">Related Sites</a>
+    {%- set update = updates | first -%}
+    <a href="/changelog/" class="button button--transparent" title="Last update">
+      {% lucide "badge-alert" %}
+      <time datetime="{{update.date | dateToISO}}">{{ update.date | formatEUDate }}</time>
+    </a>
+    <a class="button button--transparent" href="https://secure.afsc.org/a/gazaer?ms=WEB24NB1010PI">
+      <img src="/public/icons/palestinian.png" alt="Flag of Palestine" height="16" width="16">Support Gaza emergency response</a>
+    <a class="button button--transparent" href="https://u24.gov.ua/">
+      <img src="/public/icons/ukraine.png" alt="Flag of Ukraine" width="16" height="16">Support Ukraine Against Russian Invasion</a>
   </nav>
+  <details class="dropdown">
+    <summary class="button button--transparent button--icon" title="Menu" aria-label="Menu">{% lucide "menu" %}</summary>
+    <nav>
+      <a class="button button--transparent" href="/feedback" data-update="true"><img class="icon" src="/public/icons/farm-form.png" alt="" aria-hidden="true" width="32" height="32">Feedback</a>
+      <a class="button button--transparent" href="https://reduxflakes.atabook.org"><img class="icon" src="/public/icons/koloria-mail.png" alt="" aria-hidden="true" width="32" height="32">Guestbook</a>
+      <a class="button button--transparent" href="/sites"><img class="icon" src="/public/icons/sfeers-earth.png" alt="" aria-hidden="true" width="32" height="32">Related Sites</a>
+    </nav>
+  </details>
+
 </header>

@@ -14,14 +14,6 @@ I'm so sorry for making this site so convoluted :sob:
   {% block override %}
     <body>
       <a href="#main-content" class="acs-skip">Skip to main content</a>
-      {% if aid_banner %}
-        <header class="toolbar mobile aid">
-          <a href="https://secure.afsc.org/a/gazaer?ms=WEB24NB1010PI">
-            <img src="/public/icons/palestinian.png" alt="Flag of Palestine" height="16" width="16">Support Gaza emergency response</a>
-          <a href="https://u24.gov.ua/">
-            <img src="/public/icons/ukraine.png" alt="Flag of Ukraine" width="16" height="16">Support Ukraine Against Russian Invasion</a>
-        </header>
-      {% endif %}
       {% include "toolbar.njk" %}
       {% include "nav.njk" %}
       {% include "header.njk" %}
@@ -34,7 +26,7 @@ I'm so sorry for making this site so convoluted :sob:
           </aside>
         {% endif %}
         {%- block base -%}
-          <article id="main-content" class="stack" {% if util.vwsize -%}style="--vw-size:{{util.vwsize}}em;"{%- endif -%}>
+          <article id="main-content" class="stack" {% if util.vwsize and util.vwsize != "full" -%}style="--vw-size:{{util.vwsize}}em;"{% elif util.vwsize == "full" %}style="--vw-size: 100%;"{%- endif -%}>
             {%- if isInConstruction -%}
               {{ component('notice',{description: "This page is in construction, so expect broken features and/or missing content."}) }}
             {%- endif -%}
@@ -48,7 +40,7 @@ I'm so sorry for making this site so convoluted :sob:
           </aside>
         {% endif %}
       </main>
-      <div class="player-container" id="player">
+      {# <div class="player-container" id="player">
         <div class="pc-meta">
           <img id="image-test" width="72px" height="72px">
           <p>
@@ -60,7 +52,7 @@ I'm so sorry for making this site so convoluted :sob:
           <button class="play" id="play" aria-label="Play/Pause" title="Play/Pause">{%- lucide "play" -%}</button>
           <button class="next" id="next" disabled aria-label="Next Song" title="Next song">{%- lucide "skip-forward" -%}</button>
         </div>
-      </div>
+      </div> #}
       {% include "footer.njk" %}
       {% block scripts %}{% endblock scripts %}
       <script>
@@ -123,7 +115,7 @@ I'm so sorry for making this site so convoluted :sob:
           })();
         </script>
       {% endif %}
-      <script>
+      {# <script>
         let musicPlaylist = [
           {
             title: "Broken Heart",
@@ -270,7 +262,7 @@ I'm so sorry for making this site so convoluted :sob:
             playMusic();
           }
         }
-      </script>
+      </script> #}
       <script>
         if (document.querySelector('#theme-switcher')) 
           document
@@ -312,6 +304,42 @@ I'm so sorry for making this site so convoluted :sob:
           }
         }
       </script>
+      <script src="https://keepandroidopen.org/banner.js?size=mini"></script>
+      <style>
+        .kao-banner {
+          font-size: 0.85rem;
+          border-top-left-radius: 0.75rem;
+          border-top-right-radius: 0.75rem;
+        }
+
+        .kao-banner-close {
+          font-size: 1.15rem;
+          padding: 0.5rem 0.65rem;
+        }
+      </style>
+      {% if util.gallery %}
+        <script src="/public/scripts/glightbox.min.js"></script>
+        <script type="text/javascript">
+          const lightbox = GLightbox({});
+        </script>
+        {% css "gallery" -%}
+        {%- include "styles/glightbox.min.css" -%}
+        {%- endcss -%}
+        <style>
+          {% getBundle "css", "gallery" %}
+          .gbtn svg {
+            max-width: 32px;
+          }
+          .gbtn.gclose:hover,
+          .gbtn.gnext:hover,
+          .gbtn.gprev:hover {
+            background-color: hsla(255,100%,100%,0.25) !important;
+          }
+          .glightbox-clean .gslide-description {
+            background: none;
+          }
+        </style>
+      {% endif %}
     </body>
     {% css "anim" -%}
     {%- include "styles/animations.css" -%}
@@ -341,14 +369,6 @@ I'm so sorry for making this site so convoluted :sob:
         .hero::before {
           --hero-trans-delay: 800ms;
           image-rendering: initial;
-        }
-
-        #lastfm-history {
-          padding: 0 1.25em;
-        }
-
-        #lastfm-history a {
-          display: inline;
         }
       </style>
     {% endif %}

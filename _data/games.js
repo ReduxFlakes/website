@@ -15,6 +15,11 @@ export default {
             banner: "bloonstd6.jpg",
             store_link: "https://store.steampowered.com/app/960090/Bloons_TD_6/"
         },
+        {
+            title: "FlatOut Ultimate Carnage",
+            banner: "flatoutuc.png",
+            store_link: "https://store.steampowered.com/app/12360/FlatOut_Ultimate_Carnage_Collectors_Edition/"
+        },
     ],
     complete: [{
         title: "Half Life 2",
@@ -41,6 +46,5 @@ export default {
         banner: "flatoutuc.png",
         store_link: "https://store.steampowered.com/app/12360/FlatOut_Ultimate_Carnage_Collectors_Edition/"
     },
-
     ]
 }

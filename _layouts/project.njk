@@ -3,7 +3,7 @@
 {% block base %}
     <article class="stack" {% if util.vwsize -%}style="--vw-size:{{util.vwsize}}em;"{%- endif -%}>
         {%- if projectInfo.banner -%}
-            <img src="/public/{{projectInfo.banner}}" alt="{{projectInfo.banner}}" width="900">
+            <img src="/public/{{projectInfo.banner}}" alt="{{projectInfo.banner}}" width="900" class="banner">
         {%- endif -%}
         {{- content | safe -}}
     </article>

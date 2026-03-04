@@ -30,9 +30,6 @@
   <meta name="generator" content="{{ eleventy.generator }}"/>
   {% css "base" -%}
   {%- include "styles/base.css" -%}
-  {% if content_css != false %}
-    {%- include "styles/content.css" -%}
-  {% endif %}
   {% if util.prism %}
     {%- include "styles/prism.css" -%}
   {% endif %}
@@ -48,6 +45,9 @@
     {% css -%}
     {%- include "styles/style.css" -%}
     {%- include "styles/components.css" -%}
+    {% if is_home %}
+      {% include "styles/home.css" %}
+    {% endif %}
     {%- endcss %}
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
     <script>

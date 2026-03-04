@@ -4,18 +4,28 @@ description: Random design and art, from buttons & icons, to mockups.
 icon: farm-color-wheel
 parent: Work
 order: 2
+util:
+  vwsize: "full"
 ---
 
-## Icon Packs & Buttons
+{% set navPages = collections.all | eleventyNavigation("Design") %}
 
-<dl>
-<dt><a href="pixy">Pixy Icon Pack</a></dt>
-<dd>My first ever icon pack. Pixel art style with 24x24 and 48x48 sizes, both .PNG and .SVG<dd>
-</dl>
+<auto-grid style="--size:15em;">
+{% for item in navPages | sortBy("data.order") %}
 
-## Design Systems
+<a href="{{item.url}}" class="card" {% if item.data.isRefresh %}data-update="true"{%endif%}>
+<strong>{{item.title}}</strong>
 
-<dl>
-<dt><a href="return">Return Design System</a></dt>
-<dd>My first design system with the purpose to build mockups of software made for the big screen (televisions and such). Currently abandoned.<dd>
-</dl>
+<p>{{item.data.description}}</p>
+</a>
+
+{% endfor %}
+</auto-grid>
+
+{% if condition %}
+
+{% elif condition %}
+
+{% else %}
+
+{% endif %}

@@ -102,7 +102,7 @@ export default [
         actions: [
           {
             label: "Website",
-            url: "https://team.indieseas.net/",
+            url: "https://nkko.link/",
           }
         ]
       }
@@ -113,16 +113,10 @@ export default [
     icon: "lightbulb",
     items: [
       {
-        title: "Windows Browser Launcher",
+        title: "Collectio",
         description:
-          "Software similar to Junction and Switchyard on Linux but for Windows",
-        tags: ["software", "utility", "planning"],
-      },
-      {
-        title: "Obsidian + Encarta",
-        description:
-          "A desktop application that replicates the look and feel of Microsoft Encarta but with the purpose of being a knowledge base app similar to Obsidian.",
-        tags: ["software", "planning"],
+          "100% offline web app to store and categorize bookmarks using lists, tags, and collections.",
+        tags: ["service", "planning"],
       },
       {
         title: "V-Rally 2 Launcher",
@@ -131,10 +125,16 @@ export default [
         tags: ["software", "Windows", "in development"],
       },
       {
-        title: "Collectio",
+        title: "Windows Browser Launcher",
         description:
-          "100% offline web app to store and categorize bookmarks using lists, tags, and collections.",
-        tags: ["service", "planning"],
+          "Software similar to Junction and Switchyard on Linux but for Windows",
+        tags: ["software", "utility", "idea"],
+      },
+      {
+        title: "Obsidian + Encarta",
+        description:
+          "A desktop application that replicates the look and feel of Microsoft Encarta but with the purpose of being a knowledge base app similar to Obsidian.",
+        tags: ["software", "idea"],
       },
       {
         title: "Svelte web OS",

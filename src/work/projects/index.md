@@ -7,7 +7,7 @@ modified: 2026-01-30 20:27:00
 marker: ["Recommended"]
 parent: Work
 util:
-  vwsize: 50
+  vwsize: 48
 ---
 
 {% for cat in projects -%}

@@ -1,24 +1,40 @@
 /* themes */
 :root {
-  --font: "Geist", system-ui, sans-serif;
-  --background: hsl(188, 21%, 14%);
-  --container-trans: hsla(188, 21%, 15%, 0.6);
-  --container-low: hsl(188, 23%, 9%);
-  --background-high: hsl(188, 21%, 16%);
-  --background-low: hsl(188, 21%, 12%);
-  --container: hsl(188, 16%, 23%);
-  --foreground: hsl(188, 64%, 88%);
-  --primary: hsl(188, 92%, 80%);
-  --foreground-subtle: hsl(188, 13%, 67%);
-  --stroke: hsl(188, 13%, 31%);
-  --warning: hsl(21, 92%, 80%);
-  --selection: hsla(188, 17%, 64%, 0.35);
-  --shadow: hsla(189, 21%, 43%, 0.8);
+  --font: "Inter", system-ui, sans-serif;
+  /* the background used behind the main site */
+  --background: url("/public/noise.png") #131416;
+  /* the background used for the main site's content */
+  --main-background: url("/public/noise.png") hsl(240, 6%, 14%);
+  /* used for static borders */
+  --stroke: hsla(240, 2%, 100%, 0.15);
+  /* used for cards and other main elements that sit on top of the main content*/
+  --container: url("/public/noise.png") #2E2E32;
+  /* used for elements that sit on top of other containers */
+  --container-high: url("/public/noise.png") hsla(240, 4%, 30%, 0.5);
+  /* used for transparent background, should be used with backdrop-filter: blur; */
+  --container-trans: url("/public/noise.png") hsla(240, 5%, 14%, 0.6);
+  /* used for most text */
+  --foreground: hsl(240, 2%, 86%);
+  /* headings, bold text, and controls */
+  --foreground-strong: hsl(240, 2%, 98%);
+  /* used for text with less significance */
+  --foreground-muted: hsl(240, 2%, 70%);
+  /* used for primary controls and links */
+  --primary: hsl(331, 60%, 74%);
+  /* used for the background when selecting text */
+  --selection: hsla(331, 17%, 64%, 0.35);
+
+  --control: url("/public/noise.png") hsla(240, 3%, 32%, 0.5);
+  --control-hover: url("/public/noise.png") hsla(240, 3%, 38%, 0.5);
+
+  /* states */
+  --state-current: url("/public/noise.png") hsla(0, 0%, 100%, 0.075);
+  --state-active: url("/public/noise.png") hsla(0, 0%, 100%, 0.15);
+
   --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
   --transition-smooth: cubic-bezier(0.79, 0.33, 0.56, 0.64);
   --breathing-space: 1rem;
-  --radius: 0.3rem;
-  --viewport: 990px;
+  --viewport: 1024px;
   color-scheme: dark;
 }
 

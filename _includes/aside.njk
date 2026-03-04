@@ -1,13 +1,14 @@
-<section class="aside-block">
+<section class="aside-block webmaster-block">
   <h2>Webmaster</h2>
   <div class="auto-flex" >
-    <img class="avatar" src="/public/soldier_11.webp" alt="Picture of Agent Soldier 11 from ZZZ" title="Picture of Agent Soldier 11 from ZZZ" width="72" height="72" >
+    <img class="avatar image-zoom" src="/public/soldier_11.webp" alt="Picture of Agent Soldier 11 from ZZZ" title="Picture of Agent Soldier 11 from ZZZ" width="72" height="72" >
     <div style="font-size:0.9em;">
-      <p>ReduxFlakes</p>
-      <p>they/them</p>
+      <p>
+        <strong>ReduxFlakes</strong>
+      </p>
+      <p>he/they</p>
       <p>19</p>
     </div>
-    <div class="bi"></div>
   </div>
   {%- if env.host == "nekoweb" -%}
     <iframe src="https://nekoweb.org/frame/follow" frameborder="0" width="170" height="28" loading="lazy"></iframe>
@@ -27,7 +28,7 @@
     <span id="playState">Loading...</span>
   </h2>
   <small class="noscript-alert">Requires JS</small>
-  <img src="" alt="" id="albumCover" height="174" widget="174">
+  <img src="" alt="" id="albumCover" height="174" widget="174" class="image-zoom">
   <h3 >
     <a href="" id="name" target="_blank" rel="noopener"></a>
   </h3>
@@ -36,7 +37,7 @@
   <small id="albumName"></small>
 
   <details>
-    <summary>Show recents</summary>
+    <summary>Play history</summary>
     <ol id="lastfm-history"></ol>
   </details>
 </section>
@@ -55,44 +56,63 @@
 {% endif %}
 <section class="aside-block">
   <h2>Advertisements</h2>
-  <iframe width="256" height="256" style="border:none;" src="https://dimden.neocities.org/navlink/" loading="lazy"></iframe>
+  <iframe width="240" height="240" style="border:none;" src="https://dimden.neocities.org/navlink/" loading="lazy"></iframe>
   <a href="https://discord.gg/dY4GSudRxv"><img src="/public/discord_banner.png" alt=""  style="image-rendering:pixelated;"></a>
 </section>
 <section class="aside-block">
+  <h2>Link me!</h2>
+
+  <p>If you like my site, you can link me by using the buttons below!</p>
+
+  <div class="auto-flex">
+    <img src="/public/buttons/reduc_anim.gif" alt="Redux animated button" class="classic-btn" loading="lazy"
+    decoding="async">
+    <img src="/public/buttons/reduc.webp" alt="Redux static button" class="classic-btn" loading="lazy"
+    decoding="async">
+  </div>
+
+</section>
+
+<section class="aside-block">
   <h2>Recommended Pages</h2>
   <nav>
-    <ul>
+    <ul role="list">
       {%- for entry in  collections.recommended -%}
         <li>
-          <a href="{{entry.url}}">{{entry.data.title}}</a>
+          <a class="button" href="{{entry.url}}">{{entry.data.title}}</a>
         </li>
       {%- endfor -%}
     </ul>
   </nav>
 </section>
-{% set globalProgress = 81 %}
+<section class="aside-block">
+  <h2>Fanlists</h2>
+  <a href="https://fanlistings.melankorin.net/radiohead/" title="Against Demons, the Radiohead fanlisting" aria-label="Against Demons, the Radiohead fanlisting"><img src="/public/badges/against_demons_fanlist.png" alt="Badge for the Against Demons Radiohead fanlist"></a>
+</section>
+{% set globalProgress = 83 %}
 <section class="aside-block">
   <h2>To-do</h2>
   <progress max="100" value="{{globalProgress}}"></progress>
   <small>Current progress: {{globalProgress}}%</small>
   <ul>
-    <li>Shrines</li>
+    <li>Commisssions & Services</li>
     <li>Resources</li>
-    <li>Search</li>
     <li>Design Gallery</li>
+    <li>Shrines</li>
+    <li>Search</li>
   </ul>
   <p>
-    <small>Ordered by progress</small>
+    <small>Ordered by priority</small>
   </p>
   <a href="/roadmap">{% lucide "list-todo" %} Roadmap</a>
 </section>
 <section class="aside-block noscript">
   <h2>Site Preferences</h2>
-  <div class="auto-flex">
+  {# <div class="auto-flex">
     <input type="checkbox" class="toggle" id="toggle-music-player"  onchange="toggleMP(this)">
     <label for="toggle-music-player">Toggle Music Player</label>
   </div>
-  <small>This will reload the page</small>
+  <small>This will reload the page</small> #}
   <div class="auto-flex">
     <input type="checkbox" class="toggle" id="toggle-sticky-navbar"  onchange="toggleSN(this)">
     <label for="toggle-sticky-navbar">Toggle Sticky Navbar</label>

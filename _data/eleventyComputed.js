@@ -7,10 +7,31 @@ function calcDays(startDate) {
 }
 
 export default {
+    permalink: (data) => {
+        if (data.permalink === false) return false;
+        if (typeof data.permalink === "string" && data.permalink !== "") {
+            return data.permalink;
+        }
+        const stem = data.page.filePathStem;
+        if (stem === "/index") return "/";
+
+        const segments = stem.split('/').filter(Boolean);
+
+        const isIndexFile = segments[segments.length - 1] === "index";
+
+        if (segments.length > 1) {
+            if (isIndexFile && segments.length === 2) {
+                return `/${segments[0]}/`;
+            }
+            segments.shift();
+        }
+
+        let finalPath = "/" + segments.join("/") + "/";
+
+        return finalPath.replace(/\/index\/$/, "/");
+    },
     eleventyNavigation: (data) => {
         if (data.eleventyNavigation) return data.eleventyNavigation;
-        // Skip adding navigation for pages that opt out using either
-        // `eleventyExcludeFromCollections` (older name) or `excludeFromNav` (templates)
         if (!data.eleventyExcludeFromCollections && !data.excludeFromNav) {
             return {
                 key: data.key || data.title,
@@ -24,7 +45,7 @@ export default {
         return false;
     },
     isRefresh: (data) => {
-        if (!data.isRefresh && data.modified && calcDays(data.modified) < 16) {
+        if (!data.isRefresh && (data.modified && calcDays(data.modified) < 16)) {
             return true;
         }
         return data.isRefresh || undefined;
