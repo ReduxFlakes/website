@@ -1,5 +1,19 @@
 export default [
   {
+    date: "2026-03-04 07:58:00",
+    content: "New redesign! Inspired by GTK and Adwaita with some personal touches :P",
+    list: [
+      "Redesigned the site with a new look based on [Gnome's HIG](https://developer.gnome.org/hig/), this redesign comes with a lot of improvements in design and accessibility but also the site should be better to use on mobile (there's still some stuff to improve though)",
+      "Improved the [design](/design) page",
+      "Added [OS Mockup gallery](/design/os-mockups)",
+      "Added new entries to the [blogroll](/blogroll)",
+      "Added [commissions](/commissions) page (currently empty)",
+      "Streamlined permalinks",
+      "Improved the [gaming](/gaming) page",
+      "Replaced Geist with Inter ([reason](https://techforpalestine.org/vercel))",
+    ]
+  },
+  {
     date: "2026-02-09 19:17:54",
     content: "Added new buttons and updated the [services](/work/services) page with examples"
   },
@@ -16,7 +30,7 @@ export default [
     content: "Fixed layout and styling issues as well as updated some pages and links.",
     list: [
       "Updated the [now](/now) page",
-      "Updated the [uses(/uses) page",
+      "Updated the [uses](/uses) page",
       "Updated link on the nkko button in the footer",
       "Fixed navigation mapping issues"
     ]
