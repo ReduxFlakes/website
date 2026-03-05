@@ -30,7 +30,7 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
 </section>
 </auto-grid>
 
-<section class="blok stack" style="--spacer: 0.5em;margin-top:1rem;">
+<section class="blok stack" style="--spacer: 0.5em;margin-top:0.5em;">
 
 {% set latestUpdate = updates[0] %}
 
@@ -70,13 +70,13 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
   {%- endfor %}
 {%- endfor -%}
 </auto-grid>
-<a href="/work/projects" style="--spacer:0.5em">View all projects {% lucide "arrow-down-right" %}</a>
+<a href="/projects" style="--spacer:0.5em">View all projects {% lucide "arrow-down-right" %}</a>
 
 ## {% lucide "globe" %} Links
 
 ### Socials
 
-<div class="auto-grid button-grid" style="gap:0.5em;--size:12em;">
+<div class="auto-grid button-grid" style="--size:12em;">
   {%- for item in meta.socials -%}
   <a href="{{item.url}}" class="btn social-btn">
   <img
@@ -84,8 +84,8 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
   {%- endfor -%}
 </div>
 <a href="https://reduxflakes.atabook.org/" class="card guestbook-card" style="--spacer:0.5rem;">Sign my guestbook!</a>
-<div class="auto-grid button-grid" style="gap:0.5em;--spacer:0.5rem;">
- <a class="btn social-btn" href="https://nekoweb.org/follow/reduxflakes">Follow me on Nekoweb</a>
+<div class="auto-grid button-grid" style="--spacer:0.5rem;">
+ <a class="btn social-btn" href="https://nekoweb.org/follow/reduxflakes.nekoweb.org">Follow me on Nekoweb</a>
 <a class="btn social-btn" href="https://neocities.org/site/reduxflakes">Follow me on Neocities</a>
 </div>
 

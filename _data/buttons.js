@@ -700,7 +700,7 @@ export default {
     {
       title: "Andrei",
       img: "andrei.gif",
-      url: "andrei.xyz"
+      url: "https://andrei.xyz"
     },
     {
       title: "srsxnsh",

@@ -1,5 +1,15 @@
 export default [
   {
+    date: "2026-03-05 08:04:12",
+    content: "Minor fixes :P",
+    list: [
+      "Fix broken nekoweb follow link",
+      "Fix broken 88x31 button link",
+      "Tweaked grid gap",
+      "Fix inner site links"
+    ]
+  },
+  {
     date: "2026-03-04 07:58:00",
     content: "New redesign! Inspired by GTK and Adwaita with some personal touches :P",
     list: [

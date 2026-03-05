@@ -899,7 +899,7 @@ auto-grid {
   --_minsize: var(--size, 14rem);
   --_minspace: var(--space, 1fr);
   display: grid;
-  gap: 1rem;
+  gap: 0.5em;
   grid-template-columns: repeat(auto-fit, minmax(var(--_minsize), var(--_minspace)));
 }
 

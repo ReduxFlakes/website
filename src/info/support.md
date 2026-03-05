@@ -11,7 +11,7 @@ The main method is Ko-Fi, you can either make a one-time donation or a recurrent
 
 <a href='https://ko-fi.com/K3K519YBGW' target='_blank' style="border-radius:12px"><img style='border:0px;' width="156" src='/public/buttons/general/kofi_orange.webp' alt='Buy Me a Coffee at ko-fi.com' loading="lazy" decoding="async" /></a>
 
-> (I'm planning stuff to add stuff to my Ko-Fi page mainly services and commissions but haven't got the time yet to plan).
+> I'm planning stuff to add on my Ko-Fi page (mainly services and commissions) but I haven't got the time.
 
 ## GitHub Sponsors
 
