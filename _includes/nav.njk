@@ -11,7 +11,7 @@
 
 {% macro navlink(item) %}
   <li>
-    <a href="{{ item.url }}" aria-label="Navigate to the {{item.title}} page in the {{ item.category }} category" {% if page.url === item.url %}aria-current="page"{% endif %}>
+    <a href="{{ item.url }}" aria-label="Navigate to the {{item.title}} page in the {{ item.category }} category" {% if page.url === item.url or item.key === parent %}aria-current="page"{% endif %}>
       <span class="link-header">
         {%- if item.data.icon -%}
           <img src="/public/icons/{{item.data.icon}}.png" alt="" aria-hidden="true" class="icon" >
@@ -45,7 +45,7 @@
       {% endif %}
     {% endfor %}
     <details id="cat-{{entry.key | slugify}}" class="nav-details dropdown"  {% if navIsRefresh -%}data-update="true"{%- endif -%}>
-      <summary aria-controls="nav-{{entry.key | slugify }}"  {% if entry.key === parent or entry.key === title %}aria-current="true"{% endif %} class="button button--transparent">
+      <summary aria-controls="nav-{{entry.key | slugify }}"  {% if entry.key === parent or entry.key === title or navigation | hasChildWithKey(entry.key, parent) %}aria-current="true"{% endif %} class="button button--transparent">
         {% if entry.icon -%}
           <img src="/public/icons/{{entry.icon}}.png" alt="" aria-hidden="true" class="icon" >
         {%- elif entry.data.icon -%}
