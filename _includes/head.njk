@@ -18,7 +18,7 @@
   <title>{{override_title or page_title or meta.title}}</title>
   <meta name="description" content="{% if description %}{{description}}{% else %}{{ meta.description }}{% endif %}">
   <base href="{{page.url}}">
-  <link rel="canonical" href="{{host}}">
+  <link rel="canonical" href="{{host}}{{page.url}}">
   <link rel="shortcut icon" href="{{favicon}}" type="image/svg+xml">
   <meta property="og:url" content="{{host}}{{ page.url }}">
   <meta property="og:title" content="{{page_title or meta.title}}">
