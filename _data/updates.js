@@ -25,7 +25,7 @@ export default [
   },
   {
     date: "2026-02-09 19:17:54",
-    content: "Added new buttons and updated the [services](/work/services) page with examples"
+    content: "Added new buttons and updated the [services](/services) page with examples"
   },
   {
     date: "2026-02-08 01:27:05",
@@ -274,7 +274,7 @@ export default [
     date: "2025-04-26 19:10:00",
     content: "Lot of fixes and small additions.",
     list: [
-      "Added new stuff to the <a href=\"/work/design/\">design</a> page",
+      "Added new stuff to the <a href=\"/design/\">design</a> page",
       "Kickstarted the <a href=\"/sites/\">related sites</a> page",
       "Improved <a href=\"/about/\">about</a> page with new credits sections and better attribution (with template)",
       "Restructured the design page",

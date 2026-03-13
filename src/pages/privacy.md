@@ -17,4 +17,4 @@ This sites uses Neocities and Nekoweb for site hosting, below is the correspondi
 
 ## Third Party Services
 
-[File Garden](https://filegarden.com/) is currently used to host some of the downloads on the site (mainly the [Pixy Icon Pack](/work/design/pixy)), and [Tally](https://tally.so) is used for embedding forms (currently used in the [Feedback page](/feedback)).
+[File Garden](https://filegarden.com/) is currently used to host some of the downloads on the site (mainly the [Pixy Icon Pack](/design/pixy)), and [Tally](https://tally.so) is used for embedding forms (currently used in the [Feedback page](/feedback)).

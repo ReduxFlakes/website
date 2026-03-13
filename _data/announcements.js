@@ -1,7 +1,7 @@
 export default [
     {
         title: "Pixy Icon Pack v0.3.0",
-        link: "/work/design/pixy",
+        link: "/design/pixy",
         date: "2026-01-31 18:46:00"
     },
     {

@@ -23,7 +23,7 @@ One of the things that hasn't changed a lot is the navigation, I think I've hit 
 
 Different from my other redesigns, there is new features, mainly the sidebar I talked about earlier but mainly the stuff that it contains: the Last.FM widget and the to-do list that tracks the current progress of the site (spoiler: it will never reach 100%).
 
-There's also the improved homepage and improved [projects](/work/projects) page.
+There's also the improved homepage and improved [projects](/projects) page.
 
 ## Conclusion
 
