@@ -1,8 +1,8 @@
 <a href="{{params.href}}" class="card icon-card">
     <section>
-        {% if params.icon %}
-            {% lucide params.icon or "link" %}
-        {% endif %}
+        {%- if params.icon -%}
+            {%- lucide params.icon or "link" -%}
+        {%- endif -%}
         {%- if params.subheading -%}
             <h3>{{ params.title }}</h3>
         {%- else -%}
