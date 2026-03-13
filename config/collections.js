@@ -37,7 +37,7 @@ export const getDigitalGardenCollections = collectionApi => {
             if (!categoryMap.has(dg.category)) {
                 categoryMap.set(dg.category, {
                     title: dg.category,
-                    url: `/writing/digital-garden/${slug(dg.category)}/`,
+                    url: `/digital-garden/${slug(dg.category)}/`,
                     description: dg.description,
                     icon: dg.icon,
                     tagSet: new Set(),
@@ -52,13 +52,9 @@ export const getDigitalGardenCollections = collectionApi => {
                 parent: dg.category
             };
 
-
-
             const itemTags = item.data.tags || [];
 
-
             itemTags.filter(tag => !['digital-garden', 'posts'].includes(tag)).forEach(tag => categoryEntry.tagSet.add(tag));
-
 
             categoryEntry.children.push({
                 title: item.data.title,
