@@ -504,7 +504,7 @@ main.has-aside {
 
 main.home article,
 main.has-aside>article {
-  padding: 0 var(--breathing-space) var(--breathing-space) var(--breathing-space);
+  padding: 0 var(--breathing-space) 2rem var(--breathing-space);
 }
 
 main.has-aside>nav.breadcrumb {
@@ -545,13 +545,6 @@ nav.breadcrumb li+li::before {
     grid-template-areas: "article aside";
   }
 
-  /* 
-  main:not(.home)>article {
-    --_viewport-size: var(--vw-size, 44em);
-    max-width: var(--_viewport-size);
-    margin: 0 auto;
-  } */
-
   main.home article,
   main.has-aside article {
     grid-area: article;
@@ -560,19 +553,31 @@ nav.breadcrumb li+li::before {
   aside.page-aside {
     grid-area: aside;
   }
-}
 
-main:not(.home) article {
-  --_viewport-size: var(--vw-size, 42rem);
-  max-width: var(--_viewport-size);
-  margin: 0 auto;
-}
+  aside.post-aside {
+    align-self: start;
+    position: sticky;
+    top: 4rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
 
-aside.page-aside {
-  background: var(--container);
-  box-shadow: -1px -1px 3px 0px hsla(0, 0%, 0%, 0.3);
-  border-top-left-radius: 0.5rem;
-  overflow: hidden;
+  aside.post-aside .aside-block {
+    box-shadow: -1px -1px 5px 0px hsla(0, 0%, 0%, 0.5);
+    border: none;
+  }
+
+  main:not(.home) article {
+    --_viewport-size: var(--vw-size, 42rem);
+    max-width: var(--_viewport-size);
+    margin: 0 auto;
+  }
+
+  aside.page-aside {
+    background: var(--container);
+    box-shadow: -1px -1px 3px 0px hsla(0, 0%, 0%, 0.3);
+    border-top-left-radius: 0.5rem;
+    overflow: hidden;
+  }
 }
 
 /* mobile only */
@@ -597,6 +602,10 @@ aside.page-aside {
 
   .mobile {
     display: none;
+  }
+
+  aside.post-aside .aside-block {
+    margin-bottom: 1rem;
   }
 }
 
@@ -667,6 +676,17 @@ aside.page-aside {
   padding: 1rem;
   transition: 125ms var(--transition-smooth) all;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card--support {
+  --spacer: 0.5em;
+  text-align: center;
+  background: url("/public/noise.png"), radial-gradient(circle, rgba(72, 16, 105, 0.5) 4%, rgba(19, 36, 84, 0.5) 50%, rgba(9, 28, 61, 0.5) 100%);
+  background-position: bottom;
+}
+
+.card--support .button {
+  margin-inline: auto;
 }
 
 .card>strong {
@@ -800,6 +820,7 @@ a.card:hover {
 
 a.label:hover {
   scale: 1.035;
+  rotate: 2deg;
   transform: translateY(-0.1rem);
   filter: brightness(1.125);
 }
