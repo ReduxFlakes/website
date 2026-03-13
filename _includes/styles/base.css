@@ -147,7 +147,7 @@ picture,
 svg {
   display: block;
   max-width: 100%;
-  height: auto;
+
   font-style: italic;
 }
 
@@ -254,10 +254,6 @@ article.stack hr {
   margin: 1.5rem 0;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
 
 main {
   hyphens: auto;
