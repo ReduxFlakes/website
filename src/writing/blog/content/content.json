@@ -4,6 +4,6 @@
   "parent": "Blog",
   "eleventyComputed": {
     "key": "{{ title | safe }}",
-    "excludeFromNav": true
+    "excludeFromNav": false
   }
 }
