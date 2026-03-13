@@ -16,6 +16,7 @@ import filters from "./config/filters.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines, recommended } from "./config/collections.js";
 import { externalLink, postCard } from "./config/shortcodes.js"
+import process from "node:process";
 
 export default async function (eleventyConfig) {
   eleventyConfig.setServerOptions({
