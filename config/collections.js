@@ -85,11 +85,11 @@ export const getShrines = collection => {
     return collection.getFilteredByGlob("src/extras/shrines/**/index.md");
 };
 
-export const recommended = collectionApi => {
-    return collectionApi.getAll().filter(item => {
-        const markers = item.data.marker;
-        if (Array.isArray(markers))
-            return markers.includes("Recommended");
-        return markers === "Recommended";
-    });
-};
+// export const recommended = collectionApi => {
+//     return collectionApi.getAll().filter(item => {
+//         const markers = item.data.marker;
+//         if (Array.isArray(markers))
+//             return markers.includes("Recommended");
+//         return markers === "Recommended";
+//     });
+// };

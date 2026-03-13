@@ -14,7 +14,7 @@ import { DateTime } from "luxon";
 import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import filters from "./config/filters.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines, recommended } from "./config/collections.js";
+import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines } from "./config/collections.js";
 import { externalLink, postCard } from "./config/shortcodes.js"
 import process from "node:process";
 
@@ -92,8 +92,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addCollection('postTags', getBlogPostsTags);
   eleventyConfig.addCollection('digitalGarden', getDigitalGardenCollections);
   eleventyConfig.addCollection('shrines', getShrines);
-  eleventyConfig.addCollection('recommended', recommended);
-
 
   /* plugins */
   const md = markdownIt({ html: true });
