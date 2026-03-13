@@ -8,8 +8,9 @@
 {% if toc_enabled %}
   {% set aside_enabled = true %}
   {% set aside_acs = "top" %}
+  {% set aside_modifier = "post-aside" %}
   {% html "aside" %}
-  <section class="aside-block">
+  <section class="aside-block toc-aside">
     <h2>Table Of Contents</h2>
     {{ content | toc(tags=['h2', 'h3']) | safe }}
   </section>

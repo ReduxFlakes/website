@@ -20,7 +20,7 @@ I'm so sorry for making this site so convoluted :sob:
       <main {% if post == true -%}id="main-content"{%- endif %} {% if (aside_enabled == true or aside_enabled == "true") and not is_home -%}class="has-aside"{% elif is_home %}class="has-aside home"{%- endif %}>
         {% include "breadcrumbs.njk" %}
         {% if aside_enabled and aside_acs == "top" %}
-          <aside class="page-aside">
+          <aside class="page-aside {{ aside_modifier }}">
             {% getBundle "html",
             "aside" %}
           </aside>
