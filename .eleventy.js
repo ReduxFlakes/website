@@ -18,7 +18,7 @@ import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines
 import { externalLink, postCard } from "./config/shortcodes.js"
 import process from "node:process";
 
-export default async function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     watch: ["./src/**", "./config/**"],
   });
@@ -129,7 +129,7 @@ export default async function (eleventyConfig) {
     transforms: [
       async function (content) {
         const { plugins } = await postcssConfig();
-        let result = await postcss(plugins).process(content, {
+        const result = await postcss(plugins).process(content, {
           from: this.page.inputPath,
           to: null,
         });
