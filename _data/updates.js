@@ -1,5 +1,22 @@
 export default [
   {
+    date: "2026-03-14 00:59:41",
+    content: "Optimizations, and various fixes",
+    list: [
+      "Added missing Support My Work card at the end of blog posts",
+      "Added support for aria-current when a subpage is part of the main categories",
+      "Fixed canonical links",
+      "Fixed broken links",
+      "Fixed breadcrumbs on blog posts",
+      "Fixed Nekoweb and Neocities stats",
+      "Hopefully fixed goatcounter",
+      "Improved deno tasks",
+      "Improved local serve speed by enabling postcss only when deploying",
+      "Various CSS tweaks",
+      "Templating fixes"
+    ]
+  },
+  {
     date: "2026-03-05 08:04:12",
     content: "Minor fixes :P",
     list: [
