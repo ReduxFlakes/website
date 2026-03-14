@@ -440,7 +440,7 @@ a.card[data-update="true"]::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: radial-gradient(#824162 1px, hsl(330, 33%, 15%) 1px);
+  background: radial-gradient(var(--hero-high) 1px, var(--hero-low) 1px);
   background-size: 1em 1em;
   backdrop-filter: blur(10px);
   box-shadow:

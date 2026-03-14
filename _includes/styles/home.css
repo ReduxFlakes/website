@@ -43,7 +43,7 @@
       margin: 0;
       padding: 1rem;
       border-bottom: 1px solid var(--stroke);
-      background: linear-gradient(to bottom, hsla(329, 98%, 42%, 0.1) 15%, hsla(304, 50%, 44%, 0.1), hsla(220, 100%, 33%, 0.1) 70%);
+      background: url("/public/noise.png"), linear-gradient(to bottom, hsl(317, 20%, 20%) 15%, hsla(304, 20%, 20%), hsla(220, 20%, 20%) 70%);
   }
 
   .lastfm-widget img {

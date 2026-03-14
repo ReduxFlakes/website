@@ -12,6 +12,7 @@
     "start:fast": "eleventy --serve --watch --incremental",
     "start:neko": "cross-env HOST_TYPE=nekoweb BUILD_TYPE=production deno task start",
     "start:neo": "cross-env HOST_TYPE=neocities BUILD_TYPE=production deno task start",
+    "start:prod": "cross-env BUILD_TYPE=production deno task start",
     "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
     "build": "eleventy",
     "build:prod": "cross-env BUILD_TYPE=production eleventy && deno task html-minify",
