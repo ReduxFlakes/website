@@ -83,14 +83,14 @@ I'm so sorry for making this site so convoluted :sob:
               const neoJson = await neoRequest.json();
               const nekoJson = await nekoRequest.json();
 
-              const neoCreated = new Date(neoJson.info.created_at).toLocaleDateString();
+              /* const neoCreated = new Date(neoJson.info.created_at).toLocaleDateString();
 
               const nekoCreated = new Date(nekoJson.created_at).toLocaleDateString();
 
-              if (document.getElementById("nekoUpdated")) 
+              if (document.getElementById("nekoUpdated"))
                 document
                   .getElementById("nekoUpdated")
-                  .innerHTML = `Updated ${nekoUpdated}`;
+                  .innerHTML = `Updated ${nekoUpdated}`;*/
               if (document.getElementById("nekoVisitors")) 
                 document
                   .getElementById("nekoVisitors")
@@ -100,10 +100,10 @@ I'm so sorry for making this site so convoluted :sob:
                   .getElementById("nekoFollowers")
                   .innerHTML = `Followers ${nekoJson.followers}`;
               
-              if (document.getElementById("neoUpdated")) 
+              /* if (document.getElementById("neoUpdated"))
                 document
                   .getElementById("neoUpdated")
-                  .innerHTML = `Updated ${neoJson.info.last_updated}`;
+                  .innerHTML = `Updated ${neoJson.info.last_updated}`; */
               if (document.getElementById("neoVisitors")) 
                 document
                   .getElementById("neoVisitors")
