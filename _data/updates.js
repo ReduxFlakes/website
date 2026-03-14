@@ -1,5 +1,13 @@
 export default [
   {
+    date: "2026-03-14 18:53",
+    contet: "More fixes :P",
+    list: [
+      "Themes are now working properly again with the new design",
+      "Fixed wrong aspect ratio on images",
+    ]
+  },
+  {
     date: "2026-03-14 00:59:41",
     content: "Optimizations, and various fixes",
     list: [
