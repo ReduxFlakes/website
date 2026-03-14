@@ -1,6 +1,10 @@
----
-eleventyAllowMissingExtension: true
-permalink: "{% if env.host %}/elements.css{% endif %}"
+---js
+const eleventyAllowMissingExtension = true;
+const permalink = function (data) {
+  if (data.env.host === "nekoweb")
+    return "/elements.css";
+  return false;
+};
 ---
 /*!@nkb "domain":"reduxflakes","rss":"","overflow":false,"readonly":false */
-.site-box{background:#1c292b;display:grid;place-items:center}.site-box>a>.sitefeature{display:none}.site-box>a>p{display:flex;flex-direction:column;color:#cdeff4;font-family:system-ui;font-size:2.4rem;letter-spacing:-.05em;font-weight:700;transition:all 500ms cubic-bezier(.33,.72,.32,.78)!important}.site-box>a>p:hover{letter-spacing:.025em;scale:1.1}.site-box>a .follow{font-size:1.25rem;color:#9deefb}.post-box{background-color:#1c292b;border:0;padding:1rem;border-radius:0;color:#cdeff4;font-family:system-ui}.post-box .post-title{font-size:1.5rem;font-family:system-ui;font-weight:700;font-style:normal;margin-top:.5em;margin-bottom:-.25em}.follow{background-color:#1c292b;border:1px solid #38494b;color:#cdeff4;padding:2px 10px;cursor:pointer;font-family:"MS UI Gothic",Verdana,sans-serif;font-size:1rem;margin:0;display:block;width:100%;height:100%;border-radius:0px;}
+.site-box{background:url(https://reduxflakes.nekoweb.org/public/noise.png)#222226;display:grid;place-items:center;border-radius:.5rem;border:1px solid rgba(255,255,255,.15);box-shadow:0 0 2px 0 rgba(0,0,0,.5)}.site-box>a>.sitefeature{display:none}.site-box>a>p{display:flex;flex-direction:column;color:#fafafa;font-family:system-ui;font-size:2.4rem;letter-spacing:-.05em;font-weight:700;transition:all 500ms cubic-bezier(.33,.72,.32,.78)!important}.site-box>a>p:hover{letter-spacing:.015em;scale:1.1}.site-box>a .follow{font-size:1.25rem;color:#e495bb}.post-box{background:url(https://reduxflakes.nekoweb.org/public/noise.png)#222226;border:1px solid rgba(255,255,255,.15);padding:1rem;border-radius:.5rem;color:#fafafa;font-family:system-ui;box-shadow:0 0 2px 0 rgba(0,0,0,.5)}.post-box .post-author{opacity:.75}.post-box .post-author::after{content:" - Fireplace In The Mall"}.post-box .post-title{font-size:1.5rem;font-family:system-ui;font-weight:700;font-style:normal;margin-top:.5em;color:#e495bb;margin-bottom:-.25em}.follow{display:flex;align-items:center;justify-content:center;background:#3f3f43;border-radius:0;color:#fafafa;font-weight:500;gap:.3em;line-height:1.15;padding:.5em 1em;text-decoration:none;transition:all 125ms cubic-bezier(.17,.67,.38,.8);cursor:pointer;font-family:system-ui,sans-serif;font-size:1rem;margin:0;width:100%;height:100%;border:0}.follow:hover{background:#49494d}
