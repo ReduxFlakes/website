@@ -1,6 +1,6 @@
 export default [
   {
-    date: "2026-03-14 18:53",
+    date: "2026-03-14 18:53:00",
     contet: "More fixes :P",
     list: [
       "Themes are now working properly again with the new design",
