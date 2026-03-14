@@ -2,7 +2,6 @@
 key: Home
 description: "Software developer and designer from Portugal"
 layout: home.njk
-content_css: false
 ---
 
 {{ component('notice',{description: "I'm currently reworking the base of the entire site, so some stuff might look inconsistent or missing but don't worry. "}) }}
@@ -126,7 +125,7 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
 
 Some webrings might be missing because JS is currently disabled/not working. [- .noscript-alert -]
 
-{% if env.host == "neocities" or "all" %}
+{% if env.host == "neocities" or env.host == "all" %}
 
 <div class="auto-grid" style="--size:15em;">
 
@@ -165,7 +164,7 @@ Some webrings might be missing because JS is currently disabled/not working. [- 
 
 {% endif %}
 
-{% if env.host == "nekoweb" or "all" %}
+{% if env.host == "nekoweb" or env.host == "all" %}
 
 <div class="auto-grid" style="--size:15em;">
 

@@ -69,7 +69,7 @@ I'm so sorry for making this site so convoluted :sob:
           });
         }
       </script>
-      {% if env.environment == "production" and is_home == true%}
+      {% if env.environment == "production" or env.host == "all" and is_home == true%}
         <script>
           /* based on https://maxpixels.moe/resources/nekoweb-stats */
           let domain = "reduxflakes.nekoweb.org";
@@ -103,7 +103,7 @@ I'm so sorry for making this site so convoluted :sob:
               if (document.getElementById("neoUpdated")) 
                 document
                   .getElementById("neoUpdated")
-                  .innerHTML = `Updated ${neoUpdated}`;
+                  .innerHTML = `Updated ${neoJson.info.last_updated}`;
               if (document.getElementById("neoVisitors")) 
                 document
                   .getElementById("neoVisitors")

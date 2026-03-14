@@ -4,7 +4,7 @@
 
 {%- set categories = [] -%}
 {%- for item in navigation -%}
-    {%- if item.data.shrineId == "vista" and item.url != "/extras/shrines/vista/" -%}
+    {%- if item.data.shrineId == "vista" and item.url != "/shrines/vista/" -%}
         {%- set categories = categories.concat([item]) -%}
     {%- endif -%}
 {%- endfor -%}

@@ -48,7 +48,7 @@ export default function (eleventyConfig) {
         nearLossless: true
       },
       sharpJpegOptions: {
-        quality: 92
+        quality: 90
       }
     });
   }

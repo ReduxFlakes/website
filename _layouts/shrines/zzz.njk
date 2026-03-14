@@ -4,14 +4,14 @@
 
 {%- set categories = [] -%}
 {%- for item in navigation -%}
-  {%- if item.data.shrineId == "zzz" and item.url != "/extras/shrines/zzz/" -%}
+  {%- if item.data.shrineId == "zzz" and item.url != "/shrines/zzz/" -%}
     {%- set categories = categories.concat([item]) -%}
   {%- endif -%}
 {%- endfor -%}
 
 {% block body %}
   <header>
-    <a href="/extras/shrines/zzz"><img src="/public/img/shrines/zzz.png" alt="Zenless Zone Zero logo"></a>
+    <a href=/shrines/zzz"><img src="/public/img/shrines/zzz.png" alt="Zenless Zone Zero logo"></a>
     <nav>
       {%- for link in categories -%}
         <a class="button" href="{{link.url}}">
