@@ -1,7 +1,11 @@
 export default [
   {
+    date: "2026-03-21 01:16:00",
+    content: "New stuff on the [uses](/uses) page!"
+  },
+  {
     date: "2026-03-14 18:53:00",
-    contet: "More fixes :P",
+    content: "More fixes :P",
     list: [
       "Themes are now working properly again with the new design",
       "Fixed wrong aspect ratio on images",

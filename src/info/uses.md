@@ -2,7 +2,7 @@
 title: Things I Use
 description: The hardware and software I currently use every day
 icon: pixelophilia-app
-modified: 2026-03-20 23:41:29
+modified: 2026-03-21 01:15:29
 parent: Info
 order: 2
 ---
@@ -34,7 +34,7 @@ order: 2
 
 > Contains both desktop and mobile applications.
 
-- Web Browser: Firefox/Helium (desktop), Brave/Firefox (mobile).
+- Web Browser: **Firefox**/Helium (desktop), **Brave**/Firefox (mobile).
 
 - Code Editor: **Visual Studio Code** (without telemetry and copilot).
 
@@ -42,7 +42,7 @@ order: 2
 
 - Dev tools: **Git**, **Deno**, GNU Privacy Guard, GitHub CLI.
 
-- Music & Audio: **Audacity**, **Equalizer APO**, Monochrome Music, MPC-HC, Muzza, Spotify.
+- Music & Audio: **Audacity**, **Equalizer APO**, MPC-HC, Muzza, Spotify.
 
 - Image & Video: **Kdenlive**, **Figma**, Eyedropper, OBS Studio.
 
@@ -51,3 +51,19 @@ order: 2
 - **Discord** with [Vencord](https://vencord.dev) and [OpenAsar](https://openasar.dev).
 
 - Matrix: **Cinny** on desktop and **FluffyChat** on mobile.
+
+- Extensions: [AdNauseam](https://adnauseam.io/), [Sidebery](https://github.com/mbnuqw/sidebery), [Stylus](https://add0n.com/stylus.html), [Violentmonkey](https://violentmonkey.github.io/), [Unhook](https://unhook.app/)
+
+## Services
+
+This section only include online services, I know that some of the software mentioned above could also be deemed that way but I don't wanna duplicate stuff :P
+
+- [Monochrome Music](https://monochrome.tf/) - A lossless streaming service and downloader (uses Tidal or Qobuz as the source)
+- [Proton](https://proton.me) - Personal Email
+- [Disroot](https://disroot.org) - Secondary Email
+- [SimpleLogin](https://simplelogin.io/) - Aliases
+- [Last.fm](https://last.fm) - Track my music stats
+- [Bitwarden](https://bitwarden.com/) - E2EE password manager
+- [Filen](https://filen.io) - Cloud storage
+- [Riseup](https://riseup.net/) - Email for the [surfscape collective](https://surfscape.eu)
+- [4get](https://4get.ca/) - A minimal meta search engine
