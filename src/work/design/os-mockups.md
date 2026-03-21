@@ -4,7 +4,6 @@ description: Mockups of non existing operating systems
 parent: Design
 layout: base
 order: 1
-isRefresh: true
 util:
   vwsize: "full"
   gallery: true

@@ -4,7 +4,6 @@ description: Small sites of stuff I love
 icon: farm-flower
 parent: Extras
 isInConstruction: true
-isRefresh: true
 order: 0
 ---
 
