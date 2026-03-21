@@ -45,7 +45,7 @@ export default {
         return false;
     },
     isRefresh: (data) => {
-        if (!data.isRefresh && (data.modified && calcDays(data.modified) < 16)) {
+        if (!data.isRefresh && (data.modified && calcDays(data.modified) < 6)) {
             return true;
         }
         return data.isRefresh || undefined;
