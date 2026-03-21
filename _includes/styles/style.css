@@ -1016,3 +1016,19 @@ a:has(.classic-btn) {
   filter: blur(2px) saturate(0);
   opacity: 0.25;
 }
+
+figure {
+  text-align: center;
+}
+
+figure img {
+  border: 1px solid var(--stroke);
+  border-radius: 0.5rem;
+}
+
+
+figure figcaption {
+  font-style: italic;
+  color: var(--foreground-muted);
+  margin-top: 0.5em;
+}
