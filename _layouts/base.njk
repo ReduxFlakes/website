@@ -78,10 +78,10 @@ I'm so sorry for making this site so convoluted :sob:
           (async () => {
             try {
               const nekoRequest = await fetch(`https://nekoweb.org/api/site/info/${domain}`,);
-              const neoRequest = await fetch(`https://corsproxy.io/?https://neocities.org/api/info?sitename=${user}`);
+              //const neoRequest = await fetch(`https://neocities.org/api/info?sitename=${user}`);
 
-              const neoJson = await neoRequest.json();
               const nekoJson = await nekoRequest.json();
+              //const neoJson = await neoRequest.json();
 
               /* const neoCreated = new Date(neoJson.info.created_at).toLocaleDateString();
 
@@ -99,15 +99,15 @@ I'm so sorry for making this site so convoluted :sob:
                 document
                   .getElementById("nekoFollowers")
                   .innerHTML = `Followers ${nekoJson.followers}`;
-              
-              /* if (document.getElementById("neoUpdated"))
+
+                /* if (document.getElementById("neoUpdated"))
                 document
                   .getElementById("neoUpdated")
-                  .innerHTML = `Updated ${neoJson.info.last_updated}`; */
-              if (document.getElementById("neoVisitors")) 
+                  .innerHTML = `Updated ${neoJson.info.last_updated}`;
+              if (document.getElementById("neoVisitors"))
                 document
                   .getElementById("neoVisitors")
-                  .innerHTML = `Visits ${neoJson.info.views}`;
+                  .innerHTML = `Visits ${neoJson.info.views}`;*/
               }
             catch (error) {
               console.error(error);
