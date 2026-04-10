@@ -136,12 +136,23 @@ input[type="checkbox"]:checked::before {
 
 select {
   border: 1px solid var(--stroke);
-  border-radius: 0;
-  padding: 0.25rem;
-  color: var(--foreground);
   font: inherit;
-  font-size: 0.8em;
+  border-radius: 0.35rem;
+  background: var(--container);
+  color: var(--foreground-strong);
+  font-size: 0.9em;
+  padding: 0.3em 0.4em;
+  transition: 115ms all var(--transition-smooth);
 }
+
+select:hover:not(:open) {
+  background: var(--control-hover);
+}
+
+select option {
+  background: var(--container);
+}
+
 
 details summary {
   cursor: default;
