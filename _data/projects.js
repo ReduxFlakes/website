@@ -37,7 +37,7 @@ export default [
         title: "customWin",
         tags: ["software", "Windows"],
         description:
-          "Collection of Windows applications with the purpose of helping customize the system. Now part of the SurfScape project.",
+          "Collection of Windows applications with the purpose of helping customize the system. Now part of SurfScape.",
         actions: [
           {
             label: "GitHub",
