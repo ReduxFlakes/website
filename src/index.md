@@ -77,7 +77,7 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
 
 <div class="auto-grid button-grid" style="--size:12em;">
   {%- for item in meta.socials -%}
-  <a href="{{item.url}}" class="btn social-btn">
+  <a href="{{item.url}}" class="btn social-btn" aria-label="Go to my {{item.name}} profile">
   <img
       src="/public/icons/pixy/{{item.name | slugify}}.png" alt="" aria-hidden="true" width="38" height="38" eleventy:ignore class="classic-btn" >{{item.name}}</a>
   {%- endfor -%}
@@ -153,9 +153,9 @@ Some webrings might be missing because JS is currently disabled/not working. [- 
 ### No AI
 
 <div class="auto-flex" style="align-items:center;">
-  <a class="button button--icon" href="https://baccyflap.com/noai/?prv&s=rzr" target="_top" title="Go back">{% lucide "arrow-left" %}</a>
+  <a class="button button--icon" href="https://baccyflap.com/noai/?prv&s=rzr" target="_top" title="Go back" aria-label="Go Back">{% lucide "arrow-left" %}</a>
   <a class="button" href="https://baccyflap.com/noai" target="_blank" rel="noopener">{% lucide "globe" %} no ai</a>
-  <a class="button button--icon" href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" title="Next up">{% lucide "arrow-right" %}</a>
+  <a class="button button--icon" href="https://baccyflap.com/noai/?nxt&s=rzr" target="_top" title="Up Next" aria-label="Up Next">{% lucide "arrow-right" %}</a>
 </div>
 
 </section>
@@ -173,10 +173,10 @@ Some webrings might be missing because JS is currently disabled/not working. [- 
 ### Bucket Webring
 
 <div class="auto-flex" style="align-items:center;">
-  <a class="button button--icon" href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes" target="_top" title="Go back">{% lucide
+  <a class="button button--icon" href="https://webring.bucketfish.me/redirect.html?to=prev&name=reduxflakes" target="_top" title="Go back" aria-label="Go Back">{% lucide
     "arrow-left" %}</a>
   <a class="button" href="https://webring.bucketfish.me" target="_blank" rel="noopener">{% lucide "globe" %} bucket </a>
-  <a class="button button--icon" href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" title="Next up">{% lucide
+  <a class="button button--icon" href="https://webring.bucketfish.me/redirect.html?to=next&name=reduxflakes" target="_top" title="Up Next" aria-label="Up Next">{% lucide
     "arrow-right" %}</a>
 </div>
 
@@ -187,16 +187,30 @@ Some webrings might be missing because JS is currently disabled/not working. [- 
 ### SSGRing
 
 <div class="auto-flex" style="align-items:center;">
-  <a class="button button--icon" href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=prev" title="Go back">{%
+  <a class="button button--icon" href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=prev" title="Go back" aria-label="Go Back">{%
     lucide "arrow-left" %}</a>
   <a class="button" href="https://jbcarreon123.nekoweb.org/webrings/ssgring" target="_blank" rel="noopener">{% lucide "globe" %} SSGRing </a>
-  <a class="button button--icon" href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?way=rand" title="Random">{% lucide "shuffle"
+  <a class="button button--icon" href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?way=rand" aria-label="Random" title="Random">{% lucide "shuffle"
     %}</a>
   <a class="button button--icon" href="https://jbcarreon123.nekoweb.org/webrings/ssgring/redirect?slug=reduxflakes&way=next" target="_top"
-    title="Next up">{% lucide "arrow-right" %}</a>
+     title="Up Next" aria-label="Up Next">{% lucide "arrow-right" %}</a>
 </div>
 
 </section>
+
+<section class="card stack">
+
+### Snug Ring
+
+<div class="auto-flex "  style="align-items:center;">
+  <a class="button button--icon" href="https://snugnook.org/ring?action=previous" title="Go back" aria-label="Go Back">{%
+    lucide "arrow-left" %}</a>
+  <a class="button button--icon" href="https://snugnook.org/ring">{% lucide "globe" %}   Snug Ring</a>
+  <a class="button button--icon" href="https://snugnook.org/ring?action=random" aria-label="Random" title="Random">{% lucide "shuffle"
+    %}</a>
+  <a class="button button--icon" href="https://snugnook.org/ring?action=next"  title="Up Next" aria-label="Up Next">{% lucide "arrow-right" %}</a>
 </div>
+
+</section>
 
 {% endif -%}
