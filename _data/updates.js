@@ -1,5 +1,18 @@
 export default [
   {
+    date: "2026-04-13 16:23:00",
+    content: "OG images, new webring, and accessibility fixes",
+    list: [
+      "Site is now on Snug Ring! (nekoweb only)",
+      "Accessibility fixes (there's still a lot of issues but the site hasn't been reworked yet)",
+      "There's no OG images when embedding"
+    ]
+  },
+  {
+    date: "2026-03-21 12:30:00",
+    content: "Removed neocities stats"
+  },
+  {
     date: "2026-03-21 01:16:00",
     content: "New stuff on the [uses](/uses) page!"
   },
