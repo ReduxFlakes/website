@@ -15,8 +15,10 @@ import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import filters from "./config/filters.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines } from "./config/collections.js";
-import { externalLink, postCard } from "./config/shortcodes.js"
+import { externalLink, ogImage, postCard } from "./config/shortcodes.js";
+import EleventyPluginOgImage from 'eleventy-plugin-og-image';
 import process from "node:process";
+import fs from "node:fs";
 
 export default function (eleventyConfig) {
   eleventyConfig.setServerOptions({
@@ -52,6 +54,23 @@ export default function (eleventyConfig) {
       }
     });
   }
+  if (process.env.BUILD_TYPE == "production") {
+    eleventyConfig.addPlugin(EleventyPluginOgImage, {
+      satoriOptions: {
+        fonts: [
+          {
+            name: 'Inter',
+            data: fs.readFileSync('./src/public/fonts/Inter-base.woff'),
+            weight: 400,
+            style: 'normal',
+          },
+        ],
+      },
+    });
+  } else {
+    eleventyConfig.addShortcode("ogImage", ogImage);
+  }
+
   eleventyConfig.addPlugin(timeToRead);
   eleventyConfig.addPlugin(pluginTOC, {
     ignoredElements: ["a"],

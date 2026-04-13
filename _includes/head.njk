@@ -25,7 +25,9 @@
   <meta property="og:site_name" content="{{ meta.title }}"/>
   <meta property="og:description" content="{%- if description -%}{{description}}{%- else -%}{{meta.description}}{%- endif -%}">
   <meta property="og:locale" content="{{meta.lang}}">
-  <meta property="og:image" content="{{rawIcon or favicon}}">
+  {% if env.environment == "production" %}
+    {% ogImage "../_includes/og-image.njk", { title: title or meta.title, category: eleventyNavigation.parent, host: env.host, description: description} %}
+  {% endif %}
   <meta property="article:author" content="{{ meta.webmaster.name }}"/>
   <meta name="generator" content="{{ eleventy.generator }}"/>
   {% css "base" -%}
