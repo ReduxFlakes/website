@@ -4,7 +4,8 @@ export default [
     content: "New games in rotation",
     list: [
       "Added new games in rotation in the [gaming](/gaming) page",
-      "Added cursor pointer style for the nav menu buttons"
+      "Added cursor pointer style for the nav menu buttons",
+      "Image size tweaks in the toolbar"
     ]
   },
   {
