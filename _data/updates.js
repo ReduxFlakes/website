@@ -1,5 +1,13 @@
 export default [
   {
+    date: "2026-04-20 22:57:32",
+    content: "New games in rotation",
+    list: [
+      "Added new games in rotation in the [gaming](/gaming) page",
+      "Added cursor pointer style for the nav menu buttons"
+    ]
+  },
+  {
     date: "2026-04-13 16:23:00",
     content: "OG images, new webring, and accessibility fixes",
     list: [

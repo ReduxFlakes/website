@@ -298,6 +298,7 @@ body .toolbar {
   outline-offset: -2px;
   max-width: unset;
   transition: 120ms all ease-out;
+  cursor: pointer;
   border-bottom: 1px solid transparent;
 }
 

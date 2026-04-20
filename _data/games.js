@@ -6,6 +6,16 @@ export default {
             store_link: "https://zenless.hoyoverse.com/"
         },
         {
+            title: "Deadlock",
+            banner: "deadlock.jpg",
+            store_link: "https://store.steampowered.com/app/1422450/Deadlock/"
+        },
+        {
+            title: "Team Fortress 2",
+            banner: "tf2.png",
+            store_link: "https://store.steampowered.com/app/440/Team_Fortress_2/"
+        },
+        {
             title: "Counter Strike 2",
             banner: "cs2.png",
             store_link: "https://store.steampowered.com/app/730/CounterStrike_2/"
@@ -14,11 +24,6 @@ export default {
             title: "Bloon TD 6",
             banner: "bloonstd6.jpg",
             store_link: "https://store.steampowered.com/app/960090/Bloons_TD_6/"
-        },
-        {
-            title: "FlatOut Ultimate Carnage",
-            banner: "flatoutuc.png",
-            store_link: "https://store.steampowered.com/app/12360/FlatOut_Ultimate_Carnage_Collectors_Edition/"
         },
     ],
     complete: [{
