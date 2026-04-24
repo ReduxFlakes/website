@@ -1,5 +1,18 @@
 export default [
   {
+    date: "2026-04-24 10:26:00",
+    content: "New [article](/digital-garden/technology/dangers-of-ai/) about the dangers of AI available in the digital garden!",
+    list: [
+      "New article in the digital garden",
+      "Fixed issues with navigation, tagging, and collections relating to the blog and the digital garden",
+      "Fixed Discord domain ownership",
+      "Added new sites to the friends list",
+      "Added new buttons to the footer",
+      "Minor CSS tweaks for post pages",
+      "Minor CSS tweaks for cards"
+    ]
+  },
+  {
     date: "2026-04-20 22:57:32",
     content: "New games in rotation",
     list: [

@@ -5,9 +5,8 @@ export const getBlogPosts = collection => {
         ...collection.getFilteredByGlob("src/writing/blog/content/**/*.md"),
     ].reverse();
 };
-
 export const getBlogPostsTags = collectionApi => {
-    let tagSet = new Set();
+    const tagSet = new Set();
     const posts = collectionApi.getFilteredByGlob("src/writing/blog/content/**/*.md");
     posts.forEach(item => {
         if ("tags" in item.data) {
@@ -76,6 +75,27 @@ export const getDigitalGardenCollections = collectionApi => {
         tags: Array.from(cat.tagSet).sort(),
     }));
 };
+
+
+export const getDigitalGardenTags = collectionApi => {
+    const tagSet = new Set();
+    const pages = collectionApi.getFilteredByGlob("src/writing/digital-garden/content/**/*.md");
+    pages.forEach(item => {
+        if ("tags" in item.data) {
+            let tags = item.data.tags;
+            if (typeof tags === "string") {
+                tags = [tags];
+            }
+            for (const tag of tags) {
+                if (tag !== "posts" || tag !== "digital-garden") {
+                    tagSet.add(tag);
+                }
+            }
+        }
+    });
+
+    return Array.from(tagSet).sort();
+}
 
 export const getShrines = collection => {
     return collection.getFilteredByGlob("src/extras/shrines/**/index.md");

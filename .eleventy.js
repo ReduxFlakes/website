@@ -14,7 +14,7 @@ import { DateTime } from "luxon";
 import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import filters from "./config/filters.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getShrines } from "./config/collections.js";
+import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getDigitalGardenTags, getShrines } from "./config/collections.js";
 import { externalLink, ogImage, postCard } from "./config/shortcodes.js";
 import EleventyPluginOgImage from 'eleventy-plugin-og-image';
 import process from "node:process";
@@ -110,6 +110,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection('posts', getBlogPosts);
   eleventyConfig.addCollection('postTags', getBlogPostsTags);
   eleventyConfig.addCollection('digitalGarden', getDigitalGardenCollections);
+  eleventyConfig.addCollection('digitalGardenTags', getDigitalGardenTags)
   eleventyConfig.addCollection('shrines', getShrines);
 
   /* plugins */

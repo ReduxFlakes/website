@@ -1,0 +1,21 @@
+---
+pagination:
+  data: collections.digitalGardenTags
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+permalink: "/digital-garden/tags/{{tag | slugify}}/"
+eleventyComputed:
+  title: "Tagged with: {{ tag }}"
+  parent: "Digital Garden"
+  description: false
+  key: "Tagged with: {{ tag }}"
+---
+
+{% set categories = collections.digitalGarden | selectattr("tags", "contains", tag) %}
+
+{% for cat in categories %}
+  {% for post in cat.children %}
+    {{ component('post-listing', {title: post.title, date: post.date, description: post.description, href: post.url }) }}
+  {% endfor %}
+{% endfor %}

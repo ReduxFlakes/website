@@ -21,7 +21,7 @@ eleventyComputed:
 {% endrenderTemplate %}
 
 {% for post in posts.children %}
-  {{ component('post-listing', {title: post.title, date: post.date, description: post.data.description, href:
+  {{ component('post-listing', {title: post.title, date: post.date, description: post.description, href:
 post.url }) }}
 {% endfor %}
 
@@ -32,7 +32,12 @@ post.url }) }}
 {% endrenderTemplate %}
 
 <auto-flex>
-  {% for tag in posts.tags %}
-    <a href="../tags/{{tag | slugify}}" class="label">{{tag}}</a>
-  {% endfor %}
+  {%- for tag in collections.digitalGardenTags -%}
+    {% set tagPages = collections.digitalGarden | selectattr("tags", "contains", tag) %}
+
+    <a class="label" href="../tags/{{ tag | slugify }}">{{ tag }}
+      <small>
+        {{tagPages.length}}</small>
+    </a>
+  {%- endfor -%}
 </auto-flex>

@@ -38,12 +38,24 @@ export default {
         item.data.tags.forEach((tag) => {
           tagCount[tag] = (tagCount[tag] || 0) + 1;
         });
+      } else if (item.tags) {
+        item.tags.forEach((tag) => {
+          tagCount[tag] = (tagCount[tag] || 0) + 1;
+        });
       }
     });
     return tagCount;
   },
   strStarts: (str, value) => {
     return str.toString().startsWith(value);
+  },
+  excludeTag: (collection, tagToExclude) => {
+    if (!collection) return [];
+    return collection.filter(item => {
+      const tags = item.data.tags || [];
+      console.log(tags)
+      return !tags.includes(tagToExclude);
+    });
   },
   hasChildWithKey: (navCollection, parentKey, searchKey) => {
     const parentBranch = navCollection.find(item => item.key === parentKey);
@@ -59,5 +71,5 @@ export default {
     };
 
     return findKeyRecursive(parentBranch.children, searchKey);
-  }
+  },
 }

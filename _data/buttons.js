@@ -78,6 +78,16 @@ export default {
       url: "https://rice.place/",
     },
     {
+      title: "Mambuco",
+      img: "mambuco.gif",
+      url: "https://mambuco.dev/"
+    },
+    {
+      title: "pixlxip",
+      img: "pixlxip.gif",
+      url: "https://xip.neocities.org/"
+    },
+    {
       title: "Velvet Blue",
       img: "velvetblue.png",
       url: "https://velvetblue.neocities.org",
@@ -748,6 +758,14 @@ export default {
     {
       title: "This site has received 80+ Platinum",
       img: "general/80plusplat.png"
+    },
+    {
+      title: "Mobile Friendly",
+      img: "general/mobile-friendly.gif"
+    },
+    {
+      title: "Made for Dark Mode!",
+      img: "general/dark-mode.gif"
     },
     {
       title: "Made with CSS Grid",

@@ -41,24 +41,36 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
 
 </section>
 
-{% for post in collections.posts | limit(1) -%}
+{% set post = null %}
+{% set latestPostTitle = "Latest blog post" %}
+{% set latestPostIcon = "notebook-text" %}
+
+{% for blogPost in collections.posts | limit(1) -%}
+{% set post = blogPost %}
+{%- endfor -%}
+
+{% for digitalGarden in collections.digitalGarden %}
+{% for child in digitalGarden.children %}
+{% if child.date > post.date %}
+{% set post = child %}
+{% set latestPostTitle = "Latest digital garden article" %}
+{% set latestPostIcon = "sprout" %}
+{% endif %}
+{% endfor %}
+{% endfor %}
 
 <a href="{{post.url}}" class="post-listing card">
-<strong>{% lucide "notebook-text" %}  Latest blog post</strong>
+<strong>{% lucide latestPostIcon %} {{latestPostTitle}}</strong>
     <section class="stack" style="--spacer: 0.3em;">
-            <h2>{{ post.data.title }}</h2>
+            <h2>{{ post.data.title or post.title }}</h2>
         <p class="secondary">
             <small>
                 <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
             </small>
         </p>
-        <p>{{ post.data.description }}</p>
+        <p>{{ post.data.description or post.description}}</p>
     </section>
 </a>
-
-{%- endfor -%}
-
-<a href="/blog" style="--spacer:0.5em">View blog {% lucide "arrow-down-right" %}</a>
 
 ## {% lucide "box" %} Project Showcase
 

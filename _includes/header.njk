@@ -23,7 +23,13 @@
                     <small>Tagged</small>
                 </p>
                 {% for item in tags %}
-                    <a href="../tag/{{item | slugify }}" class="label">{{item}}</a>
+                    <a href="
+{% if digitalGarden %}
+../../tags/{{item | slugify}}
+{% else  %}
+../tag/{{item | slugify }}
+{% endif %}
+" class="label">{{item}}</a>
                 {% endfor %}
             </nav>
         {% endif %}

@@ -1,3 +1,4 @@
 {
-    "permalink": "/digital-garden/{{ digitalGarden.category | slugify }}/{{page.fileSlug | slugify}}/"
+    "permalink": "/digital-garden/{{ digitalGarden.category | slugify }}/{{page.fileSlug | slugify}}/",
+    "layout": "post"
 }
