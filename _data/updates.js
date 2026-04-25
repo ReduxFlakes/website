@@ -1,5 +1,10 @@
 export default [
   {
+    date: "2026-04-25 19:16:24",
+    content: "Update snugnook ring links",
+    list: ["Updated the links for the snugnook webring"]
+  },
+  {
     date: "2026-04-24 10:26:00",
     content: "New [article](/digital-garden/technology/dangers-of-ai/) about the dangers of AI available in the digital garden!",
     list: [

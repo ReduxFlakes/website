@@ -215,12 +215,12 @@ Some webrings might be missing because JS is currently disabled/not working. [- 
 ### Snug Ring
 
 <div class="auto-flex "  style="align-items:center;">
-  <a class="button button--icon" href="https://snugnook.org/ring?action=previous" title="Go back" aria-label="Go Back">{%
+  <a class="button button--icon" href="https://snugnook.org/ring/reduxflakes.nekoweb.org/previous" title="Go back" aria-label="Go Back">{%
     lucide "arrow-left" %}</a>
   <a class="button button--icon" href="https://snugnook.org/ring">{% lucide "globe" %}   Snug Ring</a>
-  <a class="button button--icon" href="https://snugnook.org/ring?action=random" aria-label="Random" title="Random">{% lucide "shuffle"
+  <a class="button button--icon" href="https://snugnook.org/ring/random" aria-label="Random" title="Random">{% lucide "shuffle"
     %}</a>
-  <a class="button button--icon" href="https://snugnook.org/ring?action=next"  title="Up Next" aria-label="Up Next">{% lucide "arrow-right" %}</a>
+  <a class="button button--icon" href="https://snugnook.org/ring/reduxflakes.nekoweb.org/next"  title="Up Next" aria-label="Up Next">{% lucide "arrow-right" %}</a>
 </div>
 
 </section>
