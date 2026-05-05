@@ -1,12 +1,17 @@
 export default [
   {
+    date: "2026-05-04 10:09:24",
+    content: "Small updates to Dangers of AI article",
+  },
+  {
     date: "2026-04-25 19:16:24",
     content: "Update snugnook ring links",
-    list: ["Updated the links for the snugnook webring"]
+    list: ["Updated the links for the snugnook webring"],
   },
   {
     date: "2026-04-24 10:26:00",
-    content: "New [article](/digital-garden/technology/dangers-of-ai/) about the dangers of AI available in the digital garden!",
+    content:
+      "New [article](/digital-garden/technology/dangers-of-ai/) about the dangers of AI available in the digital garden!",
     list: [
       "New article in the digital garden",
       "Fixed issues with navigation, tagging, and collections relating to the blog and the digital garden",
@@ -14,8 +19,8 @@ export default [
       "Added new sites to the friends list",
       "Added new buttons to the footer",
       "Minor CSS tweaks for post pages",
-      "Minor CSS tweaks for cards"
-    ]
+      "Minor CSS tweaks for cards",
+    ],
   },
   {
     date: "2026-04-20 22:57:32",
@@ -23,8 +28,8 @@ export default [
     list: [
       "Added new games in rotation in the [gaming](/gaming) page",
       "Added cursor pointer style for the nav menu buttons",
-      "Image size tweaks in the toolbar"
-    ]
+      "Image size tweaks in the toolbar",
+    ],
   },
   {
     date: "2026-04-13 16:23:00",
@@ -32,16 +37,16 @@ export default [
     list: [
       "Site is now on Snug Ring! (nekoweb only)",
       "Accessibility fixes (there's still a lot of issues but the site hasn't been reworked yet)",
-      "There's no OG images when embedding"
-    ]
+      "There's no OG images when embedding",
+    ],
   },
   {
     date: "2026-03-21 12:30:00",
-    content: "Removed neocities stats"
+    content: "Removed neocities stats",
   },
   {
     date: "2026-03-21 01:16:00",
-    content: "New stuff on the [uses](/uses) page!"
+    content: "New stuff on the [uses](/uses) page!",
   },
   {
     date: "2026-03-14 18:53:00",
@@ -49,7 +54,7 @@ export default [
     list: [
       "Themes are now working properly again with the new design",
       "Fixed wrong aspect ratio on images",
-    ]
+    ],
   },
   {
     date: "2026-03-14 00:59:41",
@@ -65,8 +70,8 @@ export default [
       "Improved deno tasks",
       "Improved local serve speed by enabling postcss only when deploying",
       "Various CSS tweaks",
-      "Templating fixes"
-    ]
+      "Templating fixes",
+    ],
   },
   {
     date: "2026-03-05 08:04:12",
@@ -75,12 +80,13 @@ export default [
       "Fix broken nekoweb follow link",
       "Fix broken 88x31 button link",
       "Tweaked grid gap",
-      "Fix inner site links"
-    ]
+      "Fix inner site links",
+    ],
   },
   {
     date: "2026-03-04 07:58:00",
-    content: "New redesign! Inspired by GTK and Adwaita with some personal touches :P",
+    content:
+      "New redesign! Inspired by GTK and Adwaita with some personal touches :P",
     list: [
       "Redesigned the site with a new look based on [Gnome's HIG](https://developer.gnome.org/hig/), this redesign comes with a lot of improvements in design and accessibility but also the site should be better to use on mobile (there's still some stuff to improve though)",
       "Improved the [design](/design) page",
@@ -90,33 +96,33 @@ export default [
       "Streamlined permalinks",
       "Improved the [gaming](/gaming) page",
       "Replaced Geist with Inter ([reason](https://techforpalestine.org/vercel))",
-    ]
+    ],
   },
   {
     date: "2026-02-09 19:17:54",
-    content: "Added new buttons and updated the [services](/services) page with examples"
+    content:
+      "Added new buttons and updated the [services](/services) page with examples",
   },
   {
     date: "2026-02-08 01:27:05",
     content: "Small CSS updates",
-    list: [
-      "Fixed gaming page grid",
-      "Fixed nekoweb follow button style"
-    ]
+    list: ["Fixed gaming page grid", "Fixed nekoweb follow button style"],
   },
   {
     date: "2026-02-05 12:08:01",
-    content: "Fixed layout and styling issues as well as updated some pages and links.",
+    content:
+      "Fixed layout and styling issues as well as updated some pages and links.",
     list: [
       "Updated the [now](/now) page",
       "Updated the [uses](/uses) page",
       "Updated link on the nkko button in the footer",
-      "Fixed navigation mapping issues"
-    ]
+      "Fixed navigation mapping issues",
+    ],
   },
   {
     date: "2026-02-04 21:41:24",
-    content: "HUGE UPDATE! Lot's of rework, optimizations, and hopefully a bit of new content for y'all :3",
+    content:
+      "HUGE UPDATE! Lot's of rework, optimizations, and hopefully a bit of new content for y'all :3",
     list: [
       "New content! Digital garden is now done (just missing the content xD), there's new projects added to the list, shrines are also working but I haven't got to make any of them yet.",
       "New buttons everywhere! I've added missing people on the friends section, updated buttons that had changed, and removed broken links. There's also a lot more buttons in the footer now promoting stuff I like!",
@@ -138,8 +144,8 @@ export default [
       "Finally updated the music player playlist",
       "Small tweaks on the last.fm widget on the homepage sidebar",
       "Images are now optimized so the site should load even faster!",
-      "There's probably more but I'm tired of remembering and writing everything I've done ~_~"
-    ]
+      "There's probably more but I'm tired of remembering and writing everything I've done ~_~",
+    ],
   },
   {
     date: "2026-01-05 21:43:10",
@@ -150,8 +156,8 @@ export default [
     content: "Happy New Year!!",
     list: [
       "Added new button to the friends section",
-      "Remove wrong line in the previous update"
-    ]
+      "Remove wrong line in the previous update",
+    ],
   },
   {
     date: "2025-12-21 19:34:21",
@@ -161,7 +167,7 @@ export default [
       "Updates to the projects page with some fixes, a new idea, and a new project i'm involved in",
       "Tweaked the default theme once again",
       "Added new theme called Liminal, which is the first light theme available",
-    ]
+    ],
   },
   {
     date: "2025-11-23 00:59:21",
@@ -172,16 +178,16 @@ export default [
       "Added Celer to the projects list",
       "Added new site to the likes section",
       "Minor updates to the Awesome YT page",
-      "Small CSS tweaks"
-    ]
+      "Small CSS tweaks",
+    ],
   },
   {
     date: "2025-11-01 13:26:21",
     content: "Added the Gaming page! Also other minor updates",
     list: [
       "I've finally created the gaming page! It's basically a list of the games I'm currently playing and the games I've finished. There's still a lot of games missing, but it's a start.",
-      "Small fixes."
-    ]
+      "Small fixes.",
+    ],
   },
   {
     date: "2025-10-26 20:02:00",
@@ -190,8 +196,8 @@ export default [
       "Finally created the services page where I list live services that I offer (currently only listing my Last.FM proxy)",
       "Added a toolbar on the homepage that links to a page for donating to support Gaza emergency response",
       "Updated various pages (about, uses, and now)",
-      "Small grammar fixes"
-    ]
+      "Small grammar fixes",
+    ],
   },
   {
     date: "2025-10-20 00:07:20",
@@ -199,7 +205,7 @@ export default [
     list: [
       "Changed default font to Geist",
       "Added a new theme called Midnight with the other one being renamed to Ocean",
-    ]
+    ],
   },
   {
     date: "2025-10-13 23:23:48",
@@ -208,16 +214,17 @@ export default [
       "Released Pixy Icon Pack v0.2.0",
       "Removed unused icons",
       "Added new project idea",
-      "Deprecation of the remasters page (replaced with File Garden)"
-    ]
+      "Deprecation of the remasters page (replaced with File Garden)",
+    ],
   },
   {
     date: "2025-10-10 16:53:48",
-    content: "Accessibility fixes and some design improvements on the homepage and project page",
+    content:
+      "Accessibility fixes and some design improvements on the homepage and project page",
     list: [
       "Various accessibility fixes to the music player and footer",
       "Added icons for the heading in the homepage and project page",
-    ]
+    ],
   },
   {
     date: "2025-10-09 00:13:48",
@@ -227,7 +234,7 @@ export default [
       "Added a new site to the friends list (Systemic Cyclops)",
       "Improved the colors for the warning notice on all themes",
       "Fixed bug where pages with a key equal to a tag would be grouped as the same parent of that tag (ex: the project page would be grouped under Blog because the tag Projects also exists)",
-    ]
+    ],
   },
   {
     date: "2025-10-05 18:02:48",
@@ -237,14 +244,14 @@ export default [
       "Added a theme switcher (more themes coming soon, contact me if you want to contribute themes)!",
       "Small CSS tweaks",
       "Removed research section (I didn't have a use for it)",
-    ]
+    ],
   },
   {
     date: "2025-08-22 16:13:48",
     content: "Updates on the support page",
     list: [
-      'Added new methods on the <a href="/support">support page</a> that you can use to support me!'
-    ]
+      'Added new methods on the <a href="/support">support page</a> that you can use to support me!',
+    ],
   },
   {
     date: "2025-08-18 21:20:48",
@@ -260,7 +267,7 @@ export default [
       "Fixed grammar",
       "Updated buttons",
       "Updated projects",
-    ]
+    ],
   },
   {
     date: "2025-08-14 10:01:48",
@@ -270,8 +277,8 @@ export default [
       "Added new entries to the blogroll",
       "Added new buttons to the inspiration section",
       "Fixed time to read field on blog posts",
-      "Changed buttons location"
-    ]
+      "Changed buttons location",
+    ],
   },
   {
     date: "2025-08-13 09:02:00",
@@ -280,8 +287,8 @@ export default [
       "Tinylytics kudos are now enabled on the blog so now you can like/kudo my posts!",
       "Added 2 new buttons to the friends section",
       "Various CSS tweaks",
-      "Content updates"
-    ]
+      "Content updates",
+    ],
   },
   {
     date: "2025-08-12 17:26:24",
@@ -292,8 +299,8 @@ export default [
       "Improved the LastFM widget which now uses my own proxy",
       "Moved some of the old pages to the new navigation",
       "Added a new button section on the footer",
-      "Made some CSS tweaks around the footer and the button-grid"
-    ]
+      "Made some CSS tweaks around the footer and the button-grid",
+    ],
   },
   {
     date: "2025-08-10 11:15:24",
@@ -301,8 +308,8 @@ export default [
     list: [
       "Updates button links",
       "Added new buttons to the friends section",
-      "Added summary field on the blog feeds"
-    ]
+      "Added summary field on the blog feeds",
+    ],
   },
   {
     date: "2025-08-10 01:12:00",
@@ -312,16 +319,16 @@ export default [
       "New sidebar that shows status, currently playing song, and a todo section for upcoming stuff",
       "Improved the navigation",
       "Improved the projects page (still not as good as I want it to be)",
-    ]
+    ],
   },
   {
     date: "2025-05-10 12:26:00",
     content: "Changes relating to buttons",
     list: [
       "Added a bunch of new buttons to the friends and inspiration section",
-      "Inspiration buttons are now available on the homepage as \"Sites I Like\"",
-      "Fixed broken/missing buttons"
-    ]
+      'Inspiration buttons are now available on the homepage as "Sites I Like"',
+      "Fixed broken/missing buttons",
+    ],
   },
   {
     date: "2025-05-07 08:00:00",
@@ -329,7 +336,7 @@ export default [
     list: [
       "Added 3 new entries on the remasters page for the band: 3D (A Fish In Sea)",
       "The Burns - Avail is now available in FLAC",
-    ]
+    ],
   },
   {
     date: "2025-04-30 09:48:00",
@@ -337,24 +344,24 @@ export default [
     list: [
       "Now every single item in the remasters download page have an ID, so you can link them now",
       "Made improvements on mobile",
-    ]
+    ],
   },
   {
     date: "2025-04-26 19:10:00",
     content: "Lot of fixes and small additions.",
     list: [
-      "Added new stuff to the <a href=\"/design/\">design</a> page",
-      "Kickstarted the <a href=\"/sites/\">related sites</a> page",
-      "Improved <a href=\"/about/\">about</a> page with new credits sections and better attribution (with template)",
+      'Added new stuff to the <a href="/design/">design</a> page',
+      'Kickstarted the <a href="/sites/">related sites</a> page',
+      'Improved <a href="/about/">about</a> page with new credits sections and better attribution (with template)',
       "Restructured the design page",
       "Improvements on CSS (improved tables, made all headings bold, fixed focus for specifci elements, and added style for textarea element)",
       "Improved some grammar",
-      "Fixed guestbook banner"
-    ]
+      "Fixed guestbook banner",
+    ],
   },
   {
     date: "2025-04-20 01:47:00",
-    content: "Fixed Tinylytics and hopefully Discord website connection."
+    content: "Fixed Tinylytics and hopefully Discord website connection.",
   },
   {
     date: "2025-04-17 18:50:00",
@@ -367,8 +374,8 @@ export default [
       "Organized all the pages into categories with icons and descriptions",
       "New content from the new download category, upcoming research section, and other goodies",
       "Improved accessibility troughout the site",
-      "And more!!"
-    ]
+      "And more!!",
+    ],
   },
   {
     date: "2025-03-25 07:57:32",
@@ -376,15 +383,18 @@ export default [
   },
   {
     date: "2025-03-24 18:42:04",
-    content: "More buttons! Also updated the now page with a new section and readded Hotline Webring on the about page.",
+    content:
+      "More buttons! Also updated the now page with a new section and readded Hotline Webring on the about page.",
   },
   {
     date: "2025-03-23 15:40:04",
-    content: "New buttons on the friends section and redesigned the site card and post box on Nekoweb.",
+    content:
+      "New buttons on the friends section and redesigned the site card and post box on Nekoweb.",
   },
   {
     date: "2025-03-21 07:54:00",
-    content: "Added new webring and fixed some stuff including fixing the webrings on Nekoweb again (i hope) and cleaned up some CSS. It's been a busy month sorry for the lack of updates :("
+    content:
+      "Added new webring and fixed some stuff including fixing the webrings on Nekoweb again (i hope) and cleaned up some CSS. It's been a busy month sorry for the lack of updates :(",
   },
   {
     date: "2025-03-10 17:38:03",

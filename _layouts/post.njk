@@ -1,10 +1,7 @@
 {% extends "./base.njk" %}
-
 {% set post = true %}
-
 {# Check if toc is not defined or if it's true in the frontmatter #}
 {% set toc_enabled = toc is not defined or toc %}
-
 {% if toc_enabled %}
   {% set aside_enabled = true %}
   {% set aside_acs = "top" %}
@@ -16,15 +13,15 @@
   </section>
   {% endhtml %}
 {% endif %}
-
 {% block base %}
-  <article class="stack" style="font-size: 1.125em;letter-spacing:0em;line-height: 1.6;text-align:justify;">
+  <article class="stack" style="font-size: 1.125em;letter-spacing:0em;line-height: 1.6;">
     {{ content | safe }}
-    <hr>
+      <hr>
     <section class="card stack card--support">
       <h2>Support my work!</h2>
-      <p>If you like what I do and what I write, plase consider doing a small donation to support the stuff I do, I'll be really grateful!</p>
-      <a href="/support" class="button">{% lucide "hand-heart"%} Support Options</a>
+      <p>If you like what I do and what I write, plase consider doing a small donation to support the stuff I do, I'll be
+        really grateful!</p>
+      <a href="/support" class="button">{% lucide "hand-heart" %} Support Options</a>
     </section>
   </article>
 {% endblock %}
