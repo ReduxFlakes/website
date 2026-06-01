@@ -9,9 +9,8 @@ paginationNextText: 'Older posts'
 permalink: "/digital-garden/{{posts.title | slugify}}/"
 eleventyComputed:
   parent: "Digital Garden"
-  key: "{{ posts.title }}"
-  title: "{{ posts.title }}"
-  description: "{{posts.description}}"
+  key: "{{ posts.title  | slugify }}"
+  title: "{{ posts.title | safe }}"
 ---
 
 {% renderTemplate "md" %}
@@ -32,12 +31,10 @@ post.url }) }}
 {% endrenderTemplate %}
 
 <auto-flex>
-  {%- for tag in collections.digitalGardenTags -%}
-    {% set tagPages = collections.digitalGarden | selectattr("tags", "contains", tag) %}
-
-    <a class="label" href="../tags/{{ tag | slugify }}">{{ tag }}
+  {%- for tag in posts.tagSet -%}
+    <a class="label" href="../tags/{{ tag }}">{{ tag }}
       <small>
-        {{tagPages.length}}</small>
+{{ collections[tag].length }}</small>
     </a>
   {%- endfor -%}
 </auto-flex>

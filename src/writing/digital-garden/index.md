@@ -10,7 +10,7 @@ util:
 
 ## Welcome to my digital garden!
 
-If you don't know what a digital garden is, it's basically a personal space where ideas can grow over time similar to an actual garden.
+If you don't know what a digital garden is, it's basically a personal space where ideas can grow over time similar to an actual garden. This allows me to write a lot more content because different from a blog where posts are published when they're ready, on a digital garden they are always subject to change and improvements so there's more experimental posts.
 
 ## Categories
 
@@ -28,7 +28,6 @@ If you don't know what a digital garden is, it's basically a personal space wher
   {% else %}
     {% set postNoteCount =  [item.children.length, " Note"] | join %}
   {% endif %}
-  
   {{ component('link-icon-card', {title: item.title, icon: item.icon, subheading: true, href: item.url, extras: [postNoteCount, tagsCount]}) }}
 {%- endfor %}
 <auto-grid>

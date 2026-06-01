@@ -1,4 +1,4 @@
-import slug from "slug";
+import slugify from '@sindresorhus/slugify';
 
 export const getBlogPosts = collection => {
     return [
@@ -26,17 +26,19 @@ export const getBlogPostsTags = collectionApi => {
 }
 
 export const getDigitalGardenCollections = collectionApi => {
-    const allItems = collectionApi.getFilteredByGlob("src/writing/digital-garden/content/**/*.md");
+    const allItems = collectionApi.getFilteredByGlob("src/writing/digital-garden/content/**/*.md").reverse();
     const categoryMap = new Map();
 
     allItems.forEach(item => {
         const dg = item.data.digitalGarden;
 
         if (dg && dg.category) {
+            const categorySlug = slugify(dg.category);
             if (!categoryMap.has(dg.category)) {
                 categoryMap.set(dg.category, {
                     title: dg.category,
-                    url: `/digital-garden/${slug(dg.category)}/`,
+                    key: categorySlug,
+                    url: `/digital-garden/${categorySlug}/`,
                     description: dg.description,
                     icon: dg.icon,
                     tagSet: new Set(),
@@ -46,36 +48,36 @@ export const getDigitalGardenCollections = collectionApi => {
 
             const categoryEntry = categoryMap.get(dg.category);
 
-            item.data.eleventyNavigation = {
-                key: item.data.title,
-                parent: dg.category
-            };
-
             const itemTags = item.data.tags || [];
 
-            itemTags.filter(tag => !['digital-garden', 'posts'].includes(tag)).forEach(tag => categoryEntry.tagSet.add(tag));
+            itemTags.filter(tag => !['digital-garden', 'posts'].includes(tag))
+                .forEach(tag => categoryEntry.tagSet.add(tag));
 
             categoryEntry.children.push({
                 title: item.data.title,
                 url: item.url,
                 description: item.data.description,
                 date: item.date,
-                status: item.data.status || "seed",
+                status: item.data.status || 1,
                 eleventyNavigation: {
                     key: item.data.title,
-                    parent: item.data.digitalGarden.category
+                    parent: categorySlug
                 },
                 tags: itemTags
             });
         }
     });
 
+    console.log(Array.from(categoryMap.values()).map(cat => ({
+        ...cat,
+        tags: Array.from(cat.tagSet).sort(),
+    })))
+
     return Array.from(categoryMap.values()).map(cat => ({
         ...cat,
         tags: Array.from(cat.tagSet).sort(),
     }));
 };
-
 
 export const getDigitalGardenTags = collectionApi => {
     const tagSet = new Set();
@@ -93,7 +95,7 @@ export const getDigitalGardenTags = collectionApi => {
             }
         }
     });
-
+    console.log(Array.from(tagSet).sort());
     return Array.from(tagSet).sort();
 }
 

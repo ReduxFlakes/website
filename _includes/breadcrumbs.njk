@@ -5,21 +5,21 @@
             <li>
                 <a href="/">Home</a>
             </li>
-            {% for crumb in navPages %}
-                {% if crumb.url %}
-                    {% if not loop.last %}
-                        <li>
-                            <a href="{{crumb.url}}">{{crumb.key}}</a>
-                        </li>
-                    {% else %}
-                        <li>
-                            <a href=""aria-current="page">
-                                <b>{{crumb.data.title}}</b>
-                            </a>
-                        </li>
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
+{% for crumb in navPages %}
+    {% if crumb.url %}
+        {% if not loop.last %}
+            <li>
+                <a href="{{ crumb.url }}">{{ crumb.title or crumb.data.title }}</a>
+            </li>
+        {% else %}
+            <li>
+                <a href="" aria-current="page">
+                    <b>{{crumb.data.title or crumb.title  }}</b>
+                </a>
+            </li>
+        {% endif %}
+    {% endif %}
+{% endfor %}
         </ol>
     </nav>
 {% endif %}
