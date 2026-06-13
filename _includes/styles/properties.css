@@ -9,6 +9,7 @@
   --stroke: hsla(240, 2%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
   --container: url("/public/noise.png") #2e2e32;
+  --container-nn: #2e2e32;
   /* used for elements that sit on top of other containers */
   --container-high: url("/public/noise.png") hsla(240, 4%, 30%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
@@ -50,6 +51,7 @@
   --stroke: hsla(290, 4%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
   --container: url("/public/noise.png") hsl(290, 10%, 19%);
+  --container-nn: hsl(290, 10%, 19%);
   /* used for elements that sit on top of other containers */
   --container-high: url("/public/noise.png") hsla(290, 10%, 30%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
@@ -85,6 +87,7 @@
   --stroke: hsla(85, 4%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
   --container: url("/public/noise.png") hsl(85, 70%, 15%);
+  --container-nn: hsl(85, 70%, 15%);
   /* used for elements that sit on top of other containers */
   --container-high: url("/public/noise.png") hsla(85, 10%, 30%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
@@ -120,6 +123,7 @@
   --stroke: hsla(218, 4%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
   --container: url("/public/noise.png") hsl(218, 14%, 19%);
+  --container-nn: hsl(218, 14%, 19%);
   /* used for elements that sit on top of other containers */
   --container-high: url("/public/noise.png") hsla(218, 11%, 30%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
@@ -155,6 +159,7 @@
   --stroke: hsla(0, 0%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
   --container: url("/public/noise.png") hsl(0, 0%, 11%);
+  --container-nn: hsl(0, 0%, 11%);
   /* used for elements that sit on top of other containers */
   --container-high: url("/public/noise.png") hsla(0, 0%, 20%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */

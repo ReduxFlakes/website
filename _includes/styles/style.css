@@ -612,20 +612,20 @@ nav.breadcrumb li+li::before {
   }
 
   main:not(.home) article {
-    --_viewport-size: var(--vw-size, 42rem);
+    --_viewport-size: var(--vw-size, 38em);
     max-width: var(--_viewport-size);
     margin: 0 auto;
   }
 
   aside.page-aside {
     background: var(--container);
-    box-shadow: -1px -1px 3px 0px hsla(0, 0%, 0%, 0.3);
+    /*box-shadow: -1px -1px 3px 0px hsla(0, 0%, 0%, 0.3);*/
     border-top-left-radius: 0.5rem;
     overflow: hidden;
   }
 
   .pride~main>aside.page-aside {
-    background: linear-gradient(to bottom, transparent, #2e2e32 35%);
+    background: url("/public/noise.png"), linear-gradient(to bottom, transparent, var(--container-nn) 35%);
   }
 }
 
