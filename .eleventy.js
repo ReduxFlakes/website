@@ -15,9 +15,8 @@ import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import filters from "./config/filters.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getDigitalGardenTags, getShrines } from "./config/collections.js";
-import { externalLink, ogImage, postCard } from "./config/shortcodes.js";
+import { externalLink, postCard } from "./config/shortcodes.js";
 import process from "node:process";
-import fs from "node:fs";
 
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/**");
@@ -50,22 +49,6 @@ export default function (eleventyConfig) {
         quality: 90
       }
     });
-  }
-  if (process.env.BUILD_TYPE == "production") {
-    eleventyConfig.addPlugin(EleventyPluginOgImage, {
-      satoriOptions: {
-        fonts: [
-          {
-            name: 'Inter',
-            data: fs.readFileSync('./src/public/fonts/Inter-base.woff'),
-            weight: 400,
-            style: 'normal',
-          },
-        ],
-      },
-    });
-  } else {
-    eleventyConfig.addShortcode("ogImage", ogImage);
   }
 
   eleventyConfig.addPlugin(timeToRead);
@@ -129,7 +112,7 @@ export default function (eleventyConfig) {
   md.use(markdownItFootnote);
   eleventyConfig.setLibrary("md", md);
 
-  eleventyConfig.addPreprocessor("macro-inject", "njk,md", (data, content) => {
+  eleventyConfig.addPreprocessor("macro-inject", "njk,md", (_data, content) => {
     return (
       `{%- from "util/component.njk" import component with context -%}\n` +
       content
