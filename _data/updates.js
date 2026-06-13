@@ -1,11 +1,13 @@
 export default [
   {
-    date: "2026-06-12 19:12:04",
+    date: "2026-06-13 22:51:09",
     content: "**HAPPY PRIDE MONTH!** New blog post about Celer and other updates :D",
     list: [
-      "Updated the [things I use](/uses) page",
-      "Added pride backdrop to the homepage",
-      "Added new buttons to the friends section"
+      "Finished the Celer blog post",
+      "Updated the [things I use](/uses) page (now I'm on Linux :3)",
+      "Added pride backdrop to the homepage to celebrate pride month",
+      "Added new buttons to the friends section",
+      "General CSS tweaks and cleaning"
     ]
   },
   {
