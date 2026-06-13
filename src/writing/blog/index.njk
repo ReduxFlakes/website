@@ -23,7 +23,7 @@ eleventyComputed:
     <h2>Tags</h2>
     <nav class="auto-flex">
       {%- set tagCloud = collections.posts | tagCloud -%}
-      {%- for tag, count in tagCloud -%}
+      {%- for tag, count in tagCloud | test -%}
         <a class="label" href="tag/{{ tag | slugify }}">{{ tag }}
           <small>{{ count }}</small>
         </a>

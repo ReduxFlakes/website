@@ -10,7 +10,7 @@ util:
 ---
 
 {%- for year, cat in mockups | dictsort | reverse -%}
-{{- component('heading-anchor',{title: title}) -}}
+{{- component('heading-anchor',{title: year}) -}}
 <auto-grid class="gallery">
 {%- for item in cat -%}
 <a href="/public/mockups{{item.img}}" aria-label="{{item.name}}" data-name="{{item.name}}" class="glightbox card-image" data-description="{{item.name}} - {{item.year}}" data-type="image">

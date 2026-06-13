@@ -8,7 +8,7 @@ function calcDays(startDate) {
 
 export default {
     permalink: (data) => {
-        if (data.permalink === false) return false;
+        if (data.permalink === false || data.draft) return false;
         if (typeof data.permalink === "string" && data.permalink !== "") {
             return data.permalink;
         }

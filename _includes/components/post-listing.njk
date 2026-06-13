@@ -1,3 +1,4 @@
+{% if params.href != false %}
 <a href="{{params.href}}" class="post-listing card">
     <section class="stack" style="--spacer: 0.25em;">
         {%- if params.subheading -%}
@@ -13,3 +14,4 @@
         <p>{{ params.description }}</p>
     </section>
 </a>
+{% endif %}

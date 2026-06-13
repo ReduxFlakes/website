@@ -17,6 +17,11 @@ export default {
       url: "https://immjs.dev/",
     },
     {
+      title: "Skyweaver!!",
+      img: "skyweaver.png",
+      url: "skyweaver.nekoweb.org"
+    },
+    {
       title: "Xan",
       img: "xan.gif",
       url: "https://xan.lol//",
@@ -427,6 +432,59 @@ export default {
       url: "https://sunnytheorem.nekoweb.org/"
     },
     {
+      title: "lumis archive",
+      img: "lumis.gif",
+      url: "https://supernw095.nekoweb.org/"
+    },
+    {
+      title: "Lakes The Guy",
+      img: "lakes.png",
+      url: "https://lakes.glamour.ovh/"
+    },
+    {
+      title: "The Breewery",
+      img: "breetea.gif",
+      url: "https://breetea.nekoweb.org/"
+    },
+    {
+      title: "Taigabeetle",
+      img: "taigabeetle.png",
+      url: "https://taigabeetle.nekoweb.org/"
+    },
+    {
+      title: "Mars",
+      img: "mars.png",
+      url: "https://mars.nekoweb.org/"
+    },
+    {
+      title: ".The End Of Science.com",
+      img: "https://the-end-of-science.com/Images/button.gif",
+      externalimg: true,
+      url: "https://the-end-of-science.com/"
+    },
+    {
+      title: "Rifleyshot",
+      img: "rifleyshot.gif",
+      url: "https://rifley.monster/"
+    },
+    {
+      title: "nomaakip",
+      img: "https://nomaakip.xyz/img/buttons/button.png",
+      externalimg: true,
+      url: "https://nomaakip.xyz"
+    },
+    {
+      title: "Lunar Corvus",
+      img: "lunarcorvus.png",
+      url: "https://lunarcorvus.com/home"
+    },
+    {
+      title: "blueberrymuffinss",
+      img: "blueberrymuffinss.png",
+      url: "https://blueberrymuffinss.neocities.org/"
+    },
+    /* static (no images ) */
+    {
       title: "Cyncrovee",
       url: "https://cyncrovee.nekoweb.org/"
     },
@@ -474,6 +532,22 @@ export default {
       title: "juice",
       url: "https://firebaseripcord.neocities.org/"
     },
+    {
+      title: " Citronella",
+      url: "https://citronella.uwu.sg/"
+    },
+    {
+      title: "Kenneth",
+      url: "https://kenneth.nekoweb.org/"
+    },
+    {
+      title: "Sakura 桜",
+      url: "https://桜.nekoweb.org/"
+    },
+    {
+      title: "_michdev",
+      url: "https://michdev.nekoweb.org/"
+    }
   ],
   likes: [
     {

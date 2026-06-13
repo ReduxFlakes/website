@@ -142,6 +142,7 @@ ol {
   padding: 0 2rem;
 }
 
+
 img,
 picture,
 svg {
@@ -253,6 +254,12 @@ h3:hover>.anchor,
 article.stack hr {
   margin: 1.5rem 0;
 }
+
+article ul>li+li,
+article ol>li+li {
+  margin-top: 0.5em;
+}
+
 
 
 main {

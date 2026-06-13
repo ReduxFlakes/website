@@ -2,9 +2,10 @@
 title: Dangers of AI
 date: 2026-04-23 09:23:11
 description: Angry man talks about the dangers of AI
-tags: ["AI", "Privacy", "Creativity"]
+tags: ["ai", "ethics", "privacy"]
+status: "3"
 digitalGarden:
-  category: Technology
+  category: "Thoughts & Essays"
 ---
 
 {{ component('notice',{type: "info", icon: "info",description: 'This started of as an essay I had to write for English class where I had to agreee or disagree with the following statement: "The dangers of AI are far greater than the benefits. If possible, we should stop developing artitificial intelligence.". This is my response to it.'}) }}

@@ -1,6 +1,6 @@
 {
     "tasks": {
-        "start": "eleventy --serve --watch",
+        "start": "rm -rf ./_site && eleventy --serve --watch",
         "start:fast": "eleventy --serve --watch --incremental",
         "start:nekoweb": "HOST_TYPE=nekoweb eleventy --serve",
         "start:all": "BUILD_TYPE=production HOST_TYPE=all eleventy --serve",
@@ -11,5 +11,8 @@
         "build:neko": "HOST_TYPE=nekoweb BUILD_TYPE=production eleventy && deno task html-minify",
         "debug": "DEBUG=Eleventy* eleventy --serve --watch"
     },
-    "allowScripts": ["npm:sharp@0.33.5", "npm:sharp@0.34.5"]
+    "allowScripts": [
+        "npm:sharp@0.33.5",
+        "npm:sharp@0.34.5"
+    ]
 }

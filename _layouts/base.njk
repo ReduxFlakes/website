@@ -16,6 +16,7 @@ I'm so sorry for making this site so convoluted :sob:
       <a href="#main-content" class="acs-skip">Skip to main content</a>
       {% include "toolbar.njk" %}
       {% include "nav.njk" %}
+    <div class="pride"></div>
       {% include "header.njk" %}
       <main {% if post == true -%}id="main-content"{%- endif %} {% if (aside_enabled == true or aside_enabled == "true") and not is_home -%}class="has-aside"{% elif is_home %}class="has-aside home"{%- endif %}>
         {% include "breadcrumbs.njk" %}
@@ -77,6 +78,7 @@ I'm so sorry for making this site so convoluted :sob:
 
           (async () => {
             try {
+              // i've removed neocities because of cors limitation on their end and i'm lazy to make a proxy to fetch the data :P
               const nekoRequest = await fetch(`https://nekoweb.org/api/site/info/${domain}`,);
               //const neoRequest = await fetch(`https://neocities.org/api/info?sitename=${user}`);
 
@@ -352,22 +354,8 @@ I'm so sorry for making this site so convoluted :sob:
         :root {
           --backdrop-icon: url("/public/redux.png");
         }
-        body {
-          animation: 800ms cubic-bezier(0.49, 0.65, 0.62, 0.41) 0s 1 fadeIn;
-        }
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-          }
-          20% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
         .hero::before {
-          --hero-trans-delay: 800ms;
+          --hero-trans-delay: 400ms;
           image-rendering: initial;
         }
       </style>

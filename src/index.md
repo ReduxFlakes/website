@@ -45,13 +45,17 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
 {% set latestPostTitle = "Latest blog post" %}
 {% set latestPostIcon = "notebook-text" %}
 
-{% for blogPost in collections.posts | limit(1) -%}
+{% for blogPost in collections.posts -%}
+{% if post == null %}
+{% if blogPost.draft != true %}
 {% set post = blogPost %}
+{% endif %}
+{% endif %}
 {%- endfor -%}
 
 {% for digitalGarden in collections.digitalGarden %}
 {% for child in digitalGarden.children %}
-{% if child.date > post.date %}
+{% if child.date > post.date and child.url != false %}
 {% set post = child %}
 {% set latestPostTitle = "Latest digital garden article" %}
 {% set latestPostIcon = "sprout" %}
@@ -61,15 +65,16 @@ Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from 
 
 <a href="{{post.url}}" class="post-listing card">
 <strong>{% lucide latestPostIcon %} {{latestPostTitle}}</strong>
-    <section class="stack" style="--spacer: 0.3em;">
-            <h2>{{ post.data.title or post.title }}</h2>
-        <p class="secondary">
-            <small>
-                <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
-            </small>
-        </p>
-        <p>{{ post.data.description or post.description}}</p>
-    </section>
+
+<section class="stack" style="--spacer: 0.3em;">
+<h2>{{ post.data.title or post.title }}</h2>
+<p class="secondary">
+<small>
+<time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
+</small>
+</p>
+<p>{{ post.data.description or post.description}}</p>
+</section>
 </a>
 
 ## {% lucide "box" %} Project Showcase

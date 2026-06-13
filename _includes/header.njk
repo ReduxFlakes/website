@@ -1,5 +1,5 @@
 <header class="hero stack" {% if icon -%}style="--backdrop-icon: url({{rawIcon}})"{%- endif %}>
-    <h1>{{title or meta.title}}</h1>
+    <h1>{{ title or meta.title }}</h1>
     {% if description != false %}
         <p>{{description or hero.description or meta.description}}</p>
     {% endif %}

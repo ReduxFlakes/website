@@ -6,13 +6,13 @@ export default {
   },
   formatDateTime: (date) => {
     const dt = DateTime.fromFormat(date, "yyyy-MM-dd HH:mm:ss").setZone(
-      "Europe/Lisbon"
+      "Europe/Lisbon",
     );
     return dt.toFormat("dd, LLL yyyy, HH:mm");
   },
   formatEUDate: (date) => {
     const dt = DateTime.fromFormat(date, "yyyy-MM-dd HH:mm:ss").setZone(
-      "Europe/Lisbon"
+      "Europe/Lisbon",
     );
     return dt.toFormat("dd/MM/yyyy");
   },
@@ -23,7 +23,7 @@ export default {
     return arr.slice(0, limit);
   },
   filterByKey: (arr, key, value) => {
-    return arr.filter(item => {
+    return arr.filter((item) => {
       return item[key] === value;
     });
   },
@@ -46,24 +46,28 @@ export default {
     });
     return tagCount;
   },
+  test: (col) => {
+    return Object.fromEntries(
+      Object.entries(col).sort(([, a], [, b]) => b - a),
+    );
+  },
   strStarts: (str, value) => {
     return str.toString().startsWith(value);
   },
   excludeTag: (collection, tagToExclude) => {
     if (!collection) return [];
-    return collection.filter(item => {
+    return collection.filter((item) => {
       const tags = item.data.tags || [];
-      console.log(tags)
+      console.log(tags);
       return !tags.includes(tagToExclude);
     });
   },
   hasChildWithKey: (navCollection, parentKey, searchKey) => {
-    const parentBranch = navCollection.find(item => item.key === parentKey);
+    const parentBranch = navCollection.find((item) => item.key === parentKey);
 
-    if (!searchKey || !parentBranch || !parentBranch.children)
-      return false;
+    if (!searchKey || !parentBranch || !parentBranch.children) return false;
     const findKeyRecursive = (items, target) => {
-      return items.some(item => {
+      return items.some((item) => {
         if (item.key === target) return true;
         if (item.children) return findKeyRecursive(item.children, target);
         return false;
@@ -72,4 +76,4 @@ export default {
 
     return findKeyRecursive(parentBranch.children, searchKey);
   },
-}
+};

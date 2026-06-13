@@ -1,5 +1,14 @@
 export default [
   {
+    date: "2026-06-12 19:12:04",
+    content: "**HAPPY PRIDE MONTH!** New blog post about Celer and other updates :D",
+    list: [
+      "Updated the [things I use](/uses) page",
+      "Added pride backdrop to the homepage",
+      "Added new buttons to the friends section"
+    ]
+  },
+  {
     date: "2026-05-04 10:09:24",
     content: "Small updates to Dangers of AI article",
   },

@@ -4,15 +4,15 @@
   /* the background used behind the main site */
   --background: url("/public/noise.png") #131416;
   /* the background used for the main site's content */
-  --main-background: url("/public/noise.png") hsl(240, 6%, 14%);
+  --main-background: url("/public/noise.png") hsl(240, 6%, 13%);
   /* used for static borders */
   --stroke: hsla(240, 2%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
-  --container: url("/public/noise.png") #2E2E32;
+  --container: url("/public/noise.png") #2e2e32;
   /* used for elements that sit on top of other containers */
   --container-high: url("/public/noise.png") hsla(240, 4%, 30%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
-  --container-trans: url("/public/noise.png") hsla(240, 5%, 14%, 0.6);
+  --container-trans: url("/public/noise.png") hsla(240, 5%, 12%, 0.5);
   /* used for most text */
   --foreground: hsl(240, 2%, 86%);
   /* headings, bold text, and controls */
@@ -99,7 +99,6 @@
   --primary: hsl(85, 62%, 74%);
   /* used for the background when selecting text */
   --selection: hsla(85, 20%, 64%, 0.35);
-
 
   /* states */
   --state-current: url("/public/noise.png") hsla(85, 4%, 100%, 0.075);

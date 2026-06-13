@@ -2,7 +2,7 @@
 title: Now
 description: Stuff I've been doing recently
 icon: farm-clock
-modified: 2026-02-05 12:09:00
+modified: 2026-06-12 19:19:22
 parent: Info
 order: 1
 ---
@@ -10,17 +10,16 @@ order: 1
 ## Checkup
 
 <dl>
-<dt>Celer</dt>
-<dd>A few days ago I released the <a href="https://surfscape.eu/celer"> second public beta</a> of Celer.</dd>
-<dt>V-Renaissance</dt>
-<dd>Started working on a new project. V-Renaissance is a launcher for the game series V-Rally that would allow all the games to be installed and patched on modern machines.</dd>
 <dt>YouTube Channel</dt>
-  <dd>Uploaded a remaster of Some Die For Money (Open Eye Studio Demo) by 3D Fish In Sea. <a href="https://youtu.be/2bXS9bcdyT8">Watch it!</a></dd>
+ <dd>Uploaded a remaster of <a href="https://youtu.be/VApMUsXDo6Q">"I Got My Eyes On You" by FEX</a> and I'm working on the rest of the requests!
+ </dd>
+<dt>Learning App Development with Libadwaita</dt>
+<dd>Now that I'm on Linux I wanna try developing stuff for it, since I use GNOME I'm going through the GTK route with Libadwaita and GNOME Builder.</dd>
 </dl>
 
 ## What I've been watching
 
-- ohnepixel on youtube
+- Trying to clear up my Watch Later on YouTube.
 
 ## What I'm Listening
 

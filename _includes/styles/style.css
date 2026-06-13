@@ -71,7 +71,6 @@ button:last-child span,
   overflow: hidden;
 }
 
-
 button img,
 .button img,
 button svg,
@@ -153,9 +152,13 @@ select option {
   background: var(--container);
 }
 
-
 details summary {
   cursor: default;
+  z-index: 1;
+}
+
+details:not(.dropdown)>p+p {
+  margin-top: 0.75em;
 }
 
 details:not(.dropdown) {
@@ -174,6 +177,7 @@ details:not(.dropdown)>summary:not(.button) {
   border-radius: 0.5rem;
   user-select: none;
   transition: var(--transition-bezier);
+  z-index: 0;
 }
 
 details:not(.dropdown)[open] {
@@ -190,6 +194,7 @@ details:not(.dropdown)>summary:not(.button)::before {
   mask-size: cover;
   width: 1.15em;
   height: 1.15em;
+  z-index: 0;
   rotate: var(--_details-icon-rotation, none);
   display: block;
   background: var(--foreground);
@@ -199,6 +204,7 @@ details:not(.dropdown)>summary:not(.button)::before {
 details:not(.dropdown)>summary:not(.button):hover {
   filter: brightness(1.05);
   background: var(--state-current);
+  z-index: 0;
 }
 
 details:not(.dropdown)[open]>summary:not(.button) {
@@ -375,7 +381,6 @@ a.card[data-update="true"]::after {
   padding: 0;
 }
 
-
 /* desktop menu */
 @media (min-width: 40rem) {
   .navbar-list {
@@ -408,7 +413,9 @@ a.card[data-update="true"]::after {
 
 .navbar-list>li>a:hover {
   background: var(--container-high);
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0.15);
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+    inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0.15);
 }
 
 .navbar-list a>span>picture:first-child {
@@ -521,18 +528,43 @@ main.has-aside>article {
 
 main.has-aside>nav.breadcrumb {
   grid-area: breadcrumb;
-  padding: 0 1rem 1rem 1rem;
+
 }
 
-
 nav.breadcrumb {
+  position: relative;
   padding-bottom: var(--breathing-space);
+}
+
+@media (max-width: 40rem) {
+  nav.breadcrumb::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    height: 1.5em;
+    background: linear-gradient(to right, transparent, hsl(240, 6%, 13%));
+    width: 4em;
+  }
 }
 
 nav.breadcrumb ol {
   display: flex;
+  flex-shrink: 0;
   list-style: none;
   padding: 0;
+  overflow-x: auto;
+}
+
+main.has-aside nav.breadcrumb ol {
+  padding: 0 3rem 1rem 1rem;
+
+}
+
+nav.breadcrumb li+li {
+  flex-shrink: 0;
+  margin-top: 0;
 }
 
 nav.breadcrumb li+li::before {
@@ -564,6 +596,7 @@ nav.breadcrumb li+li::before {
 
   aside.page-aside {
     grid-area: aside;
+    z-index: 5;
   }
 
   aside.post-aside {
@@ -589,6 +622,10 @@ nav.breadcrumb li+li::before {
     box-shadow: -1px -1px 3px 0px hsla(0, 0%, 0%, 0.3);
     border-top-left-radius: 0.5rem;
     overflow: hidden;
+  }
+
+  .pride~main>aside.page-aside {
+    background: linear-gradient(to bottom, transparent, #2e2e32 35%);
   }
 }
 
@@ -701,7 +738,12 @@ nav.breadcrumb li+li::before {
 .card--support {
   --spacer: 0.5em;
   text-align: center;
-  background: url("/public/noise.png"), radial-gradient(circle, rgba(72, 16, 105, 0.5) 4%, rgba(19, 36, 84, 0.5) 50%, rgba(9, 28, 61, 0.5) 100%);
+  background:
+    url("/public/noise.png"),
+    radial-gradient(circle,
+      rgba(72, 16, 105, 0.5) 4%,
+      rgba(19, 36, 84, 0.5) 50%,
+      rgba(9, 28, 61, 0.5) 100%);
   background-position: bottom;
 }
 
@@ -738,14 +780,13 @@ nav.breadcrumb li+li::before {
   align-self: self-start;
 }
 
-
 .card-image:hover {
   filter: brightness(1.1);
   box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.3);
 }
 
 .card-image::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -770,8 +811,7 @@ nav.breadcrumb li+li::before {
   padding: 0.5em;
   opacity: 0;
   z-index: 2;
-  transition:
-    all 125ms var(--transition-smooth);
+  transition: all 125ms var(--transition-smooth);
   transition-delay: 150ms;
 }
 
@@ -788,7 +828,6 @@ nav.breadcrumb li+li::before {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
-
 a.card {
   display: block;
   text-decoration: none;
@@ -803,6 +842,7 @@ a.card:hover {
   scale: 1.0075;
   transform: translateY(-0.125rem);
   filter: brightness(1.125);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.45);
 }
 
 .icon-card>section {
@@ -851,7 +891,9 @@ a.label:hover {
   margin: 0 auto;
   gap: 1em;
   padding: 0.75em 1em;
-  box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.3);
   border-radius: 0.5rem;
   position: relative;
   transition: filter 125ms var(--transition-smooth);
@@ -875,9 +917,7 @@ a.label:hover {
 
 .notice--danger {
   color: hsl(11, 87%, 76%);
-  background: linear-gradient(-55deg,
-      hsl(11, 91%, 18%),
-      hsl(11, 80%, 9%));
+  background: linear-gradient(-55deg, hsl(11, 91%, 18%), hsl(11, 80%, 9%));
 }
 
 .notice--warning {
@@ -893,9 +933,7 @@ a.label:hover {
 
 .notice--info {
   color: hsl(201, 87%, 76%);
-  background: linear-gradient(-55deg,
-      hsl(201, 91%, 16%),
-      hsl(201, 80%, 9%));
+  background: linear-gradient(-55deg, hsl(201, 91%, 16%), hsl(201, 80%, 9%));
 }
 
 .notice svg {
@@ -950,9 +988,9 @@ auto-grid {
   --_minspace: var(--space, 1fr);
   display: grid;
   gap: 0.5em;
-  grid-template-columns: repeat(auto-fit, minmax(var(--_minsize), var(--_minspace)));
+  grid-template-columns: repeat(auto-fit,
+      minmax(var(--_minsize), var(--_minspace)));
 }
-
 
 /* legacy code */
 
@@ -1003,7 +1041,6 @@ a:has(svg) {
   padding: var(--breathing-space);
 }
 
-
 .banner {
   margin: 0 auto;
   border-radius: 0.5rem;
@@ -1053,8 +1090,21 @@ figure {
 figure img {
   border: 1px solid var(--stroke);
   border-radius: 0.5rem;
+  z-index: 5;
+  position: relative;
+  transition: scale 0.425s cubic-bezier(.17, .77, .28, 1.15);
 }
 
+figure img:hover {
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
+  scale: 1.15;
+}
+
+@media (min-width: 72rem) {
+  figure img:hover {
+    scale: 1.475;
+  }
+}
 
 figure figcaption {
   font-style: italic;

@@ -16,14 +16,11 @@ import filters from "./config/filters.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getDigitalGardenTags, getShrines } from "./config/collections.js";
 import { externalLink, ogImage, postCard } from "./config/shortcodes.js";
-import EleventyPluginOgImage from 'eleventy-plugin-og-image';
 import process from "node:process";
 import fs from "node:fs";
 
 export default function (eleventyConfig) {
-  eleventyConfig.setServerOptions({
-    watch: ["./src/**", "./config/**"],
-  });
+  eleventyConfig.addWatchTarget("./src/**");
   eleventyConfig.addPassthroughCopy("src/public/");
 
   //########## Plugins
