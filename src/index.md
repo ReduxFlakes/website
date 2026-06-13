@@ -11,7 +11,7 @@ layout: home.njk
 
 ## Welcome!
 
-Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from Portugal. I'm known for creating the collective {% externalLink "https://surfscape.eu", "SurfScape" %}, the {% externalLink "https://surfscape.eu/celer", "Celer" %} toolbox and for also doing {% externalLink "https://youtube.com/@reduxflakes", "remasters on YouTube" %}.
+Hi ^\_^, I go around by ReduxFlakes. I'm a software developer and designer from Portugal. I'm known for creating the collective {% externalLink "https://surfscape.eu", "SurfScape" %}, the {% externalLink "https://surfscape.eu/celer", "Celer" %} toolbox and also doing {% externalLink "https://youtube.com/@reduxflakes", "remasters on YouTube" %}.
 
 <a href="/about" style="margin-top:0.5em">More about me {% lucide "arrow-down-right" %}</a>
 
