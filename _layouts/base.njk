@@ -16,7 +16,9 @@ I'm so sorry for making this site so convoluted :sob:
       <a href="#main-content" class="acs-skip">Skip to main content</a>
       {% include "toolbar.njk" %}
       {% include "nav.njk" %}
-    <div class="pride"></div>
+      {% if pride_backdrop %}
+        <div class="pride"></div>
+      {% endif %}
       {% include "header.njk" %}
       <main {% if post == true -%}id="main-content"{%- endif %} {% if (aside_enabled == true or aside_enabled == "true") and not is_home -%}class="has-aside"{% elif is_home %}class="has-aside home"{%- endif %}>
         {% include "breadcrumbs.njk" %}
