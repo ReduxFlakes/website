@@ -1,5 +1,19 @@
 export default [
   {
+    date: "2026-06-14 13:07:00",
+    content: "Small updates and bug fixes",
+    list: [
+      "Updated [Awesome YouTube page](/awesome-yt) with two new channels",
+      "Unified the toolbar and nav for mobile (on mobile/smaller screen the home link is now available on the nav itself)",
+      "Fixed breadcrumbs for the digital garden",
+      "Added support for draft on the digital garden",
+      "Added 1 new button to the friends section",
+      "Removed & updated outdated/broken buttons",
+      "Removed stub articles",
+      "CSS tweaks"
+    ]
+  },
+  {
     date: "2026-06-13 22:51:09",
     content: "**HAPPY PRIDE MONTH!** New blog post about Celer and other updates :D",
     list: [
