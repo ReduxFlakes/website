@@ -533,10 +533,9 @@ main.has-aside>nav.breadcrumb {
 
 nav.breadcrumb {
   position: relative;
-  padding-bottom: var(--breathing-space);
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 50rem) {
   nav.breadcrumb::after {
     content: "";
     position: absolute;
@@ -562,6 +561,10 @@ main.has-aside nav.breadcrumb ol {
 
 }
 
+nav.breadcrumb li {
+  display: flex;
+}
+
 nav.breadcrumb li+li {
   flex-shrink: 0;
   margin-top: 0;
@@ -575,6 +578,10 @@ nav.breadcrumb li+li::before {
 
 /* desktop only */
 @media (min-width: 48rem) {
+  .mobile-home {
+    display: none;
+  }
+
   main.has-aside {
     display: grid;
     grid-template-columns: 1fr 17em;
@@ -627,6 +634,18 @@ nav.breadcrumb li+li::before {
   .pride~main>aside.page-aside {
     background: url("/public/noise.png"), linear-gradient(to bottom, transparent, var(--container-nn) 35%);
   }
+
+  nav.breadcrumb {
+    padding-bottom: var(--breathing-space);
+  }
+}
+
+.toc-aside {
+  border-top: 1px solid var(--stroke);
+}
+
+.toc-aside li a {
+  display: block;
 }
 
 /* mobile only */
@@ -883,82 +902,6 @@ a.label:hover {
   rotate: 2deg;
   transform: translateY(-0.1rem);
   filter: brightness(1.125);
-}
-
-.notice {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  gap: 1em;
-  padding: 0.75em 1em;
-  box-shadow:
-    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 0.5rem;
-  position: relative;
-  transition: filter 125ms var(--transition-smooth);
-  z-index: 1;
-}
-
-.notice:hover {
-  filter: brightness(1.1);
-}
-
-.notice::before {
-  content: "";
-  position: absolute;
-  background: url("/public/noise.png");
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.notice--danger {
-  color: hsl(11, 87%, 76%);
-  background: linear-gradient(-55deg, hsl(11, 91%, 18%), hsl(11, 80%, 9%));
-}
-
-.notice--warning {
-  color: hsl(45, 92%, 72%);
-  background: repeating-linear-gradient(-45deg,
-      hsl(45, 92%, 13%),
-      hsl(45, 92%, 13%) 30px,
-      hsl(45, 80%, 8%) 30px,
-      hsl(45, 80%, 8%) 60px);
-  background-size: 200%;
-  animation: 7000ms moveBackground cubic-bezier(0.85, 0, 0.15, 1) infinite;
-}
-
-.notice--info {
-  color: hsl(201, 87%, 76%);
-  background: linear-gradient(-55deg, hsl(201, 91%, 16%), hsl(201, 80%, 9%));
-}
-
-.notice svg {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
-@keyframes moveBackground {
-  0% {
-    background-position: 0% 0%;
-  }
-
-  50% {
-    background-position: 70% 100%;
-  }
-
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-.secondary,
-.noscript-alert {
-  color: var(--foreground-muted);
-  font-size: 1em;
 }
 
 /* layout utils */

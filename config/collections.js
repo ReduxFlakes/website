@@ -1,4 +1,5 @@
 import slugify from '@sindresorhus/slugify';
+import dgCategories from "../_data/dgCategories.js";
 
 export const getBlogPosts = collection => {
     return [
@@ -39,7 +40,7 @@ export const getDigitalGardenCollections = collectionApi => {
                     title: dg.category,
                     key: categorySlug,
                     url: `/digital-garden/${categorySlug}/`,
-                    description: dg.description,
+                    description: dgCategories[categorySlug].description,
                     icon: dg.icon,
                     tagSet: new Set(),
                     children: []
@@ -53,18 +54,19 @@ export const getDigitalGardenCollections = collectionApi => {
             itemTags.filter(tag => !['digital-garden', 'posts'].includes(tag))
                 .forEach(tag => categoryEntry.tagSet.add(tag));
 
-            categoryEntry.children.push({
-                title: item.data.title,
-                url: item.url,
-                description: item.data.description,
-                date: item.date,
-                status: item.data.status || 1,
-                eleventyNavigation: {
-                    key: item.data.title,
-                    parent: categorySlug
-                },
-                tags: itemTags
-            });
+            if (item.data.draft == false || item.data.draft == null) {
+                categoryEntry.children.push({
+                    title: item.data.title,
+                    url: item.url,
+                    description: item.data.description,
+                    date: item.date,
+                    status: item.data.status || 1,
+                    eleventyNavigation: {
+                        key: item.data.title
+                    },
+                    tags: itemTags
+                });
+            }
         }
     });
 

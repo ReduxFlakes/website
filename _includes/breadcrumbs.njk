@@ -9,7 +9,7 @@
     {% if crumb.url %}
         {% if not loop.last %}
             <li>
-                <a href="{{ crumb.url }}">{{ crumb.title or crumb.data.title }}</a>
+                <a href="{{ crumb.url }}">{{  crumb.data.title or crumb.title }}</a>
             </li>
         {% else %}
             <li>

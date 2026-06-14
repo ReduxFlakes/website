@@ -18,17 +18,21 @@ If you don't know what a digital garden is, it's basically a personal space wher
 
 </auto-grid>
 {% for item in collections.digitalGarden -%}
-  {% if item.tags.length > 1 %}
-    {% set tagsCount =  [item.tags.length, " Tags"] | join %}
-  {% else %}
-    {% set tagsCount =  [item.tags.length, " Tag"] | join %}
-  {% endif %}
-  {% if item.children.length > 1 %}
-    {% set postNoteCount =  [item.children.length, " Notes"] | join %}
-  {% else %}
-    {% set postNoteCount =  [item.children.length, " Note"] | join %}
-  {% endif %}
-  {{ component('link-icon-card', {title: item.title, icon: item.icon, subheading: true, href: item.url, extras: [postNoteCount, tagsCount]}) }}
+{% if item.children.length > 0 %}
+
+
+{% if item.tags.length > 1 %}
+{% set tagsCount =  [item.tags.length, " Tags"] | join %}
+{% else %}
+{% set tagsCount =  [item.tags.length, " Tag"] | join %}
+{% endif %}
+{% if item.children.length > 1 %}
+{% set postNoteCount =  [item.children.length, " Notes"] | join %}
+{% else %}
+{% set postNoteCount =  [item.children.length, " Note"] | join %}
+{% endif %}
+{{ component('link-icon-card', {title: item.title, icon: item.icon, description: item.description,subheading: true, href: item.url, extras: [postNoteCount, tagsCount]}) }}
+{% endif %}
 {%- endfor %}
 <auto-grid>
 

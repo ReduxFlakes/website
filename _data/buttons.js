@@ -483,6 +483,11 @@ export default {
       img: "blueberrymuffinss.png",
       url: "https://blueberrymuffinss.neocities.org/"
     },
+    {
+      title: "Nilten",
+      img: "nilten.gif",
+      url: "https://nilten.neocities.org/"
+    },
     /* static (no images ) */
     {
       title: "Cyncrovee",
@@ -601,11 +606,6 @@ export default {
       url: "https://nova.nekoweb.org/",
     },
     {
-      title: "june's web page",
-      img: "webcatz.png",
-      url: "https://webcatz.neocities.org/",
-    },
-    {
       title: "datguy",
       img: "datguy.gif",
       url: "https://datguy.neocities.org/",
@@ -629,11 +629,6 @@ export default {
       title: "Pixel",
       img: "pixeldesu.png",
       url: "https://pixelde.su/",
-    },
-    {
-      title: "Solinu's Website",
-      img: "solinus.gif",
-      url: "https://solinus.neocities.org/",
     },
     {
       title: "meows.zip",

@@ -37,6 +37,9 @@
 {% endmacro %}
 
 <nav class="navbar main-nav" aria-label="ReduxFlakes Main Navigation">
+  <a href="/" class="button button--transparent button--icon mobile-home" title="Home">
+    {% lucide "house" %}
+  </a>
   {%- for entry in categories -%}
     {% set navIsRefresh = false %}
     {% for item in entry.children %}
