@@ -1,5 +1,16 @@
 export default [
   {
+    date: "2026-06-17 23:30:08",
+    content: "Button cleanup and base styles tweaked",
+    list: [
+      "Redesigned the home hero to look more tasty :P",
+      "Added & removed buttons on the friends section",
+      "Tweaked base styles",
+      "Added a fancy gradient to the Last.fm aside widget",
+      "Reordered socials"
+    ]
+  },
+  {
     date: "2026-06-14 13:07:00",
     content: "Small updates and bug fixes",
     list: [
