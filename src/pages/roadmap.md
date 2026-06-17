@@ -1,7 +1,7 @@
 ---
 title: Roadmap
 description: Progress on new stuff for the site (fancy name for a to-do list)
-modified: 2026-02-04T18:26:00.00Z
+modified: 2026-06-17 23:26:41
 for: Footer
 order: 2
 ---
@@ -14,7 +14,7 @@ order: 2
 - Resources
   - Snippets
   - Guides
-- Design Gallery
+- ~~Design Gallery~~ (kinda done after the creation of the [mockups](design/os-mockups/) page)
 - Improve projects page
 - Improve services page
 

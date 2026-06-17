@@ -451,7 +451,6 @@ a.card[data-update="true"]::after {
 /* end:menu */
 
 /* start:hero */
-
 .hero {
   --spacer: 0.5em;
   padding: 1rem;
@@ -463,8 +462,8 @@ a.card[data-update="true"]::after {
   background-size: 1em 1em;
   backdrop-filter: blur(10px);
   box-shadow:
-    0px 0px 5px 0px rgba(0, 0, 0, 0.3),
-    inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0.15);
+    0px 0px 5px 0px rgba(0, 0, 0, 0.4),
+    inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0.2);
   min-height: 8rem;
   margin: 1rem;
 }
@@ -550,7 +549,6 @@ nav.breadcrumb {
 
 nav.breadcrumb ol {
   display: flex;
-  flex-shrink: 0;
   list-style: none;
   padding: 0;
   overflow-x: auto;
@@ -565,6 +563,10 @@ nav.breadcrumb li {
   display: flex;
 }
 
+nav.breadcrumb>ol>li>a {
+  outline-offset: -2px;
+}
+
 nav.breadcrumb li+li {
   flex-shrink: 0;
   margin-top: 0;
@@ -572,7 +574,7 @@ nav.breadcrumb li+li {
 
 nav.breadcrumb li+li::before {
   display: inline-block;
-  margin-inline: 0.5em 0.25em;
+  margin-inline: 0.5em;
   content: "-";
 }
 

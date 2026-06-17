@@ -1,5 +1,10 @@
 export default [
     {
+        title: "New SurfScape website",
+        link: "https://surfscape.eu",
+        date: "2026-06-16 21:55:07"
+    },
+    {
         title: "Pixy Icon Pack v0.3.0",
         link: "/design/pixy",
         date: "2026-01-31 18:46:00"

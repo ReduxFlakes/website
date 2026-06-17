@@ -6,9 +6,13 @@ export default {
       url: "https://lastroseofsummer.neocities.org",
     },
     {
-      title: "ByteMoth",
-      img: "bytemoth.png",
-      url: "https://bytemoth.neocities.org/",
+      title: "Daudix",
+      img: "daudix.gif",
+      url: "https://daudix.one/",
+    }, {
+      title: "Breetea",
+      img: "breebutton.gif",
+      url: "https://breetea.nekoweb.org/"
     },
     {
       title: "immjs",
@@ -22,19 +26,29 @@ export default {
       url: "skyweaver.nekoweb.org"
     },
     {
+      title: "Mambuco",
+      img: "mambuco.gif",
+      url: "https://mambuco.dev/"
+    },
+    {
+      title: "pixlxip",
+      img: "pixlxip.gif",
+      url: "https://xip.neocities.org/"
+    },
+    {
       title: "Xan",
       img: "xan.gif",
       url: "https://xan.lol//",
     },
     {
+      title: "ByteMoth",
+      img: "bytemoth.png",
+      url: "https://bytemoth.neocities.org/",
+    },
+    {
       title: "Jak2K",
       img: "jak2k.webp",
       url: "https://jak2k.eu/",
-    },
-    {
-      title: "Daudix",
-      img: "daudix.gif",
-      url: "https://daudix.one/",
     },
     {
       title: "iox",
@@ -43,24 +57,19 @@ export default {
       url: "https://ioxtv.co/"
     },
     {
-      title: "Thin Liquid",
-      img: "thnlqd.png",
-      url: "https://thinliquid.dev/",
-    },
-    {
       title: "max's apartment",
       img: "maxs.gif",
       url: "https://maxpixels.moe/",
     },
     {
-      title: "jbcarreon123",
-      img: "jbcarreon123.png",
-      url: "https://jbc.lol/",
-    },
-    {
       title: "OpenBooks",
       img: "openbooks.gif",
       url: "https://openbooks.neocities.org",
+    },
+    {
+      title: "jbcarreon123",
+      img: "jbcarreon123.png",
+      url: "https://jbc.lol/",
     },
     {
       title: "Badgraph1csghost",
@@ -81,16 +90,6 @@ export default {
       title: "rice.place",
       img: "riceplace.png",
       url: "https://rice.place/",
-    },
-    {
-      title: "Mambuco",
-      img: "mambuco.gif",
-      url: "https://mambuco.dev/"
-    },
-    {
-      title: "pixlxip",
-      img: "pixlxip.gif",
-      url: "https://xip.neocities.org/"
     },
     {
       title: "Velvet Blue",
@@ -121,11 +120,6 @@ export default {
       title: "Leilukin's Hub",
       img: "leilukins-hub.png",
       url: "https://leilukin.neocities.org",
-    },
-    {
-      title: "july.lol",
-      img: "lonelyjuly.gif",
-      url: "https://july.lol/",
     },
     {
       title: "Wlodekm",
@@ -175,7 +169,7 @@ export default {
     {
       title: "Lux Fero",
       img: "lux_fero.gif",
-      url: "https://luxfero.su/en/",
+      url: "https://en.luxfero.su/",
     },
     {
       title: "NomnomNami",
@@ -236,11 +230,6 @@ export default {
       title: "FOGGYBEAR42",
       img: "foggybear42.gif",
       url: "https://foggybear42.net/",
-    },
-    {
-      title: "Atari404",
-      img: "atari404.gif",
-      url: "https://atari404.neocities.org/",
     },
     {
       title: "ShinyEXE",
@@ -492,10 +481,6 @@ export default {
     {
       title: "Cyncrovee",
       url: "https://cyncrovee.nekoweb.org/"
-    },
-    {
-      title: "july.lol",
-      url: "https://july.lol/"
     },
     {
       title: "Lukas Zone",

@@ -27,21 +27,20 @@ export default {
       url: "https://discord.gg/dY4GSudRxv",
     },
     {
+      name: "Steam",
+      url: "https://steamcommunity.com/id/reduxflakes/",
+    },
+    {
       name: "YouTube",
       url: "https://youtube.com/@reduxflakes",
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/fireplaceinthemall/"
-    },
-    {
-      name: "Steam",
-      url: "https://steamcommunity.com/id/reduxflakes/",
-    },
-
-    {
       name: "Last.fm",
       url: "https://www.last.fm/user/reduxflakes",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/fireplaceinthemall/"
     },
     {
       name: "Odysee",

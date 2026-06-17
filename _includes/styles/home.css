@@ -1,13 +1,46 @@
 .pride {
+    --_pride-rotation: 90deg;
     width: 100%;
-    height: 30em;
+    height: 31em;
     background: black;
     position: absolute;
     opacity: 0.275;
     filter: blur(6px) saturate(1.2);
     z-index: 0;
-    background: linear-gradient(90deg, #E31A0E 0%, #EA4E0F 3%, #F18110 6%, #F1AD16 10%, #F0D81D 13%, #CCD821 16%, #95C424 19%, #67A342 23%, #41767E 26%, #2F51A2 29%, #473D95 32%, #5E2A89 35%, #6F328D 39%, #7367AB 42%, #789DCA 45%, #81CCE5 48%, #B3C0D9 52%, #E5B4CD 55%, #F7C8D9 58%, #FCE9F0 61%, #FFFAE2 65%, #FEEC89 68%, #FDDE30 71%, #D9B02E 74%, #A0715C 77%, #68328A 81%, #7C4152 84%, #925216 87%, #73410B 90%, #4D2B07 94%, #261604 97%, #000000 100%);
-    top: 6rem;
+    background: linear-gradient(var(--_pride-rotation), #E31A0E 0%, #EA4E0F 3%, #F18110 6%, #F1AD16 10%, #F0D81D 13%, #CCD821 16%, #95C424 19%, #67A342 23%, #41767E 26%, #2F51A2 29%, #473D95 32%, #5E2A89 35%, #6F328D 39%, #7367AB 42%, #789DCA 45%, #81CCE5 48%, #B3C0D9 52%, #E5B4CD 55%, #F7C8D9 58%, #FCE9F0 61%, #FFFAE2 65%, #FEEC89 68%, #FDDE30 71%, #D9B02E 74%, #A0715C 77%, #68328A 81%, #7C4152 84%, #925216 87%, #73410B 90%, #4D2B07 94%, #261604 97%, #000000 100%);
+    top: 4.25rem;
+}
+
+.hero {
+    position: relative;
+    opacity: 0.9;
+}
+
+.hero>.bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: hard-light;
+    background: url("/public/home-hero.png");
+    filter: hue-rotate(90deg);
+    background-size: cover;
+    border-radius: 0.5rem;
+    margin: 0;
+    box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 {
+    opacity: 0.985;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 35rem) {
+    .pride {
+        --_pride-rotation: 180deg;
+        height: 40em;
+    }
 }
 
 .pride::before {
@@ -43,7 +76,11 @@ aside section.webmaster-block {
     margin: 0;
     padding: 1rem;
     border-bottom: 1px solid var(--stroke);
-    background: linear-gradient(to bottom, hsla(317, 20%, 20%, 0.4) 15%, hsla(304, 20%, 20%, 0.4), hsla(220, 20%, 20%, 0.25) 70%);
+    background: linear-gradient(to bottom, hsla(317, 30%, 20%, 0.4) 15%, hsla(304, 30%, 20%, 0.4), hsla(220, 30%, 20%, 0.4) 70%);
+}
+
+.lastfm-widget {
+    background: linear-gradient(to bottom, hsla(319, 85%, 44%, 0.1), rgba(227, 15, 15, 0.1));
 }
 
 .lastfm-widget img {
@@ -55,7 +92,7 @@ aside section.webmaster-block {
 .lastfm-widget h2 span#loadingStatus {
     width: 0.75em;
     height: 0.75em;
-    border-radius: 0.15rem;
+    border-radius: 0.2rem;
     background: var(--background);
 }
 

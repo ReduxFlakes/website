@@ -256,8 +256,16 @@ article.stack hr {
 }
 
 article ul>li+li,
-article ol>li+li {
-  margin-top: 0.5em;
+article ol>li+li,
+article ul>li>ul,
+article ul>li>ol,
+article ol>li>ul,
+article ol>li>ol {
+  margin-top: 0.25em;
+}
+
+s {
+  color: var(--foreground-muted);
 }
 
 main {
