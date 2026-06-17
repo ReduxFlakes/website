@@ -187,11 +187,6 @@ export default {
       url: "https://visualculture.vc/",
     },
     {
-      title: "dabric",
-      img: "dabric.png",
-      url: "https://dabric.xyz/",
-    },
-    {
       title: "GrayBox",
       img: "graybox.gif",
       url: "https://graybox.lol/",
