@@ -1,5 +1,13 @@
 export default [
   {
+    date: "2026-08-16 13:18:02",
+    content: "New post and updates to buttons",
+    list: [
+      "New [blog post](/blog/developing-open-source-software/)!",
+      "Updated buttons"
+    ]
+  },
+  {
     date: "2026-06-17 23:30:08",
     content: "Button cleanup and base styles tweaked",
     list: [
