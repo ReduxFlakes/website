@@ -23,7 +23,7 @@ export default {
     {
       title: "Skyweaver!!",
       img: "skyweaver.png",
-      url: "skyweaver.nekoweb.org"
+      url: "https://skyweaver.nekoweb.org"
     },
     {
       title: "Mambuco",
@@ -34,6 +34,16 @@ export default {
       title: "pixlxip",
       img: "pixlxip.gif",
       url: "https://xip.neocities.org/"
+    },
+    {
+      title: "kevadesu",
+      img: "kevadesu.gif",
+      url: "https://kevadesu.github.io/"
+    },
+    {
+      title: "Futile",
+      img: "futile.png",
+      url: "https://futile.eu/"
     },
     {
       title: "Xan",
@@ -425,11 +435,7 @@ export default {
       img: "lakes.png",
       url: "https://lakes.glamour.ovh/"
     },
-    {
-      title: "The Breewery",
-      img: "breetea.gif",
-      url: "https://breetea.nekoweb.org/"
-    },
+
     {
       title: "Taigabeetle",
       img: "taigabeetle.png",
@@ -471,6 +477,21 @@ export default {
       title: "Nilten",
       img: "nilten.gif",
       url: "https://nilten.neocities.org/"
+    },
+    {
+      title: "Sirkorgo",
+      img: "sirkorgo.gif",
+      url: "https://sirkorgo.com/"
+    },
+    {
+      title: "Ballonlea",
+      img: "ballonlea.gif",
+      url: "https://ballonlea.net/"
+    },
+    {
+      title: "Timmy",
+      img: "timmy.png",
+      url: "https://timmy.nekoweb.org/",
     },
     /* static (no images ) */
     {
