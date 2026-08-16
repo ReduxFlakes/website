@@ -58,7 +58,6 @@ export default {
     if (!collection) return [];
     return collection.filter((item) => {
       const tags = item.data.tags || [];
-      console.log(tags);
       return !tags.includes(tagToExclude);
     });
   },

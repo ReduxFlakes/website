@@ -69,12 +69,6 @@ export const getDigitalGardenCollections = collectionApi => {
             }
         }
     });
-
-    console.log(Array.from(categoryMap.values()).map(cat => ({
-        ...cat,
-        tags: Array.from(cat.tagSet).sort(),
-    })))
-
     return Array.from(categoryMap.values()).map(cat => ({
         ...cat,
         tags: Array.from(cat.tagSet).sort(),
@@ -97,7 +91,6 @@ export const getDigitalGardenTags = collectionApi => {
             }
         }
     });
-    console.log(Array.from(tagSet).sort());
     return Array.from(tagSet).sort();
 }
 
