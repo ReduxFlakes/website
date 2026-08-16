@@ -1,5 +1,5 @@
 ---
-title: Developing open source sofware
+title: Developing Open Source Software
 date: 2026-08-16 12:26:00
 description: The main struggle of open source development
 toc: false
