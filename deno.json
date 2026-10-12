@@ -12,7 +12,6 @@
         "debug": "DEBUG=Eleventy* eleventy --serve --watch"
     },
     "allowScripts": [
-        "npm:sharp@0.33.5",
         "npm:sharp@0.34.5"
     ]
 }
