@@ -7,6 +7,18 @@
     "type": "git",
     "url": "https://github.com/reduxflakes/website.git"
   },
+  "scripts": {
+    "start": "rm -rf ./_site && eleventy --serve --watch",
+    "start:fast": "eleventy --serve --watch --incremental",
+    "start:nekoweb": "HOST_TYPE=nekoweb eleventy --serve",
+    "start:all": "BUILD_TYPE=production HOST_TYPE=all eleventy --serve",
+    "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
+    "build": "eleventy",
+    "build:prod": "BUILD_TYPE=production eleventy && deno task html-minify",
+    "build:neo": "HOST_TYPE=neocities BUILD_TYPE=production eleventy && deno task html-minify",
+    "build:neko": "HOST_TYPE=nekoweb BUILD_TYPE=production eleventy && deno task html-minify",
+    "debug": "DEBUG=Eleventy* eleventy --serve --watch"
+  },
   "keywords": [],
   "author": "reduxflakes",
   "license": "GPL-2.0-only",
