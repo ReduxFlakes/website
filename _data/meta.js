@@ -1,6 +1,6 @@
 export default {
   title: "ReduxFlakes",
-  description: "Fireplace in the mall",
+  description: "Software developer and designer from Portugal",
   url_neo: "https://reduxflakes.neocities.org",
   url_neko: "https://reduxflakes.nekoweb.org",
   lang: "en-US",
@@ -37,10 +37,6 @@ export default {
     {
       name: "Last.fm",
       url: "https://www.last.fm/user/reduxflakes",
-    },
-    {
-      name: "Instagram",
-      url: "https://www.instagram.com/fireplaceinthemall/"
     },
     {
       name: "Odysee",
