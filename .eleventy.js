@@ -14,9 +14,16 @@ import { DateTime } from "luxon";
 import pluginTOC from "@uncenter/eleventy-plugin-toc";
 import filters from "./config/filters.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import { getBlogPosts, getBlogPostsTags, getDigitalGardenCollections, getDigitalGardenTags, getShrines } from "./config/collections.js";
+import {
+  getBlogPosts,
+  getBlogPostsTags,
+  getDigitalGardenCollections,
+  getDigitalGardenTags,
+  getShrines,
+} from "./config/collections.js";
 import { externalLink, postCard } from "./config/shortcodes.js";
 import process from "node:process";
+import { VentoPlugin } from "eleventy-plugin-vento";
 
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/**");
@@ -27,6 +34,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyLucideicons);
+  eleventyConfig.addPlugin(VentoPlugin);
   if (process.env.BUILD_TYPE == "production") {
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
       formats: ["webp", "jpeg"],
@@ -43,11 +51,11 @@ export default function (eleventyConfig) {
         animated: true,
       },
       sharpWebpOptions: {
-        nearLossless: true
+        nearLossless: true,
       },
       sharpJpegOptions: {
-        quality: 90
-      }
+        quality: 90,
+      },
     });
   }
 
@@ -75,23 +83,23 @@ export default function (eleventyConfig) {
     let localDate;
     if (typeof dateValue === "string") {
       localDate = DateTime.fromFormat(dateValue, "yyyy-MM-dd HH:mm:ss").setZone(
-        "Europe/Lisbon"
+        "Europe/Lisbon",
       );
     }
     if (localDate?.isValid === false) {
       throw new Error(
-        `Invalid \`date\` value (${dateValue}) is invalid for ${this.page.inputPath}: ${localDate.invalidReason}`
+        `Invalid \`date\` value (${dateValue}) is invalid for ${this.page.inputPath}: ${localDate.invalidReason}`,
       );
     }
     return localDate;
   });
 
   //########## Collections
-  eleventyConfig.addCollection('posts', getBlogPosts);
-  eleventyConfig.addCollection('postTags', getBlogPostsTags);
-  eleventyConfig.addCollection('digitalGarden', getDigitalGardenCollections);
-  eleventyConfig.addCollection('digitalGardenTags', getDigitalGardenTags)
-  eleventyConfig.addCollection('shrines', getShrines);
+  eleventyConfig.addCollection("posts", getBlogPosts);
+  eleventyConfig.addCollection("postTags", getBlogPostsTags);
+  eleventyConfig.addCollection("digitalGarden", getDigitalGardenCollections);
+  eleventyConfig.addCollection("digitalGardenTags", getDigitalGardenTags);
+  eleventyConfig.addCollection("shrines", getShrines);
 
   /* plugins */
   const md = markdownIt({ html: true });
@@ -124,7 +132,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("externalLink", externalLink);
 
   /* bundles & html and css optimization */
-  eleventyConfig.addBundle("html")
+  eleventyConfig.addBundle("html");
   eleventyConfig.addBundle("css", {
     transforms: [
       async function (content) {
@@ -139,12 +147,7 @@ export default function (eleventyConfig) {
   });
 
   return {
-    templateFormats: [
-      "md",
-      "njk",
-      "html",
-      "11ty.js",
-    ],
+    templateFormats: ["md", "njk", "html", "11ty.js"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dir: {
