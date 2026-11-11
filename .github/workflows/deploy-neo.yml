@@ -1,5 +1,9 @@
 name: Deploy to neocities
 
+strategy:
+  matrix:
+    node-version: ["24.x"]
+
 # run on changes to stable branch or when manually triggered
 on:
   push:
@@ -19,12 +23,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install Deno
-        uses: denoland/setup-deno@v2
+      - name: Install Node
+        uses: actions/setup-node@v7
         with:
-          deno-version: v2.6.8
-      - run: deno i
-      - run: deno task build:neo
+          node-version: ${{ matrix.node-version }}
+      - run: npm i
+      - run: npm run build:neo
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:
