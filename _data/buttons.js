@@ -9,10 +9,11 @@ export default {
       title: "Daudix",
       img: "daudix.gif",
       url: "https://daudix.one/",
-    }, {
+    },
+    {
       title: "Breetea",
       img: "breebutton.gif",
-      url: "https://breetea.nekoweb.org/"
+      url: "https://breetea.nekoweb.org/",
     },
     {
       title: "immjs",
@@ -23,27 +24,27 @@ export default {
     {
       title: "Skyweaver!!",
       img: "skyweaver.png",
-      url: "https://skyweaver.nekoweb.org"
+      url: "https://skyweaver.nekoweb.org",
     },
     {
       title: "Mambuco",
       img: "mambuco.gif",
-      url: "https://mambuco.dev/"
+      url: "https://mambuco.dev/",
     },
     {
       title: "pixlxip",
       img: "pixlxip.gif",
-      url: "https://xip.neocities.org/"
+      url: "https://xip.neocities.org/",
     },
     {
       title: "kevadesu",
       img: "kevadesu.gif",
-      url: "https://kevadesu.github.io/"
+      url: "https://kevadesu.github.io/",
     },
     {
       title: "Futile",
       img: "futile.png",
-      url: "https://futile.eu/"
+      url: "https://futile.eu/",
     },
     {
       title: "Xan",
@@ -64,7 +65,7 @@ export default {
       title: "iox",
       img: "https://ioxtv.co/assets/buttons/iox.gif",
       externalimg: true,
-      url: "https://ioxtv.co/"
+      url: "https://ioxtv.co/",
     },
     {
       title: "max's apartment",
@@ -157,11 +158,6 @@ export default {
       url: "https://bulltown.neocities.org",
     },
     {
-      title: "Hifumi's Weebsite",
-      img: "lhfm.png",
-      url: "https://lhfm.neocities.org/",
-    },
-    {
       title: "NorthSilver",
       img: "northsilver.png",
       url: "https://northsilversite.neocities.org/",
@@ -195,11 +191,6 @@ export default {
       title: "visualculture",
       img: "visualculture.png",
       url: "https://visualculture.vc/",
-    },
-    {
-      title: "GrayBox",
-      img: "graybox.gif",
-      url: "https://graybox.lol/",
     },
     {
       title: "concon.sou",
@@ -299,32 +290,32 @@ export default {
     {
       title: "pirahxcx",
       img: "pirahxcx.gif",
-      url: "https://pirahxcx.neocities.org/"
+      url: "https://pirahxcx.neocities.org/",
     },
     {
       title: "isobel's web",
       img: "isobelsweb.gif",
-      url: "https://isobelsweb.com/"
+      url: "https://isobelsweb.com/",
     },
     {
       title: "xolimni's HQ",
       img: "xsoliminishq.gif",
-      url: "https://xsolimini.fr/"
+      url: "https://xsolimini.fr/",
     },
     {
       title: "Knoxie's World",
       img: "knoxstation.gif",
-      url: "https://knoxstation.neocities.org/"
+      url: "https://knoxstation.neocities.org/",
     },
     {
       title: "bielzin's space",
       img: "bielzin.png",
-      url: "https://bielzin.space/"
+      url: "https://bielzin.space/",
     },
     {
       title: "Kanan draw",
       img: "kanan.gif",
-      url: "https://kanandraw.neocities.org/"
+      url: "https://kanandraw.neocities.org/",
     },
     {
       title: "Demgoze",
@@ -349,144 +340,144 @@ export default {
     {
       title: "VIVISECTION",
       img: "vivisection.gif",
-      url: "https://v1v1sect1on.nekoweb.org/"
+      url: "https://v1v1sect1on.nekoweb.org/",
     },
     {
       title: "aid's small corner",
       img: "zhongvie.png",
-      url: "https://zhongvie.neocities.org/"
+      url: "https://zhongvie.neocities.org/",
     },
     {
       title: "Underwhite",
       img: "underwhite.gif",
-      url: "https://underwhite.neocities.org/"
+      url: "https://underwhite.neocities.org/",
     },
 
     {
       title: "Greenbox",
       img: "greenbox.png",
-      url: "https://greenbox.network/"
+      url: "https://greenbox.network/",
     },
     {
       title: "philia995",
       img: "philia995.gif",
-      url: "https://philia995.neocities.org/"
+      url: "https://philia995.neocities.org/",
     },
     {
       title: "da ditzy dmns!",
       img: "ditzydmns.gif",
-      url: "https://ditzydmns.nekoweb.org/"
+      url: "https://ditzydmns.nekoweb.org/",
     },
     {
       title: "dabric",
       img: "https://dabric.xyz/butt.png",
       externalimg: true,
-      url: "https://dabric.xyz/"
+      url: "https://dabric.xyz/",
     },
     {
       title: "mars",
       img: "mars.gif",
-      url: "https://mars.nekoweb.org/"
+      url: "https://mars.nekoweb.org/",
     },
     {
       title: "dreamscape",
       img: "dreamscape.png",
-      url: "https://dreamscape.place/"
+      url: "https://dreamscape.place/",
     },
     {
       title: "moru's pond",
       img: "moru.png",
-      url: "https://morushroom.nekoweb.org/"
+      url: "https://morushroom.nekoweb.org/",
     },
     {
       title: "Yume Kuni",
       img: "yumekuni.png",
-      url: "https://yumekuni.moe/"
+      url: "https://yumekuni.moe/",
     },
     {
       title: "nikonet",
       img: "nikonet.gif",
-      url: "https://nikonet.xyz/"
+      url: "https://nikonet.xyz/",
     },
     {
       title: "eepynoelles website :D",
       img: "eepynoelle.png",
-      url: "https://eepynoelle.nekoweb.org/"
+      url: "https://eepynoelle.nekoweb.org/",
     },
     {
       title: "gwenbnuuy",
       img: "https://gwenbnuuy.moe/images/buttons/sitebutton.gif",
       externalimg: true,
-      url: "https://gwenbnuuy.moe/"
+      url: "https://gwenbnuuy.moe/",
     },
     {
       title: "sunnytheorem",
       img: "https://sunnytheorem.nekoweb.org/buttons/sunnytheorembutton.gif",
       externalimg: true,
-      url: "https://sunnytheorem.nekoweb.org/"
+      url: "https://sunnytheorem.nekoweb.org/",
     },
     {
       title: "lumis archive",
       img: "lumis.gif",
-      url: "https://supernw095.nekoweb.org/"
+      url: "https://supernw095.nekoweb.org/",
     },
     {
       title: "Lakes The Guy",
       img: "lakes.png",
-      url: "https://lakes.glamour.ovh/"
+      url: "https://lakes.glamour.ovh/",
     },
 
     {
       title: "Taigabeetle",
       img: "taigabeetle.png",
-      url: "https://taigabeetle.nekoweb.org/"
+      url: "https://taigabeetle.nekoweb.org/",
     },
     {
       title: "Mars",
       img: "mars.png",
-      url: "https://mars.nekoweb.org/"
+      url: "https://mars.nekoweb.org/",
     },
     {
       title: ".The End Of Science.com",
       img: "https://the-end-of-science.com/Images/button.gif",
       externalimg: true,
-      url: "https://the-end-of-science.com/"
+      url: "https://the-end-of-science.com/",
     },
     {
       title: "Rifleyshot",
       img: "rifleyshot.gif",
-      url: "https://rifley.monster/"
+      url: "https://rifley.monster/",
     },
     {
       title: "nomaakip",
       img: "https://nomaakip.xyz/img/buttons/button.png",
       externalimg: true,
-      url: "https://nomaakip.xyz"
+      url: "https://nomaakip.xyz",
     },
     {
       title: "Lunar Corvus",
       img: "lunarcorvus.png",
-      url: "https://lunarcorvus.com/home"
+      url: "https://lunarcorvus.com/home",
     },
     {
       title: "blueberrymuffinss",
       img: "blueberrymuffinss.png",
-      url: "https://blueberrymuffinss.neocities.org/"
+      url: "https://blueberrymuffinss.neocities.org/",
     },
     {
       title: "Nilten",
       img: "nilten.gif",
-      url: "https://nilten.neocities.org/"
+      url: "https://nilten.neocities.org/",
     },
     {
       title: "Sirkorgo",
       img: "sirkorgo.gif",
-      url: "https://sirkorgo.com/"
+      url: "https://sirkorgo.com/",
     },
     {
       title: "Ballonlea",
       img: "ballonlea.gif",
-      url: "https://ballonlea.net/"
+      url: "https://ballonlea.net/",
     },
     {
       title: "Timmy",
@@ -496,7 +487,7 @@ export default {
     /* static (no images ) */
     {
       title: "Cyncrovee",
-      url: "https://cyncrovee.nekoweb.org/"
+      url: "https://cyncrovee.nekoweb.org/",
     },
     {
       title: "Lukas Zone",
@@ -536,24 +527,24 @@ export default {
     },
     {
       title: "juice",
-      url: "https://firebaseripcord.neocities.org/"
+      url: "https://firebaseripcord.neocities.org/",
     },
     {
       title: " Citronella",
-      url: "https://citronella.uwu.sg/"
+      url: "https://citronella.uwu.sg/",
     },
     {
       title: "Kenneth",
-      url: "https://kenneth.nekoweb.org/"
+      url: "https://kenneth.nekoweb.org/",
     },
     {
       title: "Sakura 桜",
-      url: "https://桜.nekoweb.org/"
+      url: "https://桜.nekoweb.org/",
     },
     {
       title: "_michdev",
-      url: "https://michdev.nekoweb.org/"
-    }
+      url: "https://michdev.nekoweb.org/",
+    },
   ],
   likes: [
     {
@@ -667,11 +658,6 @@ export default {
       url: "https://nuthead.neocities.org/",
     },
     {
-      title: "sizeof(cat)",
-      img: "sizeofcat.jpg",
-      url: "https://sizeof.cat/",
-    },
-    {
       title: "RoBu",
       img: "rbuchanan.png",
       url: "https://rbuchanan.neocities.org/",
@@ -707,11 +693,6 @@ export default {
       url: "https://cyuucat.moe/",
     },
     {
-      title: "lempamo",
-      img: "lempamo.png",
-      url: "https://lempamo.glitch.me/",
-    },
-    {
       title: "elke.cafe",
       img: "elkecafe.gif",
       url: "https://elke.cafe/",
@@ -730,11 +711,6 @@ export default {
       title: "sneexy",
       img: "sneexy.svg",
       url: "https://sneexy.pages.gay/",
-    },
-    {
-      title: "olivia",
-      img: "olivia.png",
-      url: "https://floof.gay/",
     },
     {
       title: "pancakes",
@@ -764,50 +740,50 @@ export default {
     {
       title: "HEROTRAP",
       img: "herotrap.png",
-      url: "https://herotrap.neocities.org/"
+      url: "https://herotrap.neocities.org/",
     },
 
     {
       title: "Selvan",
       img: "selvan.png",
-      url: "https://the-selvan.neocities.org/"
+      url: "https://the-selvan.neocities.org/",
     },
     {
       title: "makoenergy",
       img: "makoenergy.gif",
-      url: "https://makoenergy.neocities.org/"
+      url: "https://makoenergy.neocities.org/",
     },
     {
       title: "Andrei",
       img: "andrei.gif",
-      url: "https://andrei.xyz"
+      url: "https://andrei.xyz",
     },
     {
       title: "srsxnsh",
       img: "srsxnsh.gif",
-      url: "https://srsxnsh.xyz/"
+      url: "https://srsxnsh.xyz/",
     },
     {
       title: "junyaverse",
       img: "junya.gif",
-      url: "https://cutiesin.tech/"
+      url: "https://cutiesin.tech/",
     },
     {
       title: "Gideon",
       img: "gideon.gif",
-      url: "https://gideon.sh/"
-    }
+      url: "https://gideon.sh/",
+    },
   ],
   special: [
     {
       title: "Neocities",
       img: "general/neocities.gif",
-      url: "https://neocities.org/"
+      url: "https://neocities.org/",
     },
     {
       title: "Nekoweb",
       img: "general/nekoweb.gif",
-      url: "https://nekoweb.org/"
+      url: "https://nekoweb.org/",
     },
     {
       title: "OpenBooks",
@@ -817,25 +793,25 @@ export default {
     {
       title: "nkko",
       img: "general/nkko.png",
-      url: "https://nkko.link/"
+      url: "https://nkko.link/",
     },
 
     {
       title: "plasma",
       img: "general/plasmanow.gif",
-      url: "https://plasma.nekoweb.org/"
+      url: "https://plasma.nekoweb.org/",
     },
     {
       title: "This site has received 80+ Platinum",
-      img: "general/80plusplat.png"
+      img: "general/80plusplat.png",
     },
     {
       title: "Mobile Friendly",
-      img: "general/mobile-friendly.gif"
+      img: "general/mobile-friendly.gif",
     },
     {
       title: "Made for Dark Mode!",
-      img: "general/dark-mode.gif"
+      img: "general/dark-mode.gif",
     },
     {
       title: "Made with CSS Grid",
@@ -856,7 +832,7 @@ export default {
     {
       title: "Bitwarden Password Manager",
       img: "general/bitwarden.gif",
-      url: "https://bitwarden.com"
+      url: "https://bitwarden.com",
     },
     {
       title: "Catppuccin",
@@ -866,16 +842,16 @@ export default {
     {
       title: "webchnl",
       img: "general/webchnl.gif",
-      url: "https://webchnl.com/"
+      url: "https://webchnl.com/",
     },
     {
       title: "Made with VS Code",
       img: "general/vscode.png",
-      url: "https://code.visualstudio.com/"
+      url: "https://code.visualstudio.com/",
     },
     {
       title: "Don't Feed The AI!",
       img: "general/notfeedai.gif",
-    }
+    },
   ],
 };
