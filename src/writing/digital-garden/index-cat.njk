@@ -20,8 +20,7 @@ eleventyComputed:
 {% endrenderTemplate %}
 
 {% for post in posts.children %}
-  {{ component('post-listing', {title: post.title, date: post.date, description: post.description, href:
-post.url }) }}
+  {% renderFile "./_includes/components/post-listing.vto", {title: post.title, date: post.date, description: post.description, href: post.url } %}
 {% endfor %}
 
 {% renderTemplate "md" %}

@@ -1,0 +1,12 @@
+{{# props: title, date, description, href?, subheading? #}}
+{{ if href !== false && href }}
+<a href="{{ href }}" class="post-listing card">
+  <section class="stack" style="--spacer: 0.25em;">
+    {{ if subheading }}<h3>{{ title }}</h3>{{ else }}<h2>{{ title }}</h2>{{ /if }}
+    <p class="secondary">
+      <small><time datetime="{{ date }}">{{ date |> formatPostDate }}</time></small>
+    </p>
+    <p>{{ description }}</p>
+  </section>
+</a>
+{{ /if }}

@@ -31,7 +31,7 @@ If you don't know what a digital garden is, it's basically a personal space wher
 {% else %}
 {% set postNoteCount =  [item.children.length, " Note"] | join %}
 {% endif %}
-{{ component('link-icon-card', {title: item.title, icon: item.icon, description: item.description,subheading: true, href: item.url, extras: [postNoteCount, tagsCount]}) }}
+{% renderFile "./_includes/components/link-icon-card.vto", {title: item.title, icon: item.icon, description: item.description,subheading: true, href: item.url, extras: [postNoteCount, tagsCount]} %}
 {% endif %}
 {%- endfor %}
 <auto-grid>

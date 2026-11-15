@@ -45,7 +45,7 @@ eleventyComputed:
 {% endif %}
 
 {% for post in posts %}
-  {{ component('post-listing', {title: post.data.title, date: post.date, description: post.data.description, href: post.url }) }}
+  {% renderFile "./_includes/components/post-listing.vto", {title: post.data.title, date: post.date, description: post.data.description, href: post.url } %}
 {% endfor %}
 
 {% if pagination.href.next or pagination.href.previous %}

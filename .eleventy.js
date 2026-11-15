@@ -24,6 +24,7 @@ import {
 import { externalLink, postCard } from "./config/shortcodes.js";
 import process from "node:process";
 import { VentoPlugin } from "eleventy-plugin-vento";
+import eleventyWebc from "@11ty/eleventy-plugin-webc";
 
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/**");
@@ -31,10 +32,20 @@ export default function (eleventyConfig) {
 
   //########## Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventyWebc, {
+    components: "_includes/components/*.webc",
+  });
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyLucideicons);
-  eleventyConfig.addPlugin(VentoPlugin);
+  eleventyConfig.addPlugin(VentoPlugin, {
+    autotrim: true,
+    ventoOptions: {
+      includes: "_includes",
+      autoescape: true,
+    },
+  });
+
   if (process.env.BUILD_TYPE == "production") {
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
       formats: ["webp", "jpeg"],
@@ -119,13 +130,6 @@ export default function (eleventyConfig) {
   });
   md.use(markdownItFootnote);
   eleventyConfig.setLibrary("md", md);
-
-  eleventyConfig.addPreprocessor("macro-inject", "njk,md", (_data, content) => {
-    return (
-      `{%- from "util/component.njk" import component with context -%}\n` +
-      content
-    );
-  });
 
   /* shortcode */
   eleventyConfig.addShortcode("card", postCard);

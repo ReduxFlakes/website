@@ -16,11 +16,11 @@ eleventyComputed:
 
 {% for post in postList %}
     {% if tag in post.data.tags %}
-        {{ component('post-listing', {
+        {% renderFile "./_includes/components/post-listing.vto", {
       title: post.data.title, 
       date: post.date, 
       description: post.data.description, 
       href: post.url 
-    }) }}
+    } %}
     {% endif %}
 {% endfor %}

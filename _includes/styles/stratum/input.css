@@ -1,0 +1,13 @@
+input[type="text"] {
+  background: linear-gradient(to bottom, white, gray);
+  border-radius: 50rem;
+  border: 1px solid gray;
+  box-shadow: 0px 0px 2px 0px white;
+  padding: 0.25rem 0.75rem;
+  &::placeholder {
+    font: inherit;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+  }
+}

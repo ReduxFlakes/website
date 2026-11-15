@@ -16,39 +16,49 @@
   <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
   <title>{{override_title or page_title or meta.title}}</title>
-  <meta name="description" content="{% if description %}{{description}}{% else %}{{ meta.description }}{% endif %}">
+  <meta name="description" content="{{description or meta.description}}">
   <base href="{{page.url}}">
   <link rel="canonical" href="{{host}}{{page.url}}">
   <link rel="shortcut icon" href="{{favicon}}" type="image/svg+xml">
   <meta property="og:url" content="{{host}}{{ page.url }}">
   <meta property="og:title" content="{{page_title or meta.title}}">
   <meta property="og:site_name" content="{{ meta.title }}"/>
-  <meta property="og:description" content="{%- if description -%}{{description}}{%- else -%}{{meta.description}}{%- endif -%}">
+  <meta property="og:description" content="{{description or meta.description}}">
   <meta property="og:locale" content="{{meta.lang}}">
   <meta property="article:author" content="{{ meta.webmaster.name }}"/>
   <meta name="generator" content="{{ eleventy.generator }}"/>
+
+  {# Base CSS #}
   {% css "base" -%}
-  {%- include "styles/base.css" -%}
-  {% if util.prism %}
-    {%- include "styles/prism.css" -%}
-  {% endif %}
+    {% include "styles/themes.css" %}
+    {%- include "styles/base.css" -%}
+    {# include prism for syntax highlighting when requested #}
+    {% if util.prism -%}
+      {%- include "styles/prism.css" -%}
+    {%- endif %}
   {%- endcss -%}
   <style>
     {% getBundle "css", "base" %}
   </style>
-  {%- if env.environment == "production" -%}
-    <script data-goatcounter="https://reduxflakes.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-  {%- endif -%}
+
+  {# Main CSS #}
   {% if not shrine or shrine == false %}
-    {% css -%}
-    {%- include "styles/style.css" -%}
-    {%- include "styles/components.css" -%}
-    {% if is_home %}
-      {% include "styles/home.css" %}
-    {% endif %}
+    {# Stratum Design CSS #}
+    {% css "stratum" -%}
+      {% include "styles/stratum/index.css" %}
     {%- endcss %}
+
+    {% css -%}
+      {%- include "styles/style.css" -%}
+    {%- include "styles/components.css" -%}
+      {% if is_home %}
+        {% include "styles/home.css" %}
+      {% endif %}
+    {%- endcss %}
+    <link rel="stylesheet" href="{% getBundleFileUrl "css", "stratum" %}">
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+
+    {# Theme Switcher #}
     <script>
       if (localStorage.getItem("theme")) {
         document.documentElement.className = localStorage.getItem("theme");
@@ -67,6 +77,7 @@
       }
     </script>
   {% endif %}
+
   <style>
     .noscript-alert {
       display: none;
@@ -90,4 +101,9 @@
       {%- endif -%}
     </style>
   </noscript>
+  
+  {%- if env.environment == "production" -%}
+    <script data-goatcounter="https://reduxflakes.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+  {%- endif -%}
 </head>

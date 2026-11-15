@@ -8,7 +8,7 @@ digitalGarden:
   category: "Thoughts & Essays"
 ---
 
-{{ component('notice',{type: "info", icon: "info",description: 'This started of as an essay I had to write for English class where I had to agreee or disagree with the following statement: "The dangers of AI are far greater than the benefits. If possible, we should stop developing artitificial intelligence.". This is my response to it.'}) }}
+{% renderFile "./_includes/components/notice.vto", {type: "info", icon: "info",description: 'This started of as an essay I had to write for English class where I had to agreee or disagree with the following statement: "The dangers of AI are far greater than the benefits. If possible, we should stop developing artitificial intelligence.". This is my response to it.'} %}
 
 I agree with the statement and there’s a lot of reason why I agree with it, from political, privacy, environmental standpoints, and more that I want to go over with this essay.
 

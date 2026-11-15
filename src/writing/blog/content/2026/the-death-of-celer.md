@@ -7,7 +7,7 @@ tags: ["Projects", "Open Source", "Celer"]
 
 ## Some Backstory
 
-Back in 2024 when I was still studying {{ component('abbrv',{meaning: "Computer Science", abr:"CS"}) }} we had to make a final project for the course and then do a presentation about it, I already knew what I wanted to make: an optimization utility for Windows (similar to Glary Utilities, IoBit, and others).
+Back in 2024 when I was still studying CS we had to make a final project for the course and then do a presentation about it, I already knew what I wanted to make: an optimization utility for Windows (similar to Glary Utilities, IoBit, and others).
 
 I always had an interest on cleaning and performance applications since I was a kid, they were intriguing to me, mainly because of the flashy nature of their designs and UI since most of them don't do anything, and in this case I wanted to make something that actually worked and so late 2024 I started doing plans writing some of the features I wanted and making some simple concepts in Figma.
 

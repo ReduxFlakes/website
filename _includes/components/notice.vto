@@ -1,0 +1,6 @@
+{{# props: type?, icon?, description #}}
+{{ default type = "warning" }}
+{{ default icon = "traffic-cone" }}
+<p class="notice notice--{{ type }}" role="alert">
+  {{ lucide icon |> safe }}{{ description }}
+</p>

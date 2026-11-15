@@ -1,0 +1,13 @@
+{{# props: title, href, icon?, description?, subheading?, extras? #}}
+<a href="{{ href }}" class="card icon-card">
+  <section>
+    {{ if icon }}{{ lucide icon |> safe }}{{ /if }}
+    {{ if subheading }}<h3>{{ title }}</h3>{{ else }}<h2>{{ title }}</h2>{{ /if }}
+    {{ if description }}<p>{{ description }}</p>{{ /if }}
+    {{ if extras }}
+    <auto-flex class="justify">
+      {{ for item of extras }}<p><small>{{ item }}</small></p>{{ /for }}
+    </auto-flex>
+    {{ /if }}
+  </section>
+</a>

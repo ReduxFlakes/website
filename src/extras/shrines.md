@@ -10,7 +10,7 @@ order: 0
 <div class="auto-grid">
 {%- for shrine in collections.shrines -%}
 {%- if not shrine.data.draft or shrine.url -%}
-  {{ component('link-icon-card', {title: shrine.data.title, description: shrine.data.description, href: shrine.url, extras: [shrine.data.status]}) }}
+  {% renderFile "./_includes/components/link-icon-card.vto", {title: shrine.data.title, description: shrine.data.description, href: shrine.url, extras: [shrine.data.status]} %}
 {%- endif -%}
 {%- endfor -%}
 </div>

@@ -13,5 +13,5 @@ eleventyComputed:
 ---
 
 {% for post in collections[tag] | reverse %}
-    {{ component('post-listing', {title: post.data.title, date: post.date, description: post.data.description, href: post.url }) }}
+    {% renderFile "./_includes/components/post-listing.vto", {title: post.data.title, date: post.date, description: post.data.description, href: post.url } %}
 {% endfor %}

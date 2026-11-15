@@ -1,0 +1,14 @@
+/*
+
+Contains all the properties of the Stratum design system.
+(colors and themes are in themes.css instead)
+
+*/
+
+:root {
+    /* z layers */
+    --overlay: 10;
+    --navbar: 50;
+    --top-menu: 90;
+    --z-noise: 100;
+}
