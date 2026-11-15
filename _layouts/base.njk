@@ -1,8 +1,6 @@
 <!--
 I'm so sorry for making this site so convoluted :sob:
 -->
-{%- from "util/component.njk" import component with context -%}
-
 {# Global Variables #}
 {% if icon %}
   {% set rawIcon = ["/public/icons/", icon, ".png"] | join %}
@@ -14,7 +12,9 @@ I'm so sorry for making this site so convoluted :sob:
   {% block override %}
     <body>
       <a href="#main-content" class="acs-skip">Skip to main content</a>
-      {% include "toolbar.njk" %}
+      {% renderTemplate "webc", { lastUpdate: updates[0] } %}
+<toolbar></toolbar>
+{% endrenderTemplate %}
       {% include "nav.njk" %}
       {% if pride_backdrop %}
         <div class="pride"></div>
@@ -31,7 +31,7 @@ I'm so sorry for making this site so convoluted :sob:
         {%- block base -%}
           <article id="main-content" class="stack" {% if util.vwsize and util.vwsize != "full" -%}style="--vw-size:{{util.vwsize}}em;"{% elif util.vwsize == "full" %}style="--vw-size: 100%;"{%- endif -%}>
             {%- if isInConstruction -%}
-              {{ component('notice',{description: "This page is in construction, so expect broken features and/or missing content."}) }}
+              {% renderFile "./_includes/components/notice.vto", {type: "warning",description: 'This page is in construction, so expect broken features and/or missing content.'} %}
             {%- endif -%}
             {{- content | safe -}}
           </article>
@@ -183,6 +183,9 @@ I'm so sorry for making this site so convoluted :sob:
           }
         </style>
       {% endif %}
+      <script>
+        {% getBundle "js" %}
+      </script>
     </body>
     {% css "anim" -%}
     {%- include "styles/animations.css" -%}

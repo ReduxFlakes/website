@@ -4,8 +4,6 @@ description: "Software developer and designer from Portugal"
 layout: home.njk
 ---
 
-{{ component('notice',{description: "I'm currently reworking the base of the entire site, so some stuff might look inconsistent or missing but don't worry. "}) }}
-
 <auto-grid style="--size:15em;">
 <section class="blok">
 

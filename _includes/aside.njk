@@ -21,26 +21,9 @@
   </div>
   <script src="https://status.cafe/current-status.js?name=reduxflakes" defer></script>
 </section>
-
-<section class="aside-block lastfm-widget noscript">
-  <h2>
-    <span id="loadingStatus"></span>
-    <span id="playState">Loading...</span>
-  </h2>
-  <small class="noscript-alert">Requires JS</small>
-  <img src="" alt="" id="albumCover" height="174" width="174" class="image-zoom">
-  <h3 >
-    <a href="" id="name" target="_blank" rel="noopener"></a>
-  </h3>
-  <p id="artist"></p>
-
-  <small id="albumName"></small>
-
-  <details>
-    <summary>Play history</summary>
-    <ol id="lastfm-history"></ol>
-  </details>
-</section>
+{% renderTemplate "webc" %}
+<lastfm></lastfm>
+{% endrenderTemplate %}
 {% if env.environment == "production" %}
   <section class="aside-block noscript">
     <h2>Nekoweb Stats</h2>

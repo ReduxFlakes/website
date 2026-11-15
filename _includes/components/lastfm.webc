@@ -1,0 +1,107 @@
+<section class="aside-block lastfm-widget noscript">
+  <h2>
+    <span id="loadingStatus"></span>
+    <span id="playState">Loading...</span>
+  </h2>
+  <small class="noscript-alert">Requires JS</small>
+  <img
+    alt=""
+    id="albumCover"
+    height="174"
+    width="174"
+    class="image-zoom"
+    style="display: none"
+  />
+  <h3>
+    <a id="name" target="_blank" rel="noopener"></a>
+  </h3>
+  <p id="artist"></p>
+
+  <small id="albumName"></small>
+
+  <details>
+    <summary>Play history</summary>
+    <ol id="lastfm-history"></ol>
+  </details>
+</section>
+
+<script>
+  (() => {
+    const widget = document.querySelector(".lastfm-widget");
+    if (!widget) return;
+
+    const els = {
+      status: widget.querySelector("#loadingStatus"),
+      playState: widget.querySelector("#playState"),
+      art: widget.querySelector("#albumCover"),
+      name: widget.querySelector("#name"),
+      artist: widget.querySelector("#artist"),
+      album: widget.querySelector("#albumName"),
+      history: widget.querySelector("#lastfm-history"),
+    };
+
+    const api =
+      "https://lastfm-worker.contact-surfscape.workers.dev/?user=reduxflakes";
+
+    function renderTrack(track) {
+      const { albumCover, song, artist, album, songUrl, nowPlaying } = track;
+
+      if (albumCover) {
+        if (els.art.getAttribute("src") !== albumCover) {
+          els.art.src = albumCover;
+          els.art.alt = `${album} by ${artist}`;
+        }
+        els.art.style.display = "block";
+      } else {
+        els.art.style.display = "none";
+      }
+
+      els.name.textContent = song;
+      if (songUrl) els.name.href = songUrl;
+      els.artist.textContent = artist;
+      els.album.textContent = album;
+
+      els.playState.textContent = nowPlaying ? "Listening To" : "Last Played";
+      els.status.classList.toggle("flashing", nowPlaying);
+      els.status.style.background = nowPlaying ? "#A6E3A1" : "";
+    }
+
+    function renderHistory(tracks) {
+      els.history.replaceChildren(
+        ...tracks.slice(1).map((track) => {
+          const item = document.createElement("li");
+          const link = document.createElement("a");
+          if (track.songUrl) link.href = track.songUrl;
+          link.textContent = track.song;
+
+          const meta = document.createElement("small");
+          meta.textContent = ` - ${track.artist}`;
+
+          item.append(link, meta);
+          return item;
+        }),
+      );
+    }
+
+    async function fetchLastfm() {
+      try {
+        const response = await fetch(api);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        const { recentTracks } = await response.json();
+        if (!recentTracks || recentTracks.length === 0) return;
+
+        renderTrack(recentTracks[0]);
+        renderHistory(recentTracks);
+      } catch (error) {
+        console.error("Error fetching Last.fm data:", error);
+        if (els.playState.textContent === "Loading...") {
+          els.playState.textContent = "Last.fm unavailable";
+        }
+      }
+    }
+
+    fetchLastfm();
+    setInterval(fetchLastfm, 7000);
+  })();
+</script>

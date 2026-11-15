@@ -1,0 +1,149 @@
+<nav>
+  <a
+    href="/"
+    class="button button--transparent button--icon"
+    title="Home"
+    @html="this.lucide('house')"
+  >
+  </a>
+
+  <a href="/changelog/" class="button button--transparent" title="Last update">
+    <span @html="this.lucide('badge-alert')"></span>
+    <time
+      :datetime="this.dateToISO(this.$data.lastUpdate.date)"
+      @text="this.formatEUDate(this.$data.lastUpdate.date)"
+    ></time>
+  </a>
+</nav>
+<div class="supports">
+  <p>I support</p>
+
+  <img
+    src="/public/icons/palestinian.png"
+    alt="Flag of Palestine"
+    height="24"
+    width="24"
+  />
+
+  <img
+    src="/public/icons/ukraine.png"
+    alt="Flag of Ukraine"
+    width="24"
+    height="24"
+  />
+
+  <img
+    src="/public/icons/transgender.png"
+    alt="Transgender Flag"
+    width="24"
+    height="24"
+  />
+
+  <img
+    src="/public/icons/rainbow.png"
+    alt="Transgender Flag"
+    width="24"
+    height="24"
+  />
+</div>
+
+<input
+  type="text"
+  name="search-term"
+  id="searchInput"
+  placeholder="Site-wide search"
+/>
+
+<details class="dropdown">
+  <summary
+    class="button button--transparent button--icon"
+    title="Menu"
+    aria-label="Menu"
+    @html="this.lucide('menu')"
+  ></summary>
+  <nav>
+    <a class="button button--transparent" href="/feedback" data-update="true"
+      ><img
+        class="icon"
+        src="/public/icons/farm-form.png"
+        alt=""
+        aria-hidden="true"
+        width="32"
+        height="32"
+      />Feedback</a
+    >
+    <a class="button button--transparent" href="https://reduxflakes.atabook.org"
+      ><img
+        class="icon"
+        src="/public/icons/koloria-mail.png"
+        alt=""
+        aria-hidden="true"
+        width="32"
+        height="32"
+      />Guestbook</a
+    >
+    <a class="button button--transparent" href="/sites"
+      ><img
+        class="icon"
+        src="/public/icons/sfeers-earth.png"
+        alt=""
+        aria-hidden="true"
+        width="32"
+        height="32"
+      />Related Sites</a
+    >
+  </nav>
+</details>
+
+<style webc:scoped>
+  :host {
+    border-radius: 0.75rem 0.75rem 0 0;
+    position: relative;
+    display: flex;
+    gap: 0.25em;
+    z-index: 30;
+    background: var(--main-background);
+    align-items: center;
+    padding: 0.25rem;
+    > nav {
+      display: flex;
+      width: 100%;
+      justify-content: stretch;
+      overflow-x: auto;
+    }
+    > a {
+      flex-shrink: 0;
+      word-break: unset;
+      word-wrap: unset;
+      outline-offset: -2px;
+    }
+    > .supports {
+      display: flex;
+      gap: 0.5em;
+      align-items: center;
+      min-width: max-content;
+      margin-right: 0.5rem;
+    }
+    > details[open] summary {
+      background: var(--container-high);
+    }
+
+    > details[open] nav {
+      position: absolute;
+      top: 2.75rem;
+      right: 0.25rem;
+      border-radius: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25em;
+      padding: 0.25em;
+      z-index: 40;
+      background: var(--container);
+      border: 1px solid var(--stroke);
+      box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.3);
+      a {
+        min-width: 100%;
+      }
+    }
+  }
+</style>
