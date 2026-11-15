@@ -1,12 +1,55 @@
-input[type="text"] {
+.input-container {
   border-radius: 0.5rem;
-  padding: 0.3em 0.75rem;
-  color: var(--foreground);
   background: var(--container);
+  &:focus-within {
+    outline: 2px solid var(--primary);
+  }
+  > input {
+    border-radius: 0;
+    padding: 0.35em 0.5em 0.35em 0;
+    &:focus {
+      outline: none;
+    }
+  }
+  > button {
+    padding: 0.5rem;
+    &:hover {
+      background: none;
+      box-shadow: none;
+    }
+    > svg {
+      width: 1em;
+      height: 1em;
+      color: var(--foreground-muted);
+    }
+  }
+}
+
+.input-container:has(.search) {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  position: relative;
+  padding-left: 0.5em;
+  &::before {
+    display: block;
+    content: "";
+    width: 1em;
+    height: 1em;
+    --_search-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNlYXJjaCBwcmV2aWV3LWljb24iPjxwYXRoIGQ9Im0yMSAyMS00LjM0LTQuMzQiLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjExIiByPSI4Ii8+PC9zdmc+");
+    -webkit-mask: var(--_search-icon) no-repeat 50% 50%;
+    mask: var(--_search-icon) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background: var(--foreground-muted);
+  }
+}
+
+input[type="text"] {
+  color: var(--foreground);
   &::placeholder {
     font: inherit;
     font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.5);
-    font-style: italic;
+    color: var(--foreground-muted);
   }
 }

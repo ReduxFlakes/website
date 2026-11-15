@@ -47,12 +47,20 @@
   />
 </div>
 
-<input
-  type="text"
-  name="search-term"
-  id="searchInput"
-  placeholder="Site-wide search"
-/>
+<div class="input-container">
+  <input
+    type="text"
+    name="search-term"
+    id="searchInput"
+    class="search"
+    placeholder="Search site..."
+  />
+  <button
+    id="searchClear"
+    @html="this.lucide('circle-x')"
+    class="button--transparent button--icon"
+  ></button>
+</div>
 
 <details class="dropdown">
   <summary
@@ -95,21 +103,48 @@
   </nav>
 </details>
 
+<script>
+  (() => {
+    const clearButton = document.getElementById("searchClear");
+    const searchField = document.getElementById("searchInput");
+
+    searchField.addEventListener("input", () => {
+      checkTerm();
+    });
+
+    clearButton.addEventListener("click", () => {
+      clearField();
+    });
+
+    function checkTerm() {
+      let value = searchField.value;
+      if (value == "") clearButton.style.visibility = "collapse";
+      else clearButton.style.visibility = "visible";
+    }
+
+    function clearField() {
+      searchField.value = "";
+      checkTerm();
+    }
+  })();
+</script>
+
 <style webc:scoped>
   :host {
     border-radius: 0.75rem 0.75rem 0 0;
     position: relative;
     display: flex;
+    align-items: center;
     gap: 0.25em;
     z-index: 30;
     background: var(--main-background);
-    align-items: center;
     padding: 0.25rem;
+    padding-bottom: 0.125rem;
     > nav {
       display: flex;
-      width: 100%;
-      justify-content: stretch;
-      overflow-x: auto;
+      gap: 0.25em;
+      align-items: center;
+      margin-right: auto;
     }
     > a {
       flex-shrink: 0;
@@ -127,7 +162,6 @@
     > details[open] summary {
       background: var(--container-high);
     }
-
     > details[open] nav {
       position: absolute;
       top: 2.75rem;
@@ -145,5 +179,9 @@
         min-width: 100%;
       }
     }
+  }
+
+  #searchClear {
+    visibility: collapse;
   }
 </style>

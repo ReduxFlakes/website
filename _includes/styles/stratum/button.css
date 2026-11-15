@@ -1,0 +1,58 @@
+button,
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  line-height: 1.15;
+  background: var(--control);
+  font-weight: 600;
+  color: var(--foreground-strong);
+  text-decoration: none;
+  max-width: max-content;
+  min-width: 0;
+  padding: 0.55em 1.25em;
+  border-radius: 0.5em;
+  transition: 125ms cubic-bezier(0.17, 0.67, 0.38, 0.8) all;
+
+  &:hover {
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.125);
+    background: var(--control-hover);
+  }
+}
+
+button:last-child span,
+.button:last-child span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+button img,
+.button img,
+button svg,
+.button svg {
+  flex-shrink: 0;
+}
+
+.button--icon {
+  padding: 0.65em;
+}
+
+.button--pill {
+  border-radius: 10rem;
+  padding: 0.75em 1.25em;
+}
+
+.button--primary {
+  background: var(--primary);
+}
+
+.button--transparent {
+  background: none;
+}
+
+.button svg,
+.button img {
+  width: 1rem;
+  height: 1rem;
+}

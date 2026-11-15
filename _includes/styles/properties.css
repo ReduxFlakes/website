@@ -2,18 +2,18 @@
 :root {
   --font: "Inter", system-ui, sans-serif;
   /* the background used behind the main site */
-  --background: url("/public/noise.png") #131416;
+  --backdrop: hsl(220, 7%, 6%);
   /* the background used for the main site's content */
-  --main-background: url("/public/noise.png") hsl(240, 6%, 13%);
+  --main-background: hsl(240, 6%, 12%);
   /* used for static borders */
   --stroke: hsla(240, 2%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
-  --container: url("/public/noise.png") #2e2e32;
+  --container: #2e2e32;
   --container-nn: #2e2e32;
   /* used for elements that sit on top of other containers */
-  --container-high: url("/public/noise.png") hsla(240, 4%, 30%, 0.5);
+  --container-high: hsla(240, 4%, 30%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
-  --container-trans: url("/public/noise.png") hsla(240, 5%, 12%, 0.5);
+  --container-trans: hsla(240, 5%, 12%, 0.5);
   /* used for most text */
   --foreground: hsl(240, 2%, 86%);
   /* headings, bold text, and controls */
@@ -25,12 +25,12 @@
   /* used for the background when selecting text */
   --selection: hsla(331, 17%, 64%, 0.35);
 
-  --control: url("/public/noise.png") hsla(240, 3%, 32%, 0.5);
-  --control-hover: url("/public/noise.png") hsla(240, 3%, 38%, 0.5);
+  --control: hsla(240, 3%, 32%, 0.5);
+  --control-hover: hsla(240, 3%, 40%, 0.5);
 
   /* states */
-  --state-current: url("/public/noise.png") hsla(240, 2%, 100%, 0.075);
-  --state-active: url("/public/noise.png") hsla(240, 2%, 100%, 0.15);
+  --state-current: hsla(240, 2%, 100%, 0.075);
+  --state-active: hsla(240, 2%, 100%, 0.15);
 
   --hero-high: hsl(330, 33%, 38%);
   --hero-low: hsl(330, 33%, 15%);
@@ -38,24 +38,24 @@
   --transition-bezier: 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
   --transition-smooth: cubic-bezier(0.79, 0.33, 0.56, 0.64);
   --breathing-space: 1rem;
-  --viewport: 1024px;
+  --viewport: 1080px;
   color-scheme: dark;
 }
 
 .purple {
   /* the background used behind the main site */
-  --background: url("/public/noise.png") hsl(290, 9%, 8%);
+  --background: hsl(290, 9%, 8%);
   /* the background used for the main site's content */
-  --main-background: url("/public/noise.png") hsl(290, 10%, 14%);
+  --main-background: hsl(290, 10%, 14%);
   /* used for static borders */
   --stroke: hsla(290, 4%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
-  --container: url("/public/noise.png") hsl(290, 10%, 19%);
+  --container: hsl(290, 10%, 19%);
   --container-nn: hsl(290, 10%, 19%);
   /* used for elements that sit on top of other containers */
-  --container-high: url("/public/noise.png") hsla(290, 10%, 30%, 0.5);
+  --container-high: hsla(290, 10%, 30%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
-  --container-trans: url("/public/noise.png") hsla(290, 9%, 14%, 0.6);
+  --container-trans: hsla(290, 9%, 14%, 0.6);
   /* used for most text */
   --foreground: hsl(290, 4%, 86%);
   /* headings, bold text, and controls */
@@ -68,30 +68,30 @@
   --selection: hsla(290, 20%, 64%, 0.35);
 
   /* states */
-  --state-current: url("/public/noise.png") hsla(290, 2%, 100%, 0.075);
-  --state-active: url("/public/noise.png") hsla(290, 2%, 100%, 0.15);
+  --state-current: hsla(290, 2%, 100%, 0.075);
+  --state-active: hsla(290, 2%, 100%, 0.15);
 
   --hero-high: hsl(290, 33%, 38%);
   --hero-low: hsl(290, 33%, 15%);
 
-  --control: url("/public/noise.png") hsla(290, 5%, 32%, 0.5);
-  --control-hover: url("/public/noise.png") hsla(290, 5%, 38%, 0.5);
+  --control: hsla(290, 5%, 32%, 0.5);
+  --control-hover: hsla(290, 5%, 38%, 0.5);
 }
 
 .green-man {
   /* the background used behind the main site */
-  --background: url("/public/noise.png") hsl(85, 60%, 7%);
+  --background: hsl(85, 60%, 7%);
   /* the background used for the main site's content */
-  --main-background: url("/public/noise.png") hsl(85, 60%, 12%);
+  --main-background: hsl(85, 60%, 12%);
   /* used for static borders */
   --stroke: hsla(85, 4%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
-  --container: url("/public/noise.png") hsl(85, 70%, 15%);
+  --container: hsl(85, 70%, 15%);
   --container-nn: hsl(85, 70%, 15%);
   /* used for elements that sit on top of other containers */
-  --container-high: url("/public/noise.png") hsla(85, 10%, 30%, 0.5);
+  --container-high: hsla(85, 10%, 30%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
-  --container-trans: url("/public/noise.png") hsla(85, 60%, 12%, 0.6);
+  --container-trans: hsla(85, 60%, 12%, 0.6);
   /* used for most text */
   --foreground: hsl(85, 12%, 86%);
   /* headings, bold text, and controls */
@@ -104,30 +104,30 @@
   --selection: hsla(85, 20%, 64%, 0.35);
 
   /* states */
-  --state-current: url("/public/noise.png") hsla(85, 4%, 100%, 0.075);
-  --state-active: url("/public/noise.png") hsla(85, 4%, 100%, 0.15);
+  --state-current: hsla(85, 4%, 100%, 0.075);
+  --state-active: hsla(85, 4%, 100%, 0.15);
 
   --hero-high: hsl(85, 33%, 38%);
   --hero-low: hsl(85, 33%, 15%);
 
-  --control: url("/public/noise.png") hsla(85, 12%, 32%, 0.5);
-  --control-hover: url("/public/noise.png") hsla(85, 12%, 38%, 0.5);
+  --control: hsla(85, 12%, 32%, 0.5);
+  --control-hover: hsla(85, 12%, 38%, 0.5);
 }
 
 .ocean {
   /* the background used behind the main site */
-  --background: url("/public/noise.png") hsl(218, 13%, 8%);
+  --background: hsl(218, 13%, 8%);
   /* the background used for the main site's content */
-  --main-background: url("/public/noise.png") hsl(218, 13%, 14%);
+  --main-background: hsl(218, 13%, 14%);
   /* used for static borders */
   --stroke: hsla(218, 4%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
-  --container: url("/public/noise.png") hsl(218, 14%, 19%);
+  --container: hsl(218, 14%, 19%);
   --container-nn: hsl(218, 14%, 19%);
   /* used for elements that sit on top of other containers */
-  --container-high: url("/public/noise.png") hsla(218, 11%, 30%, 0.5);
+  --container-high: hsla(218, 11%, 30%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
-  --container-trans: url("/public/noise.png") hsla(218, 10%, 14%, 0.6);
+  --container-trans: hsla(218, 10%, 14%, 0.6);
   /* used for most text */
   --foreground: hsl(218, 10%, 86%);
   /* headings, bold text, and controls */
@@ -140,30 +140,30 @@
   --selection: hsla(218, 20%, 64%, 0.35);
 
   /* states */
-  --state-current: url("/public/noise.png") hsla(218, 6%, 100%, 0.075);
-  --state-active: url("/public/noise.png") hsla(218, 6%, 100%, 0.15);
+  --state-current: hsla(218, 6%, 100%, 0.075);
+  --state-active: hsla(218, 6%, 100%, 0.15);
 
   --hero-high: hsl(218, 33%, 38%);
   --hero-low: hsl(218, 33%, 15%);
 
-  --control: url("/public/noise.png") hsla(218, 5%, 32%, 0.5);
-  --control-hover: url("/public/noise.png") hsla(218, 5%, 38%, 0.5);
+  --control: hsla(218, 5%, 32%, 0.5);
+  --control-hover: hsla(218, 5%, 38%, 0.5);
 }
 
 .neue {
   /* the background used behind the main site */
-  --background: url("/public/noise.png") hsl(0, 0%, 2%);
+  --background: hsl(0, 0%, 2%);
   /* the background used for the main site's content */
-  --main-background: url("/public/noise.png") hsl(0, 0%, 7%);
+  --main-background: hsl(0, 0%, 7%);
   /* used for static borders */
   --stroke: hsla(0, 0%, 100%, 0.15);
   /* used for cards and other main elements that sit on top of the main content*/
-  --container: url("/public/noise.png") hsl(0, 0%, 11%);
+  --container: hsl(0, 0%, 11%);
   --container-nn: hsl(0, 0%, 11%);
   /* used for elements that sit on top of other containers */
-  --container-high: url("/public/noise.png") hsla(0, 0%, 20%, 0.5);
+  --container-high: hsla(0, 0%, 20%, 0.5);
   /* used for transparent background, should be used with backdrop-filter: blur; */
-  --container-trans: url("/public/noise.png") hsla(0, 0%, 7%, 0.6);
+  --container-trans: hsla(0, 0%, 7%, 0.6);
   /* used for most text */
   --foreground: hsl(0, 0%, 86%);
   /* headings, bold text, and controls */
@@ -176,12 +176,12 @@
   --selection: hsla(0, 0%, 64%, 0.35);
 
   /* states */
-  --state-current: url("/public/noise.png") hsla(0, 0%, 100%, 0.075);
-  --state-active: url("/public/noise.png") hsla(0, 0%, 100%, 0.15);
+  --state-current: hsla(0, 0%, 100%, 0.075);
+  --state-active: hsla(0, 0%, 100%, 0.15);
 
   --hero-high: hsl(0, 0%, 30%);
   --hero-low: hsl(0, 0%, 9%);
 
-  --control: url("/public/noise.png") hsla(0, 0%, 32%, 0.5);
-  --control-hover: url("/public/noise.png") hsla(0, 0%, 38%, 0.5);
+  --control: hsla(0, 0%, 32%, 0.5);
+  --control-hover: hsla(0, 0%, 38%, 0.5);
 }
