@@ -168,11 +168,6 @@ export default {
       url: "https://somefan0102.neocities.org/",
     },
     {
-      title: "Coloured",
-      img: "conline.png",
-      url: "https://coloured.neocities.org/",
-    },
-    {
       title: "Lux Fero",
       img: "lux_fero.gif",
       url: "https://en.luxfero.su/",
@@ -206,11 +201,6 @@ export default {
       title: "soulwebb",
       img: "soulwebb.gif",
       url: "https://soulwebb.ing/",
-    },
-    {
-      title: "ui(ooo-eee)",
-      img: "oooeee.png",
-      url: "https://oooeee.nekoweb.org/",
     },
     {
       title: "Layercake",
